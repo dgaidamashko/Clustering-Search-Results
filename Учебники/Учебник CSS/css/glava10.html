@@ -1,0 +1,298 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Учебник CSS для начинающих.</title>
+<meta HTTP-EQUIV="Content-Type" Content="text/html; Charset=Windows-1251">
+<meta name="author" Content="Семикопенко Алексей Алексеевич">
+<meta name="copyright" Content="Семикопенко Алексей Алексеевич">
+<meta name="Publisher-Email" Content="alex@webremeslo.ru">
+<meta name="Publisher-URL" Content="http://webremeslo.ru/">
+<link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+<body>
+<!-- Шапка -->
+<div class="header">
+<h1 class="logo">Учебник CSS</h1>
+</div>
+<!-- Конец шапке -->
+<!--левая колонка "меню" -->
+<div class="left">
+<div class="fixed">
+<ul class="ul_none">
+<li><a href="../index.html" class="menu" title="От автора.">Главная</a></li>
+<li><a href="glava0.html" class="menu" title="Введение.   Что такое CSS?">Что такое CSS?</a></li>
+<li><a href="glava1.html" class="menu" title="Глава 1   Внедрение CSS в HTML документ.">Внедрение CSS.</a></li>
+<li><a href="glava2.html" class="menu" title="Глава 2   Свойства текста.">Свойства текста.</a></li>
+<li><a href="glava3.html" class="menu" title="Глава 3   Свойства шрифта.">Свойства шрифта.</a></li>
+<li><a href="glava4.html" class="menu" title="Глава 4   Цвет и фон.">Цвет и фон.</a></li>
+<li><a href="glava5.html" class="menu" title="Глава 5   Границы элемента.">Границы элемента.</a></li>
+<li><a href="glava6.html" class="menu" title="Глава 6   Классы и id селекторы.">Классы и id селекторы.</a></li>
+<li><a href="glava7.html" class="menu" title="Глава 7   Размеры элемента.">Размеры элемента.</a></li>
+<li><a href="glava8.html" class="menu" title="Глава 8   Поля и отступы.">Поля и отступы.</a></li>
+<li><a href="glava9.html" class="menu" title="Глава 9   Курсоры.">Курсоры.</a></li>
+<li><a href="glava10.html" class="activemenu" title="Глава 10   Форматирование.">Форматирование.</a></li>
+<li><a href="glava11.html" class="menu" title="Глава 11   Поплавки.">Поплавки.</a></li>
+<li><a href="glava12.html" class="menu" title="Глава 12   Позиционирование.">Позиционирование.</a></li>
+<li><a href="glava13.html" class="menu" title="Глава 13   Стиль списка.">Стиль списка.</a></li>
+<li><a href="glava14.html" class="menu" title="Глава 14   Полоса прокрутки.">Полоса прокрутки.</a></li>
+<li><a href="glava15.html" class="menu" title="Глава 15   Псевдоклассы.">Псевдоклассы.</a></li>
+<li><a href="glava16.html" class="menu" title="Глава 16   Псевдоэлементы.">Псевдоэлементы.</a></li>
+</ul>
+</div>
+</div>
+<!-- Конец левой колонке -->
+<!-- Правая колонка -->
+<div class="right">
+<h2>А так же:</h2>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">Как создать сайт?</a>
+<a href="http://www.webremeslo.ru/html/glava0.html" class="menu" title="www.webremeslo.ru">Учебник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka.html" class="menu" title="www.webremeslo.ru">Справочник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka4.html" class="menu" title="www.webremeslo.ru">Справочник CSS</a>
+<a href="http://forum.webremeslo.ru/index.php" class="menu" title="www.webremeslo.ru">Форум</a><br>
+..<em>и многое другое на сайте:</em><br>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец правой колонке -->
+<!-- Центральная колонка -->
+<div class="center">
+   
+<p class="zag">Глава 10</p>
+
+<h1>Форматирование.</h1>
+<p>В этой главе речь пойдет о форматировании элементов, на самом деле речь об этом уже шла в <a href="glava7.html" title="Глава 7   Размеры элемента.">седьмой главе</a>, в которой мы говорили о размерах элемента - <samp><b>width</b></samp> и <samp><b>height</b></samp>,  минимальных и максимальных размеров элемента - <samp><b>max-height, max-width, min -height, min-width</b></samp> и свойстве <samp><b>overflow</b></samp>.  Все свойства из седьмой главы относятся к категории "форматирование элементов" однако знания лучше получать  порциями, чтобы каши в голове не случилось, вот я и решил придержать кой какой материал на потом..</p>
+<p>Потом настало! так что готовьтесь переваривать информацию на медленном огне..</p>
+ 
+
+<h2>Показ элементов.</h2>
+<p>Свойство <samp><b>display</b></samp> указывает браузеру, как тот или иной элемент должен быть показан на странице, другими словами  определяет параметры вывода браузером элемента на экран.</p>
+
+<p><samp><b>Display</b></samp> имеет кучу возможных значений, однако, большинство из них поддерживаются далеко не всеми браузерами, поэтому мы поговорим лишь о тех которые будут корректно работать во всех браузерах , а таковых всего три:</p>
+<ul>
+<li><samp><b>block</b></samp> - Показывает элемент как блочный. Происходит перенос строк вначале и в конце элемента.
+<li><samp><b>inline</b></samp> - Показывает элемент как встроеный. Элемент не переносятся на следующую строку.
+<li><samp><b>none</b></samp> - Запрещает показ элемента. Элемент "удаляется" из общего потока, его занимаемое пространство на экране не резервируется.
+</ul>
+<p>Теперь "расшифрую" написанное  и покажу примеры..</p>
+
+<p>Начнем с <samp><b>block</b></samp> и <samp><b>inline</b></samp></p>
+
+<p>Помните, в той же <a href="glava7.html" title="Глава 7   Размеры элемента.">седьмой главе</a> мы говорили о том, что все элементы можно разделить на строчные и блочные? так вот значения <samp><b>block</b></samp> и <samp><b>inline</b></samp> свойства <samp><b>display</b></samp> позволяет самостоятельно указывать, какие элементы мы хотим сделать строчными, а какие блочными, что позволяет решить ряд задач при верстке сайта с помощью CSS.</p>
+
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;style type="text/css"&gt;</samp><br>
+<samp class="xxx">.menu {</samp><br>
+<samp class="xxx"> <b>display: block;</b> </samp><br>
+<samp class="xxx"> color:#006080; </samp><br>
+<samp class="xxx"> font-size: 14px; </samp><br>
+<samp class="xxx"> font-weight: bold; </samp><br>
+<samp class="xxx"> padding: 5px;</samp><br>
+<samp class="xxx">} </samp><br>
+<samp class="xxx">h2 {</samp><br>
+<samp class="xxx">padding: 5px; </samp><br>
+<samp class="xxx">color: #800080; </samp><br>
+<samp class="xxx">font-size:16px;</samp><br>
+<samp class="xxx">}</samp><br>
+<samp class="xx">&lt;/style&gt;</samp><br>
+<samp class="xx">&lt;title&gt;display: block;&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;p&gt;В этом примере показано как можно сделать вертикальное меню присвоив ссылке (элемент &lt;a&gt;) свойство display с значением block.&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;hr&gt;</samp><br>
+<samp class="xx">&lt;h2&gt;Меню:&lt;/h2&gt;</samp><br>
+<samp class="xx">&lt;a href="#" class="menu"&gt;Все о слонах.&lt;/a&gt;</samp><br>
+<samp class="xx">&lt;a href="#" class="menu"&gt;Купить слона.&lt;/a&gt;</samp><br>
+<samp class="xx">&lt;a href="#" class="menu"&gt;Взять слона на прокат.&lt;/a&gt;</samp><br>
+<samp class="xx">&lt;hr&gt;</samp><br>
+<samp class="xx">&lt;p&gt;Как видите ссылки стали блочными.. то есть в начале и в конце элемента &lt;a&gt; происходит перенос строки, хотя по умолчанию ссылка должна была идти в общем потоке текста.&lt;/p&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer45.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>А вот пример использования значения <samp><b>inline</b></samp>:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;display: inline;&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;p&gt;Вот пример того как можно зпретить параграфу перенос строки&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;hr&gt;</samp><br>
+<samp class="xx">&lt;p style="<b>display: inline;</b> background: #c5ffa0; padding: 5px;"&gt;Это параграф.&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;p style="<b>display: inline;</b> background: #c0e4ff; padding: 5px;"&gt;И это параграф!&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;p style="<b>display: inline;</b> background: #c5ffa0; padding: 5px;"&gt;И снава параграф!!&lt;/p&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer46.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Идем дальше.. значение <samp><b>none</b></samp> свойства <samp><b>display</b></samp>  запрещает элемент к показу. Браузер удаляет элемент с таким значением из общего потока. </p>
+
+<p>Небольшой пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;display: none;&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">А где второй блок ???</samp><br>
+<samp class="xx">&lt;hr&gt;</samp><br>
+<samp class="xx">&lt;div style="background: #c5ffa0"&gt;Блок 1&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;div style="<b>display: none"</b>&gt;Блок 2&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;div style="background: #c0e4ff"&gt;Блок 3&lt;/div&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer47.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>Конечно, от такого примера толку в практике ноль, какой смысл прописывать блок, а потом умышленно скрывать его!?? Однако это свойство незаменимо на страницах где присутствует динамика.. например для создания раскрывающегося списка.</p>
+<p>Помнится мне, я Вам уже показывал этот пример:</p>
+<div class="primer"> 
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;display:none и скрипты&lt;/title&gt;</samp><br>
+<samp class="xx"><i>&lt;script&gt;</i></samp><br>
+<samp class="xxx"><i>function show_hide(id)</i>{</samp><br>
+<samp class="xxx"><i>var item = document.getElementById(id);</i></samp><br>
+<samp class="xxx"><i>if (item.style.<b>display == 'none'</b>) {item.style.<b>display = 'block';</b>}</i></samp><br>
+<samp class="xxx"><i>else item.style.<b>display = 'none'</b>;</i></samp><br>
+<samp class="xxx"><i>}</i></samp><br>
+<samp class="xx"><i>&lt;/script&gt;</i></samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;div id="block" style="<b>display:none</b>"&gt;</samp><br>
+<samp class="xxx">&lt;h2 style="color: #ff00ff"&gt;А вот и я!!&lt;/h2&gt;</samp><br>
+<samp class="xxx">&lt;img src="rosemammoth.gif"&gt;</samp><br>
+<samp class="xx">&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;a href=<i>"javascript:show_hide('block')"</i> title="Развернуть/Свернуть" style="color: #ff00ff"&gt;Нажми на меня!!&lt;/a&gt;</samp><br>
+<samp class="xx">&lt;hr&gt;</samp><br>
+<samp class="xx">&lt;div id="block1" style="<b>display:none</b>"&gt;</samp><br>
+<samp class="xxx">&lt;h2 style="color: #0000ff"&gt;А здесь я!!&lt;/h2&gt;</samp><br>
+<samp class="xxx">&lt;img src="mammoth.jpg"&gt;</samp><br>
+<samp class="xx">&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;a href=<i>"javascript:show_hide('block1')"</i> title="Развернуть/Свернуть" style="color: #0000ff"&gt;И на меня нажми!!&lt;/a&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer35.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>Курсивом, в данном примере, выделен скрипт, который может динамически обрабатывать блоки <samp><b>&lt;div&gt;</b></samp> присваивая ему свойства <samp><b>display:none</b></samp> или <samp><b>display: block</b></samp>, и хотя пока Вам, думаю, мало, что понятно из выше написанного, но цель данного примера показать для каких целей предназначено свойство <samp><b>display: none</b></samp>.</p>
+
+<p>Ну и для общего развития.. Как уже говорилось выше <samp><b>block</b></samp>, <samp><b>inline</b></samp> и  <samp><b>none</b></samp> это далеко не все возможные значения свойства <samp><b>display</b></samp>.</p>
+
+<p>Вот остальные: </p>
+<ul>
+<li><samp><b>list-item</b></samp>	- элемент выводится как блочный и добавляется маркер списка.
+<li><samp><b>run-in</b></samp>	- устанавливает элемент как блочный или строковый в зависимости от контекста.
+<li><samp><b>compact</b></samp>  - устанавливает элемент как блочный или строковый в зависимости от контекста.
+<li><samp><b>marker</b></samp>	значение используется совместно с псевдоэлементами <samp><b>before</b></samp> и <samp><b>after</b></samp>, генерирует блок маркера
+<li><samp><b>table</b></samp> - элемент объявляется таблицей 
+<li><samp><b>inline-table</b></samp> - элемент объявляется строкой таблицы
+<li><samp><b>table-row-group</b></samp> - элемент объявляется группой строк ячеек таблицы
+<li><samp><b>table-header-group</b></samp> - элемент объявляется группой строк ячеек таблицы, располагается в начале таблицы
+<li><samp><b>table-footer-group</b></samp> - элемент объявляется группой строк ячеек таблицы, располагается в конце таблицы
+<li><samp><b>table-row</b></samp> - элемент отображается как строка таблицы
+<li><samp><b>table-column-group</b></samp> - определяет, что элемент является группой одной или более колонок таблицы
+<li><samp><b>table-column</b></samp> - элемент объявляется колонкой ячеек таблицы
+<li><samp><b>table-cell</b></samp> - элемент объявляется ячейкой таблицы
+<li><samp><b>table-caption</b></samp> - задает заголовок таблицы
+</ul>
+
+<p>Но использовать их в деле я бы не рекомендовал.. по той простой причине, что многие браузеры не поддерживают данные значения.. поэтому заострять внимания на них не будем.</p>
+
+<h2>Видимость элемента.</h2>
+
+<p>Свойство CSS <samp><b>visibility</b></samp> предназначено для отображения или скрытия элемента, включая рамку вокруг него и фон.  При скрытии элемента с помощью свойства <samp><b>visibility</b></samp> элемент становится, не виден, однако место, которое он занимает, остается за ним.</p> 
+
+
+<p>Возможные значения свойства <samp><b>visibility</b></samp>:</p> 
+<ul>
+<li><samp><b>inherit</b></samp> - Элемент отображается так как указанно в элементе родителе. 
+<li><samp><b>visible</b></samp> - Отображает элемент. (по умолчанию). 
+<li><samp><b>hidden</b></samp> - Скрывает элемент. В отличии от <samp><b>display: none</b></samp> оставляет за элементом площадь которую он занимает. Проще говоря если <samp><b>display: none</b></samp> "удаляет" элемент то <samp><b>hidden</b></samp> делает его "прозрачным". 
+<li><samp><b>collapse</b></samp> - Скрывает колонки и строки таблицы идентично <samp><b>display: none</b></samp>, Если свойство применяется к другим элементам, не имеющим отношения к таблицам, то результат будет таким же, как <samp><b>hidden</b></samp>.
+</ul>
+
+<p>Пример:</p>
+<div class="primer"> 
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;visibility&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;p&gt;Блок 2 скрыт, однако место, которое он занимает, зарезервировано за ним.&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;div&gt;</samp><br>
+<samp class="xxx">&lt;span style="background: #c5ffa0; padding: 5px;"&gt;блок 1&lt;/span&gt;</samp><br>
+<samp class="xxx">&lt;span style="<b>visibility: hidden;</b> background: #c0e4ff; padding: 5px;"&gt;блок 2&lt;/span&gt;</samp><br>
+<samp class="xxx">&lt;span style="background: #c5ffa0; padding: 5px;"&gt;блок 3&lt;/span&gt;</samp><br>
+<samp class="xx">&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;hr&gt;</samp><br>
+<samp class="xx">&lt;p&gt;Строка 2 скрыта "удалена", если только дело происходит не в Internet Explorer&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;table border="1"&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt;Строка 1&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;tr style="<b>visibility: collapse;</b>"&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt;Строка 2&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt;Строка 3&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xx">&lt;/table&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer48.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>Обратите внимание <samp><b>visibility: collapse;</b></samp> не поддерживается браузером <samp>Internet Explorer</samp>.</p>
+
+<h2>Видимая часть элемента.</h2>
+
+<p>Свойство <samp><b>clip</b></samp> определяет видимую область элемента, в которой будет показано его содержимое. Все, что не помещается в эту область, "обрезается" и становится невидимым. На данный момент единственно доступная форма области - прямоугольник.</p>
+<p><samp><b>clip</b></samp> работает только для абсолютно позиционированных элементов и показывает лишь ту его часть, что входит в прямоугольную область заданную четырьмя значениями от левого и верхнего краёв данного элемента.</p>
+<p>Значения:</p>
+
+<ul>
+<li><samp><b>rect(</b>сверху справа снизу слева<b>)</b></samp> - Обрезает элемент сверху, справа, снизу и слева в соответствии с заданными, в скобках, четырьмя значениями, которые могут выражаться в процентах от ширины/длины элемента, пикселях или любых других единицах измерения принятых в CSS. 
+<li><samp><b>auto</b></samp> - Оставляет элемент или одну из сторон элемента без изменений (по умолчанию). 
+</ul>
+<p>Пример:</p>
+<div class="primer"> 
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;clip&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;div style="position: absolute; <b>clip: rect(15px auto auto 15px)</b>; width: 100px; height: 100px; background: #c5ffa0; border: double 5px #008000"&gt;</samp><br>
+<samp class="xxx">Этот блок частично обрезан слева и сверху</samp><br>
+<samp class="xx">&lt;/div&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer49.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>О том, что такое <samp><b>position: absolute;</b></samp> - абсолютно позиционированный элемент и вообще что такое позиционирование мы поговорим в отдельной главе.</p> 
+
+<h2>Полезные советы:</h2>
+<ul>
+<li><p>В виду того, что свойство <samp><b>visibility: collapse;</b></samp> не поддерживается браузером <samp>Internet Explorer</samp> рекомендую, при работе с таблицами использовать <samp><b>display: none</b></samp>,  результат будет аналогичным <samp><b>collapse</b></samp> только работающим в <samp>IE</samp>.</p>
+<li><p>Свойства <samp><b>display, visibility</b></samp> и <samp><b>clip</b></samp> в сочетании с скриптами, а так же псевдоэлементами позволяют достичь весьма интересных результатов.</p>
+</ul>
+<div class="url">
+<a href="glava9.html" title="К предыдущей главе">&lt;&lt; предыдущая глава</a> | 
+<a href="glava11.html" title="К следующей главе">следующая глава &gt;&gt;</a>
+</div>
+</div>
+<!-- Конец центральной колонке -->
+<!-- Подвал -->
+<div class="footer">
+&copy; Автор: Семикопенко Алексей Алексеевич. | <a href="http://webremeslo.ru/" class="logo" title="Перейти на сайт webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец подвалу -->
+</body>
+</html>

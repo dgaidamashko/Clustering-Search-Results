@@ -1,0 +1,227 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Учебник CSS для начинающих.</title>
+<meta HTTP-EQUIV="Content-Type" Content="text/html; Charset=Windows-1251">
+<meta name="author" Content="Семикопенко Алексей Алексеевич">
+<meta name="copyright" Content="Семикопенко Алексей Алексеевич">
+<meta name="Publisher-Email" Content="alex@webremeslo.ru">
+<meta name="Publisher-URL" Content="http://webremeslo.ru/">
+<link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+<body>
+<!-- Шапка -->
+<div class="header">
+<h1 class="logo">Учебник CSS</h1>
+</div>
+<!-- Конец шапке -->
+<!--левая колонка "меню" -->
+<div class="left">
+<div class="fixed">
+<ul class="ul_none">
+<li><a href="../index.html" class="menu" title="От автора.">Главная</a></li>
+<li><a href="glava0.html" class="menu" title="Введение.   Что такое CSS?">Что такое CSS?</a></li>
+<li><a href="glava1.html" class="menu" title="Глава 1   Внедрение CSS в HTML документ.">Внедрение CSS.</a></li>
+<li><a href="glava2.html" class="menu" title="Глава 2   Свойства текста.">Свойства текста.</a></li>
+<li><a href="glava3.html" class="menu" title="Глава 3   Свойства шрифта.">Свойства шрифта.</a></li>
+<li><a href="glava4.html" class="menu" title="Глава 4   Цвет и фон.">Цвет и фон.</a></li>
+<li><a href="glava5.html" class="menu" title="Глава 5   Границы элемента.">Границы элемента.</a></li>
+<li><a href="glava6.html" class="menu" title="Глава 6   Классы и id селекторы.">Классы и id селекторы.</a></li>
+<li><a href="glava7.html" class="menu" title="Глава 7   Размеры элемента.">Размеры элемента.</a></li>
+<li><a href="glava8.html" class="menu" title="Глава 8   Поля и отступы.">Поля и отступы.</a></li>
+<li><a href="glava9.html" class="menu" title="Глава 9   Курсоры.">Курсоры.</a></li>
+<li><a href="glava10.html" class="menu" title="Глава 10   Форматирование.">Форматирование.</a></li>
+<li><a href="glava11.html" class="activemenu" title="Глава 11   Поплавки.">Поплавки.</a></li>
+<li><a href="glava12.html" class="menu" title="Глава 12   Позиционирование.">Позиционирование.</a></li>
+<li><a href="glava13.html" class="menu" title="Глава 13   Стиль списка.">Стиль списка.</a></li>
+<li><a href="glava14.html" class="menu" title="Глава 14   Полоса прокрутки.">Полоса прокрутки.</a></li>
+<li><a href="glava15.html" class="menu" title="Глава 15   Псевдоклассы.">Псевдоклассы.</a></li>
+<li><a href="glava16.html" class="menu" title="Глава 16   Псевдоэлементы.">Псевдоэлементы.</a></li>
+</ul>
+</div>
+</div>
+<!-- Конец левой колонке -->
+<!-- Правая колонка -->
+<div class="right">
+<h2>А так же:</h2>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">Как создать сайт?</a>
+<a href="http://www.webremeslo.ru/html/glava0.html" class="menu" title="www.webremeslo.ru">Учебник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka.html" class="menu" title="www.webremeslo.ru">Справочник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka4.html" class="menu" title="www.webremeslo.ru">Справочник CSS</a>
+<a href="http://forum.webremeslo.ru/index.php" class="menu" title="www.webremeslo.ru">Форум</a><br>
+..<em>и многое другое на сайте:</em><br>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец правой колонке -->
+<!-- Центральная колонка -->
+<div class="center">
+   
+<p class="zag">Глава 11</p>
+
+<h1>Поплавки.</h1>
+
+<p>Эх рыбалка.. хорошо бы было сейчас закинув удочку посидеть на каком ни будь тихом пруду под пенье птиц и шорох камыша.. сидишь себе наблюдаешь за поплавком, потягиваешь пивко, где то неподалёку горит костер.. запах ухи смешавшись с ароматами разнотравья кружит голову и ты окунаешься  в нирвану.. в мир спокойствия и гармонии..</p>
+<p>Ладно, будем считать, что отдохнули перед очередной порцией информации..  и хотя в этой главе речь пойдёт о поплавках диалоги  будут вовсе не о рыбалке..</p>
+<p>Итак, свойство <samp><b>float</b></samp> -  что поделаешь, этому свойству, при переводе с английского не придумали более точного определения, нежели чем  "поплавок".  А элемент с таким свойством называют "всплывающим" </p>
+<p>Теперь побольше конкретики и примеров..</p>
+<h2>Обтекание элемента</h2>
+<p>Свойство <samp><b>float</b></samp> определяет, по какой стороне будет выравниваться - всплывать элемент, при этом остальные элементы будут обтекать его с других сторон.</p>
+<p>Выравнивание элемента происходит по краям родительского элемента или же по краям окна браузера.</p>
+<p>Значения свойства <samp><b>float</b></samp>:</p>
+
+<ul>
+<li><samp><b>left</b></samp> - Выравнивает элемент по левому краю, остальные элементы обтекают его справа. 
+<li><samp><b>right</b></samp> - Выравнивает элемент по правому краю, остальные элементы обтекают его слева. 
+<li><samp><b>none</b></samp> - Выравнивание элемента не задается. (по умолчанию) 
+</ul>
+<p>Небольшой пример: заставим текст обтекать фотографию по правому краю при этом сам блок с фотографией "всплывёт" с левой стороны.</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;float&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;div style="border: solid 1px black; width: 220px"&gt;</samp><br>
+<samp class="xxx">  &lt;div style="<b>float: left;</b>"&gt;</samp><br>
+<samp class="xxxx">   &lt;img src="graphics/fon.jpg"&gt;</samp><br>
+<samp class="xxx">  &lt;/div&gt;</samp><br>
+<samp class="xxx">Текст в этом блоке обтекает рисунок помещённый в контейнер div с правой стороны, так как сам блок с рисунком, с помощью свойства float с значением left, "всплывает" слева. </samp><br>
+<samp class="xx">&lt;/div&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer50.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>А вот в примере ниже показано как могут располагаться элементы относительно друг друга, если свойство <samp><b>float</b></samp> присвоено нескольким элементам</p>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;float&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;div style="<b>float: right;</b> background: #c5ffa0; border: solid 1px black; padding: 10px; width: 420px"&gt;</samp><br>
+<samp class="xxx">&lt;span style="<b>float: left;</b> background: #c0e4ff; border: solid 1px black; padding: 5px; width: 150px"&gt;блок выровнен по левому краю&lt;/span&gt;</samp><br>
+<samp class="xxx">&lt;span style="<b>float: right;</b> background: #c0e4ff; border: solid 1px black; padding: 5px; width: 150px"&gt;блок выровнен по правому краю&lt;/span&gt;</samp><br>
+<samp class="xxx">содержание блока div обтекает выровненные элементы span слева и справа</samp><br>
+<samp class="xx">&lt;/div&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer51.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<h2>Запрет обтекания</h2>
+
+<p>Свойство <samp><b>clear</b></samp> запрещает обтекание элемента с левой и/или правой стороны. Если для элемента установлено обтекание с помощью свойства <samp><b>float</b></samp> то <samp><b>clear</b></samp> отменяет обтекание данного элемента с указанных сторон.</p>
+<p>Значения:</p>
+<ul>
+<li><samp><b>both</b></samp> - Запрещает обтекание элемента с левой и правой стороны. 
+<li><samp><b>left</b></samp> - Запрещает обтекание элемента с левой стороны. 
+<li><samp><b>right</b></samp> - Запрещает обтекание элемента с правой стороны. 
+<li><samp><b>none</b></samp> - Запрет на обтекание элемента не задается.(по умолчанию) 
+</ul>
+
+<p>Вот пример где <samp><b>clear</b></samp> отменяет действие <samp><b>float</b></samp></p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;clear&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;div style="background:#cc0; width:150px; height: 50px; float:left;"&gt;Этот блок всплывает слева.&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;div style="background:#c0c; width:150px; height: 100px; float:left;"&gt;И этот блок всплывает слева.&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;div style="background:#0c0; width:300px; height: 80px; <b>clear:left;</b>"&gt;А этот блок отменяет обтекание с левой стороны.&lt;/div&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer52.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+
+<h2>Блочная вёрстка.</h2>
+
+<p>В довершение главы  акцентирую Ваше внимание на еще одном способе верстки сайта, ранее в учебнике HTML я приводил примеры верстки страницы при помощи <strong>таблиц</strong> (<a href="http://webremeslo.ru/html/glava4.html" title="&quot;Учебник HTML&quot;   Глава 4   Таблицы">http://webremeslo.ru/html/glava4.html</a>) и  <strong>фреймов</strong> (<a href="http://webremeslo.ru/html/glava7.html" title="&quot;Учебник HTML&quot;   Глава 7   Фреймы">http://webremeslo.ru/html/glava7.html</a>), теперь имея накопленный багаж знаний, настало время познакомить Вас с блочной версткой сайта, используя блоки div и свойства CSS.</p>
+<p>Разберём классический макет верстки сайта из трёх колонок, а так же "шапки" и "подвала".. в котором правая и левая колонки имеют фиксированную ширину, а центральная колонка "резиновая" т.е. занимает собой всё оставшееся место.</p>
+
+<p>Взгляните на пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Блочная вёрстка&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body style="background: #cc0; margin:0;"&gt;</samp><br>
+<samp class="xx">&lt;div style="clear:both; background: #0c0; padding: 5px;"&gt;Логотип&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;div style="float: left; background: #c0c; padding: 5px; width: 170px"&gt;Меню&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;div style="float: right; background: #c0c; padding: 5px; width: 170px"&gt;Реклама&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;div style="margin:0 180px; background: #0cc; padding: 5px;"&gt;Основное содержание&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt; И ещё куча текста..&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;div style="clear:both; background: #0c0; padding: 5px;"&gt;Подвал&lt;/div&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer53.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Что было понятно "расшифрую"  каждую строчку из примера выше:</p>
+<hr>
+<samp>
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;<br>
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;Блочная вёрстка&lt;/title&gt;<br>
+&lt;/head&gt;
+</samp><b></b>
+<p><i>- Думаю понятно..:) стандартное начало любой страницы..</i></p>
+<hr>
+<samp>&lt;body style="background: #cc0; <b>margin:0;</b>"&gt;</samp>
+
+<p><i>- Используем <samp><b>margin:0</b></samp> для того чтобы обнулить поля в окне браузера.</i></p> 
+<hr>
+<samp>&lt;div style="<b>clear:both;</b> background: #0c0; padding: 5px;"&gt;Логотип&lt;/div&gt;</samp>
+
+<p><i>- Создаём контейнер с будущим логотипом и запрещаем его обтекание с обеих сторон, используя <samp><b>clear:both</b></samp>, теперь что бы не случилось, последующие блоки будут идти снизу, а шапка сайта как ей и положено будет располагаться сверху.</i></p>
+<hr>
+<samp>&lt;div style="<b>float: left;</b> background: #c0c; padding: 5px; <b>width: 170px</b>"&gt;Меню&lt;/div&gt;</samp> 
+
+<p><i>- Левая колонка с "Меню" выровнена по левому краю свойством <samp><b>float: left</b></samp> и имеет фиксированный размер в <samp><b>170</b></samp> пикселей.</i></p> 
+<hr>
+<samp>&lt;div style="<b>float: right;</b> background: #c0c; padding: 5px; <b>width: 170px</b>"&gt;Реклама&lt;/div&gt;</samp> 
+
+<p>-<i> Правая колонка с рекламой выровнена по правому краю свойством <samp><b>float: right;</b></samp> и тоже имеет фиксированный размер <samp><b>170</b></samp> пикселей.</i></p>
+<hr>
+<samp>&lt;div style="<b>margin:</b>0 <b>180px;</b> background: #0cc; padding: 5px;"&gt;Основное содержание&lt;/div&gt;</samp>
+
+<p><i>- Центральная колонка никак не выравнивается, но занимает своё место по центру, так как имеет широкие поля слева и справа <samp><b>margin:0 180px</b></samp>, тем самым не накладываясь на правую и левую колонки. Почему поля 180 пикселей, а не 170 в соответствии с ширенной колонок "Меню" и "Реклама"? Отвечаю: потому что кроме ширины <samp><b>width: 170px</b></samp> эти колонки имеют ещё и отступы со всех сторон <samp><b>padding: 5px</b></samp> складываем <samp>170+5+5=<b>180</b></samp> - такая вот арифметика..</i></p>
+<hr>
+<samp>&lt;div style="<b>clear:both;</b> background: #0c0; padding: 5px;"&gt;Подвал&lt;/div&gt;</samp>
+
+<p><i>- Ну и "подвал" блок, в котором, как правило, располагаются контактные данные и авторские права, так же как логотип запрещает на всякий случай обтекание слева и справа <samp><b>clear:both</b></samp> и тем самым устремляется вниз страницы.</i></p>
+<hr>
+<samp>
+&lt;/body&gt;<br>
+&lt;/html&gt;
+</samp>
+
+<p><i>- Это нужно "расшифровывать"? :)</i></p> 
+<hr>
+
+<p>В данном примере стилевое описание блоков div происходит  с помощью атрибута  <samp><b>style</b></samp> - на самом деле это глупо.. привел такой пример, что бы просто понятнее было разобраться в коде, а вообще при блочной верстке обычно назначают каждому блоку свой идентификатор <samp><b>id</b></samp> (<a href="glava6.html" title="Глава 6   Классы и id селекторы.">см. Глава 6 Классы и идентификаторы.</a>)и всё это дело с остальными потрохами выносят в отдельный css файл..</p>
+
+<h2>Полезные советы:</h2>
+<ul>
+<li><p>Верстка блоками <samp><b>div</b></samp> стремительно набирает популярность, и позволяет сверстать сайт практически любой сложности, однако не всегда стоит полностью отказываться от табличного способа верстки. Зачастую верным решением является комбинированный способ верстки, где грубым "каркасом" сайта является таблица, наполненная блоками <samp><b>div</b></samp> которые выполняют более тонкие задачи верстки сложного по структуре сайта.</p>
+</ul>
+<div class="url">
+<a href="glava10.html" title="К предыдущей главе">&lt;&lt; предыдущая глава</a> | 
+<a href="glava12.html" title="К следующей главе">следующая глава &gt;&gt;</a>
+</div>
+</div>
+<!-- Конец центральной колонке -->
+<!-- Подвал -->
+<div class="footer">
+&copy; Автор: Семикопенко Алексей Алексеевич. | <a href="http://webremeslo.ru/" class="logo" title="Перейти на сайт webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец подвалу -->
+</body>
+</html>

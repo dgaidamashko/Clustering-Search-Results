@@ -1,0 +1,261 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Учебник CSS для начинающих.</title>
+<meta HTTP-EQUIV="Content-Type" Content="text/html; Charset=Windows-1251">
+<meta name="author" Content="Семикопенко Алексей Алексеевич">
+<meta name="copyright" Content="Семикопенко Алексей Алексеевич">
+<meta name="Publisher-Email" Content="alex@webremeslo.ru">
+<meta name="Publisher-URL" Content="http://webremeslo.ru/">
+<link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+<body>   
+<!-- Шапка -->
+<div class="header">
+<h1 class="logo">Учебник CSS</h1>
+</div>
+<!-- Конец шапке -->
+<!--левая колонка "меню" -->
+<div class="left">
+<div class="fixed">
+<ul class="ul_none">
+<li><a href="../index.html" class="menu" title="От автора.">Главная</a></li>
+<li><a href="glava0.html" class="menu" title="Введение.   Что такое CSS?">Что такое CSS?</a></li>
+<li><a href="glava1.html" class="activemenu" title="Глава 1   Внедрение CSS в HTML документ.">Внедрение CSS.</a></li>
+<li><a href="glava2.html" class="menu" title="Глава 2   Свойства текста.">Свойства текста.</a></li>
+<li><a href="glava3.html" class="menu" title="Глава 3   Свойства шрифта.">Свойства шрифта.</a></li>
+<li><a href="glava4.html" class="menu" title="Глава 4   Цвет и фон.">Цвет и фон.</a></li>
+<li><a href="glava5.html" class="menu" title="Глава 5   Границы элемента.">Границы элемента.</a></li>
+<li><a href="glava6.html" class="menu" title="Глава 6   Классы и id селекторы.">Классы и id селекторы.</a></li>
+<li><a href="glava7.html" class="menu" title="Глава 7   Размеры элемента.">Размеры элемента.</a></li>
+<li><a href="glava8.html" class="menu" title="Глава 8   Поля и отступы.">Поля и отступы.</a></li>
+<li><a href="glava9.html" class="menu" title="Глава 9   Курсоры.">Курсоры.</a></li>
+<li><a href="glava10.html" class="menu" title="Глава 10   Форматирование.">Форматирование.</a></li>
+<li><a href="glava11.html" class="menu" title="Глава 11   Поплавки.">Поплавки.</a></li>
+<li><a href="glava12.html" class="menu" title="Глава 12   Позиционирование.">Позиционирование.</a></li>
+<li><a href="glava13.html" class="menu" title="Глава 13   Стиль списка.">Стиль списка.</a></li>
+<li><a href="glava14.html" class="menu" title="Глава 14   Полоса прокрутки.">Полоса прокрутки.</a></li>
+<li><a href="glava15.html" class="menu" title="Глава 15   Псевдоклассы.">Псевдоклассы.</a></li>
+<li><a href="glava16.html" class="menu" title="Глава 16   Псевдоэлементы.">Псевдоэлементы.</a></li>
+</ul>
+</div>
+</div>
+<!-- Конец левой колонке -->
+<!-- Правая колонка -->
+<div class="right">
+<h2>А так же:</h2>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">Как создать сайт?</a>
+<a href="http://www.webremeslo.ru/html/glava0.html" class="menu" title="www.webremeslo.ru">Учебник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka.html" class="menu" title="www.webremeslo.ru">Справочник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka4.html" class="menu" title="www.webremeslo.ru">Справочник CSS</a>
+<a href="http://forum.webremeslo.ru/index.php" class="menu" title="www.webremeslo.ru">Форум</a><br>
+..<em>и многое другое на сайте:</em><br>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец правой колонке -->
+<!-- Центральная колонка -->
+<div class="center">
+  
+<p class="zag">Глава 1</p>
+    
+<h1>Внедрение CSS в HTML документ.</h1>
+
+<p>В этой главе речь пойдет о том, как внедрить CSS  в документ HTML, то есть связать стилевое описание элемента непосредственно с самим элементом, каким либо HTML тегом.</p> 
+<p>Осуществить  данную задачу можно тремя способами:</p>
+<ul>
+<li>Написать стилевое описание непосредственно  в самом элементе. Такой способ хорош лишь в том случае если таковой элемент один единственный в HTML документе который нуждается в отдельном стилевом описании.
+<li>Написать стилевое описание для всех идентичных элементов HTML документа. Такой способ оправдывает себя, если стиль страницы принципиально отличается от общего дизайна сайта (группы взаимосвязанных страниц).
+<li>Вынести стилевое описание элементов HTML  в отдельный файл CSS. Это позволит управлять дизайном всего сайта целиком, каждой страницей сайта в которой указанно обращение к CSS файлу. Этот способ является наиболее эффективным использованием таблицы каскадных стилей.
+</ul>
+<p>Давайте более подробно рассмотрим каждый вариант, а заодно познакомимся с правилами синтаксиса  написания CSS.</p>
+
+<h2>Атрибут style.</h2>
+
+<p>Практически каждый HTML тег  имеет атрибут <samp><b>style</b></samp>, который говорит о том, что к этому тегу применяется некое стилевое описание.</p>
+<p>Пишется так:</p>
+<samp>&lt;p <b>style=""</b>&gt; это параграф с индивидуальным стилем &lt;/p&gt;</samp>
+<p>Всё что будет написано между кавычками атрибута <samp><b>style</b></samp> и будет являться стилевым описанием для данного элемента, в данном случае элемента <samp><b>&lt;p&gt;</b></samp></p>
+<p>Ну например:</p> 
+
+<samp>&lt;p <b>style="color: #ff0000; font-size:12px"</b>&gt; это параграф с индивидуальным стилем&lt;/p&gt;</samp>
+
+<p>В данном случае мы указали, что этот параграф должен отображаться красным цветом и иметь размер шрифта в 12 пикселей. В последующих главах я подробно расскажу о том что написано в кавычках , сейчас же речь идет о том как применить CSS к какому либо HTML тегу.</p>
+<p>По такому же принципу можно указать индивидуальный стиль практически для каждого HTML элемента.</p>
+
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Атрибут style&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body <b>style="background-color: #c5ffa0"</b>&gt;</samp><br>
+<samp class="xx">&lt;h1 <b>style="color: #0000ff; font-size:18px"</b>&gt;Всё о слонах&lt;/h1&gt;</samp><br>
+<samp class="xx">&lt;p <b>style="color: #ff0000; font-size:14px"</b>&gt;На этом сайте Вы найдёте любую информацию о слонах.&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;h2 <b>style="color: #0000ff; font-size:16px"</b>&gt;Купить слона&lt;/h2&gt;</samp><br>
+<samp class="xx">&lt;p <b>style="color: #ff0000; font-size:14px"</b>&gt;У нас Вы можете по выгодным ценам приобрести лучших слонов!!&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;h2 <b>style="color: #0000ff; font-size:16px"</b>&gt;Взять слона на прокат&lt;/h2&gt;</samp><br>
+<samp class="xx">&lt;p <b>style="color: #ff0000; font-size:14px"</b>&gt;Только у нас Вы можете взять любых слонов на прокат!!&lt;/p&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer1.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Но еще раз повторюсь такой способ внедрения CSS хорош лишь в том случае если требуется задать определенный стиль малому числу HTML элементов.</p>
+
+<h2><Тег &lt;style&gt;</h2>
+
+<p>Для того, что бы описать необходимые элементы одновременно на всей странице в заголовок  HTML документа внедряют тег <samp><b>&lt;style&gt; &lt;/style&gt;</b></samp> (не путайте с одноименным атрибутом) в котором  и происходит описание нужных нам элементов.</p>
+
+<p>Взгляните на пример, ниже к нему будут комментарии.</p> 
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Тег style&lt;/title&gt;</samp><br>
+<samp class="xx"><b>&lt;style type="text/css"&gt;</b></samp><br>
+<samp class="xxx"><b>body {background-color: #c5ffa0}</b></samp><br>
+<samp class="xxx"><b>h1 {color: #0000ff; font-size:18px}</b></samp><br>
+<samp class="xxx"><b>h2 {color: #0000ff; font-size:16px}</b></samp><br>
+<samp class="xxx"><b>p  {color: #ff0000; font-size:14px}</b></samp><br>
+<samp class="xx"><b>&lt;/style&gt;</b></samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;h1&gt;Всё о слонах&lt;/h1&gt;</samp><br>
+<samp class="xx">&lt;p&gt;На этом сайте Вы найдёте любую информацию о слонах.&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;h2&gt;Купить слона&lt;/h2&gt;</samp><br>
+<samp class="xx">&lt;p&gt;У нас Вы можете по выгодным ценам приобрести лучших слонов!!&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;h2&gt;Взять слона на прокат&lt;/h2&gt;</samp><br>
+<samp class="xx">&lt;p&gt;Только у нас Вы можете взять любых слонов на прокат!!&lt;/p&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer2.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>Как видно из примера мы добились точно такого же результата что и в первом случае только теперь мы не прописываем каждому элементу стиль индивидуально, а вынесли его в "голову" документа тем самым указав что все заголовки <samp><b>&lt;h1&gt;,&lt;h2&gt;</b></samp> - будут синими а параграфы <samp><b>&lt;p&gt;</b></samp> - красными.  Представьте как мы облегчили бы себе работу будь на странице сотня таких параграфов и штук пятнадцать заголовков, да и сам документ стал меньше весить за счет "удаления" всех повторяющихся стилевых описаний для каждого отдельно взятого элемента.</p>
+
+<p>Теперь обещанные комментарии:</p>
+<p>Тег <samp><b>&lt;style&gt;</b></samp> принято внедрять в заголовок HTML документа между тегами <samp><b>&lt;head&gt;&lt;/head&gt;</b></samp>.</p>
+<p>Атрибут тега <samp><b>&lt;style&gt;  type</b></samp> - сообщает браузеру, какой синтаксис использовать для правильной интерпретации стилей. Для правильной интерпретации браузерами CSS значение  <samp><b>type</b></samp> (MIME тип данных) должно равняться <samp><b>text/css</b></samp>.</p>  
+<p>Внутри тега <samp><b>&lt;style&gt; &lt;/style&gt;</b></samp>  идет непосредственное объявление стилей тех или иных HTML  элементов согласно следующему синтаксису:</p>
+
+<img src="../graphics/syntax.gif" width="400" height="174" border="0" alt="CSS синтаксис">
+
+<p>Если в блоке объявления стилей указывается несколько свойств элемента, то они между собой разделяются точкой с запятой.</p>
+<h2>CSS в отдельном внешнем файле.</h2>
+
+<p>Долго ли коротко ли, подошли мы к главному, на мой взгляд, достоинству CSS, а именно возможности выносить все сведения касающиеся дизайна сайта в отдельный внешний файл.</p>
+<p>Итак, открываем блокнот (или другой редактор) и пишем в нем следующий текст:</p>
+<div class="primer">
+<samp class="x">body {background-color: #c5ffa0}</samp><br>
+<samp class="x">a {color:#000060; font-weight: bold;}</samp><br>
+<samp class="x">a:hover {color:#ff0000; font-weight: bold; text-decoration:none}</samp><br>
+<samp class="x">h1 {color: #0000ff; font-size:18px}</samp><br>
+<samp class="x">h2 {color: #ff00ff; font-size:16px}</samp><br>
+<samp class="x">p {color: #600000; font-size:14px}</samp>
+</div>
+<p>О том, что это такое странное мы написали, постараюсь подробно рассказать в последующих главах этого учебника.</p> 
+<p>Далее сохраняем этот небольшой файлик с расширением <b>*.css</b> (обычно файл со стилями называют <b>style.css</b>).</p>
+<p>Все! файл со стилевым  описанием создан! Теперь осталось совсем чуть чуть, а именно заставить нужные страницы нашего сайта черпать информацию с этого файла.</p>
+<p>Делается это с помощью тега <samp><b>&lt;link&gt;</b></samp> (связь). Тег <samp><b>&lt;link&gt;</b></samp> многоцелевой и служит для "связывания" HTML документа с дополнительными внешними файлами, обеспечивающими его должную работу. Тег <samp><b>&lt;link&gt;</b></samp> является своего рода ссылкой, только предназначенной не для пользователей, а для программ обозревателей (браузеров). Так как <samp><b>&lt;link&gt;</b></samp> несёт в себе исключительно служебную информацию он располагается в заголовке HTML документа между тегами  <samp><b>&lt;head&gt;&lt;/head&gt;</b></samp> и не выводится браузерами на экран.</p>
+<p>Тег <samp><b>&lt;link&gt;</b></samp> имеет атрибуты:</p>
+<samp><b>href</b></samp> - Путь к файлу.<br>
+<samp><b>rel</b></samp> - Определяет отношения между текущим документом и файлом, на который делается ссылка. 
+<ul>
+<li><samp>shortcut icon</samp> - Определяет, что подключаемый файл является иконкой. 
+<li><samp><b>stylesheet</b></samp> - Определяет, что подключаемый файл содержит таблицу стилей. 
+<li><samp>application/rss+xml</samp> - Файл в формате XML для описания ленты новостей. 
+</ul>
+<samp><b>type</b></samp> - MIME тип данных подключаемого файла. 
+<p>Так как мы подключаем в качестве внешнего файла каскадную таблицу стилей, то наша служебная ссылка приобретает следующий вид:</p> 
+<samp class="x"><b>&lt;link rel="stylesheet" href="mystyle.css" type="text/css"&gt;</b></samp>
+<p>Повторюсь, что бы уж точно развеять возможные недопонимания. Атрибуту <samp><b>rel</b></samp> присваиваем значение <samp><b>stylesheet</b></samp> так как подключаем в качестве внешнего файла каскадную таблицу стилей, указываем путь к файлу css (в этом примере файл называется <b>mystyle.css</b> и лежит рядом с документом HTML в котором прописывается данная ссылка) так же указываем, что данный файл текстовый и содержит в себе стилевое описание <samp><b>type="text/css"</b></samp></p>
+<p>Теперь вставляем эту строчку в заголовки страниц нашего сайта и наслаждаемся результатом..</p>
+
+<p>Пример:</p>
+<div class="primer">
+Файл mystyle.css<br>
+<samp><b>body {background-color: #c5ffa0}</b></samp><br>
+<samp><b>a {color:#000060; font-weight: bold;}</b></samp><br> 
+<samp><b>a:hover {color:#ff0000; font-weight: bold; text-decoration:none}</b></samp><br> 
+<samp><b>h1 {color: #0000ff; font-size:18px}</b></samp><br>
+<samp><b>h2 {color: #ff00ff; font-size:16px}</b></samp><br>
+<samp><b>p {color: #600000; font-size:14px}</b></samp><br>
+<hr>
+Файл index.html<br>
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;каскадная таблица стилей&lt;/title&gt;</samp><br>
+<samp class="xx"><b>&lt;link rel="stylesheet" href="mystyle.css" type="text/css"&gt;</b></samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;h2&gt;Меню:&lt;/h2&gt;</samp><br>
+<samp class="xx">&lt;a href="index.html">Всё о слонах.&lt;/a&gt;</samp><br>
+<samp class="xx">&lt;a href="elephant.html">Купить слона.&lt;/a&gt;</samp><br>
+<samp class="xx">&lt;a href="elephant1.html">Взять слона на прокат.&lt;/a&gt;</samp><br>
+<samp class="xx">&lt;hr&gt;</samp><br>
+<samp class="xx">&lt;h1&gt;Всё о слонах&lt;/h1&gt;</samp><br>
+<samp class="xx">&lt;p&gt;На этом сайте Вы найдёте любую информацию о слонах.&lt;/p&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<hr>
+Файл elephant.html<br>
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;каскадная таблица стилей&lt;/title&gt;</samp><br>
+<samp class="xx"><b>&lt;link rel="stylesheet" href="mystyle.css" type="text/css"&gt;</b></samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;h2&gt;Меню:&lt;/h2&gt;</samp><br>
+<samp class="xx">&lt;a href="index.html">Всё о слонах.&lt;/a&gt;</samp><br>
+<samp class="xx">&lt;a href="elephant.html">Купить слона.&lt;/a&gt;</samp><br>
+<samp class="xx">&lt;a href="elephant1.html">Взять слона на прокат.&lt;/a&gt;</samp><br>
+<samp class="xx">&lt;hr&gt;</samp><br>
+<samp class="xx">&lt;h1&gt;Купить слона&lt;/h1&gt;</samp><br>
+<samp class="xx">&lt;p&gt;У нас Вы можете по выгодным ценам приобрести лучших слонов!!&lt;/p&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<hr>
+Файл elephant1.html<br>
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;каскадная таблица стилей&lt;/title&gt;</samp><br>
+<samp class="xx"><b>&lt;link rel="stylesheet" href="mystyle.css" type="text/css"&gt;</b></samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;h2&gt;Меню:&lt;/h2&gt;</samp><br>
+<samp class="xx">&lt;a href="index.html">Всё о слонах.&lt;/a&gt;</samp><br>
+<samp class="xx">&lt;a href="elephant.html">Купить слона.&lt;/a&gt;</samp><br>
+<samp class="xx">&lt;a href="elephant1.html">Взять слона на прокат.&lt;/a&gt;</samp><br>
+<samp class="xx">&lt;hr&gt;</samp><br>
+<samp class="xx">&lt;h1&gt;Взять слона на прокат&lt;/h1&gt;</samp><br>
+<samp class="xx">&lt;p&gt;Только у нас Вы можете взять любых слонов на прокат!!&lt;/p&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer3.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>В примере выше, "сайт о слонах", на данный момент, имеется три страницы,  каждая из которых связана с одним единственным внешним css файлом - mystyle.css. Таким образом, мы значительно его "разгрузили" и сделали дизайн  всего сайта "мобильным". Представьте сколько б килобайт мы выиграли, будь на этом сайте сотня полноценных страниц!? А также, сколько б времени сэкономили, если бы нам понадобилось изменить что-либо в его дизайне!?</p>   
+<p>О том как присвоить какой либо группе идентичных элементов стиль отличающийся от основного стиля данного элемента, сделать отдельный класс элементов, читайте в главе <a href="glava6.html" title="Глава 6   Классы и идентификаторы.">Классы и идентификаторы.</a></p>
+<h2>Полезные советы:</h2>
+<p>В этой главе мы рассмотрели три способа внедрения CSS в HTML документ. Какой же лучше использовать?</p>
+<ul>
+<li>Используйте атрибут <samp><b>style</b></samp> для какого либо элемента если этот элемент с отличным от других элементов стилем один единственный на всём сайте.
+<li>Используйте тег <samp><b>&lt;style&gt;</b></samp> со стилевым  описанием, в том случае, если страница должна иметь индивидуальный дизайн в корни отличный от других страниц сайта.
+<li>В большинстве случаев разумно выносить каскадную таблицу стилей в отдельный css файл.
+</ul>
+<div class="url">
+<a href="glava0.html" title="К предыдущей главе">&lt;&lt; предыдущая глава</a> | 
+<a href="glava2.html" title="К следующей главе">следующая глава &gt;&gt;</a>
+</div>
+</div>
+<!-- Конец центральной колонке -->
+<!-- Подвал -->
+<div class="footer">
+&copy; Автор: Семикопенко Алексей Алексеевич. | <a href="http://webremeslo.ru/" class="logo" title="Перейти на сайт webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец подвалу -->
+</body>
+</html>

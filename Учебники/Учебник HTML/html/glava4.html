@@ -1,0 +1,558 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Учебник HTML для начинающих.</title>
+<meta HTTP-EQUIV="Content-Type" Content="text/html; Charset=Windows-1251">
+<meta name="author" Content="Семикопенко Алексей Алексеевич">
+<meta name="copyright" Content="Семикопенко Алексей Алексеевич">
+<meta name="Publisher-Email" Content="alex@webremeslo.ru">
+<meta name="Publisher-URL" Content="http://webremeslo.ru/">
+<link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+<body>
+<!-- Шапка -->
+<div class="header">
+<h1 class="logo">Учебник HTML</h1>
+</div>
+<!-- Конец шапке -->
+<!--левая колонка "меню" -->
+<div class="left">
+<div class="fixed">
+<ul class="ul_none">
+<li><a href="../index.html" class="menu" title="От автора.">Главная</a></li>
+<li><a href="glava0.html" class="menu" title="Введение.">Введение</a></li>
+<li><a href="glava1.html" class="menu" title="Перейти к Главе 1   Что такое HTML язык?">Что такое HTML язык</a>  </li>
+<li><a href="glava2.html" class="menu" title="Перейти к Главе 2   Редактируем текст">Редактируем текст</a></li>
+<li><a href="glava3.html" class="menu" title="Перейти к Главе 3   Рисунки">Рисунки</a></li>
+<li><a href="glava4.html" class="activemenu" title="Перейти к Главе 4   Таблицы">Таблицы</a></li>
+<li><a href="glava5.html" class="menu" title="Перейти к Главе 5   Ссылки">Ссылки</a></li>
+<li><a href="glava6.html" class="menu" title="Перейти к Главе 6   И ещё…">И ещё…</a></li>
+<li><a href="glava7.html" class="menu" title="Перейти к Главе 7   Фреймы">Фреймы</a></li>
+<li><a href="glava8.html" class="menu" title="Перейти к Главе 8   Навигационные карты">Навигационные карты</a></li>
+<li><a href="glava9.html" class="menu" title="Перейти к Главе 9   Списки">Списки</a></li>
+<li><a href="glava10.html" class="menu" title="Перейти к Главе 10   Meta теги">Meta теги</a></li>
+<li><a href="glava11.html" class="menu" title="Перейти к Главе 11   Заголовок &lt;!DOCTYPE&gt;">Заголовок &lt;!DOCTYPE&gt;</a></li>
+<li><a href="glava12.html" class="menu" title="Перейти к Главе 12   И снова таблицы..">И снова таблицы..</a></li>
+<li><a href="glava13.html" class="menu" title="Перейти к Главе 13   Фоновая музыка">Фоновая музыка</a></li>
+<li><a href="glava14.html" class="menu" title="Перейти к Главе 14   Текст - логика и физика">Текст - логика и физика</a></li>
+</ul>
+</div>
+</div>
+<!-- Конец левой колонке -->
+<!-- Правая колонка -->
+<div class="right">
+<h2>А так же:</h2>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">Как создать сайт?</a>
+<a href="http://www.webremeslo.ru/css/glava0.html" class="menu" title="www.webremeslo.ru">Учебник CSS</a>
+<a href="http://www.webremeslo.ru/spravka/spravka.html" class="menu" title="www.webremeslo.ru">Справочник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka4.html" class="menu" title="www.webremeslo.ru">Справочник CSS</a>
+<a href="http://forum.webremeslo.ru/index.php" class="menu" title="www.webremeslo.ru">Форум</a><br>
+..<em>и многое другое на сайте:</em><br>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец правой колонке -->
+<!-- Центральная колонка -->
+<div class="center">
+
+<p class="zag">Глава 4</p>
+
+<h1>Таблицы</h1>
+
+<p>Помимо прочих объектов в свой сайт Вы можете вставить таблицы.. и сразу забегая вперёд скажу о том что они имеют не малую значимость при создании сайта. С помощью таблицы можно не только выложить ту или иную информацию, тарифную сетку или график дежурств к примеру, но и взяв ёе за основу полностью построить на ней свой сайт, таблицы порой незаменимы при верстке страницы, но об этом позже. А сейчас давайте научимся её рисовать..</p>
+
+<h2>Рисуем таблицу</h2>
+
+<p>Тег <samp><b>&lt;table&gt;</b></samp> задаёт начало и конец таблицы, любая таблица, как известно, состоит из строк и столбцов, для этого есть ещё два тега:</p>
+
+<samp class="x"><b>&lt;tr&gt;</b></samp> - строка таблицы<br>
+<samp class="x"><b>&lt;td&gt;</b></samp> - столбец таблицы
+
+<p>Вместе эти теги пишутся так:</p>
+<b>
+<samp class="x">&lt;table&gt;</samp><br>
+<samp class="xx">&lt;tr&gt;</samp><br>
+<samp class="xxx">&lt;td&gt;ячейка&lt;/td&gt;</samp><br>
+<samp class="xx">&lt;/tr&gt;</samp><br>
+<samp class="x">&lt;/table&gt;</samp><br>
+</b>
+
+<p>Такая запись это самая маленькая таблица, в ней всего одна строка, содержащая один столбец - ячейку</p>
+<p>Поставим перед собой задачу нарисовать таблицу из трёх строк и трёх столбцов, а заодно вспомним атрибут <samp><b>border</b></samp> "рамка", который добавит нам наглядности.</p>
+
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Таблица&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;<b>table border="1"</b>&gt;</samp><br>
+<samp class="xxx"><b>&lt;tr&gt;</b></samp><br>
+<samp class="xxxx"><b>&lt;td&gt;</b>строка1 ячейка1<b>&lt;/td&gt;</b></samp><br>
+<samp class="xxxx"><b>&lt;td&gt;</b>строка1 ячейка2<b>&lt;/td&gt;</b></samp><br>
+<samp class="xxxx"><b>&lt;td&gt;</b>строка1 ячейка3<b>&lt;/td&gt;</b></samp><br>
+<samp class="xxx"><b>&lt;/tr&gt;</b></samp><br>
+<samp class="xxx"><b>&lt;tr&gt;</b></samp><br>
+<samp class="xxxx"><b>&lt;td&gt;</b>строка2 ячейка1<b>&lt;/td&gt;</b></samp><br>
+<samp class="xxxx"><b>&lt;td&gt;</b>строка2 ячейка2<b>&lt;/td&gt;</b></samp><br>
+<samp class="xxxx"><b>&lt;td&gt;</b>строка2 ячейка3<b>&lt;/td&gt;</b></samp><br>
+<samp class="xxx"><b>&lt;/tr&gt;</b></samp><br>
+<samp class="xxx"><b>&lt;tr&gt;</b></samp><br>
+<samp class="xxxx"><b>&lt;td&gt;</b>строка3 ячейка1<b>&lt;/td&gt;</b></samp><br>
+<samp class="xxxx"><b>&lt;td&gt;</b>строка3 ячейка2<b>&lt;/td&gt;</b></samp><br>
+<samp class="xxxx"><b>&lt;td&gt;</b>строка3 ячейка3<b>&lt;/td&gt;</b></samp><br>
+<samp class="xxx"><b>&lt;/tr&gt;</b></samp><br>
+<samp class="xx"><b>&lt;/table&gt;</b></samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer10.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Разобрались? Если да, идем дальше..</p> 
+
+<h2>Объединение ячеек.</h2>
+
+<p>Часто при работе с таблицами возникает необходимость объединить те или иные ячейки в одну.</p>
+<p>На самом деле слово "объединить" здесь неуместно, использовал я его лишь для того, что бы вызвать ассоциации в Вашей голове. Вспомните тот же Word, добавив там таблицу Вы выделяете нужные ячейки и нажимаете кнопку "объединить".. здесь всё происходит не совсем так, и правильнее было бы говорить не "объединить" а "растянуть".</p>
+<p>Эту задачу решают атрибуты <samp><b>colspan</b></samp> и <samp><b>rowspan</b></samp></p>
+<ul>
+<li><samp><b>colspan</b></samp> - определяет какое количество столбцов будет занимать данная ячейка
+<li><samp><b>rowspan</b></samp> - количество рядов занимаемое ячейкой
+</ul>
+<p>Предположим что в нашем примере нам необходимо "объединить" в третьей строке вторую и третью ячейку, для этого атрибуту <samp><b>colspan</b></samp> присваиваем значение 2 (растянуть на два столбца) и вставляем его в нужное место.</p>
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Таблица&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;table border="1"&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt;строка1 ячейка1&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt;строка1 ячейка2&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt;строка1 ячейка3&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt;строка2 ячейка1&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt;строка2 ячейка2&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt;строка2 ячейка3&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt;строка3 ячейка1&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;td <b>colspan="2"</b>&gt;строка3 ячейка2&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt;строка3 ячейка3&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xx">&lt;/table&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer11.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Как видите ячейка растянулась на два столбца, но при этом сдвинула третью ячейку, которая собственно нам теперь не нужна, а по сему мы её просто напросто удаляем.  Специально допустил эту оплошность, чтобы Вы поняли принцип данного действия.</p>
+<p>Исправленный пример:</p>
+
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Таблица&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;table border="1"&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt;строка1 ячейка1&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt;строка1 ячейка2&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt;строка1 ячейка3&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt;строка2 ячейка1&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt;строка2 ячейка2&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt;строка2 ячейка3&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt;строка3 ячейка1&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;td <b>colspan="2"</b>&gt;строка3 ячейка2&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xx">&lt;/table&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer12.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Теперь попробуем объединить весь первый столбец в одну ячейку, используя атрибут <samp><b>rowspan</b></samp>, ну точнее растянем ячейку первой строчки первого столбца на три строки и на сей раз сразу уберём лишнее.</p>
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Таблица&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;table border="1"&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td <b>rowspan="3"</b>&gt;строка1 ячейка1&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt;строка1 ячейка2&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt;строка1 ячейка3&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt;строка2 ячейка2&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt;строка2 ячейка3&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td colspan="2"&gt;строка3 ячейка2&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xx">&lt;/table&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer13.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Всё просто.. главное быть внимательным!</p> 
+
+<h2>Размеры таблицы.</h2>
+
+<p>Если Вы самостоятельно тренировались с рисованием таблицы то наверняка обратили внимание на то, что размеры таблицы и ячеек по умолчанию ограничены вставленным в неё текстом.. и "ползают" себе как хотят.    
+Вспомните про атрибуты  <samp><b>width</b></samp> - ширина и <samp><b>height</b></samp> - высота, которые мы использовали для растягивания рисунков, они так же применимы к тегам <samp><b>&lt;table&gt;, &lt;tr&gt;</b></samp>и <samp><b>&lt;td&gt;</b></samp>. С этими атрибутами Вы знакомы, так что рассусоливать не буду.. просто приведу пример. В нём заданы размеры таблицы и отдельных её ячеек, а заодно и вся таблица выровнена по центру знакомым тегом <samp><b>&lt;center&gt;</b></samp></p>
+
+<p>Пример:</p>
+
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Таблица&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx"><b>&lt;center&gt;</b></samp><br> 
+<samp class="xxx">&lt;table border="1" <b>width="640" height="480"</b>&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;td rowspan="3" <b>width="150"</b>&gt;строка1 ячейка1&lt;/td&gt;</samp><br>
+<samp class="xxxxx">&lt;td<b> height="30"</b>&gt;строка1 ячейка2&lt;/td&gt;</samp><br>
+<samp class="xxxxx">&lt;td&gt;строка1 ячейка3&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;td <b>height="30"</b>&gt;строка2 ячейка2&lt;/td&gt;</samp><br>
+<samp class="xxxxx">&lt;td&gt;строка2 ячейка3&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;td colspan="2" &gt;строка3 ячейка2&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;/table&gt;</samp><br>
+<samp class="xx"><b>&lt;/center&gt;</b></samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer14.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Обратите внимание на то, что длина и ширина заданы не для всех ячеек. А зачем? Если и так таблица будет выровнена по самым широким и длинным ячейкам.. на то она и таблица..</p>
+<p>Еще не всё рассказал..</p>
+<p>Значения атрибутов <samp><b>width</b></samp> и <samp><b>height</b></samp> в таблице могут указываться не только в пикселях, но и в процентах </p>
+
+<p align="left">Вот пример:</p>
+
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Таблица&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;center&gt;</samp><br> 
+<samp class="xxx">&lt;table border="1" width="640" height="480"&gt;</samp><br>
+<samp class="xxxx">&lt;tr <b>height="25%"</b>&gt;</samp><br>
+<samp class="xxxxx">&lt;td <b>width="15%"&gt;</b> строка1 ячейка1&lt;/td&gt;</samp><br>
+<samp class="xxxxx">&lt;td <b>width="25%"&gt;</b>строка1 ячейка2&lt;/td&gt;</samp><br>
+<samp class="xxxxx">&lt;td <b>width="60%"&gt;</b>строка1 ячейка3&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxxx">&lt;tr <b>height="50%"&gt;</b></samp><br>
+<samp class="xxxxx">&lt;td&gt;строка2 ячейка1&lt;/td&gt;</samp><br>
+<samp class="xxxxx">&lt;td&gt;строка2 ячейка2&lt;/td&gt;</samp><br>
+<samp class="xxxxx">&lt;td&gt;строка2 ячейка3&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxxx">&lt;tr <b>height="25%"</b>&gt;</samp><br>
+<samp class="xxxxx">&lt;td&gt;строка3 ячейка1&lt;/td&gt;</samp><br>
+<samp class="xxxxx">&lt;td&gt;строка3 ячейка2&lt;/td&gt;</samp><br>
+<samp class="xxxxx">&lt;td&gt;строка3 ячейка3&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;/table&gt;</samp><br>
+<samp class="xx">&lt;/center&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer15.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>В этом примере от общей ширины таблицы в 640 пикселей мы отдали 15% первой ячейке, 25% второй и 60% третьей. А по высоте из 480 пикселей по 25% первой и третьей строчке, а добрую половину места второй.. Короче справедливости в мире нет.. Ну до это Вам решать, сколько кому места отчуждать, главное, чтобы в сумме было 100%, иначе неразбериха будет.. смутное время.. революция..</p>
+
+<h2>Верстка страницы с использованием таблицы.</h2>
+
+<p>Посмотрите на этот пример с таблицей, он Вам ничего не напоминает??</p>
+
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;<b>Верстка страницы</b>&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;center&gt;</samp><br> 
+<samp class="xxx">&lt;table border="1" width="640" height="480"&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;td colspan="5" height="30"&gt;&lt;center&gt;Заголовок&lt;/center&gt;&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;td height="30" width="20%"&gt;&lt;center&gt;кнопка1&lt;/center&gt;&lt;/td&gt;</samp><br>
+<samp class="xxxxx">&lt;td width="20%"&gt;&lt;center&gt;кнопка2&lt;/center&gt;&lt;/td&gt;</samp><br>
+<samp class="xxxxx">&lt;td width="20%"&gt;&lt;center&gt;кнопка3&lt;/center&gt;&lt;/td&gt;</samp><br>
+<samp class="xxxxx">&lt;td width="20%"&gt;&lt;center&gt;кнопка4&lt;/center&gt;&lt;/td&gt;</samp><br>
+<samp class="xxxxx">&lt;td width="20%"&gt;&lt;center&gt;кнопка5&lt;/center&gt;&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;td valign="top"&gt;содержание:&lt;/td&gt;</samp><br>
+<samp class="xxxxx">&lt;td colspan="4"&gt;&lt;center&gt;куча текста&lt;/center&gt;&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;/table&gt;</samp><br>
+<samp class="xx">&lt;/center&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer16.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Как видите, таблица это хороший и главное удобный инструмент для верстки страницы..</p>  
+<p>Любая ячейка таблицы может служить самостоятельной ёмкостью  для наполнения другими тегами и текстовым содержанием, а также иметь те или иные индивидуальные свойства - атрибуты.</p> 
+<p>Давайте освежим в голове уже пройденный материал, применив эти знания к таблице. Покажу на примерах, мы это уже проходили..</p>
+<p>Добавим красок:</p>
+
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Таблица и краски&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;center&gt;</samp><br> 
+<samp class="xxx">&lt;table width="300" height="300"&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;td <b>bgcolor="#c0e4ff"&gt;1&lt;/td&gt;</b></samp><br>
+<samp class="xxxxx">&lt;td <b>bgcolor="#c5ffa0"&gt;2&lt;/td&gt;</b></samp><br>
+<samp class="xxxxx">&lt;td <b>bgcolor="#c0e4ff"&gt;3&lt;/td&gt;</b></samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;td <b>bgcolor="#c5ffa0"&gt;4&lt;/td&gt;</b></samp><br>
+<samp class="xxxxx">&lt;td <b>bgcolor="#ffa0c5"&gt;5&lt;/td&gt;</b></samp><br>
+<samp class="xxxxx">&lt;td <b>bgcolor="#c5ffa0"&gt;6&lt;/td&gt;</b></samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;td <b>bgcolor="#c0e4ff"&gt;7&lt;/td&gt;</b></samp><br>
+<samp class="xxxxx">&lt;td <b>bgcolor="#c5ffa0"&gt;8&lt;/td&gt;</b></samp><br>
+<samp class="xxxxx">&lt;td <b>bgcolor="#c0e4ff"&gt;9&lt;/td&gt;</b></samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;/table&gt;</samp><br>
+<samp class="xx">&lt;/center&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer17.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Выровняем текст:</p>
+<p>Здесь появляется новый атрибут <samp><b>valign</b></samp> - Вертикальное выравнивание. До этого момента нам был знаком атрибут <samp><b>align</b></samp> - горизонтальное выравнивание.</p>
+
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Выравнивание в таблице&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;center&gt;</samp><br>
+<samp class="xxx">&lt;table width="300" height="300"&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;td bgcolor="#c0e4ff" <b>valign="top"</b>&gt;1&lt;/td&gt;</samp><br>
+<samp class="xxxxx">&lt;td bgcolor="#c5ffa0" <b>valign="top"</b>&gt;&lt;center&gt;2&lt;/center&gt;&lt;/td&gt;</samp><br>
+<samp class="xxxxx">&lt;td bgcolor="#c0e4ff" <b>align="right"</b> valign="top"&gt;3&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;td bgcolor="#c5ffa0"&gt;4&lt;/td&gt;</samp><br>
+<samp class="xxxxx">&lt;td bgcolor="#ffa0c5"&gt;<b>&lt;center&gt;</b>5<b>&lt;/center&gt;</b>&lt;/td&gt;</samp><br>
+<samp class="xxxxx">&lt;td bgcolor="#c5ffa0" <b>align="right"</b>&gt;6&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;td bgcolor="#c0e4ff" <b>valign="bottom"</b>&gt;7&lt;/td&gt;</samp><br>
+<samp class="xxxxx">&lt;td bgcolor="#c5ffa0" <b>valign="bottom"</b>&gt;&lt;center&gt;8&lt;/center&gt;&lt;/td&gt;</samp><br>
+<samp class="xxxxx">&lt;td bgcolor="#c0e4ff" <b>align="right" valign="bottom"</b>&gt;9&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;/table&gt;</samp><br>
+<samp class="xx">&lt;/center&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer18.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Теперь о новых атрибутах.</p>
+<p><samp><b>Cellspacing</b></samp> - задаёт расстояние в пикселях между ячейками таблицы.  Задав значение <samp><b>cellspacing="0"</b></samp> можно избавиться от "зазора" между ячейками.</p>
+<p>Пример, увеличим "зазор":</p>
+
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Расстояние между ячейками&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;center&gt;</samp><br>
+<samp class="xxx">&lt;table width="300" height="300" <b>cellspacing="15"</b>&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;td bgcolor="#c0e4ff" valign="top"&gt;1&lt;/td&gt;</samp><br>
+<samp class="xxxxx">&lt;td bgcolor="#c5ffa0" valign="top"&gt;&lt;center&gt;2&lt;/center&gt;&lt;/td&gt;</samp><br>
+<samp class="xxxxx">&lt;td bgcolor="#c0e4ff" align="right" valign="top"&gt;3&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;td bgcolor="#c5ffa0"&gt;4&lt;/td&gt;</samp><br>
+<samp class="xxxxx">&lt;td bgcolor="#ffa0c5"&gt;&lt;center&gt;5&lt;/center&gt;&lt;/td&gt;</samp><br>
+<samp class="xxxxx">&lt;td bgcolor="#c5ffa0" align="right"&gt;6&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;td bgcolor="#c0e4ff" valign="bottom"&gt;7&lt;/td&gt;</samp><br>
+<samp class="xxxxx">&lt;td bgcolor="#c5ffa0" valign="bottom"&gt;&lt;center&gt;8&lt;/center&gt;&lt;/td&gt;</samp><br>
+<samp class="xxxxx">&lt;td bgcolor="#c0e4ff" align="right" valign="bottom"&gt;9&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;/table&gt;</samp><br>
+<samp class="xx">&lt;/center&gt;</samp><br> 
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer19.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Атрибут <samp><b>cellpadding</b></samp> (не путайте с <samp><b>cellspacing</b></samp>) - в пикселях задаёт поля ячеек (отступ от границ ячеек до текста)</p>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Поля таблицы&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;center&gt;</samp><br>
+<samp class="xxx">&lt;table width="300" height="300" cellspacing="0" <b>cellpadding="25"</b>&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;td bgcolor="#c0e4ff" valign="top"&gt;1&lt;/td&gt;</samp><br>
+<samp class="xxxxx">&lt;td bgcolor="#c5ffa0" valign="top"&gt;&lt;center&gt;2&lt;/center&gt;&lt;/td&gt;</samp><br>
+<samp class="xxxxx">&lt;td bgcolor="#c0e4ff" align="right" valign="top"&gt;3&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;td bgcolor="#c5ffa0"&gt;4&lt;/td&gt;</samp><br>
+<samp class="xxxxx">&lt;td bgcolor="#ffa0c5"&gt;&lt;center&gt;5&lt;/center&gt;&lt;/td&gt;</samp><br>
+<samp class="xxxxx">&lt;td bgcolor="#c5ffa0" align="right"&gt;6&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;td bgcolor="#c0e4ff" valign="bottom"&gt;7&lt;/td&gt;</samp><br>
+<samp class="xxxxx">&lt;td bgcolor="#c5ffa0" valign="bottom"&gt;&lt;center&gt;8&lt;/center&gt;&lt;/td&gt;</samp><br>
+<samp class="xxxxx">&lt;td bgcolor="#c0e4ff" align="right" valign="bottom"&gt;9&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;/table&gt;</samp><br>
+<samp class="xx">&lt;/center&gt;</samp><br> 
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer20.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Отдельно, пожалуй, еще следует обратить внимание на так называемые вложенные таблицы, я уже говорил про то, что каждая отдельно взятая ячейка может служить емкостью для других тегов.. и тег <samp><b>&lt;table&gt;</b></samp> не является исключением. По сути можно вставить одну таблицу в другую..</p>
+<p>Смотрим пример:</p>
+
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp>&lt;head&gt;</samp><br>
+<samp class="x">&lt;title&gt;Вложенная таблица&lt;/title&gt;</samp><br>
+<samp>&lt;/head&gt;</samp><br>
+<samp>&lt;body&gt;</samp><br>
+<samp class="x">&lt;center&gt;</samp><br>
+<samp class="xx">&lt;table width="600" height="400" border="1"&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td colspan="2"&gt;&lt;center&gt;Заголовок&lt;/center&gt;&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td valign="top"&gt;содержание:&lt;/td&gt;</samp><br>   
+<samp class="xxxx">&lt;td valign="top"&gt;</samp><br>
+<samp class="xxxxx">&lt;center&gt;</samp><br>
+<samp class="xxxxx">&lt;br&gt;&lt;br&gt;</samp><br>
+<samp class="xxxxx">В одну ячейку вложена целая таблица!!</samp><br> 
+<samp class="xxxxx">&lt;br&gt;&lt;br&gt;&lt;br&gt;</samp><br>
+<samp class="xxxxx"><b>&lt;table width="200" height="200" cellspacing="0" cellpadding="15"&gt;</b></samp><br>
+<samp class="xxxxx"><b>&lt;tr&gt;</b></samp><br>
+<samp class="xxxxx"><b>&lt;td bgcolor="#c0e4ff" valign="top"&gt;1&lt;/td&gt;</b></samp><br>
+<samp class="xxxxx"><b>&lt;td bgcolor="#c5ffa0" valign="top"&gt;&lt;center&gt;2&lt;/center&gt;&lt;/td&gt;</b></samp><br>
+<samp class="xxxxx"><b>&lt;td bgcolor="#c0e4ff" align="right" valign="top"&gt;3&lt;/td&gt;</b></samp><br>
+<samp class="xxxxx"><b>&lt;/tr&gt;</b></samp><br>
+<samp class="xxxxx"><b>&lt;tr&gt;</b></samp><br>
+<samp class="xxxxx"><b>&lt;td bgcolor="#c5ffa0"&gt;4&lt;/td&gt;</b></samp><br>
+<samp class="xxxxx"><b>&lt;td bgcolor="#ffa0c5"&gt;&lt;center&gt;5&lt;/center&gt;&lt;/td&gt;</b></samp><br>
+<samp class="xxxxx"><b>&lt;td bgcolor="#c5ffa0" align="right"&gt;6&lt;/td&gt;</b></samp><br>
+<samp class="xxxxx"><b>&lt;/tr&gt;</b></samp><br>
+<samp class="xxxxx"><b>&lt;tr&gt;</b></samp><br>
+<samp class="xxxxx"><b>&lt;td bgcolor="#c0e4ff" valign="bottom"&gt;7&lt;/td&gt;</b></samp><br>
+<samp class="xxxxx"><b>&lt;td bgcolor="#c5ffa0" valign="bottom"&gt;&lt;center&gt;8&lt;/center&gt;&lt;/td&gt;</b></samp><br>
+<samp class="xxxxx"><b>&lt;td bgcolor="#c0e4ff" align="right" valign="bottom"&gt;9&lt;/td&gt;</b></samp><br>
+<samp class="xxxxx"><b>&lt;/tr&gt;</b></samp><br>
+<samp class="xxxxx"><b>&lt;/table&gt;</b></samp><br>
+<samp class="xxxxx">&lt;/center&gt;</samp><br>
+<samp class="xxxx">&lt;/td&gt;</samp><br>   
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xx">&lt;/table&gt;</samp><br>
+<samp class="x">&lt;/center&gt;</samp><br>
+<samp>&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer21.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Такой вот растянутый код получился… Сложно? Запутанно? Может быть на первый взгляд оно так и есть, но ведь не зря же я приводил столько примеров! Если что то не понятно вернитесь назад, перечитайте, идите от простого к более сложному и тогда всё станет на свои места!  Практика - залог успеха. Не ленитесь, пробуйте писать код самостоятельно.. </p>
+<p>Ну и уже по традиции подвожу итог главы.. Итак, что у Вас там за страничка получилась..?</p>
+
+<p>У меня она уже вот такая:</p>
+
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp>&lt;head&gt;</samp><br>
+<samp class="x">&lt;title&gt;Мой первый сайт &lt;/title&gt;</samp><br>
+<samp>&lt;/head&gt;</samp><br>
+<samp>&lt;body text="#484800" bgcolor="#ffffff" background="graphics/fon.jpg"&gt;</samp><br>
+<samp class="x">&lt;center&gt;</samp><br> 
+<samp class="xx"><b>&lt;table width="640" height="480" cellpadding="5" cellspacing="2" border="1"&gt;</b></samp><br>
+<samp class="xxx"><b>&lt;tr&gt;</b></samp><br>
+<samp class="xxxx"><b>&lt;td colspan="3" height="30" bgcolor="#b2ff80"&gt;</b></samp><br>
+<samp class="xxxxx">&lt;center&gt;&lt;img src="graphics/privet.png" width="200" height="40" alt="Привет мир!!!"&gt;&lt;/center&gt;</samp><br>
+<samp class="xxxx"><b>&lt;/td&gt;</b></samp><br>
+<samp class="xxx"><b>&lt;/tr&gt;</b></samp><br>
+<samp class="xxx"><b>&lt;tr&gt;</b></samp><br>
+<samp class="xxxx"><b>&lt;td height="30" width="33%" bgcolor="#ffa0cf"&gt;</b>&lt;center&gt;&lt;b&gt;Обо мне!!!&lt;/b&gt;&lt;/center&gt;<b>&lt;/td&gt;</b></samp><br>
+<samp class="xxxx"><b>&lt;td width="33%" bgcolor="#c0e4ff"&gt;</b>&lt;center&gt;&lt;b&gt;Здесь мои фотки!!&lt;/b&gt;&lt;/center&gt;<b>&lt;/td&gt;</b></samp><br>
+<samp class="xxxx"><b>&lt;td bgcolor="#c0e4ff"&gt;</b>&lt;center&gt;&lt;b&gt;Напишите мне письмо..&lt;/b&gt;&lt;/center&gt;<b>&lt;/td&gt;</b></samp><br>
+<samp class="xxx"><b>&lt;/tr&gt;</b></samp><br>
+<samp class="xxx"><b>&lt;tr&gt;</b></samp><br>
+<samp class="xxxx"><b>&lt;td colspan="3" valign="top" bgcolor="#b2ff80"&gt;</b></samp><br>
+<samp class="xxxxx">&lt;p align="justify"&gt;</samp><br>
+<samp class="xxxxx">&lt;img src="graphics/foto.jpg" align="left" hspace="10" width="100" height="90" alt="Это моя фотка!!!" title="Это моя фотка!!"&gt;</samp><br>
+<samp class="xxxxx">&amp;nbsp;&amp;nbsp;&amp;nbsp;Разрешите представиться Карлсон! который живет на крыше.</samp><br>
+<samp class="xxxxx">Спокойствие! Только спокойствие! подумаешь с жильём проблемы..&lt;br&gt; Я - умный, красивый, в меру упитанный мужчина, в полном расцвете сил! Женщины сходят по мне сходят с ума.. эх.. какая досада.. в общем со мной не соскучишься..</samp><br>
+<samp class="xxxxx">&lt;/p&gt;</samp><br>
+<samp class="xxxxx">&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;По телевизору показывают жуликов... Ну чем я хуже?! - так что вот решил сделать свою страничку!&lt;/p&gt;</samp><br>
+<samp class="xxxxx">&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;Хочу здесь найти себе новых друзей, для того чтобы вместе гулять по крышам!&lt;/p&gt;</samp><br>
+<samp class="xxxxx">&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;Я очень очень сильно люблю &lt;font size="+1" color="#ff0000"&gt; варенье&lt;/font&gt; !!! С нетерпеньем буду ждать Вашего приглашения на чай.. побалуемся плюшками… пошалим…&lt;/p&gt;</samp><br>
+<samp class="xxxxx">&lt;center&gt;&lt;b&gt;Прилечу!!&lt;/b&gt;&lt;/center&gt;</samp><br>
+<samp class="xxxxx">&lt;p&gt;&amp;nbsp;&amp;nbsp;Ну зачем тебе этот щенок? Я же лучше, Малыш…&lt;/p&gt;</samp><br>
+<samp class="xxxx"><b>&lt;/td&gt;</b></samp><br>
+<samp class="xxx"><b>&lt;/tr&gt;</b></samp><br>
+<samp class="xx"><b>&lt;/table&gt;</b></samp><br>
+<samp class="x">&lt;/center&gt;</samp><br>
+<samp>&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer22.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>Читайте так же: <a href="glava12.html" title="Перейти к Главе 12   И снова таблицы..">И снова таблицы..</a></p>
+<h2>Полезные советы:</h2>
+<ul>
+<li><p>При создании больших сложных таблиц рекомендую сначала рисовать их на бумаге.  Так будет удобнее представить её общую картину, подсчитать количество строк и столбцов, увидеть с какой ячейки и на какое количество следует растягивать "объединять" те или иные ячейки.</p>
+<li><p>При выборе будущих размеров Вашей страницы, особенно это касается её ширины (атрибут <samp><b>width</b></samp>), ориентируйтесь на стандартные разрешения мониторов 640 на 480, 800 на 600, 1024 на 768…  Но самое главное помните, что у разных пользователей в зависимости от их мониторов и зрения выставлены разные разрешения и если указанные Вами размеры будут выходить за их рамки то соответственно на экранах таких пользователей будут появляться полосы прокрутки. Вертикальная полоса это беда нестрашная, благо колёсико на мышке придумали, да и пишут у нас слева направо, а не сверху вниз.. а вот горизонтальная полоса прокрутки уже вызывает значительные неудобства при чтении страницы.. Так что не советую указывать большую ширину страницы. По-моему ширина в 1024 пикселей будет оптимальным размером… хотя… ну да ладно.. решайте сами.</p> 
+</ul>
+
+
+<div class="url">
+<a href="glava3.html" title="К предыдущей главе">&lt;&lt; предыдущая глава</a> | 
+<a href="glava5.html" title="К следующей главе">следующая глава &gt;&gt;</a>
+</div>
+</div>
+<!-- Конец центральной колонке -->
+<!-- Подвал -->
+<div class="footer">
+&copy; Автор: Семикопенко Алексей Алексеевич. | <a href="http://webremeslo.ru/" class="logo" title="Перейти на сайт webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец подвалу -->
+</body>
+</html>

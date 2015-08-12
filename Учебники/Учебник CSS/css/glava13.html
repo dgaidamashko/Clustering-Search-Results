@@ -1,0 +1,239 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Учебник CSS для начинающих.</title>
+<meta HTTP-EQUIV="Content-Type" Content="text/html; Charset=Windows-1251">
+<meta name="author" Content="Семикопенко Алексей Алексеевич">
+<meta name="copyright" Content="Семикопенко Алексей Алексеевич">
+<meta name="Publisher-Email" Content="alex@webremeslo.ru">
+<meta name="Publisher-URL" Content="http://webremeslo.ru/">
+<link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+<body>
+<!-- Шапка -->
+<div class="header">
+<h1 class="logo">Учебник CSS</h1>
+</div>
+<!-- Конец шапке -->
+<!--левая колонка "меню" -->
+<div class="left">
+<div class="fixed">
+<ul class="ul_none">
+<li><a href="../index.html" class="menu" title="От автора.">Главная</a></li>
+<li><a href="glava0.html" class="menu" title="Введение.   Что такое CSS?">Что такое CSS?</a></li>
+<li><a href="glava1.html" class="menu" title="Глава 1   Внедрение CSS в HTML документ.">Внедрение CSS.</a></li>
+<li><a href="glava2.html" class="menu" title="Глава 2   Свойства текста.">Свойства текста.</a></li>
+<li><a href="glava3.html" class="menu" title="Глава 3   Свойства шрифта.">Свойства шрифта.</a></li>
+<li><a href="glava4.html" class="menu" title="Глава 4   Цвет и фон.">Цвет и фон.</a></li>
+<li><a href="glava5.html" class="menu" title="Глава 5   Границы элемента.">Границы элемента.</a></li>
+<li><a href="glava6.html" class="menu" title="Глава 6   Классы и id селекторы.">Классы и id селекторы.</a></li>
+<li><a href="glava7.html" class="menu" title="Глава 7   Размеры элемента.">Размеры элемента.</a></li>
+<li><a href="glava8.html" class="menu" title="Глава 8   Поля и отступы.">Поля и отступы.</a></li>
+<li><a href="glava9.html" class="menu" title="Глава 9   Курсоры.">Курсоры.</a></li>
+<li><a href="glava10.html" class="menu" title="Глава 10   Форматирование.">Форматирование.</a></li>
+<li><a href="glava11.html" class="menu" title="Глава 11   Поплавки.">Поплавки.</a></li>
+<li><a href="glava12.html" class="menu" title="Глава 12   Позиционирование.">Позиционирование.</a></li>
+<li><a href="glava13.html" class="activemenu" title="Глава 13   Стиль списка.">Стиль списка.</a></li>
+<li><a href="glava14.html" class="menu" title="Глава 14   Полоса прокрутки.">Полоса прокрутки.</a></li>
+<li><a href="glava15.html" class="menu" title="Глава 15   Псевдоклассы.">Псевдоклассы.</a></li>
+<li><a href="glava16.html" class="menu" title="Глава 16   Псевдоэлементы.">Псевдоэлементы.</a></li>
+</ul>
+</div>
+</div>
+<!-- Конец левой колонке -->
+<!-- Правая колонка -->
+<div class="right">
+<h2>А так же:</h2>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">Как создать сайт?</a>
+<a href="http://www.webremeslo.ru/html/glava0.html" class="menu" title="www.webremeslo.ru">Учебник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka.html" class="menu" title="www.webremeslo.ru">Справочник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka4.html" class="menu" title="www.webremeslo.ru">Справочник CSS</a>
+<a href="http://forum.webremeslo.ru/index.php" class="menu" title="www.webremeslo.ru">Форум</a><br>
+..<em>и многое другое на сайте:</em><br>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец правой колонке -->
+<!-- Центральная колонка -->
+<div class="center">
+   
+<p class="zag">Глава 13</p>
+
+<h1>Стиль списка.</h1>
+
+<p>В девятой главе <strong>учебника HTML</strong> (<a href="http://webremeslo.ru/html/glava9.html" title="&quot;Учебник HTML&quot;   Глава 9 &quot;Списки&quot;">http://webremeslo.ru/html/glava9.html</a>) мы с Вами уже знакомились  с таким немаловажным элементом как список и действительно хорошее средство для структуризации данных. Однако списки организованные одними средствами HTML весьма убоги в плане дизайна и не радуют глаз человека.</p>
+<p>В этой главе мы немного поколдуем над списками с помощью свойств CSS. Так мы будем говорить о стеле списка, то для обучения Вам понадобится базовая информация о тегах: <b><samp>&lt;ul&gt; &lt;ol&gt; &lt;li&gt; &lt;dl&gt; &lt;dt&gt; &lt;dd&gt;</samp></b> - изложенная в учебнике HTML глава 9 <strong>"Списки"</strong> (<a href="http://webremeslo.ru/html/glava9.html" title="&quot;Учебник HTML&quot;   Глава 9 &quot;Списки&quot;">http://webremeslo.ru/html/glava9.html</a>) - рекомендую освежить в голове информацию о данных элементах, прежде чем приступать к работе.</p>
+<p>Ну а если в голове и так свежо тогда начнем!</p> 
+
+<h2>Вид маркера в списке.</h2>
+
+<p>Если вы помните, то в чистом HTML вид маркера в списке определял атрибут <b><samp>type</samp></b> и одно из его возможных значений, в CSS  данную задачу берёт на себя свойство: <b><samp>list-style-type</samp></b> которое, в свою очередь, тоже имеет свои стандартные значения определяющие вид маркера как всего списка сразу, так и его отдельного "пункта".</p>
+<p>Значения <b>list-style-type:</b></p>
+<ul>
+<li><b><samp>disc</samp></b> - Диск. (по умолчанию для <b>&lt;ul&gt;</b>) 
+<li><b><samp>circle</samp></b> - Полый круг. 
+<li><b><samp>square</samp></b> - Квадрат. 
+<li><b><samp>decimal</samp></b> - Арабские цифры. (по умолчанию для <b>&lt;ol&gt;</b>) 
+<li><b><samp>lower-roman</samp></b> - Строчные римские цифры. 
+<li><b><samp>lower-alpha</samp></b> - Строчные буквы. 
+<li><b><samp>upper-roman</samp></b> - Заглавные римские цифры. 
+<li><b><samp>upper-alpha</samp></b> - Заглавные буквы. 
+<li><b><samp>none</samp></b> - Маркер отсутствует. 
+</ul>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Вид маркера в списке&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;   </samp><br>
+<samp class="xx">&lt;ul style="<b>list-style-type: square</b>"&gt;</samp><br>
+<samp class="xxx">&lt;li&gt;Пункт 1.</samp><br>
+<samp class="xxx">&lt;li&gt;Пункт 2.</samp><br>
+<samp class="xxx">&lt;li  style="<b>list-style-type: circle</b>"&gt;Пункт 3 (особенный).</samp><br>
+<samp class="xx">&lt;/ul&gt;</samp><br>
+<samp class="xx">&lt;ul style="<b>list-style-type: upper-roman</b>"&gt;</samp><br>
+<samp class="xxx">&lt;li&gt;Пункт 1.</samp><br>
+<samp class="xxx">&lt;li&gt;Пункт 2.</samp><br>
+<samp class="xxx">&lt;li&gt;Пункт 3.</samp><br>
+<samp class="xx">&lt;/ul&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer60.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<h2>Пользовательский маркер рисунок.</h2>
+
+<p>Наиболее интересным CSS инструментом для работы со стилем списка является, на мой взгляд, возможность вместо стандартных "скучных" маркеров описанных выше использовать свои собственные нестандартные изображения - небольшие рисунки, вписывающиеся в общий дизайн Вашего сайта.</p>
+<p>Эту задачу выполняет свойство <b><samp>list-style-image</samp></b> которое определяет в качестве маркера списка некое графическое изображение с указанием пути к нему.</p>
+<p>Значений данного свойства всего два:</p>
+<ul>
+<li><b><samp>none</samp></b> - Отменяет графическое изображение маркера.
+<li><b><samp>url</samp></b> - Путь к файлу с рисунком маркера.
+</ul>
+<p>Путь к рисунку после <b><samp>url</samp></b> указывается в круглых скобках.</p>
+<p>Вот так:</p>
+<b><samp>list-style-image: url(graphics/marker.gif)</samp></b> 
+<p>- Такая запись будет говорить о том, что рядом с документом есть папка graphics в которой лежит файлик-рисунок: "&nbsp;<img src="../graphics/marker.gif" alt="" title="Это маленький рисунок &quot;сердечко&quot; 15 на 15 пикселей,   который по задумке мы будем использовать в качестве   маркера неупорядоченного списка">&nbsp;" - под названьем marker.gif</p>
+
+<p>Теперь попрубуем сделать так, что бы каждый пункт нашего списока был промаркерован этим рисунком. Смотрим пример:</p>
+
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Нестандартный маркер-рисунок&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;   </samp><br>
+<samp class="xx">&lt;ul style="<b>list-style-image: url(graphics/marker.gif)</b>"&gt;</samp><br>
+<samp class="xxx">&lt;li&gt;Первый любимый пункт.</samp><br>
+<samp class="xxx">&lt;li&gt;Второй любимый пункт.</samp><br>
+<samp class="xxx">&lt;li&gt;И не менее любимый третий пункт.</samp><br>
+<samp class="xx">&lt;/ul&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer61.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<h2>Стиль обтекания маркера списком.</h2>
+
+<p>Свойство <b><samp>list-style-position</samp></b>	указывает браузеру на то, как следует отображать текст в списке относительно его маркеров. По умолчанию маркеры находятся в стороне от текста  списка, но можно сделать так, что они будут обтекаться текстом.</p>
+
+<p>Возможных значений свойства <b><samp>list-style-position</samp></b> всего два:</p> 
+<ul>
+<li><b><samp>outside</samp></b> - Маркер находится в стороне от списка.(по умолчанию) 
+<li><b><samp>inside</samp></b> - Маркер обтекается текстом. 
+</ul>
+<p>Пример для наглядности:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Обтекание маркера текстом&lt;/title&gt;</samp><br>
+<samp class="xx">&lt;style type="text/css"&gt;</samp><br>
+<samp class="xxx">body {</samp><br>
+<samp class="xxxx">margin: 0px;</samp><br>
+<samp class="xxxx">background: #e8e8e8</samp><br>
+<samp class="xxxx">}</samp><br>
+<samp class="xxx">div {</samp><br>
+<samp class="xxxx">width: 300px;</samp><br>
+<samp class="xxxx">height: 200px;</samp><br>
+<samp class="xxxx">float:left;</samp><br>
+<samp class="xxxx">margin: 10px;</samp><br>
+<samp class="xxxx">padding: 10px;</samp><br>
+<samp class="xxxx">border: RGB(25, 125, 25) 2px ridge;</samp><br>
+<samp class="xxxx">background: #fff</samp><br>
+<samp class="xxxx">}</samp><br>
+<samp class="xxx">h3 {</samp><br>
+<samp class="xxxx">text-align: center</samp><br>
+<samp class="xxxx">}</samp><br>
+<samp class="xx">&lt;/style&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;div&gt;</samp><br>
+<samp class="xxx">&lt;h3&gt;Здесь маркер обтекается текстом:&lt;/h3&gt;</samp><br>
+<samp class="xxx">&lt;ul style="<b>list-style-position:inside</b>"&gt;</samp><br>
+<samp class="xxxx">&lt;li&gt;Пункт, в котором говорится о том, что хорошо бы было сделать, что-то там, где это что-то еще не сделано.</samp><br>
+<samp class="xxxx">&lt;li&gt;Пункт, в котором говорится о том, что неплохо бы было сделать, нечто там, где это нечто еще не сделано.</samp><br>
+<samp class="xxx">&lt;/ul&gt;</samp><br>
+<samp class="xx">&lt;/div&gt; </samp><br>
+<samp class="xx">&lt;div&gt;</samp><br>
+<samp class="xxx">&lt;h3&gt;А здесь нет:&lt;/h3&gt;</samp><br>
+<samp class="xxx">&lt;ul  style="<b>list-style-position:outside</b>"&gt;</samp><br>
+<samp class="xxxx">&lt;li&gt;Пункт, в котором говорится о том, что хорошо бы было сделать, что-то там, где это что-то еще не сделано.</samp><br>
+<samp class="xxxx">&lt;li&gt;Пункт, в котором говорится о том, что неплохо бы было сделать, нечто там, где это нечто еще не сделано.</samp><br>
+<samp class="xxx">&lt;/ul&gt;</samp><br>
+<samp class="xx">&lt;/div&gt; </samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer62.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<h2>list-style</h2>
+
+<p>Базовое свойство <b><samp>list-style</samp></b> используется, когда стилю списка необходимо одновременно присвоить несколько значений. Может иметь от одного до трёх значений из свойств применяемых к стилю списка, в любой последовательности через пробел.</p>
+<p>Все три свойства и их возможные значения мы рассмотрели выше, поэтому повторятся не буду, а просто перечислю их:</p>
+<ul>
+<li><b><samp>list-style-type</samp></b> - Вид маркера в списке
+<li><b><samp>list-style-image</samp></b> - Нестандартный маркер рисунок
+<li><b><samp>list-style-position</samp></b> - Стиль обтекания маркера списком
+</ul>
+<p>Если в голове остались какие то пробелы можете вернуться и перечитать.</p>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Стиль списка&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;div style="width: 250px;"&gt;</samp><br>
+<samp class="xxx">&lt;ul style="<b>list-style: url(graphics/marker.gif) inside</b>"&gt;</samp><br>
+<samp class="xxxx">&lt;li&gt;- Этот список использует в качестве маркера рисунок.</samp><br>
+<samp class="xxxx">&lt;li&gt;- Текст этого списка обтекает маркер.</samp><br>
+<samp class="xxx">&lt;/ul&gt;</samp><br>
+<samp class="xx">&lt;/div&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer63.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<h2>Полезные советы:</h2>
+
+<ul>
+<li><p>Списки наряду с заголовками,  выделенным текстом и картинками, являются элементами, которые приковывают взгляд посетителя при беглом просмотре страницы. Умелое и ненавязчивое размещение таковых элементов залог того, что посетитель окунётся в чтение Вашего документа более глубоко.</p>
+<li><p>Так как списки являются великолепным инструментом для структуризации данных, а свойства CSS  позволяют создать практически любой их дизайн, используйте списки, помимо их основного назначения, в качестве "меню" - навигации по сайту, где каждый пункт является ссылкой на ту или иную страницу Вашего сайта.</p>
+</ul>
+<div class="url">
+<a href="glava12.html" title="К предыдущей главе">&lt;&lt; предыдущая глава</a> | 
+<a href="glava14.html" title="К следующей главе">следующая глава &gt;&gt;</a>
+</div>
+</div>
+<!-- Конец центральной колонке -->
+<!-- Подвал -->
+<div class="footer">
+&copy; Автор: Семикопенко Алексей Алексеевич. | <a href="http://webremeslo.ru/" class="logo" title="Перейти на сайт webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец подвалу -->
+</body>
+</html>

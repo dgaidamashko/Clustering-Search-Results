@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Псевдокласс lang. Цитаты.</title>
+<meta http-equiv="Content-Type" Content="text/html; Charset=Windows-1251">
+<meta http-equiv="Content-Language" Content="ru">
+<style type="text/css">
+div {
+color:#000;
+font-size: 24px;
+}
+q:lang(en) {quotes: "\201C" "\201D"}
+q:lang(de) {quotes: "\201E" "\201C"}
+q:lang(fr) {quotes: "\00AB" "\00BB"}
+q:lang(ru) {quotes: "ёклмн.." "..ёпрст"}
+</style>
+</head>
+<body>
+
+<div>
+<p>Обратите внимание на вид кавычек для цитат:<p>
+<q>Цитата по умолчанию</q><br>
+<q lang="fr">Французская цитата</q><br>
+<q lang="de">Немецкая цитата</q><br>
+<q lang="en">Английская цитата</q><br>
+<q lang="ru">Русская цитата</q><br>
+</div>
+</body>
+</html>

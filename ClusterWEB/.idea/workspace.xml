@@ -1,0 +1,1420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="746b114c-2f61-4729-b716-602c1714bb58" name="Default" comment="">
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\HTML Manual.pdf" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\JavaScript.pdf" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\[O`Reilly] - Регулярные выражения, 3-е изд. - [Дж.Фридл].pdf" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\djbook1-7_7-1-15.pdf" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Марк Лутц - Изучаем Python - 4-е изд - 2011.djvu" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS.doc" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\glava0.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\glava1.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\glava10.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\glava11.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\glava12.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\glava13.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\glava14.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\glava15.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\glava16.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\glava2.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\glava3.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\glava4.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\glava5.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\glava6.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\glava7.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\glava8.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\glava9.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\graphics\fon.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\graphics\fon1.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\graphics\fon2.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\graphics\marker.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\graphics\my.ani" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\graphics\rose.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\graphics\z-index1.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\graphics\z-index2.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\graphics\z-index3.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\graphics\z-index4.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\graphics\z-index5.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\graphics\z-index6.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer1.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer1.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer10.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer11.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer12.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer13.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer14.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer15.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer16.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer17.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer18.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer19.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer2.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer2.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer20.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer21.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer22.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer23.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer24.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer25.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer26.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer27.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer28.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer29.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer3.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer3.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer30.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer31.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer32.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer33.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer34.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer35.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer36.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer37.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer38.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer39.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer3a.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer3b.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer4.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer40.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer41.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer42.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer43.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer44.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer45.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer46.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer47.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer48.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer49.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer5.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer50.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer51.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer52.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer53.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer54.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer55.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer56.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer57.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer58.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer59.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer5a.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer6.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer60.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer61.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer62.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer63.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer64.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer65.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer66.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer67.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer68.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer69.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer7.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer70.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer71.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer72.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer73.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer74.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer8.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\css\primer\primer9.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\graphics\1x1.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\graphics\baseline.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\graphics\margin.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\graphics\marker.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\graphics\rgb.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\graphics\scrollbar.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\graphics\scrollbar1.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\graphics\scrollbar2.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\graphics\semikopenko.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\graphics\syntax.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\graphics\ul.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\graphics\win2.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\graphics\z-index.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник CSS\style.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML.doc" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\graphics\karta.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\graphics\karta1.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\graphics\karta2.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\graphics\karta3.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\graphics\karta4.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\graphics\karta5.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\graphics\karta6.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\graphics\karta7.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\graphics\semikopenko.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\graphics\ul.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\graphics\win.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\graphics\win1.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\graphics\win2.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\glava0.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\glava1.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\glava10.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\glava11.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\glava12.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\glava13.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\glava14.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\glava2.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\glava3.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\glava4.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\glava5.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\glava6.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\glava7.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\glava8.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\glava9.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\graphics\fon.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\graphics\fon1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\graphics\fon2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\graphics\foto.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\graphics\karta.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\graphics\karta1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\graphics\karta3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\graphics\knopa.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\graphics\logotype.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\graphics\mammoth.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\graphics\privet.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\mammoth.mid" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer1.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer10.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer11.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer12.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer13.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer14.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer15.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer16.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer17.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer18.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer19.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer2.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer20.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer21.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer22.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer23.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer24.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer25.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer26.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer27.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer28.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer29.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer3.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer30.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer31.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer32.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer33.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer34.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer35.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer36.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer37.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer38.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer39.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer4.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer40.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer41.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer42.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer43.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer44.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer45.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer46.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer47.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer48.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer49.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer5.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer50.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer51.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer52.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer53.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer54.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer55.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer56.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer57.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer58.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer59.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer6.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer60.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer61.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer62.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer63.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer64.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer65.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer66.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer67.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer68.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer69.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer7.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer70.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer71.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer72.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer73.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer74.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer8.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primer9.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primerf1.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primerf10.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primerf11.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primerf12.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primerf13.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primerf2.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primerf3.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primerf4.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primerf5.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primerf6.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primerf7.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primerf8.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primerf9.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primerk1.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primerk2.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primerk3.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primerk4.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primerk5.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primerm1.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primers1.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primers2.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primers3.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\html\primer\primers4.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Учебник HTML\style.css" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Тест Библиотеки/Тест Библиотеки/Form2.cs" afterPath="$PROJECT_DIR$/../Тест Библиотеки/Тест Библиотеки/Form2.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/views.py" afterPath="$PROJECT_DIR$/Site/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
+    <ignored path="ClusterWEB.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CoverageDataManager">
+<<<<<<< HEAD
+    <SUITE FILE_PATH="coverage/ClusterWEB$manage.coverage" NAME="manage Coverage Results" MODIFIED="1437598161181" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ClusterWEB$views.coverage" NAME="views Coverage Results" MODIFIED="1437597294300" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Site" />
+    <SUITE FILE_PATH="coverage/ClusterWEB$models.coverage" NAME="models Coverage Results" MODIFIED="1435092273979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Site" />
+=======
+    <SUITE FILE_PATH="coverage/ClusterWEB$manage.coverage" NAME="manage Coverage Results" MODIFIED="1436993900504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ClusterWEB$views.coverage" NAME="views Coverage Results" MODIFIED="1437461687640" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Site" />
+>>>>>>> 73f793168335c623ffed6c5a61a0f55c7bc0a7c3
+    <SUITE FILE_PATH="coverage/ClusterWEB$grab_google.coverage" NAME="grab_google Coverage Results" MODIFIED="1437225612427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
+    <SUITE FILE_PATH="coverage/ClusterWEB$models.coverage" NAME="models Coverage Results" MODIFIED="1435092273979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Site" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="ClusterWEB" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Site/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state vertical-scroll-proportion="-0.34102142">
+=======
+<<<<<<< HEAD
+            <state vertical-scroll-proportion="0.1453552">
+              <caret line="277" column="32" selection-start-line="277" selection-start-column="32" selection-end-line="277" selection-end-column="32" />
+=======
+            <state vertical-scroll-proportion="0.30807248">
+>>>>>>> bc286c544fd4289ae276945226b9cbc7f3ea3214
+              <caret line="71" column="30" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
+>>>>>>> 73f793168335c623ffed6c5a61a0f55c7bc0a7c3
+              <folding>
+                <element signature="e#0#62#0" expanded="true" />
+                <element signature="e#2136#3781#0" expanded="false" />
+                <element signature="e#3818#4627#0" expanded="false" />
+                <element signature="e#4673#5095#0" expanded="false" />
+                <element signature="e#5131#5763#0" expanded="false" />
+                <element signature="e#6775#7806#0" expanded="false" />
+                <element signature="e#7871#9790#0" expanded="false" />
+                <element signature="e#9835#10295#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tests.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Site/tests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ClusterWEB/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Site/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Site/migrations/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ClusterWEB/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+              <folding>
+                <element signature="e#619#670#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main_Page.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/Site/Main_Page.html">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state vertical-scroll-proportion="0.0">
+=======
+<<<<<<< HEAD
+            <state vertical-scroll-proportion="0.0">
+=======
+            <state vertical-scroll-proportion="-11.115385">
+>>>>>>> 73f793168335c623ffed6c5a61a0f55c7bc0a7c3
+>>>>>>> bc286c544fd4289ae276945226b9cbc7f3ea3214
+              <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="Html5" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Site/migrations/0001_initial.py" />
+        <option value="$PROJECT_DIR$/Site/urls.py" />
+        <option value="$PROJECT_DIR$/Site/models.py" />
+        <option value="$PROJECT_DIR$/ClusterWEB/urls.py" />
+        <option value="$PROJECT_DIR$/templates/Site/Main_Page.html" />
+        <option value="$PROJECT_DIR$/../grab_google.py" />
+        <option value="$PROJECT_DIR$/Site/views.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClusterWEB" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; Python 3.4.3 (C:\Python34\python.exe) &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClusterWEB" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClusterWEB" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClusterWEB" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClusterWEB" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClusterWEB" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClusterWEB" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClusterWEB" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClusterWEB" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClusterWEB" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClusterWEB" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClusterWEB" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="recentsLimit" value="5" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../grab_google.py" />
+    <property name="FullScreen" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+  </component>
+  <component name="RunManager" selected="Python.manage">
+    <configuration default="false" name="views" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Site" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ClusterWEB" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Site/views.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="grab_google" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ClusterWEB" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../grab_google.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ClusterWEB" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ClusterWEB" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ClusterWEB" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ClusterWEB" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ClusterWEB" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ClusterWEB" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ClusterWEB" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ClusterWEB" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ClusterWEB" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ClusterWEB" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="manage" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ClusterWEB" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="models" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Site" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ClusterWEB" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Site/models.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ClusterWEB" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="ClusterWEB.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ClusterWEB" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python.manage" />
+      <item index="1" class="java.lang.String" itemvalue="Python.models" />
+      <item index="2" class="java.lang.String" itemvalue="Django server.ClusterWEB" />
+      <item index="3" class="java.lang.String" itemvalue="Python.views" />
+      <item index="4" class="java.lang.String" itemvalue="Python.grab_google" />
+    </list>
+    <recent_temporary>
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Python.views" />
+        <item index="1" class="java.lang.String" itemvalue="Python.grab_google" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="746b114c-2f61-4729-b716-602c1714bb58" name="Default" comment="" />
+      <created>1434887847238</created>
+      <option name="number" value="Default" />
+      <updated>1434887847238</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+<<<<<<< HEAD
+    <frame x="65" y="-9" width="1864" height="1098" extended-state="6" />
+=======
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+<<<<<<< HEAD
+    <editor active="true" />
+=======
+>>>>>>> 73f793168335c623ffed6c5a61a0f55c7bc0a7c3
+    <editor active="false" />
+>>>>>>> bc286c544fd4289ae276945226b9cbc7f3ea3214
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32923076" sideWeight="0.50325024" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32923076" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Django errors" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32923076" sideWeight="0.49783316" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="manage.py@ClusterWEB" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.49674973" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/../grab_google.py</url>
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="3" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Site/migrations/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClusterWEB/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="93" selection-start-line="19" selection-start-column="93" selection-end-line="19" selection-end-column="93" />
+          <folding>
+            <element signature="e#619#670#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClusterWEB/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClusterWEB/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/migrations/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClusterWEB/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#619#670#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="36" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#62#0" expanded="true" />
+            <element signature="e#2136#3781#0" expanded="false" />
+            <element signature="e#3818#4627#0" expanded="false" />
+            <element signature="e#4673#5095#0" expanded="false" />
+            <element signature="e#5131#5763#0" expanded="false" />
+            <element signature="e#6775#7806#0" expanded="false" />
+            <element signature="e#7871#9790#0" expanded="false" />
+            <element signature="e#9835#10295#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClusterWEB/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClusterWEB/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="36" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#62#0" expanded="true" />
+            <element signature="e#2136#3781#0" expanded="false" />
+            <element signature="e#3818#4627#0" expanded="false" />
+            <element signature="e#4673#5095#0" expanded="false" />
+            <element signature="e#5131#5763#0" expanded="false" />
+            <element signature="e#6775#7806#0" expanded="false" />
+            <element signature="e#7871#9790#0" expanded="false" />
+            <element signature="e#9835#10295#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClusterWEB/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#619#670#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClusterWEB/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClusterWEB/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python34/Lib/site-packages/django/core/management/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python34/Lib/importlib/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python34/Lib/site-packages/django/apps/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="197" column="0" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python34/Lib/site-packages/django/core/management/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="337" column="0" selection-start-line="337" selection-start-column="0" selection-end-line="337" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python34/Lib/importlib/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python34/Lib/site-packages/django/apps/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="197" column="0" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python34/Lib/site-packages/django/core/management/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.873673">
+          <caret line="337" column="0" selection-start-line="337" selection-start-column="0" selection-end-line="337" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python34/Lib/site-packages/django/apps/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="197" column="0" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python34/Lib/importlib/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/migrations/0002_auto_20150623_2349.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/migrations/0003_auto_20150625_2332.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28874734">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClusterWEB/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClusterWEB/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/migrations/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../grab_google.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21656051">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClusterWEB/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+          <folding>
+            <element signature="e#619#670#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Site/Main_Page.html">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state vertical-scroll-proportion="0.0">
+=======
+<<<<<<< HEAD
+        <state vertical-scroll-proportion="0.0">
+=======
+        <state vertical-scroll-proportion="-11.115385">
+>>>>>>> 73f793168335c623ffed6c5a61a0f55c7bc0a7c3
+>>>>>>> bc286c544fd4289ae276945226b9cbc7f3ea3214
+          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state vertical-scroll-proportion="-0.34102142">
+=======
+<<<<<<< HEAD
+        <state vertical-scroll-proportion="0.1453552">
+          <caret line="277" column="32" selection-start-line="277" selection-start-column="32" selection-end-line="277" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#62#0" expanded="true" />
+=======
+        <state vertical-scroll-proportion="0.30807248">
+>>>>>>> bc286c544fd4289ae276945226b9cbc7f3ea3214
+          <caret line="71" column="30" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#62#0" expanded="true" />
+            <element signature="e#2136#3781#0" expanded="false" />
+            <element signature="e#3818#4627#0" expanded="false" />
+            <element signature="e#4673#5095#0" expanded="false" />
+            <element signature="e#5131#5763#0" expanded="false" />
+            <element signature="e#6775#7806#0" expanded="false" />
+            <element signature="e#7871#9790#0" expanded="false" />
+            <element signature="e#9835#10295#0" expanded="false" />
+>>>>>>> 73f793168335c623ffed6c5a61a0f55c7bc0a7c3
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

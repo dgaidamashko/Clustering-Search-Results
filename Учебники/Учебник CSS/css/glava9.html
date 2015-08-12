@@ -1,0 +1,190 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Учебник CSS для начинающих.</title>
+<meta HTTP-EQUIV="Content-Type" Content="text/html; Charset=Windows-1251">
+<meta name="author" Content="Семикопенко Алексей Алексеевич">
+<meta name="copyright" Content="Семикопенко Алексей Алексеевич">
+<meta name="Publisher-Email" Content="alex@webremeslo.ru">
+<meta name="Publisher-URL" Content="http://webremeslo.ru/">
+<link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+<body>
+<!-- Шапка -->
+<div class="header">
+<h1 class="logo">Учебник CSS</h1>
+</div>
+<!-- Конец шапке -->
+<!--левая колонка "меню" -->
+<div class="left">
+<div class="fixed">
+<ul class="ul_none">
+<li><a href="../index.html" class="menu" title="От автора.">Главная</a></li>
+<li><a href="glava0.html" class="menu" title="Введение.   Что такое CSS?">Что такое CSS?</a></li>
+<li><a href="glava1.html" class="menu" title="Глава 1   Внедрение CSS в HTML документ.">Внедрение CSS.</a></li>
+<li><a href="glava2.html" class="menu" title="Глава 2   Свойства текста.">Свойства текста.</a></li>
+<li><a href="glava3.html" class="menu" title="Глава 3   Свойства шрифта.">Свойства шрифта.</a></li>
+<li><a href="glava4.html" class="menu" title="Глава 4   Цвет и фон.">Цвет и фон.</a></li>
+<li><a href="glava5.html" class="menu" title="Глава 5   Границы элемента.">Границы элемента.</a></li>
+<li><a href="glava6.html" class="menu" title="Глава 6   Классы и id селекторы.">Классы и id селекторы.</a></li>
+<li><a href="glava7.html" class="menu" title="Глава 7   Размеры элемента.">Размеры элемента.</a></li>
+<li><a href="glava8.html" class="menu" title="Глава 8   Поля и отступы.">Поля и отступы.</a></li>
+<li><a href="glava9.html" class="activemenu" title="Глава 9   Курсоры.">Курсоры.</a></li>
+<li><a href="glava10.html" class="menu" title="Глава 10   Форматирование.">Форматирование.</a></li>
+<li><a href="glava11.html" class="menu" title="Глава 11   Поплавки.">Поплавки.</a></li>
+<li><a href="glava12.html" class="menu" title="Глава 12   Позиционирование.">Позиционирование.</a></li>
+<li><a href="glava13.html" class="menu" title="Глава 13   Стиль списка.">Стиль списка.</a></li>
+<li><a href="glava14.html" class="menu" title="Глава 14   Полоса прокрутки.">Полоса прокрутки.</a></li>
+<li><a href="glava15.html" class="menu" title="Глава 15   Псевдоклассы.">Псевдоклассы.</a></li>
+<li><a href="glava16.html" class="menu" title="Глава 16   Псевдоэлементы.">Псевдоэлементы.</a></li>
+</ul>
+</div>
+</div>
+<!-- Конец левой колонке -->
+<!-- Правая колонка -->
+<div class="right">
+<h2>А так же:</h2>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">Как создать сайт?</a>
+<a href="http://www.webremeslo.ru/html/glava0.html" class="menu" title="www.webremeslo.ru">Учебник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka.html" class="menu" title="www.webremeslo.ru">Справочник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka4.html" class="menu" title="www.webremeslo.ru">Справочник CSS</a>
+<a href="http://forum.webremeslo.ru/index.php" class="menu" title="www.webremeslo.ru">Форум</a><br>
+..<em>и многое другое на сайте:</em><br>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец правой колонке -->
+<!-- Центральная колонка -->
+<div class="center">
+   
+<p class="zag">Глава 9</p>
+
+<h1>Курсоры.</h1>
+
+<p>Свойство CSS <samp><b>cursor</b></samp>  позволяет установить нестандартный вид курсора для того или иного элемента - блока, текста, рисунка.. то есть когда пользователь наведет курсор на такой элемент он, курсор то бишь, поменяет свой вид.</p>
+<p>Курсоры можно выбирать как стандартные, так и подгружать свои собственные пользовательские курсоры - файлы в формате <samp><b>cur, ani</b></samp> или <samp><b>svg</b>.</samp></p>
+<p>Теперь по порядку..</p>
+
+<h2>Стандартные курсоры.</h2>
+
+<p>Вы наверняка обратили внимание на то, что по умолчанию, на странице, курсор приобретает вид в зависимости от специфики элемента, на который он нацелен, например если навести курсор на ссылку он отображается в виде указателя обычно "руки", если на некий текст, то курсор становится вида "работа с текстом", а если просто елозить по пустому месту на странице, то курсор имеет обыкновенный вид "стрелка".</p>
+<p>Так вот, для того чтобы изменить внешний вид курсора свойству <samp><b>cursor</b></samp> необходимо указать одно из возможных значений:</p>
+
+<ul>
+<li><samp><b>auto</b></samp> - <span style="cursor: auto; text-decoration: underline">курсор назначается автоматически в зависимости от специфики элемента.(по умолчанию)</span> 
+<li><samp><b>crosshair</b></samp> - <span style="cursor: crosshair; text-decoration: underline">перекрестие</span> 
+<li><samp><b>default</b></samp> - <span style="cursor: default; text-decoration: underline">встроенный(основной)</span>
+<li><samp><b>e-resize</b></samp> - <span style="cursor: e-resize; text-decoration: underline">стрелка на "восток"</span>
+<li><samp><b>hand</b></samp> - <span style="cursor: hand; text-decoration: underline">указатель аналогия pointer</span>
+<li><samp><b>help</b></samp> - <span style="cursor: help; text-decoration: underline">помощь</span>
+<li><samp><b>move</b></samp> - <span style="cursor: move; text-decoration: underline">перемещение</span>
+<li><samp><b>n-resize</b></samp> - <span style="cursor: n-resize; text-decoration: underline">переместить на "север"</span>
+<li><samp><b>ne-resize</b></samp> - <span style="cursor: ne-resize; text-decoration: underline">переместить на "северо-восток"</span>
+<li><samp><b>nw-resize</b></samp> - <span style="cursor: nw-resize; text-decoration: underline">переместить на "северо-запад"</span>
+<li><samp><b>pointer</b></samp> - <span style="cursor: pointer; text-decoration: underline">указатель</span>
+<li><samp><b>progress</b></samp> - <span style="cursor: progress; text-decoration: underline">продолжение операции</span>
+<li><samp><b>s-resize</b></samp> - <span style="cursor: s-resize; text-decoration: underline">переместить на "юг"</span>
+<li><samp><b>se-resize</b></samp> - <span style="cursor: se-resize; text-decoration: underline">переместить на "юго-восток"</span>
+<li><samp><b>sw-resize</b></samp> - <span style="cursor: sw-resize; text-decoration: underline">переместить на "юго-запад"</span>
+<li><samp><b>text</b></samp> - <span style="cursor: text; text-decoration: underline">текст</span>
+<li><samp><b>w-resize</b></samp> - <span style="cursor: w-resize; text-decoration: underline">переместить на "запад"</span>
+<li><samp><b>wait</b></samp> - <span style="cursor: wait; text-decoration: underline">ожидание</span>
+</ul>
+
+<p>Кроме того некоторые браузеры поддерживают дополнительные формы курсоров:</p>
+<ul>
+<li><samp><b><i>all-scroll</i></b></samp> - <span style="cursor: all-scroll; text-decoration: underline"><i>переместить во все стороны</i></span>
+<li><samp><b><i>col-resize</i></b></samp> - <span style="cursor: col-resize; text-decoration: underline"><i>переместить по горизонтали</i></span>
+<li><samp><b><i>no-drop</i></b></samp> - <span style="cursor: no-drop; text-decoration: underline"><i>указатель "нет доступа"</i></span>
+<li><samp><b><i>not-allowed</i></b></samp> - <span style="cursor: not-allowed; text-decoration: underline"><i>нет доступа</i></span>
+<li><samp><b><i>row-resize</i></b></samp> - <span style="cursor: row-resize; text-decoration: underline"><i>переместить по вертикали</i></span>
+<li><samp><b><i>vertical-text</i></b></samp> - <span style="cursor: vertical-text; text-decoration: underline"><i>вертикальный текст</i></span>
+</ul>
+
+<p>Следует понимать, что данные значения являются, не каким либо конкретным изображением курсора, а определяют тип курсора. Внешний вид курсора зависит от настроек операционной системы пользователя.</p>
+<p>Проведите курсором над каждым значением свойства <samp><b>cursor</b></samp> в списке выше, чтобы увидеть какую форму принимает курсор в Вашем браузере.</p>
+<p>Провели? А теперь если есть желание можете зайти в <samp>"Пуск" &gt; "Панель управления" &gt; "Мышь" &gt; закладка "Указатели" &gt; из списка "Схема" выберите любую другую схему..</samp>  Теперь можете снова провести по списку выше, чтобы увидеть, как теперь выглядят курсоры.</p>
+
+<p>Пример:</p>
+
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Стандартные курсоры&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;div style="<b>cursor: wait; </b>padding: 30px; background-color: #c0e4ff; border: 2px solid #008000; height: 300px; width: 300px"&gt;</samp><br>
+<samp class="xxx">Буду думу думать..</samp><br>
+<samp class="xxx">&lt;p style="width: 150px; text-align: center; <b>cursor: help;</b> background-color: #c5ffa0; border: 2px solid #008000"&gt;Кнопка "помощь"&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;/div&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer43.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<h2>Пользовательские курсоры.</h2>
+
+<p>Для того чтобы курсор приобрёл нестандартный вид его необходимо подгрузить присвоив свойству cursor значение: <samp><b>url("путь к курсору")</b></samp>. </p>
+<p>Например:</p>
+
+<samp class="x"><b>div { cursor : url("my.cur"); }</b></samp>
+
+<p>Так же можно указать несколько пользовательских курсоров, через запятую, в этом случае браузер будет пытаться отобразить первый из перечисленных, если у него это не получится, возьмется за второй.. и т. д. А не получится может из-за того, что браузер не поддерживает определённый формат файла-курсора. Как уже говорилось выше можно использовать  файлы в формате cur, ani или svg - такие курсоры поддерживаются, начиная с IE6, Firefox 1.5. Однако Firefox 1.5 не поддерживает формат ani, а IE6 в свою очередь, не понимает формат svg.</p>
+<p>Поэтому список курсоров составляют из файлов разных форматов.. например, так:</p>
+
+<samp class="x"><b>div { cursor : url("my.cur"), url("my.svg"); }</b></samp>
+
+<p>И уж что б совсем обезопасить себя в конце списка рекомендуется ставить один из курсоров из стандартного набора.</p>
+<p>Вот так:</p>
+
+<samp class="x"><b>div { cursor : url("my.cur"), url("my.svg"), help; }</b></samp>
+
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;style type="text/css"&gt;</samp><br>
+<samp class="xxx">div { </samp><br>
+<samp class="xxx"><b>cursor : url("cursors/my.ani"), crosshair;</b></samp><br>
+<samp class="xxx">width: 200px; </samp><br>
+<samp class="xxx">padding: 10px; </samp><br>
+<samp class="xxx">text-align: center; </samp><br>
+<samp class="xxx">background-color: #c5ffa0; border: 2px solid #008000</samp><br>
+<samp class="xxx">}</samp><br>
+<samp class="xx">&lt;/style&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Пользовательские курсоры&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;div&gt;</samp><br>
+<samp class="xxx">Если нацелив курсор на этот блок вместо "навороченного" курсора Вы видите обыкновенное перекрестие значит Ваш браузер не поддерживает формат ani</samp><br>
+<samp class="xx">&lt;/div&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer44.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Ну и в конце..</p>
+
+<p>Свойство <samp><b>cursor</b></samp>, имеет еще одно значение - <samp><b>inherit</b></samp>. которое говорит о том, что свойство наследуется от элемента-родителя. </p>
+
+<h2>Полезные советы:</h2>
+<ul>
+<li><p>В подавляющем большинстве случаев не стоит вообще трогать курсоры, оставьте всё как есть. Пользователя могут ввести в заблуждение нестандартные курсоры, например, когда при наведении на ссылку вместо привычной "руки" появляется что-то другое. Пользовательские курсоры уместны лишь там, где они действительно необходимы.</p>
+<li><p>Помните что любой курсор должен быть как минимум двухцветным. Это нужно для того чтобы его было видно на фоне такого же цвета как и сам курсор.. представьте одноцветный белый курсор на белом фоне.. вот уж задачка будет какой ни будь домохозяйке!! :)</p>
+<p>Ааа.. у меня стрелка потерялась!!.. вирусы!!.. проклятый Бил Гейтс!!.. :)  и давай лупить кулаком по системному блоку.. :)</p>
+<p>Короче паники с истериками нам не нужны..</p>
+</ul>
+<div class="url">
+<a href="glava8.html" title="К предыдущей главе">&lt;&lt; предыдущая глава</a> | 
+<a href="glava10.html" title="К следующей главе">следующая глава &gt;&gt;</a>
+</div>
+</div>
+<!-- Конец центральной колонке -->
+<!-- Подвал -->
+<div class="footer">
+&copy; Автор: Семикопенко Алексей Алексеевич. | <a href="http://webremeslo.ru/" class="logo" title="Перейти на сайт webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец подвалу -->
+</body>
+</html>

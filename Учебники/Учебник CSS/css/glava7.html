@@ -1,0 +1,215 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Учебник CSS для начинающих.</title>
+<meta HTTP-EQUIV="Content-Type" Content="text/html; Charset=Windows-1251">
+<meta name="author" Content="Семикопенко Алексей Алексеевич">
+<meta name="copyright" Content="Семикопенко Алексей Алексеевич">
+<meta name="Publisher-Email" Content="alex@webremeslo.ru">
+<meta name="Publisher-URL" Content="http://webremeslo.ru/">
+<link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+<body>
+<!-- Шапка -->
+<div class="header">
+<h1 class="logo">Учебник CSS</h1>
+</div>
+<!-- Конец шапке -->
+<!--левая колонка "меню" -->
+<div class="left">
+<div class="fixed">
+<ul class="ul_none">
+<li><a href="../index.html" class="menu" title="От автора.">Главная</a></li>
+<li><a href="glava0.html" class="menu" title="Введение.   Что такое CSS?">Что такое CSS?</a></li>
+<li><a href="glava1.html" class="menu" title="Глава 1   Внедрение CSS в HTML документ.">Внедрение CSS.</a></li>
+<li><a href="glava2.html" class="menu" title="Глава 2   Свойства текста.">Свойства текста.</a></li>
+<li><a href="glava3.html" class="menu" title="Глава 3   Свойства шрифта.">Свойства шрифта.</a></li>
+<li><a href="glava4.html" class="menu" title="Глава 4   Цвет и фон.">Цвет и фон.</a></li>
+<li><a href="glava5.html" class="menu" title="Глава 5   Границы элемента.">Границы элемента.</a></li>
+<li><a href="glava6.html" class="menu" title="Глава 6   Классы и id селекторы.">Классы и id селекторы.</a></li>
+<li><a href="glava7.html" class="activemenu" title="Глава 7   Размеры элемента.">Размеры элемента.</a></li>
+<li><a href="glava8.html" class="menu" title="Глава 8   Поля и отступы.">Поля и отступы.</a></li>
+<li><a href="glava9.html" class="menu" title="Глава 9   Курсоры.">Курсоры.</a></li>
+<li><a href="glava10.html" class="menu" title="Глава 10   Форматирование.">Форматирование.</a></li>
+<li><a href="glava11.html" class="menu" title="Глава 11   Поплавки.">Поплавки.</a></li>
+<li><a href="glava12.html" class="menu" title="Глава 12   Позиционирование.">Позиционирование.</a></li>
+<li><a href="glava13.html" class="menu" title="Глава 13   Стиль списка.">Стиль списка.</a></li>
+<li><a href="glava14.html" class="menu" title="Глава 14   Полоса прокрутки.">Полоса прокрутки.</a></li>
+<li><a href="glava15.html" class="menu" title="Глава 15   Псевдоклассы.">Псевдоклассы.</a></li>
+<li><a href="glava16.html" class="menu" title="Глава 16   Псевдоэлементы.">Псевдоэлементы.</a></li>
+</ul>
+</div>
+</div>
+<!-- Конец левой колонке -->
+<!-- Правая колонка -->
+<div class="right">
+<h2>А так же:</h2>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">Как создать сайт?</a>
+<a href="http://www.webremeslo.ru/html/glava0.html" class="menu" title="www.webremeslo.ru">Учебник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka.html" class="menu" title="www.webremeslo.ru">Справочник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka4.html" class="menu" title="www.webremeslo.ru">Справочник CSS</a>
+<a href="http://forum.webremeslo.ru/index.php" class="menu" title="www.webremeslo.ru">Форум</a><br>
+..<em>и многое другое на сайте:</em><br>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец правой колонке -->
+<!-- Центральная колонка -->
+<div class="center">
+   
+<p class="zag">Глава 7</p>
+
+<h1>Размеры элемента.</h1>
+
+<h2>Блоки и строки.</h2>
+
+<p>Прежде чем говорить о работе с размерами элементов их расположении, полях и отступах, расскажу немного о  самих элементах, точнее об их  типах. </p>
+<p>Все элементы (теги) можно разделить на две категории: Блочные и строковые. </p>
+<p>Чем они отличаются?</p>
+<p>Думаю, сами названия уже говорят о различиях. Блочные или боксовые элементы - это контейнеры, прямоугольные области на мониторе компьютера которым без труда и вело-изобретательства можно присвоить определенное положение, размер, вложить в них другие блоки, определить расположение относительно друг друга. А строковые элементы располагаются в одну сроку, выравниваются по её базовой линии и как правило служат для форматирования и редакции текста. </p>
+
+<p>К блочным (<samp><b>block</b></samp>) элементам относятся:<br>
+<b><samp>&lt;div&gt;, &lt;dl&gt;, &lt;form&gt;, &lt;h1&gt;- &lt;h6&gt;, &lt;hr&gt;, &lt;noscript&gt;, &lt;ol&gt;, &lt;p&gt;, &lt;pre&gt;, &lt;table&gt;, &lt;ul&gt;</samp></b>…</p>
+<p>К строчным (<samp><b>inline</b></samp>) элементам относятся:<br>
+<b><samp>&lt;a&gt;, &lt;br&gt;, &lt;cite&gt;, &lt;code&gt;, &lt;em&gt;, &lt;img&gt;, &lt;input&gt;, &lt;label&gt;, &lt;select&gt;, &lt;span&gt;, &lt;strong&gt;, &lt;sub&gt;, &lt;sup&gt;, &lt;textarea&gt;</samp></b>…</p>
+
+<p>Основные отличия от элементов строкового и блочного типа заключаются в том что:</p>
+<p>Боксовые элементы могут содержать в себе другие элементы, как блочного, так и строкового типа. Строчные же элементы могут включать в себя только строчные элементы.</p>
+<p>На примере:</p>
+<samp><b>
+&lt;div&gt;<br>
+&lt;b&gt;Это &lt;i&gt;правильная строка&lt;/i&gt; в блоке&lt;/b&gt;<br>
+&lt;/div&gt;<br>
+<br>
+&lt;i&gt;&lt;b&gt;<br>
+&lt;div&gt;А это неправильная толи строка толи блок. Так лучше не делать!!&lt;/div&gt;<br>
+&lt;/b&gt;&lt;/i&gt;
+</b></samp>
+<p>Боксовые элементы, по умолчанию, располагаются относительно друг друга вертикально, т.е. в начале и конце блока происходит "перенос строки", а строковые элементы располагаются горизонтально, перенос строки происходит только в том случае если это необходимо. </p>
+<p>По умолчанию блочные элементы имеют ширину 100%  и тем самым оставляют за собой все пространство по горизонтали, у строковых же элементов ширина определяется содержанием.</p>
+<p>Думаю, на примере будет понятнее.</p>
+
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Блочные и строковые элементы&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;p style="background-color: #00ffff;"&gt;Параграф&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;p style="background-color: #00ff00;"&gt;Параграф&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;p style="background-color: #ffff00;"&gt;Параграф&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;hr&gt;</samp><br>
+<samp class="xx">&lt;span style="background-color: #00ffff;"&gt;Строка&lt;/span&gt;</samp><br>
+<samp class="xx">&lt;span style="background-color: #00ff00;"&gt;Строка&lt;/span&gt;</samp><br>
+<samp class="xx">&lt;span style="background-color: #ffff00;"&gt;Строка&lt;/span&gt;</samp><br>
+<samp class="xx">&lt;hr&gt;</samp><br>
+<samp class="xx">&lt;div style="background-color: #00ffff;"&gt;Блок&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;div style="background-color: #00ff00;"&gt;Блок&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;div style="background-color: #ffff00;"&gt;Блок&lt;/div&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer36.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<h2>Ширина и высота блочных элементов.</h2>
+
+<p>Свойства CSS <samp><b>width</b> и <b>height</b></samp> - устанавливают ширину и высоту блочных элементов.  Ширина и высота элемента может быть задана следующими способами:</p>
+<ul>
+<li><samp><b>auto</b></samp> - Размеры элемента определяется его содержанием. (по умолчанию) 
+<li><samp><b>%</b></samp> - Размеры элемента задаётся в процентах от высоты/ширины элемента родителя. 
+<li><samp><b>px</b></samp> - Размеры элемента задаётся в пикселях или любых других единицах измерения принятых в CSS. 
+</ul>
+
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Размеры блока&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;div style="background-color: #00ffff; <b>height: 100px; width: 250px</b>"&gt;Блок 1&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;div style="background-color: #00ff00; <b>height: 150px; width: 50%</b>"&gt;Блок 2&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;div style="background-color: #ffff00; <b>height: auto; width: auto</b>"&gt;Блок 3&lt;/div&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer37.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Если содержание элемента превышает его указанный размер, то в некоторых браузерах элемент автоматически присвоит значение auto, а в некоторых содержание "выползет" за пределы элемента.</p>
+
+<h2>Управление содержанием элемента.</h2>
+
+<p>Что делать с содержанием элемента, если оно превышает его размер?</p>
+
+<p>Если элементу присвоены точные значения высоты и ширины (<samp><b>height, width</b></samp>) а его содержание, например длинный текст, не вмещается в указанных пределах, то по умолчанию такой элемент растягивается до нужных размеров, что не всегда на руку веб-мастеру. На помощь приходит атрибут <samp><b>overflow</b></samp>, который указывает браузеру, что делать с элементом в таких случаях.</p>
+
+<p>Свойство <samp><b>overflow</b></samp> может иметь следующие значения:</p>
+<ul>
+<li><samp><b>visible</b></samp> - Элемент растягивается до необходимых размеров. (по умолчанию) 
+<li><samp><b>hidden</b></samp> - Содержание элемента "обрезается" видна лишь та его часть что помещается в элементе. 
+<li><samp><b>scroll</b></samp> - Добавляются полосы прокрутки (всегда! даже если содержание помещается в пределах элемента). 
+<li><samp><b>auto</b></samp> - Полосы прокрутки добавляются при необходимости. 
+</ul>
+
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Содержание элемента&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;div style="<b>overflow: auto;</b> width: 250px; height: 150px; border: solid 2px #dddddd"&gt;</samp><br>
+<samp class="xxx">&lt;h3 align="center"&gt;Диктант&lt;/h3&gt;</samp><br>
+<samp class="xxx">На дощатой террасе, близ конопляника, небезызвестная вдова Агриппина Саввечна, потчевала, отставного коллежского асессора Аполлона Карповича, моллюсками и другими яствами, под аккомпанемент виолончели.</samp><br>
+<samp class="xx">&lt;/div&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer38.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<h2>Минимальные и максимальные размеры элемента.</h2>
+
+<p>Так как размеры элемента по умолчанию регулируются исключительно вложенным  в него содержанием, текстом, графикой.. и т.д. то элементы становятся, вернее, остаются  "резиновыми" и это хорошо! Но хорошо не во всех случаях.. иногда требуется ограничить эту "резиновость" конкретными размерами. Например, указать ячейке таблицы, что ты мол, независимо от твоего содержания, можешь быть по высоте не менее 50 пикселей, но и не более  200 пикселей..  определить, так сказать, диапазон её высоты или ширины.</p>
+<p>Ниже перечисленные свойства CSS позволяют определить минимальные и максимальные размеры того или иного элемента</p>
+<ul>
+<li><samp><b>max-height</b></samp>  - максимальная высота элемента	
+<li><samp><b>max-width</b></samp> - максимальная ширина элемента
+<li><samp><b>min -height</b></samp> - минимальная высота элемента
+<li><samp><b>min-width</b></samp>  - минимальная ширина элемента
+</ul>
+
+<p>Эти свойства CSS, в свою очередь, могут выражаться в пикселях, процентах  от размеров родительского элемента и <samp><b>none</b></samp> - без ограничений.</p>
+
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Минимальные и максимальные размеры элемента&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;div style="<b>min-height: 50px; min-width: 100px; max-height: 250px; max-width: 300px;</b> border: solid 2px #dddddd"&gt;</samp><br>
+<samp class="xxx">Браузер Internet Explorer игнорирует свойства css min-width, max-width, min-height и max-height.</samp><br>
+<samp class="xx">&lt;/div&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer39.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<h2>Полезные советы:</h2>
+<p>Как Вы уже поняли не все браузеры одинаково интерпретируют как HTML теги, так и свойства CSS. Особым "невежеством" по отношению как к пользователям так и к веб дизайнерам  отличился Internet Explorer 6 и его более ранние версии.. Впрочем, и в остальных браузерах далеко не всё проходит гладко. Отсюда необходимо сделать вывод, что прежде чем выкладывать ту или иную страницу в Интернет её необходимо просмотреть (протестировать) в различных браузерах и их версий. А совет заключается собственно в том, что хорошо бы было их иметь под рукой - в установленном виде на Вашем компьютере.  Соберите свою "коллекцию" браузеров.</p>
+<div class="url">
+<a href="glava6.html" title="К предыдущей главе">&lt;&lt; предыдущая глава</a> | 
+<a href="glava8.html" title="К следующей главе">следующая глава &gt;&gt;</a>
+</div>
+</div>
+<!-- Конец центральной колонке -->
+<!-- Подвал -->
+<div class="footer">
+&copy; Автор: Семикопенко Алексей Алексеевич. | <a href="http://webremeslo.ru/" class="logo" title="Перейти на сайт webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец подвалу -->
+</body>
+</html>

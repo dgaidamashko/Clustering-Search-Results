@@ -1,0 +1,171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Учебник HTML для начинающих.</title>
+<meta HTTP-EQUIV="Content-Type" Content="text/html; Charset=Windows-1251">
+<meta name="author" Content="Семикопенко Алексей Алексеевич">
+<meta name="copyright" Content="Семикопенко Алексей Алексеевич">
+<meta name="Publisher-Email" Content="alex@webremeslo.ru">
+<meta name="Publisher-URL" Content="http://webremeslo.ru/">
+<link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+<body>
+<!-- Шапка -->
+<div class="header">
+<h1 class="logo">Учебник HTML</h1>
+</div>
+<!-- Конец шапке -->
+<!--левая колонка "меню" -->
+<div class="left">
+<div class="fixed">
+<ul class="ul_none">
+<li><a href="../index.html" class="menu" title="От автора.">Главная</a></li>
+<li><a href="glava0.html" class="menu" title="Введение.">Введение</a></li>
+<li><a href="glava1.html" class="menu" title="Перейти к Главе 1   Что такое HTML язык?">Что такое HTML язык</a></li>
+<li><a href="glava2.html" class="menu" title="Перейти к Главе 2   Редактируем текст">Редактируем текст</a></li>
+<li><a href="glava3.html" class="menu" title="Перейти к Главе 3   Рисунки">Рисунки</a></li>
+<li><a href="glava4.html" class="menu" title="Перейти к Главе 4   Таблицы">Таблицы</a></li>
+<li><a href="glava5.html" class="menu" title="Перейти к Главе 5   Ссылки">Ссылки</a></li>
+<li><a href="glava6.html" class="menu" title="Перейти к Главе 6   И ещё…">И ещё…</a></li>
+<li><a href="glava7.html" class="menu" title="Перейти к Главе 7   Фреймы">Фреймы</a></li>
+<li><a href="glava8.html" class="menu" title="Перейти к Главе 8   Навигационные карты">Навигационные карты</a></li>
+<li><a href="glava9.html" class="menu" title="Перейти к Главе 9   Списки">Списки</a></li>
+<li><a href="glava10.html" class="menu" title="Перейти к Главе 10   Meta теги">Meta теги</a></li>
+<li><a href="glava11.html" class="menu" title="Перейти к Главе 11   Заголовок &lt;!DOCTYPE&gt;">Заголовок &lt;!DOCTYPE&gt;</a></li>
+<li><a href="glava12.html" class="menu" title="Перейти к Главе 12   И снова таблицы..">И снова таблицы..</a></li>
+<li><a href="glava13.html" class="activemenu" title="Перейти к Главе 13   Фоновая музыка">Фоновая музыка</a></li>
+<li><a href="glava14.html" class="menu" title="Перейти к Главе 14   Текст - логика и физика">Текст - логика и физика</a></li>
+</ul>
+</div>
+</div>
+<!-- Конец левой колонке -->
+<!-- Правая колонка -->
+<div class="right">
+<h2>А так же:</h2>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">Как создать сайт?</a>
+<a href="http://www.webremeslo.ru/css/glava0.html" class="menu" title="www.webremeslo.ru">Учебник CSS</a>
+<a href="http://www.webremeslo.ru/spravka/spravka.html" class="menu" title="www.webremeslo.ru">Справочник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka4.html" class="menu" title="www.webremeslo.ru">Справочник CSS</a>
+<a href="http://forum.webremeslo.ru/index.php" class="menu" title="www.webremeslo.ru">Форум</a><br>
+..<em>и многое другое на сайте:</em><br>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец правой колонке -->
+<!-- Центральная колонка -->
+<div class="center">
+
+<p class="zag">Глава 13</p>
+<h1>Фоновая музыка.</h1>
+<h2>.. или то чего лучше не делать.</h2>
+
+<p>Раскрывая все возможности HTML языка, в тринадцатой несчастливой главе,  вынужден Вам рассказать о теге <samp><b>&lt;bgsound&gt;</b></samp> который позволяет внедрять в страницу сайта фоновую музыку. Другими словами когда пользователь зайдёт на Ваш сайт он услышит звучание музыки указанной с помощью вышеупомянутого тега, ну естественно если у него подключены колонки или наушники.</p>
+<p>Итак, тег <samp><b>&lt;bgsound&gt;</b></samp> первое, что необходимо сказать об этом теге то, что он не входит в официальную спецификацию HTML, а является инициативой компании <samp>Microsoft</samp> для браузера <samp>Internet Explorer</samp>, так что большинство других браузеров игнорируют данный тег.</p>
+<p>Для того чтобы  вставить аудио файл в какую либо страницу сайта, в качестве фоновой музыки, нужно в теге <samp><b>&lt;bgsound&gt;</b></samp> с помощью атрибута <samp><b>src</b></samp> указать путь к аудио файлу</p>
+<p>Вот так: </p>
+<samp class="x"><b>&lt;bgsound src="music.mid"&gt;</b></samp> - закрывающий тег необязателен.
+<p>Ну и собственно вставить эту конструкцию в html документ, обычно тег <samp><b>&lt;bgsound&gt;</b></samp> располагают в "голове" документа между тегами <samp><b>&lt;head&gt; &lt;/head&gt;</b></samp>.</p>
+<p>Сам аудио файл должен быть в формате: <samp><b>WAV, AU</b></samp> или <samp><b>MIDI</b></samp>.</p>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Фоновая музыка&lt;/title&gt;</samp><br>
+<samp class="xx"><b>&lt;bgsound src="mammoth.mid"&gt;</b></samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;table border="0" align="center" width="800" cellspacing="0" cellpadding="15"&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td valign="top"&gt;&lt;img src="mammoth.jpg" width="120" height="120" align="left" alt="Ищу маму.."&gt;&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt;</samp><br>
+<samp class="xxxxx">&lt;h2&gt;Песенка мамонтенка.&lt;/h2&gt;</samp><br>
+<samp class="xxxxx">&lt;pre&gt;</samp><br>
+<samp class="xxxxx">По синему морю, к зелёной земле</samp><br>
+<samp class="xxxxx">Плыву я на белом своём корабле.</samp><br>
+<samp class="xxxxx">На белом своём корабле,</samp><br>
+<samp class="xxxxx">На белом своём корабле.</samp><br>
+<samp class="xxxxx">... ... ...</samp><br>
+<samp class="xxxxx">&lt;b&gt;Музыка: В. Шаинский &lt;/b&gt;</samp><br>
+<samp class="xxxxx">&lt;b&gt;Слова: Д. Непомнящий&lt;/b&gt;</samp><br>
+<samp class="xxxxx">&lt;/pre&gt;</samp><br>
+<samp class="xxxx">&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xx">&lt;/table&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer70.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>Музыка нааас сближала.. тайною нааашей стала.. :)</p>
+
+<h2>Атрибуты тега &lt;bgsound&gt;</h2>
+
+<p>К тегу <b>&lt;bgsound&gt;</b> могут быть применены следующие атрибуты:</p>
+<ul>
+<li><samp><b>src</b></samp> - адрес звукового файла
+<li><samp><b>loop</b></samp> - число повторов звукового файла
+<li><samp><b>balance</b></samp> - стереобаланс
+<li><samp><b>volume</b></samp> - громкость
+</ul>
+<p>Теперь поподробнее:</p>
+<p><samp><b>src</b></samp> - адрес звукового файла.. ну думаю понятно указывает путь к аудио файлу, например такая запись:<br> 
+<samp><b>&lt;bgsound src="music/mammoth.mid"&gt;</b></samp> говорит, что рядом с документом есть папка <samp><b>music</b></samp>, а в ней лежит музыкальный файл <samp><b>mammoth.mid</b></samp> который следует воспроизвести в качестве фоновой музыки.</p>
+<p><samp><b>loop</b></samp> -  данный атрибут указывает сколько раз подряд будет проигрываться аудио файл, значения 0 и 1 проигрывает файл один раз, любое целое положительное число проигрывает звуковой файл заданное число раз, а вот отрицательное значение -1 говорит браузеру о том что данный файл необходимо проигрывать бесконечно. По умолчанию значение равно 1.</p>
+<p><samp><b>balance</b></samp> - стереобаланс между правой и левой колонками компьютера, возможный диапазон значений от -10000 до 10000. Так, например значение -10000 переведёт весь звук на лёвую колонку компьютера при этом из правой колонки будет доносится лишь тишина..  Значение по умолчанию равно 0 т.е. распределять звук равномерно между левой и правой колонками.</p>
+<p><samp><b>volume</b></samp> - громкость можно определить значениями в диапазоне от  -10000 до 0, где ноль это максимальная громкость, а -10000 минимальная.  Значение 0 стоит по умолчанию.</p>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Фоновая музыка&lt;/title&gt;</samp><br>
+<samp class="x"><b>&lt;bgsound src="music/mammoth.mid" loop="-1" volume="-800" balance volume="1500"&gt;</b></samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;table border="0" align="center" width="800" cellspacing="0" cellpadding="15"&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td valign="top"&gt;&lt;img src="mammoth.jpg" width="120" height="120" align="left" alt="Ищу маму.."&gt;&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt;</samp><br>
+<samp class="xxxxx">&lt;h2&gt;Песенка мамонтенка.&lt;/h2&gt;</samp><br>
+<samp class="xxxxx">&lt;pre&gt;</samp><br>
+<samp class="xxxxx">По синему морю, к зелёной земле</samp><br>
+<samp class="xxxxx">Плыву я на белом своём корабле.</samp><br>
+<samp class="xxxxx">На белом своём корабле,</samp><br>
+<samp class="xxxxx">На белом своём корабле.</samp><br>
+<samp class="xxxxx">... ... ...</samp><br>
+<samp class="xxxxx">&lt;b&gt;Музыка: В. Шаинский &lt;/b&gt;</samp><br>
+<samp class="xxxxx">&lt;b&gt;Слова: Д. Непомнящий&lt;/b&gt;</samp><br>
+<samp class="xxxxx">&lt;/pre&gt;</samp><br>
+<samp class="xxxx">&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xx">&lt;/table&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer71.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>Вот собственно и всё.. а теперь внимательно читаем полезные советы..</p>
+
+<h2>Полезные советы:</h2>
+<ul>
+<li><p>Использование фоновой музыки, это не есть хорошо по нескольким причинам:</p>
+<p>Во-первых, мало кому из пользователей нравится, когда против его воли из динамиков начинает доноситься то, что он не заказывал! К тому же лазая в Интернете, у него может играть собственная музыка открытая с помощью какого ни будь плеера, может быть ему не нравится именно Ваше музыкальное сопровождение и он предпочитает классику вместо тяжёлого рока, может быть вокруг все спят да и просто он хочет поработать в тишине..</p>
+<p>Во-вторых, пользователю не предоставляется возможности управлять данной музыкой, проще говоря, нет кнопок "Стоп" "Пауза" "Плей" и т.д.</p>
+<p>В-третьих, музыкальные записи в форматах <samp><b>WAV, AU</b></samp> и <samp><b>MIDI</b></samp>, как правило, низкого качества, кому нравится слушать некачественную музыку?</p>
+<p>В-четвёртых, несмотря на то, что указанные выше форматы, как правило,  сравнительно небольшого объёма памяти - это всё же трафик, а любой лишний трафик это плохо.</p>
+<p>Ну и в-пятых, как уже говорилось раннее тег <samp><b>&lt;bgsound&gt;</b></samp> это придумка для браузера  <samp>Internet Explorer</samp> так что в большинстве других браузеров музыка играть не будет! Кроме того, так как данный тег не входит в спецификацию  HTML, то документ с этим тегом будет не валидным. </p>
+<li><p>Если уж Вам действительно так необходима музыка на сайте, то внедряйте её с помощью тегов <samp><b>&lt;embed&gt;</b></samp> и/или <samp><b>&lt;object&gt;</b></samp>.. о данных тегах я постараюсь Вам рассказать в пока что ещё ненаписанной главе "объекты".</p>
+</ul>
+
+
+<div class="url">
+<a href="glava12.html" title="К предыдущей главе">&lt;&lt; предыдущая глава</a> | 
+<a href="glava14.html" title="К следующей главе">следующая глава &gt;&gt;</a>
+</div>
+</div>
+<!-- Конец центральной колонке -->
+<!-- Подвал -->
+<div class="footer">
+&copy; Автор: Семикопенко Алексей Алексеевич. | <a href="http://webremeslo.ru/" class="logo" title="Перейти на сайт webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец подвалу -->
+</body>
+</html>

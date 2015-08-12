@@ -1,0 +1,247 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Учебник CSS для начинающих.</title>
+<meta HTTP-EQUIV="Content-Type" Content="text/html; Charset=Windows-1251">
+<meta name="author" Content="Семикопенко Алексей Алексеевич">
+<meta name="copyright" Content="Семикопенко Алексей Алексеевич">
+<meta name="Publisher-Email" Content="alex@webremeslo.ru">
+<meta name="Publisher-URL" Content="http://webremeslo.ru/">
+<link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+<body>
+<!-- Шапка -->
+<div class="header">
+<h1 class="logo">Учебник CSS</h1>
+</div>
+<!-- Конец шапке -->
+<!--левая колонка "меню" -->
+<div class="left">
+<div class="fixed">
+<ul class="ul_none">
+<li><a href="../index.html" class="menu" title="От автора.">Главная</a></li>
+<li><a href="glava0.html" class="menu" title="Введение.   Что такое CSS?">Что такое CSS?</a></li>
+<li><a href="glava1.html" class="menu" title="Глава 1   Внедрение CSS в HTML документ.">Внедрение CSS.</a></li>
+<li><a href="glava2.html" class="menu" title="Глава 2   Свойства текста.">Свойства текста.</a></li>
+<li><a href="glava3.html" class="menu" title="Глава 3   Свойства шрифта.">Свойства шрифта.</a></li>
+<li><a href="glava4.html" class="menu" title="Глава 4   Цвет и фон.">Цвет и фон.</a></li>
+<li><a href="glava5.html" class="menu" title="Глава 5   Границы элемента.">Границы элемента.</a></li>
+<li><a href="glava6.html" class="menu" title="Глава 6   Классы и id селекторы.">Классы и id селекторы.</a></li>
+<li><a href="glava7.html" class="menu" title="Глава 7   Размеры элемента.">Размеры элемента.</a></li>
+<li><a href="glava8.html" class="activemenu" title="Глава 8   Поля и отступы.">Поля и отступы.</a></li>
+<li><a href="glava9.html" class="menu" title="Глава 9   Курсоры.">Курсоры.</a></li>
+<li><a href="glava10.html" class="menu" title="Глава 10   Форматирование.">Форматирование.</a></li>
+<li><a href="glava11.html" class="menu" title="Глава 11   Поплавки.">Поплавки.</a></li>
+<li><a href="glava12.html" class="menu" title="Глава 12   Позиционирование.">Позиционирование.</a></li>
+<li><a href="glava13.html" class="menu" title="Глава 13   Стиль списка.">Стиль списка.</a></li>
+<li><a href="glava14.html" class="menu" title="Глава 14   Полоса прокрутки.">Полоса прокрутки.</a></li>
+<li><a href="glava15.html" class="menu" title="Глава 15   Псевдоклассы.">Псевдоклассы.</a></li>
+<li><a href="glava16.html" class="menu" title="Глава 16   Псевдоэлементы.">Псевдоэлементы.</a></li>
+</ul>
+</div>
+</div>
+<!-- Конец левой колонке -->
+<!-- Правая колонка -->
+<div class="right">
+<h2>А так же:</h2>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">Как создать сайт?</a>
+<a href="http://www.webremeslo.ru/html/glava0.html" class="menu" title="www.webremeslo.ru">Учебник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka.html" class="menu" title="www.webremeslo.ru">Справочник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka4.html" class="menu" title="www.webremeslo.ru">Справочник CSS</a>
+<a href="http://forum.webremeslo.ru/index.php" class="menu" title="www.webremeslo.ru">Форум</a><br>
+..<em>и многое другое на сайте:</em><br>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец правой колонке -->
+<!-- Центральная колонка -->
+<div class="center">
+   
+<p class="zag">Глава 8</p>
+
+<h1>Поля и отступы.</h1>
+<p>В этой главе мы поговорим о полях (свойство <samp><b>margin</b></samp>) и отступах (свойство <samp><b>padding</b></samp>) элемента. Между собой эти два свойства весьма схожи, однако все же это два абсолютно разных свойства.</p> 
+
+<img src="../graphics/margin.gif" width="267" height="243" align="left" alt="Поля и отступы" vspace="5" hspace="30">
+
+<p>Давайте разберемся в этих понятиях..</p> 
+<p>Поле (<samp><b>margin</b></samp>) - Это расстояние от внешней границы элемента до границы окна браузера или же элемента родителя.. ну границы того блока в который вложен наш элемент.</p>
+<p>Отступом (<samp><b>padding</b></samp>) - Называют расстояние от внутренней границы элемента до его содержания текста, картинок таблиц.. </p>
+<p>На рисунке наглядно показаны эти расстояния, а так же место занимаемое бордюром (<samp><b>border</b></samp>) про него тоже не следует забывать.</p>
+
+<p>Расстояния <samp><b>margin</b></samp> и <samp><b>padding</b></samp> указываются:</p>
+<ul>
+<li><samp><b>px</b></samp> - В пикселях или любых других допустимых CSS единицах измерения.
+<li><samp><b>%</b></samp> - В процентах.
+<li><samp><b>auto</b></samp> - Размер полей и отступов автоматически рассчитывается браузером.
+</ul>
+<p>Давайте попробуем сделать тоже самое, что показано на рисунке с помощью блоков <samp><b>&lt;div&gt;</b></samp> и свойств CSS.</p>
+
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Поля и отступы&lt;/title&gt;</samp><br>
+<samp class="xx">&lt;style type="text/css"&gt;</samp><br>
+<samp class="xxx">div.block1 {</samp><br>
+<samp class="xxx">width: 260px;</samp><br>
+<samp class="xxx">background-color: #c5ffa0;</samp><br>
+<samp class="xxx">border: 2px solid #a68754</samp><br>
+<samp class="xxx">}</samp><br>
+<samp class="xxx">div.block2 {</samp><br>
+<samp class="xxx">background-color: #c0e4ff;</samp><br>
+<samp class="xxx">border: 8px solid #a68754;</samp><br>
+<samp class="xxx"><b>margin: 40px;</b></samp><br>
+<samp class="xxx"><b>padding: 20px</b></samp><br>
+<samp class="xxx">}</samp><br>
+<samp class="xx">&lt;/style&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;div class="block1"&gt;</samp><br>
+<samp class="xxx">&lt;div class="block2"&gt;</samp><br>
+<samp class="xxxx">&lt;samp&gt;Осмысливая мысли в смысле смысла, есть смысл помыслить о немыслимом!&lt;/samp&gt;</samp><br>
+<samp class="xxx">&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;/div&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer40.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Попробуйте поменять значения свойств <samp><b>margin</b></samp> и <samp><b>padding</b></samp> и Вы поймете, что к чему.. а если  и так понятно идем дальше..</p>
+
+<h2>Возможные значения margin и padding.</h2>
+
+<p>В примере выше присудив свойствам <samp><b>margin</b></samp> и <samp><b>padding</b></samp> по одному значению, мы определили поля и отступы элемента со всех четырех его сторон. Для того чтобы указать разные размеры полей и отступов для каждой из сторон элемента, необходимо указывать  два, три или четыре аргумента через пробел. Причем  в зависимости от количества значений результат будет разным.</p>
+<p>Вот примеры:</p>
+
+ <div style="background-color: #acdb82; border: 2px solid #008000; margin: 5px;">
+     <div style="border: solid #008000 2px; background-color: #c6f2de; margin: 5px; padding: 5px;">
+       <samp><b>margin: 5px</b>;</samp> - <i>одно значение</i>. <br>
+        Одно значение - Поля одинаковые со всех сторон.
+     </div>
+ </div>
+ <div style="background-color: #acdb82; border: 2px solid #008000; margin: 5px;">
+   <div style="border: solid #008000 2px; background-color: #c6f2de; margin: 5px 40px; padding: 5px;">
+    <samp><b>margin: 5px 40px;</b></samp> - <i>два значения.</i> <br>
+    Первое значение - Устанавливает поля от верхней и нижней границ.<br>
+    Второе значение - Устанавливает поля от левой и правой границ элемента.
+  </div>
+</div> 
+ <div style="background-color: #acdb82; border: 2px solid #008000; margin: 5px;">
+   <div style="border: solid #008000 2px; background-color: #c6f2de; margin: 5px 40px 20px; padding: 5px;">
+    <samp><b>margin: 5px 40px 20px;</b></samp> <i>- три значения.</i><br> 
+      Первое значение - Устанавливает поле от верхней границы элемента. <br>
+      Второе значение - Устанавливает поля от левой и правой границ элемента.<br> 
+      Третье значение - Устанавливает поле от нижней границы элемента.
+  </div>
+</div>
+<div style="background-color: #acdb82; border: 2px solid #008000; margin: 5px;"> 
+   <div style="border: solid #008000 2px; background-color: #c6f2de; margin: 5px 40px 20px 1px; padding: 5px;">
+     <samp><b>margin: 5px 40px 20px 1px;</b></samp> -<i> четыре значения.</i><br> 
+      Первое значение - Устанавливает поле от верхней границы элемента. <br>
+      Второе значение - Устанавливает поле от правой границы элемента. <br>
+      Третье значение - Устанавливает поле от нижней границы элемента. <br>
+      Четвёртое значение - Устанавливает поле от левой границы элемента.
+   </div>
+</div>
+
+<p>С <samp><b>padding</b></samp> дело происходит по тому же принципу, как и с <samp><b>margin</b></samp>, отступы от внутренних границ элемента до содержания приобретают размеры  в зависимости от количества аргументов и их значений.</p>
+
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Поля и отступы&lt;/title&gt;</samp><br>
+<samp class="xx">&lt;style type="text/css"&gt;</samp><br>
+<samp class="xxx">div.block1 {</samp><br>
+<samp class="xxx">width: 260px; </samp><br>
+<samp class="xxx">background-color: #c5ffa0; </samp><br>
+<samp class="xxx">border: 2px solid #a68754</samp><br>
+<samp class="xxx">}</samp><br>
+<samp class="xxx">div.block2 {</samp><br>
+<samp class="xxx">background-color: #c0e4ff; </samp><br>
+<samp class="xxx">border: 2px solid #a68754; </samp><br>
+<samp class="xxx"><b>margin:  20px 5px 20px 40px;</b></samp><br>
+<samp class="xxx"><b>padding: 5px 25px</b></samp><br>
+<samp class="xxx">}</samp><br>
+<samp class="xx">&lt;/style&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;div class="block1"&gt;</samp><br>
+<samp class="xxx">&lt;div class="block2"&gt;</samp><br>
+<samp class="xxxx">&lt;samp&gt;Осмысливая мысли в смысле смысла, есть смысл помыслить о немыслимом!&lt;/samp&gt;</samp><br>
+<samp class="xxx">&lt;/div&gt;</samp><br>
+<samp class="xxx">&lt;div class="block2"&gt;</samp><br>
+<samp class="xxxx">&lt;samp&gt;Мало кто знает, как много надо знать, для того чтобы знать, как мало мы знаем!&lt;/samp&gt;</samp><br>
+<samp class="xxx">&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;/div&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer41.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<h2>Дочерние свойства  margin и padding.</h2>
+
+<p>Свойства CSS <samp><b>margin</b></samp> и <samp><b>padding</b></samp> являются базовыми и имеют ряд дочерних свойств.</p>
+<p>У <samp><b>margin</b></samp> зто:</p>
+<ul>
+<li><samp><b>margin-top</b></samp> - Поле от верхней границы элемента родителя,
+<li><samp><b>margin-left </b></samp> - Поле от левой границы элемента родителя,
+<li><samp><b>margin-right</b></samp> -  Поле от правой границы элемента родителя,
+<li><samp><b>margin-bottom</b></samp> - Поле от нижней границы элемента родителя.
+</ul>
+
+<p>И у <samp><b>padding</b></samp> соответственно:</p>
+
+<ul>
+<li><samp><b>padding-top</b></samp> - Отступ от верхней границы элемента до его содержания,
+<li><samp><b>padding-left</b></samp> - Отступ от левой границы элемента до его содержания,
+<li><samp><b>padding-right</b></samp> - Отступ от правой границы элемента до его содержания,
+<li><samp><b>padding-bottom</b></samp> - Отступ от нижней границы элемента до его содержания.
+</ul>
+
+<p>Ну думаю понятно.. если возникает необходимость определить отступ или поле от одной единственной стороны  элемента лучше воспользоваться одним из вышеперечисленных свойств.</p>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Поля и отступы&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;div style="width: 250px; background-color: #c5ffa0; border: 2px solid #a68754"&gt;</samp><br>
+<samp class="xxx">&lt;div style="background-color: #c0e4ff; border: 2px solid #a68754; <b>margin-left:40px; padding-right: 50px</b>"&gt;</samp><br>
+<samp class="xxxx">&lt;samp&gt;Осмысливая мысли в смысле смысла, есть смысл помыслить о немыслимом!&lt;/samp&gt;</samp><br>
+<samp class="xxx">&lt;/div&gt;</samp><br>
+<samp class="xxx">&lt;br&gt;</samp><br>
+<samp class="xxx">&lt;div style="background-color: #c0e4ff; border: 2px solid #a68754; <b>margin-right:40px; padding-left: 50px</b>"&gt;</samp><br>
+<samp class="xxxx">&lt;samp&gt;Мало кто знает, как много надо знать, для того чтобы знать, как мало мы знаем!&lt;/samp&gt;</samp><br>
+<samp class="xxx">&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;/div&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer42.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<h2>Полезные советы:</h2>
+
+<p>Поля и отступы являются одними из основных составляющих дизайна сайта, по этому поводу следует придерживаться нескольких рекомендаций.</p>
+<ul>
+<li><p>Избегайте коротких, и уж тем более, нулевых отступов от содержимого к границам элемента, особенно это касается текстовых блоков. Текст с маленькими полями и отступами  читается трудно и "вязко".</p>
+<li><p>Соблюдайте правила пропорциональности и соизмеримости полей и отступов как для отдельно взятого элемента, так и для всей страницы (композиции элементов) целиком.</p>
+<li><p>Один из способов акцентирования внимания посетителя страницы на нужном Вам месте -  это отступы размером больше обычного, такой контраст заставит зрителя смотреть и проявить внимание к "особым" местам в тексте..</p>   
+</ul>
+<div class="url">
+<a href="glava7.html" title="К предыдущей главе">&lt;&lt; предыдущая глава</a> | 
+<a href="glava9.html" title="К следующей главе">следующая глава &gt;&gt;</a>
+</div>
+</div>
+<!-- Конец центральной колонке -->
+<!-- Подвал -->
+<div class="footer">
+&copy; Автор: Семикопенко Алексей Алексеевич. | <a href="http://webremeslo.ru/" class="logo" title="Перейти на сайт webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец подвалу -->
+</body>
+</html>

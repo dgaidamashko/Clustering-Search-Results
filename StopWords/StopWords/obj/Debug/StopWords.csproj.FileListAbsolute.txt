@@ -1,0 +1,5 @@
+D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\StopWords\StopWords\bin\Debug\StopWords.dll
+D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\StopWords\StopWords\bin\Debug\StopWords.pdb
+D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\StopWords\StopWords\obj\Debug\StopWords.csprojResolveAssemblyReference.cache
+D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\StopWords\StopWords\obj\Debug\StopWords.dll
+D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\StopWords\StopWords\obj\Debug\StopWords.pdb

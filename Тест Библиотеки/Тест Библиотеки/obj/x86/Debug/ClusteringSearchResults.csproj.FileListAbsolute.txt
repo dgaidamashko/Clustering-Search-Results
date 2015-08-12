@@ -1,0 +1,13 @@
+D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Тест Библиотеки\Тест Библиотеки\obj\x86\Debug\ClusteringSearchResults.csprojResolveAssemblyReference.cache
+D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Тест Библиотеки\Тест Библиотеки\obj\x86\Debug\ClusteringSearchResults.Form1.resources
+D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Тест Библиотеки\Тест Библиотеки\obj\x86\Debug\ClusteringSearchResults.Form2.resources
+D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Тест Библиотеки\Тест Библиотеки\obj\x86\Debug\ClusteringSearchResults.Properties.Resources.resources
+D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Тест Библиотеки\Тест Библиотеки\obj\x86\Debug\ClusteringSearchResults.csproj.GenerateResource.Cache
+D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Тест Библиотеки\Тест Библиотеки\bin\Debug\Тест Библиотеки.exe
+D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Тест Библиотеки\Тест Библиотеки\bin\Debug\Тест Библиотеки.pdb
+D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Тест Библиотеки\Тест Библиотеки\bin\Debug\alglibnet2.dll
+D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Тест Библиотеки\Тест Библиотеки\bin\Debug\StopWords.dll
+D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Тест Библиотеки\Тест Библиотеки\bin\Debug\StopWords.pdb
+D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Тест Библиотеки\Тест Библиотеки\obj\x86\Debug\Тест Библиотеки.exe
+D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Тест Библиотеки\Тест Библиотеки\obj\x86\Debug\Тест Библиотеки.pdb
+D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Тест Библиотеки\Тест Библиотеки\obj\x86\Debug\ClusteringSearchResults.Form3.resources

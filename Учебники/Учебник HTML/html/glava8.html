@@ -1,0 +1,324 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Учебник HTML для начинающих.</title>
+<meta HTTP-EQUIV="Content-Type" Content="text/html; Charset=Windows-1251">
+<meta name="author" Content="Семикопенко Алексей Алексеевич">
+<meta name="copyright" Content="Семикопенко Алексей Алексеевич">
+<meta name="Publisher-Email" Content="alex@webremeslo.ru">
+<meta name="Publisher-URL" Content="http://webremeslo.ru/">
+<link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+<body>
+<!-- Шапка -->
+<div class="header">
+<h1 class="logo">Учебник HTML</h1>
+</div>
+<!-- Конец шапке -->
+<!--левая колонка "меню" -->
+<div class="left">
+<div class="fixed">
+<ul class="ul_none">
+<li><a href="../index.html" class="menu" title="От автора.">Главная</a></li>
+<li><a href="glava0.html" class="menu" title="Введение.">Введение</a></li>
+<li><a href="glava1.html" class="menu" title="Перейти к Главе 1   Что такое HTML язык?">Что такое HTML язык</a></li>
+<li><a href="glava2.html" class="menu" title="Перейти к Главе 2   Редактируем текст">Редактируем текст</a></li>
+<li><a href="glava3.html" class="menu" title="Перейти к Главе 3   Рисунки">Рисунки</a></li>
+<li><a href="glava4.html" class="menu" title="Перейти к Главе 4   Таблицы">Таблицы</a></li>
+<li><a href="glava5.html" class="menu" title="Перейти к Главе 5   Ссылки">Ссылки</a></li>
+<li><a href="glava6.html" class="menu" title="Перейти к Главе 6   И ещё…">И ещё…</a></li>
+<li><a href="glava7.html" class="menu" title="Перейти к Главе 7   Фреймы">Фреймы</a></li>
+<li><a href="glava8.html" class="activemenu" title="Перейти к Главе 8   Навигационные карты">Навигационные карты</a></li>
+<li><a href="glava9.html" class="menu" title="Перейти к Главе 9   Списки">Списки</a></li>
+<li><a href="glava10.html" class="menu" title="Перейти к Главе 10   Meta теги">Meta теги</a></li>
+<li><a href="glava11.html" class="menu" title="Перейти к Главе 11   Заголовок &lt;!DOCTYPE&gt;">Заголовок &lt;!DOCTYPE&gt;</a></li>
+<li><a href="glava12.html" class="menu" title="Перейти к Главе 12   И снова таблицы..">И снова таблицы..</a></li>
+<li><a href="glava13.html" class="menu" title="Перейти к Главе 13   Фоновая музыка">Фоновая музыка</a></li>
+<li><a href="glava14.html" class="menu" title="Перейти к Главе 14   Текст - логика и физика">Текст - логика и физика</a></li>
+</ul>
+</div>
+</div>
+<!-- Конец левой колонке -->
+<!-- Правая колонка -->
+<div class="right">
+<h2>А так же:</h2>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">Как создать сайт?</a>
+<a href="http://www.webremeslo.ru/css/glava0.html" class="menu" title="www.webremeslo.ru">Учебник CSS</a>
+<a href="http://www.webremeslo.ru/spravka/spravka.html" class="menu" title="www.webremeslo.ru">Справочник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka4.html" class="menu" title="www.webremeslo.ru">Справочник CSS</a>
+<a href="http://forum.webremeslo.ru/index.php" class="menu" title="www.webremeslo.ru">Форум</a><br>
+..<em>и многое другое на сайте:</em><br>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец правой колонке -->
+<!-- Центральная колонка -->
+<div class="center">
+
+<p class="zag">Глава 8</p>
+<h1>Навигационные карты</h1>
+
+<p>Мы с Вами уже говорили о том как сделать рисунок ссылкой.. в этой главе поговорим о том как сделать фрагмент, область рисунка ссылкой на тот или иной документ, а так же о том как сделать различные области одного и того же рисунка ссылками на различные документы.<p>
+<p>Для осуществления данной задачи нам не обойтись без так называемых навигационных карт.</p>
+<p>Предположим, у нас имеется такой рисунок:</p>
+
+<img src="../graphics/karta.png" alt="Навигационная карта"> 
+
+<p>..и нам необходимо сделать, так что бы пользователь, нажав на одну из этих "кнопок" переходил по ссылке в тот или  документ.. что нам для этого нужно? </p>
+<p>В первую очередь обозначим наш рисунок не как обыкновенное графическое изображение, а как навигационную карту присвоив этому рисунку своё индивидуальное имя. Делается это при помощи атрибута <samp><b>usemap</b></samp> тега <samp><b>&lt;img&gt;</b></samp> (я думаю Вам не стоит напоминать о том что тег <samp><b>&lt;img&gt;</b></samp>  имеет обязательный атрибут <samp><b>src</b></samp> который указывает путь к той или иной картинке <samp><b>&lt;img src="knopki.jpg"&gt;</b></samp> )</p> 
+<p>Назовём наш рисунок/карту именем <samp><b>panel</b></samp>. Это будет выглядеть так:</p>
+<samp class="x">&lt;img src="knopki.jpg" <b>usemap="#panel"</b>&gt;</samp>
+<p>Не забываем по правилам синтаксиса поставить знак <b>#</b>решётки перед именем..</p> 
+<p>Ну а теперь, собственно, составим навигационную карту. Она задаётся тегом <samp><b>&lt;map&gt;</b></samp> у которого есть атрибут  <samp><b>name</b></samp> - имя.. улавливаете к чему я веду? Ну как Вы наверное уже догадались, укажем на базе какого рисунка мы будем строить нашу навигационную карту указав его имя..</p>
+	
+<samp class="x"><b>&lt;map name="panel"&gt;</b></samp><br>
+<samp class="x"><b>&lt;/map&gt;</b></samp>
+
+<p>Теперь займемся тем, что укажем браузеру области рисунка которые будут являться ссылками, а заодно пропишем пути переходов по этим ссылкам. Эту задачу берет на себя тег <samp><b>&lt;area&gt;</b></samp>, закрывающего  тега он не требует, и имеет следующие атрибуты, с которыми мы будем работать:</p>
+<samp class="x"><b>href</b></samp> - указывает путь к открываемому документу (точно так же как в теге <samp><b>&lt;a&gt;</b></samp>)<br>
+<samp class="x"><b>shape</b></samp> - форма области рисунка которая будет служить ссылкой. Может иметь одно из трёх значений:
+          <ul>
+		  <li><samp><b>rect</b></samp> - прямоугольная область
+          <li><samp><b>poly</b></samp> - область представляет собой некий многоугольник
+          <li><samp><b>circle</b></samp> - область заданная окружностью
+          </ul>
+		 
+<samp class="x"><b>coords</b></samp> - координаты формы
+
+<h2>Прямоугольная область</h2>
+
+<p>Теперь наша карта приобретает такой вид:</p>
+
+<samp class="x">&lt;map name="panel"&gt;</samp><br>
+<samp class="xx"><b>&lt;area href="primer1.html" shape="rect" coords="15,15,82,82"&gt;</b></samp><br>
+<samp class="x">&lt;/map&gt;</samp>
+
+<p>По сути теперь "зелёная" квадратная кнопка стала рабочей.</p>
+<p>В чем Вы можете убедится нажав на неё в этом примере:</p>
+
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Навигационная карта&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;center&gt;</samp><br>
+<samp class="xxx">&lt;img src="karta.jpg" <b>usemap="#panel"&gt;</b></samp><br>
+<samp class="xx">&lt;/center&gt;</samp><br>
+<samp class="xx"><b>&lt;map name="panel"&gt;</b></samp><br>
+<samp class="xxx"><b>&lt;area href="primer1.html" shape="rect" coords="15,15,82,82"&gt;</b></samp><br>
+<samp class="xx"><b>&lt;/map&gt;</b></samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer45.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Немного поспешил с примером толком не объяснив суть написанного.. Заострим внимание на атрибутах тега <samp><b>&lt;area&gt;</b></samp>.</p>  
+<p><samp><b>href="primer1.html"</b></samp> - здесь думаю понятно, это путь к документу, который должен открыться при нажатии на "зелёную кнопку".</p>
+<p>Так как кнопка у нас квадратная, а квадрат как известно это "правильный" прямоугольник, форму области рисунка назначаем прямоугольной <samp><b>shape="rect"</b></samp>.</p>
+<p>А теперь самое интересное  <samp><b>coords="15,15,82,82"</b></samp> - координаты.. Для прямоугольника они задаются двумя точками по принципу "Х1,У1,Х2,У2" Где Х1,У1- первая точка и соответственно Х2,У2 -вторая. Координаты указываются в пикселях.. Наш рисунок/карта имеет размеры 300 на 100 пикселей, её самый верхний левый пиксель имеет координаты Х=0,У=0, а самый нижний правый Х=300,У=100. Если не понятно, окунёмся в геометрию за пятый класс..</p>
+
+<p>Взгляните на рисунок:</p>
+
+<img src="../graphics/karta1.gif" alt="Навигационная карта">
+
+<p>Так, выбрав прямоугольную форму <samp><b>shape="rect"</b></samp> для нашей области в виде квадратной кнопки мы указали координаты ёё верхнего левого и нижнего правого пикселей.. которых вполне достаточно для обозначения "рабочей" области всей кнопки.</p>
+
+<h2>Полигон (многоугольник).</h2>
+
+<p>Займёмся "жёлтой кнопкой", она у нас представлена в виде треугольника. Для того чтобы выделить её "рабочую" область из нашего рисунка, присвоим атрибуту <samp><b>shape</b></samp> значение <samp><b>poly</b></samp> - полигон, которое определит эту область как некий многоугольник, где координаты через запятую будут являться его вершинами, их может быть сколь угодно много "Х1,У1,Х2,У2,Х3,У3,Х4,У4… Х124,У124" фигура образованная этими точками вершинами углов может иметь вид любого многоугольника как правильного, так и неправильного. В нашем случае угла всего три, на то он и треугольник, следовательно его координаты будут заданы тремя парами значений "Х1,У1,Х2,У2,Х3,У3"</p>
+<p>Значит всё вместе пишем так:</p>
+<samp class="x">&lt;area href="primer2.html" <b>shape="poly" coords="148,15,185,82,110,82"</b>&gt;</samp>  
+<p>А вот рисунок который наглядно показывает откуда берутся координаты точек..</p>
+<img src="../graphics/karta2.gif" alt="Навигационная карта">
+
+<p>Пример:</p>
+
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Навигационная карта&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;center&gt;</samp><br>
+<samp class="xxx">&lt;img src="karta.jpg" usemap="#panel"&gt;</samp><br>
+<samp class="xx">&lt;/center&gt;</samp><br> 
+<samp class="xx">&lt;map name="panel"&gt;</samp><br>
+<samp class="xxx">&lt;area href="primer1.html" shape="rect" coords="15,15,82,82"&gt;</samp><br>
+<samp class="xxx">&lt;area href="primer2.html" <b>shape="poly" coords="148,15,185,82,110,82"&gt;</b></samp><br> 
+<samp class="xx">&lt;/map&gt;</samp><br>   
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer46.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div>
+</div>
+
+<h2>Окружность</h2>
+
+<p>Ну и последняя "красная кнопка" она у нас круглая.. значит форма области будет круглой <samp><b>shape= "circle"</b></samp>. На сей раз с координатами дело обстоит немного иначе. Нам понадобится три значения Х,У,R. Х и У это координаты центра нашей окружности, а R - это длина радиуса в пикселях.</p>
+
+<p>Вот рисунок:</p>
+
+<img src="../graphics/karta3.gif" alt="Навигационная карта">
+
+<p>А вот пример:</p>
+
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Навигационная карта&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;center&gt;</samp><br>
+<samp class="xxx">&lt;img src="karta.jpg" usemap="#panel"&gt;</samp><br>
+<samp class="xx">&lt;/center&gt;</samp><br> 
+<samp class="xx">&lt;map name="panel"&gt;</samp><br>
+<samp class="xxx">&lt;area href="primer1.html" shape="rect" coords="15,15,82,82"&gt;</samp><br>
+<samp class="xxx">&lt;area href="primer2.html" shape="poly" coords="148,15,185,82,110,82"&gt;</samp><br>
+<samp class="xxx">&lt;area href="primerk3.html" <b>shape="circle"coords="250,50,33"&gt;</b></samp><br>
+<samp class="xx">&lt;/map&gt;</samp><br>   
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer47.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>  
+
+<h2>Доводим до ума..</h2>
+
+<p>Теперь немного о том, что ещё желательно было бы сделать с нашей картой прежде чем "монтировать" её в какую либо страницу.</p> 
+
+<p>Определим фиксированные размеры рисунка-карты атрибутами <samp><b>width</b></samp> и <samp><b>height</b></samp></p>
+<p>Напишем альтернативный текст, как для всего рисунка карты, так и для её отдельных областей используя атрибут <samp><b>alt</b></samp>, а также описание элементов атрибутом <samp><b>title</b></samp>.</p>
+<p>Избавимся от рамки бордюра.. сделаем <samp><b>border="0"</b></samp>..(ну если Вам с бордюром больше нравится, можете этого не делать.. я не настаиваю..)</p>
+
+<p>В конце должно выглядеть примерно вот так:</p>
+
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Навигационная карта&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;center&gt;</samp><br>
+<samp class="xxx">&lt;img src="karta.jpg" usemap="#panel" <b>width="300" height="100" border="0" alt="Панель управления" title="Панель управления"&gt;</b></samp><br> 
+<samp class="xx">&lt;/center&gt;</samp><br>
+<samp class="xx">&lt;map name="panel"&gt;</samp><br>
+<samp class="xxx">&lt;area href="primer1.html" shape="rect" coords="15,15,82,82" <b>alt="Зелёная кнопка" title="Зелёная кнопка"&gt;</b></samp><br>  
+<samp class="xxx">&lt;area href="primer2.html" shape="poly" coords="148,15,185,82,110,82" <b>alt="Жёлтая кнопка" title="Жёлтая кнопка"&gt;</b></samp><br> 
+<samp class="xxx">&lt;area href="primer3.html" shape="circle"coords="250,50,33" <b>alt="Красная кнопка" title="Красная кнопка"&gt;</b></samp><br>    
+<samp class="xx">&lt;/map&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer48.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div> 
+<h2>Пересечение областей</h2>
+
+<p>Иногда удобно формировать "рабочую" область изображения "смешивая" разные формы..</p>
+<p>Предположим, наша очередная кнопка имеет такой вид:</p>
+<img src="../graphics/karta4.png" alt="Навигационная карта">
+<p>Конечно, можно определить форму как многоугольник, но придется задать уйму координат для округлой части такой кнопки (ну это если нужна особая точность в навигационной карте).</p>
+<p>А можно определить в этом примере две формы прямоугольник <samp><b>rect</b></samp> и окружность <samp><b>circle</b></samp>  как показано на рисунке:</p>
+<img src="../graphics/karta5.gif" alt="Навигационная карта">
+<p>А в коде указать путь к одному и тому же документу:</p>
+<p>Пример: </p>
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Навигационная карта&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;center&gt;</samp><br>
+<samp class="xxx">&lt;img src="karta1.jpg" usemap="#panel1" width="300" height="100" border="0" alt="Панель управления"&gt;</samp><br> 
+<samp class="x">&lt;/center&gt;</samp><br>
+<samp class="xx">&lt;map name="panel1"&gt;</samp><br>
+<b>
+<samp class="xxx">&lt;area href="primer4.html" shape="circle"coords="206,50,33" title="Синяя кнопка"&gt;</samp><br>  
+<samp class="xxx">&lt;area href="primer4.html" shape="rect" coords="80,17,206,83" title="Синяя кнопка"&gt;</samp><br>
+</b>
+<samp class="xx">&lt;/map&gt;</samp><br>  
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer49.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Однако стоит помнить о том, что если бы ссылки с разных форм вели к разным документам, то нажимая на область пересечения наших фигур посетитель будет переходить по той ссылке, чья область в коде указана первой.. в нашем случае это окружность. </p>
+<h2>"Не область"</h2>
+<p>Рассмотрим на примере.. предположим необходимо изготовить вот такую кнопку:</p>
+<img src="../graphics/karta6.png" alt="Навигационная карта">
+<p>Как быть с отверстием в ней? </p>
+<p>Тег <samp><b>&lt;area&gt;</b></samp> помимо атрибута <samp><b>href</b></samp> имеет противоположенный по значению атрибут <samp><b>nohref</b></samp> - неактивная область, то есть если пользователь нажмет на такую область, то ровным счетом ничего не произойдёт, чего нам собственно и необходимо добиться при изготовлении "отверстия" в нашей карте.</p>
+<p>Карта будет задана двумя областями, неактивной окружностью <samp><b>circle</b></samp> и активной прямоугольной областью <samp><b>rect</b></samp> и как показано на рисунке чертеже иметь следующие координаты:</p> 
+<img src="../graphics/karta7.gif" alt="Навигационная карта">
+<p>Как уже говорилось ранее, при пересечении областей наибольшим приоритетом будет пользоваться та область, которая в коде внутри тега <samp><b>&lt;map&gt;</b></samp> указана первой</p>
+<p>Следовательно, пример будет иметь такой вид:</p>
+<div class="primer"> 
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Навигационная карта&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;center&gt;</samp><br>
+<samp class="xxx">&lt;img src="karta2.jpg" usemap="#panel2" width="150" height="150" border="0" alt="Панель управления"&gt;</samp><br>
+<samp class="xx">&lt;/center&gt;</samp><br>
+<samp class="xx">&lt;map name="panel2"&gt;</samp><br>
+<samp class="xxx">&lt;area <b>nohref</b> shape="circle" coords="76,74,35" title="дырка"&gt;</samp><br>  
+<samp class="xxx">&lt;area href="primer5.html" shape="rect" coords="25,22,126,124" title="Дырявая кнопка"&gt;</samp><br> 
+<samp class="xx">&lt;/map&gt;</samp><br>   
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer50.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>   
+<h2>Карта на сервере.</h2>
+
+<p>Отрывок из <b>справочника:</b> (<a href="http://www.webremeslo.ru/spravka/spravka.html" title="Справочник HTML тегов на сайте webremeslo.ru">http://www.webremeslo.ru/spravka/spravka.html</a>) (атрибуты тега <samp><b>&lt;img&gt;</b></samp>):</p>
+
+<samp class="x"><b>usemap</b></samp> - изображение является навигационной картой на стороне клиента.<br>
+<samp class="x"><b>ismap</b></samp> - изображение является навигационной картой на сервере.
+
+<p>Непонятно? Тогда читаем..</p> 
+<p>С атрибутом <samp><b>usemap</b></samp> мы вроде бы разобрались.. Смотрите, пользователь (клиент) открыв Вашу страницу, одновременно со всем остальным содержанием, загружает "на свою сторону" как сам рисунок, так и  навигационную карту к нему и всё это дело обрабатывается его браузером.</p>  
+<p>А вот атрибут <samp><b>ismap</b></samp> тега <samp><b>&lt;img&gt;</b></samp> говорит браузеру о том, что к данному изображению на сервере, ну там где Вы выложили или собираетесь выложить свой сайт,  есть навигационная карта. И теперь, когда посетитель (клиент) кликнет по какой либо области рисунка с таким атрибутом, браузер запомнит координаты этого клика и отправит их на сервер, где специальная программка обработает эти данные и перенаправит пользователя на тот адрес который указан в карте на сервере, в соответствии с полученными от браузера клиента координатами точки.</p>
+<p>Пишется так:</p>
+<b>
+<samp class="x">&lt;a href="http://www.site.ru/imagemaps/karta"&gt;&lt;img srs="knopki.jpg" ismap&gt;&lt;/a&gt;</samp>
+</b>
+
+<p>Где <samp><b>&lt;a href="http://www.site.ru/imagemaps/karta"&gt;</b></samp> адрес навигационной карты на каком либо сайте.. размещённом на том или ином сервере..</p>
+<p>Всё равно непонятно? Если да, то тогда не стоит заморачивотся по этому поводу.. используйте <samp><b>usemap</b></samp>, на мой взгляд такое решение будет лучшим в большинстве случаев при использовании навигационных карт.</p>
+
+<h2>Полезные советы:</h2>
+<ul>
+<li><p>Что бы без труда определить координаты той или иной точки на Вашей навигационной карте откройте рисунок графическим редактором тем же Paint к примеру.. там, когда будете двигать указателем по рисунку, увидите две меняющиеся цифры, это и есть координаты пикселя Х и У на данном рисунке. В Paint эта панелька расположена в нижней части экрана.</p>
+<li><p>При создании страницы с навигационной картой тег <samp><b>&lt;img&gt;</b></samp> всегда должен быть выше самой карты <samp><b>&lt;map&gt;</b></samp>  То есть писать вот так:</p>
+<b>
+<samp class="x">&lt;map name="panel"&gt;</samp><br>
+<samp class="xx">&lt;area href="primer1.html" shape="rect" coords="20,20,80,80"&gt;</samp><br>  
+<samp class="x">&lt;/map&gt;</samp><br><br>
+<samp class="x">&lt;img src="knopki.jpg" usemap="#panel"&gt;</samp> 
+</b>
+<p>..можно, но не нужно.. потому что при загрузке страницы могут возникнуть проблемы, так как карта с разметкой уже загрузилась, а самого рисунка ещё нет..</p>
+<li><p>И ещё что касается загрузки..</p>  
+
+<samp class="x"><b>&lt;img src="knopki.jpg" usemap="#panel"&gt;</b></samp><br><br>
+
+<samp class="xx">В этом месте кода может быть всё что угодно длинный текст, таблицы, графика.. но всё же лучше здесь ничего не писать</samp><br><br>
+<b>
+<samp class="x">&lt;map name="panel"&gt;</samp><br>
+<samp class="x">&lt;area href="primer1.html" shape="rect" coords="20,20,80,80"&gt;</samp><br>  
+<samp class="x">&lt;/map&gt;</samp></b><br><br>
+
+<samp class="x">А писать здесь, так как во время загрузки страницы, пользователь не дождавшись её окончания, может пытаться нажимать на кнопки указанные в навигационной карте которая к этому времени еще не загрузилась..</samp><br>
+</ul>
+
+<div class="url">
+<a href="glava7.html" title="К предыдущей главе">&lt;&lt; предыдущая глава</a> | 
+<a href="glava9.html" title="К следующей главе">следующая глава &gt;&gt;</a>
+
+
+</div>
+</div>
+<!-- Конец центральной колонке -->
+<!-- Подвал -->
+<div class="footer">
+&copy; Автор: Семикопенко Алексей Алексеевич. | <a href="http://webremeslo.ru/" class="logo" title="Перейти на сайт webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец подвалу -->
+</body>
+</html>

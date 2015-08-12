@@ -1,0 +1,513 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Учебник HTML для начинающих.</title>
+<meta HTTP-EQUIV="Content-Type" Content="text/html; Charset=Windows-1251">
+<meta name="author" Content="Семикопенко Алексей Алексеевич">
+<meta name="copyright" Content="Семикопенко Алексей Алексеевич">
+<meta name="Publisher-Email" Content="alex@webremeslo.ru">
+<meta name="Publisher-URL" Content="http://webremeslo.ru/">
+<link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+<body>
+<!-- Шапка -->
+<div class="header">
+<h1 class="logo">Учебник HTML</h1>
+</div>
+<!-- Конец шапке -->
+<!--левая колонка "меню" -->
+<div class="left">
+<div class="fixed">
+<ul class="ul_none">
+<li><a href="../index.html" class="menu" title="От автора.">Главная</a></li>
+<li><a href="glava0.html" class="menu" title="Введение.">Введение</a></li>
+<li><a href="glava1.html" class="menu" title="Перейти к Главе 1   Что такое HTML язык?">Что такое HTML язык</a></li>
+<li><a href="glava2.html" class="menu" title="Перейти к Главе 2   Редактируем текст">Редактируем текст</a></li>
+<li><a href="glava3.html" class="menu" title="Перейти к Главе 3   Рисунки">Рисунки</a></li>
+<li><a href="glava4.html" class="menu" title="Перейти к Главе 4   Таблицы">Таблицы</a></li>
+<li><a href="glava5.html" class="menu" title="Перейти к Главе 5   Ссылки">Ссылки</a></li>
+<li><a href="glava6.html" class="menu" title="Перейти к Главе 6   И ещё…">И ещё…</a></li>
+<li><a href="glava7.html" class="activemenu" title="Перейти к Главе 7   Фреймы">Фреймы</a></li>
+<li><a href="glava8.html" class="menu" title="Перейти к Главе 8   Навигационные карты">Навигационные карты</a></li>
+<li><a href="glava9.html" class="menu" title="Перейти к Главе 9   Списки">Списки</a></li>
+<li><a href="glava10.html" class="menu" title="Перейти к Главе 10   Meta теги">Meta теги</a></li>
+<li><a href="glava11.html" class="menu" title="Перейти к Главе 11   Заголовок &lt;!DOCTYPE&gt;">Заголовок &lt;!DOCTYPE&gt;</a></li>
+<li><a href="glava12.html" class="menu" title="Перейти к Главе 12   И снова таблицы..">И снова таблицы..</a></li>
+<li><a href="glava13.html" class="menu" title="Перейти к Главе 13   Фоновая музыка">Фоновая музыка</a></li>
+<li><a href="glava14.html" class="menu" title="Перейти к Главе 14   Текст - логика и физика">Текст - логика и физика</a></li>
+</ul>
+</div>
+</div>
+<!-- Конец левой колонке -->
+<!-- Правая колонка -->
+<div class="right">
+<h2>А так же:</h2>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">Как создать сайт?</a>
+<a href="http://www.webremeslo.ru/css/glava0.html" class="menu" title="www.webremeslo.ru">Учебник CSS</a>
+<a href="http://www.webremeslo.ru/spravka/spravka.html" class="menu" title="www.webremeslo.ru">Справочник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka4.html" class="menu" title="www.webremeslo.ru">Справочник CSS</a>
+<a href="http://forum.webremeslo.ru/index.php" class="menu" title="www.webremeslo.ru">Форум</a><br>
+..<em>и многое другое на сайте:</em><br>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец правой колонке -->
+<!-- Центральная колонка -->
+<div class="center">
+
+<p class="zag">Глава 7</p>
+<h1>Фреймы.</h1>
+
+<p>Итак, фреймы.. для чего они нужны и какую пользу в себе несут? Об этом я и постараюсь рассказать в этой главе, ну и естественно о том, как их внедрять и работать с ними..</p>
+<p>Часто при создании сайта возникает необходимость открывать в одном окне браузера одновременно несколько HTML документов.. так вот фреймы как раз таки и созданы для того чтобы  определить рабочие области для каждого документа. Кроме того, фреймы - это хороший инструмент, с помощью которого можно заниматься версткой страницы, они служат достойной "альтернативой" табличному способу верстки страницы.. в кавычки взял слово "альтернатива" потому, что это совершенно иной способ построения сайта со своими достоинствами и недостатками и его достаточно трудно сопоставлять с доселе привычным построением сайта.. но обо всем по порядку..</p>
+<p>Ну что, начнем? Допустим нам необходимо в одном окне браузера открыть сразу три HTML документа и расположить их к примеру вот таким способом:</p>
+<img src="../graphics/win.gif" hspace="5" alt="Пример расположеня фреймов">
+<p>Что нам для этого нужно? Для начала естественно нам необходимо создать три отдельных html документа которые мы собственно и будем открывать в одном  окне.. Пусть первый документ будет нести в себе графическое изображение и будет выполнять роль логотипа назовём его logotype.html , вторым документом будет некое содержание.. назовём menu.html , ну и третьим документ с кучей текста.  text.html. Конечно Вы можете придумать свои названия, как впрочем и содержание документов, но пока лучше всё же копируйте мои.. так будет удобнее и мне и Вам. </p>
+<p>Итак, есть три файла  logotype.html, menu.html и text.html.. которые нам необходимо разместить под одной крышей, а крыши у нас как раз таки ещё пока и нет.. </p>
+<p>Пишем "крышу", главный документ к которому будем подключать наши файлы. Раз он будет главным, присваиваем ему имя index.html.</p>
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;фреймы&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+</div>
+
+<p>Вот привычная для нас структура документа которую мы пережевали ещё в самом начале нашего обучения.. Фреймы ломают сложившиеся стереотипы! Структура фрейм документа имеет вот такой вид:</p>
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;фреймы &lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x"><b>&lt;frameset&gt;</b></samp><br>
+<samp class="x"><b>&lt;/frameset&gt;</b></samp><br>
+<samp>&lt;/html&gt;</samp>
+</div>
+<p>Отсутствие тега <samp><b>&lt;body&gt;</b></samp> компенсирует новый тег <samp><b>&lt;frameset&gt;</b></samp> - установить фрейм или набор фреймов.. с этим товарищем мы собственно и будем работать дальше.</p>
+<p>Тег <samp><b>&lt;frameset&gt;</b></samp> имеет атрибуты <samp><b>rows</b></samp> и <samp><b>cols</b></samp> - эти атрибуты указывают браузеру на то, как следует размещать фреймы в окне браузера </p>
+
+<samp class="x"><b>rows</b></samp> - горизонтально &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<samp><b>cols</b></samp> - вертикально<br>
+<img src="../graphics/win1.gif" hspace="5" alt="Пример расположеня фреймов">
+<p>В нашем случае нам необходимо горизонтальное размещение фреймов.. значит пишем так:</p>
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;фреймы &lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;frameset <b>rows="15%,15%,70%"</b>&gt;</samp><br>
+<samp class="x">&lt;/frameset&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+</div>
+
+<p>Проценты после знака равенства - это не что иное, как размеры наших окошек- фреймов в одном большом окне браузера, у нас предполагается размещение трёх окон - следовательно и значений через запятую тоже три. Вспомните как мы задавали размеры ячеек для таблицы, здесь тот же принцип.. Как и в случае с ячейками таблицы, размеры фреймов можно указывать в процентах от общей площади и в пикселях.</p> 
+<p>
+Вот несколько примеров написания:
+<br><samp><b>&lt;frameset rows="15%,15%,70%"&gt;</b></samp> - такая запись говорит о том, что будет три горизонтальных окошка где последнее займет 70% площади окна браузера, а первые два по 15%. 
+<br><samp><b>&lt;frameset cols ="200,240,200"&gt;</b></samp> - здесь три окна расположены вертикально ширина которых указана в пикселях. 
+<br><samp><b>&lt;frameset rows="100,*,180"&gt;</b></samp> - такая запись значит, что первое и третье окно будут иметь ширину 100 и 180 пикселей соответственно, а второй фрейм займет всю оставшеюся  площадь.
+</p>
+<p>С размещением документов покончили, теперь собственно осталось их подключить и насладится первым результатом..</p>
+<p>Тег <samp><b>&lt;frame&gt;</b></samp> и его атрибут <samp><b>src</b></samp> укажет браузеру путь к html документу который следует открыть в отведенном для него месте. У нас имеется три отдельных документа logotype.html, menu.html и text.html теперь к каждому нужно прописать путь, что мы собственно и делаем. (предполагаю, что у Вас все четыре файла находятся в одной папке и пути к ним имеют самую простую запись по типу: <samp><b>&lt;frame src="logotype.html"&gt;</b></samp>)</p>
+<p>Пример:</p>
+<div class="primer">
+Файл index.html
+<br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;фреймы&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;frameset rows="15%,15%,70%"&gt;</samp><br>
+<samp class="xx"><b>&lt;frame src="logotype.html"&gt;</b></samp><br>
+<samp class="xx"><b>&lt;frame src="menu.html"&gt;</b></samp><br>
+<samp class="xx"><b>&lt;frame src="text.html"&gt;</b></samp><br>
+<samp class="x">&lt;/frameset&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<hr>
+Файл logotype.html
+<br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;фреймы&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;img src="logotype.jpg" width="800" height="120" alt="Кулинария"&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<hr>
+Файл menu.html 
+<br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;фреймы&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body bgcolor="#e8e8e8" background="fon1.jpg"&gt;</samp><br>
+<samp class="xx">&lt;font face="Monotype Corsiva" size="6"color="#ff0000"&gt;Меню:&lt;/font&gt;&lt;br&gt;</samp><br>
+<samp class="xx">&lt;font face="Comic Sans MS" size="3"&gt;</samp><br>
+<samp class="xxx">&lt;a href="text.html"&gt;Суп из шампиньонов&lt;/a&gt;&lt;br&gt;</samp><br>
+<samp class="xxx">&lt;a href="text1.html"&gt;Бобы в горшочке по-итальянски&lt;/a&gt;&lt;br&gt;</samp><br>
+<samp class="xxx">&lt;a href="text2.html"&gt;Австралийский летний салат&lt;/a&gt;&lt;br&gt;</samp><br>
+<samp class="xxx">... ... ...</samp><br>
+<samp class="xx">&lt;/font&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<hr>
+Файл text.html
+<br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;фреймы&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body bgcolor="#f5f5f5"&gt;</samp><br>
+<samp class="xx">&lt;center&gt;&lt;font face="Comic Sans MS" size="3"&gt;Суп из шампиньонов&lt;/font&gt;&lt;/center&gt;</samp><br>	
+<samp class="xx">&lt;br&gt;</samp><br>
+<samp class="xx">куча текста..</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer34.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>В данном примере я выложил все четыре HTML документа где index.html является основным, а остальные три, это подключаемые страницы, каждая из которых в принципе может работать автономно и содержать в себе всё что угодно картинки, таблицы, тексты, ссылки.. сделал я это для того что бы дать Вам понять принцип работы с фреймами. В дальнейших примерах я буду выкладывать лишь головной файл с фреймами, (а то уж больно много места на странице они все вместе занимают), а Вы знайте что у меня "где то там" есть все остальные файлы содержащие в себе графику, тексты, может быть ещё что ни будь.. ну и не отставайте за мной потихоньку редактируйте свои собственные странички к будущему тренировочному сайту.. Не знаю про что Вы будите писать свой, а я тут пообещался помочь одной девушке в написании сайта посвящённого кулинарии..)) так что решил так сказать сразу на двух зайцев замахнуться.. на девушку зайку и сайт..)) как-то так..))</p>
+<p>В выше изложенном примере мы расположили все окна горизонтально, поменяв атрибут <samp><b>rows</b></samp> на <samp><b>cols</b></samp> можно расположить их в вертикальном порядке. А как быть, если требуется разместить наши окна</p>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;вот так?: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;или так?: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;или даже так?:<br>
+<img src="../graphics/win2.gif" hspace="5" alt="Пример расположеня фреймов">
+<p>Выход есть. Разберём на примерах.</p>
+<p>Начнём с первого случая.. что мы видим? А видим мы две строки, где вторая поделена на два столбца.</p> 
+<p>A теперь по порядку:</p>
+<samp>
+<b>&lt;frameset rows="20%,80%"&gt;</b> <i>- делим окно браузера на две строки</i><br>
+<b>&lt;frame src="logotype.html"&gt;</b><i>- в первую строку загружаем наш логотип</i><br>
+<b>&lt;frameset cols="30%,70%"&gt;</b><i>- а вторую строку делим на два столбца</i><br>
+<b>&lt;frame src="menu.html"&gt;</b> <i>- в первом будет меню</i><br>
+<b>&lt;frame src="text.html"&gt;</b><i>- а во втором куча текста</i><br>
+<b>&lt;/frameset&gt;</b> <i>- закрываем тег деления на столбцы</i><br>
+<b>&lt;/frameset&gt;</b> <i>- закрываем тег деления на строки</i><br>
+</samp>
+<p>Вообще то говорить столбцы и строки  неверно, так как фреймы никакого отношения к таблицам не имеют кроме как визуального подобия, правильно говорить горизонтальные и вертикальные фреймы.. ну это я так изрекаюсь что б  Вам понятнее было..</p>
+<p>Ну да ладно, смотрим пример:</p>
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;фреймы&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;frameset rows="15%,85%"&gt;</samp><br>
+<samp class="xx">&lt;frame src="logotype.html"&gt;</samp><br>
+<samp class="xx">&lt;frameset cols="20%,80%"&gt;</samp><br>
+<samp class="xxx">&lt;frame src="menu.html"&gt;</samp><br>
+<samp class="xxx">&lt;frame src="text.html"&gt;</samp><br>
+<samp class="xx">&lt;/frameset&gt;</samp><br>
+<samp class="x">&lt;/frameset&gt;</samp><br>  
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer35.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>Во втором случае у нас имеется два столбца в котором второй поделен на две строки, значит будем писать так:</p>
+<samp>
+<b>&lt;frameset cols="30%,70%"&gt;</b> <i>- делим окно на два столбца</i><br>
+<b>&lt;frame src="menu.html"&gt;</b> <i>- в первом будет содержание</i><br>
+<b>&lt;frameset rows="20%,80%"&gt;</b> <i>- а второй делим на две строки</i><br>
+<b>&lt;frame src="logotype.html"&gt;</b><i> - логотип</i><br>
+<b>&lt;frame src="text.html"&gt;</b> <i>- и основной текст</i><br>
+<b>&lt;/frameset&gt;</b> <i>- закрываем деление на строки</i><br>
+<b>&lt;/frameset&gt;</b><i> - закрываем деление на столбцы</i><br>
+</samp>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;фреймы&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;frameset cols="20%,80%"&gt;</samp><br>
+<samp class="xx">&lt;frame src="menu.html"&gt;</samp><br>
+<samp class="xx">&lt;frameset rows="15%,85%"&gt;</samp><br>
+<samp class="xxx">&lt;frame src="logotype.html"&gt;</samp><br>
+<samp class="xxx">&lt;frame src="text.html"&gt;</samp><br>
+<samp class="xx">&lt;/frameset&gt;</samp><br>
+<samp class="x">&lt;/frameset&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br> 
+<div align="right"><a href="primer/primer36.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Третий случай немного посложней, но бояться его не стоит.. тем более что именно такое построение лично я выбрал для сайта про кулинарное искусство, чуть ниже объясню почему. Что мы имеем? три столбца причем во второй столбец по сути заключён наш первый случай..</p>
+<samp>
+<b>&lt;frameset cols="*,800,*"&gt;</b> <i>- делим окно на три столбика (обратите внимание второй столбец занимает ровно 800 пикселей а два крайних точного размера не имеют и поделят пополам оставшееся место)</i><br>
+<b>&lt;frame src="dekor.html"&gt;</b> <i>-в первый столбец загружаем html документ который будет выполнять сугубо декоративную функцию </i><br>
+ <br> 
+<b>&lt;frameset rows="15%,85%"&gt;</b> -<br>
+<b>&lt;frame src="logotype.html"&gt;</b> -<br>
+<b>&lt;frameset cols="20%,80%"&gt;</b> - <i>во второй столбец вставляем наш "первый случай"</i><br>
+<b>&lt;frame src="menu.html"&gt;</b> -<br>
+<b>&lt;frame src="text.html"&gt;</b> -<br>
+<b>&lt;/frameset&gt;</b> -<br>
+<b>&lt;/frameset&gt;</b> -<br>
+ <br> 
+<b>&lt;frame src="dekor.html"&gt;</b><i> - в третий столбец загружаем всё тот же файл с декорациями</i><br>
+<b>&lt;/frameset&gt;</b><i> - захлопываем</i><br>
+</samp>
+<p>Посмотрите пример, а потом я объясню почему избрал путь с пятью окнами</p>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;фреймы&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;frameset cols="*,800,*"&gt;</samp><br>
+<samp class="xx">&lt;frame src="dekor.html"&gt;</samp><br>
+<samp class="xx">&lt;frameset rows="120,*"&gt;</samp><br>
+<samp class="xxx">&lt;frame src="logotype.html"&gt;</samp><br>
+<samp class="xxx">&lt;frameset cols="200,600"&gt;</samp><br>
+<samp class="xxxx">&lt;frame src="menu.html"&gt;</samp><br>
+<samp class="xxxx">&lt;frame src="text.html"&gt;</samp><br>
+<samp class="xxx">&lt;/frameset&gt;</samp><br>
+<samp class="xx">&lt;/frameset&gt;</samp><br>
+<samp class="xx">&lt;frame src="dekor.html"&gt;</samp><br>
+<samp class="x">&lt;/frameset&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer37.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>Так почему пять окон? Помнится мне, я уже писал про то, что у разных пользователей сети Интернет на мониторах выставлены разные разрешения и соответственно на разных экранах наш сайт будет выглядеть по разному.. и если нет конкретных размеров все наши рисунки, тексты, таблицы что называется "поплывут" у тех пользователей, разрешения мониторов которых отлично от Вашего. Когда мы верстали сайт с помощью таблицы, вопрос с размерами страницы решался при помощи присуждения этой таблице конкретной ширины и высоты, к сожалению, с фреймами так поступить нельзя.. даже если указывать ширину фреймов не в процентах, а в пикселях, всё равно последний столбец растянется на оставшеюся ширину окна браузера и страница, что называется, потеряет "товарный вид". Так как же быть? Приходится идти на маленькие хитрости.. Задав центральному столбцу (в котором у нас собственно и размещена вся страница) размер 800 пикселей мы раз и навсегда определи его ширину, а безразмерные первый и третий столбцы помимо декора выполняют роль своего рода "пружин" на которых подвешен центральный столбец.. Так, у людей с маленьким разрешением монитора эти окна/поля будут узкими, а людей с большим разрешением широкими, таким образом центральный столбец никак не пострадает и теперь мы можем с полной уверенностью размещать в нём какие либо объекты, с точной привязкой по месту, не переживая за их дальнейшую судьбу. Сравните первый пример, где три окна и третий, где их уже пять, неправда ли так лучше?</p>
+<p>На этом с размещением и размерами фреймов закончим.. и так здесь долго задержались.. идём дальше.</p>
+
+<h2>Приводим фреймы в опрятный вид.</h2>
+<p>В последнем нашем примере первое, что бросается в глаза, это целая куча полос прокруток, которые стоят где надо и не надо.. Давайте от них избавимся, ну можно и оставить кое где.. Делается это при помощи атрибута <samp><b>scrolling</b></samp> - <samp>тега <b>&lt;frame&gt;</b></samp>, он может иметь одно из трёх значений:</p> 
+<ul>
+<li><samp><b>no</b></samp>- никогда не показывать полосу прокрутки, 
+<li><samp><b>yes</b></samp>- всегда показывать,
+<li><samp><b>auto</b></samp>- показывать в том случае если она необходима.
+</ul>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;фреймы&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;frameset cols="*,800,*"&gt;</samp><br>
+<samp class="xx">&lt;frame src="dekor.html" <b>scrolling="no"</b>&gt;</samp><br>
+<samp class="xx">&lt;frameset rows="120,*"&gt;</samp><br>
+<samp class="xxx">&lt;frame src="logotype.html" <b>scrolling="no"</b></samp>&gt;<br>
+<samp class="xxx">&lt;frameset cols="200,600"&gt;</samp><br>
+<samp class="xxxx">&lt;frame src="menu.html"&gt;</samp><br>
+<samp class="xxxx">&lt;frame src="text.html"&gt;</samp><br>
+<samp class="xxx">&lt;/frameset&gt;</samp><br>
+<samp class="xx">&lt;/frameset&gt;</samp><br>
+<samp class="xx">&lt;frame src="dekor.html" <b>scrolling="no"</b>&gt;</samp><br>
+<samp class="x">&lt;/frameset&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer38.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div>
+</div>
+<p>Поля фреймов или иначе расстояние от границ фрейма до текста или картинки, как в нашем случае, задаются в пикселях при помощи атрибутов  <samp><b>marginwidth</b></samp> и <samp><b>marginheight</b></samp> тега <samp><b>&lt;frame&gt;</b></samp></p>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;фреймы&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;frameset cols="*,800,*"&gt;</samp><br>
+<samp class="xx">&lt;frame src="dekor.html" scrolling="no"&gt;</samp><br>
+<samp class="xx">&lt;frameset rows="120,*"&gt;</samp><br>
+<samp class="xxx">&lt;frame src="logotype.html" scrolling="no" <b>marginwidth="0" marginheight="0"</b>&gt;</samp><br>
+<samp class="xxx">&lt;frameset cols="200,600"&gt;</samp><br>
+<samp class="xxxx">&lt;frame src="menu.html"&gt;</samp><br>
+<samp class="xxxx">&lt;frame src="text.html" <b>marginwidth="10" marginheight="10"</b>&gt;</samp><br>
+<samp class="xxx">&lt;/frameset&gt;</samp><br>
+<samp class="xx">&lt;/frameset&gt;</samp><br>
+<samp class="xx">&lt;frame src="dekor.html" scrolling="no"&gt;</samp><br>
+<samp class="x">&lt;/frameset&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer39.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div>
+</div>
+<p>Поговорим немного о рамках вокруг наших фреймов.</p> 
+<p>Если Вы обратили внимание, то в последнем примере наведя курсор на границу фрейма он, курсор то бишь, приобретает другой вид (захватить и переместить) и теперь эту границу можно перетащить в какую либо сторону удерживая левой кнопкой мыши. Иногда такая "мобильность" границ фреймов играет на руку веб-мастеру, но чаще всё же мешает.. Для того, чтобы запретить пользователю играться с размерами окон для тега <samp><b>&lt;frame&gt;</b></samp> придумали атрибут <samp><b>noresize</b></samp></p>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;фреймы&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;frameset cols="*,800,*"&gt;</samp><br>
+<samp class="xx">&lt;frame src="dekor.html" scrolling="no" <b>noresize</b>&gt;</samp><br>
+<samp class="xx">&lt;frameset rows="120,*"&gt;</samp><br>
+<samp class="xxx">&lt;frame src="logotype.html" scrolling="no" marginwidth="0" marginheight="0" <b>noresize</b>&gt;</samp><br>
+<samp class="xxx">&lt;frameset cols="200,600"&gt;</samp><br>
+<samp class="xxxx">&lt;frame src="menu.html" <b>noresize</b>&gt;</samp><br>
+<samp class="xxxx">&lt;frame src="text.html" marginwidth="10" marginheight="10" <b>noresize</b>&gt;</samp><br>
+<samp class="xxx">&lt;/frameset&gt;</samp><br>
+<samp class="xx">&lt;/frameset&gt;</samp><br>
+<samp class="xx">&lt;frame src="dekor.html" scrolling="no" <b>noresize</b>&gt;</samp><br>
+<samp class="x">&lt;/frameset&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer40.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div>
+</div>
+<p>А вот давно нам знакомый атрибут <samp><b>border</b></samp> задаёт ширину в пикселях этих самых рамок между фрёймами.. пишется  он внутри тега  <samp><b>&lt;frameset&gt;</b></samp>. Как и раньше значение <samp><b>border="0"</b></samp> вовсе избавит нас от рамок.</p>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;фреймы&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;frameset cols="*,800,*" <b>border="0"</b>&gt;</samp><br>
+<samp class="xx">&lt;frame src="dekor.html" scrolling="no" noresize&gt;</samp><br>
+<samp class="xx">&lt;frameset rows="120,*" <b>border="0"</b>&gt;</samp><br>
+<samp class="xxx">&lt;frame src="logotype.html" scrolling="no" marginwidth="0" marginheight="0" noresize&gt;</samp><br>
+<samp class="xxx">&lt;frameset cols="200,600" <b>border="0"</b>&gt;</samp><br>
+<samp class="xxxx">&lt;frame src="menu.html" noresize&gt;</samp><br>
+<samp class="xxxx">&lt;frame src="text.html" marginwidth="10" marginheight="10" noresize&gt;</samp><br>
+<samp class="xxx">&lt;/frameset&gt;</samp><br>
+<samp class="xx">&lt;/frameset&gt;</samp><br>
+<samp class="xx">&lt;frame src="dekor.html" scrolling="no" noresize&gt;</samp><br>
+<samp class="x">&lt;/frameset&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer41.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div>
+</div>
+<h2>Фреймы и ссылки.</h2>
+<p>Настало время оживить наш сайт ссылками, да вот беда, знакомая нам обыкновенная ссылка <samp><b>&lt;a href="text1.html"&gt;Бобы в горшочке по-итальянски&lt;/a&gt;</b></samp> откроет данный документ в том же фрейме где она и находится, в нашем случае непосредственно в фрейме с содержанием, а само содержание в момент перехода по этой ссылки уйдёт в небытие.. можете взглянуть на&nbsp;&nbsp;&nbsp;<a href="primer/primer42.html" target="_blank"> корявый пример..</a> &nbsp;&nbsp;&nbsp;кликнете в нём на любую ссылку.. Что бы впредь такого не происходило, необходимо указывать браузеру в каком фрейме следует открывать необходимый нам документ, ну если конечно Вам и в правду не нужно открывать его в этом же фрейме.</p>
+<p>Помнится мы уже знакомились, в главе посвящённой ссылкам, с атрибутами <samp><b>name</b></samp>- имя и <samp><b>target</b></samp>- цель, применяются они также и при работе с фреймами механизм немного изменён а так почти тоже самое. первым делом фрейму в котором мы хотели бы открывать какие либо документы необходимо присвоить индивидуальное имя.</p>
+<p>пишется так:</p>
+<samp class="x">&lt;frame src="text.html" <b>name="osnovnoe"</b>&gt;</samp> имя можно придумать любое.. главное его не забыть..
+<p>А теперь в документе с ссылками (в нашем случае это файл menu.html)необходимо указать цель то есть собственно определить в каком окне стоит открывать тот или иной документ</p>
+<p>Пишется так:</p> 
+<samp class="x">&lt;a href="text1.html" <b>target="osnovnoe"</b>&gt;Бобы в горшочке по-итальянски&lt;/a&gt;</samp>
+<p>Ну я думаю Вам уже не стоит объяснять, что прежде чем ссылаться на какие либо документы, их необходимо создать.. в моём случае файлы (рецепты) имеют имена text.html, text1.html, text2.html…</p>
+<p align="left">Посмотрите пример:</p>
+<div class="primer">
+Файл index.html<br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="x">&lt;title&gt;фреймы&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;frameset cols="*,800,*" border="0"&gt;</samp><br>
+<samp class="xx">&lt;frame src="dekor.html" scrolling="no" noresize&gt;</samp><br>
+<samp class="xx">&lt;frameset rows="120,*" border="0"&gt;</samp><br>
+<samp class="xxx">&lt;frame src="logotype.html" scrolling="no" marginwidth="0" marginheight="0" noresize&gt;</samp><br>
+<samp class="xxx">&lt;frameset cols="200,600" border="0"&gt;</samp><br>
+<samp class="xxxx">&lt;frame src="menu.html" noresize&gt;</samp><br>
+<samp class="xxxx">&lt;frame src="text.html" <b>name="osnovnoe"</b> marginwidth="10" marginheight="10" noresize&gt;</samp><br>
+<samp class="xxx">&lt;/frameset&gt;</samp><br>
+<samp class="xx">&lt;/frameset&gt;</samp><br>
+<samp class="xx">&lt;frame src="dekor.html" scrolling="no" noresize&gt;</samp><br>
+<samp class="x">&lt;/frameset&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<hr>
+Файл menu.html 
+<br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;фреймы&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body bgcolor="#e8e8e8" background="fon1.jpg" link="#b40000" alink="#900000" vlink="#900000"&gt;</samp><br>
+<samp class="xx">&lt;font face="Monotype Corsiva" size="6"color="#ff0000"&gt;Меню:&lt;/font&gt;&lt;hr&gt;</samp><br>
+<samp class="xx">&lt;font face="Comic Sans MS" size="3"&gt;</samp><br>
+<samp class="xxx">&lt;a href="text.html" <b>target="osnovnoe"</b>&gt;Суп из шампиньонов&lt;/a&gt;&lt;hr&gt;</samp><br>
+<samp class="xxx">&lt;a href="text1.html" <b>target="osnovnoe"</b>&gt;Бобы в горшочке по-итальянски&lt;/a&gt;&lt;hr&gt;</samp><br>
+<samp class="xxx">&lt;a href="text2.html" <b>target="osnovnoe"</b>&gt;Австралийский летний салат&lt;/a&gt;&lt;hr&gt;</samp><br>
+<samp class="xxx">... ... ...</samp><br>
+<samp class="xx">&lt;/font&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer43.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div>
+</div>
+
+<p>Так же как и раньше документ можно открыть в отдельном окне. Напомню, пишется так:</p>
+<samp class="x">&lt;a href="text1.html" <b>target="_blank"</b>&gt;Бобы в горшочке по-итальянски&lt;/a&gt;</samp>
+<p>Или же присвоив атрибуту <samp><b>target</b></samp> значение <samp><b>_top</b></samp> открыть его в этом же окне браузера, но на весь экран.. "обнулив" при этом всё что бы там не находилось.. пишется так:</p>
+<samp class="x">&lt;a href="text1.html" <b>target="_top"</b>&gt;Бобы в горшочке по-итальянски&lt;/a&gt;</samp>
+<p>Такой вот сайтик получился.. конечно над ним ещё работать и работать.. к тому же по моёй задумке он будет иметь несколько иную структуру в плане навигации по сайту, в нем будет ёщё целая куча страниц, красивое меню, но что касается фреймовой структуры, думаю она останется прежней..</p>
+
+<h2>Плавающий фрейм</h2>
+<p>Иногда в страницу содержащую в себе не фреймовую структуру необходимо в отдельном окне вставить другой HTML документ или даже ряд таковых документов. Для выполнения этой цели существует тег <samp><b>&lt;iframe&gt;</b></samp> - так называемый плавающий фрейм.</p>
+<p>Данный тег имеет ряд атрибутов:</p>
+<samp><b>src</b></samp> - обязательный атрибут, указывающий путь к открываемой странице<br>
+<samp><b>width</b></samp> - ширина плавающего фрейма в пикселях или процентах<br>
+<samp><b>height</b></samp> - высота плавающего фрейма<br><br>
+<samp><b>scrolling</b></samp> - показ полосы прокрутки
+<ul>
+  <li><samp><b>no</b></samp> - никогда не показывать полосу прокрутки,
+  <li><samp><b>yes</b></samp> - всегда показывать,
+  <li><samp><b>auto</b></samp> - показывать в том случае если она необходима. 
+</ul>
+<samp><b>align</b></samp> - выравнивание пваюшего фрейма
+<ul>
+   <li><samp><b>left</b></samp> - слева 
+   <li><samp><b>right</b></samp> - справа 
+   <li><samp><b>top</b></samp> - выше 
+   <li><samp><b>bottom</b></samp> - ниже 
+</ul>
+<samp><b>frameborder</b></samp> - наличие рамки вокруг плавающего фрейма
+<ul>
+ <li><b>1</b> - включить рамку
+ <li><b>0</b>- выключить рамку
+</ul>
+
+<p>Всё вместе пишется так:</p>
+<samp class="x"><b>&lt;iframe src="primer.html" width="300" height="250" align ="left" scrolling="auto" frameborder="1" &gt;&lt;/iframe&gt;</b></samp>
+<p>Пример документа с плавающим фреймом:</p>
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Плавающий фрейм&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;center&gt;&lt;h2&gt;Плавающий фрейм&lt;/h2&gt;&lt;/center&gt;</samp><br>
+<samp class="xx">В эту страницу введён так называемый "плавающий фрейм".</samp><br> 
+<samp class="xx">В отдельном окне он открывает для показа другой документ html.</samp><br>
+<samp class="xx">&lt;br&gt;</samp><br>
+<samp class="xx"><b>&lt;iframe src="primer.html" width="250" height="250" align ="left" scrolling="auto" frameborder="1"&gt;&lt;/iframe&gt;</b></samp><br>
+<samp class="xx">&lt;br&gt;</samp><br>
+<samp class="xx">… … …</samp><br>
+<samp class="xx">&lt;br&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer44.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div>
+</div>
+
+<h2>Noframes</h2>
+<p>Некоторые браузеры не поддерживают фреймовую структуру документа или неправильно её интерпретируют, кроме того зачастую пользователи в настройках своих браузеров умышленно отключают поддержку фреймовой структуры html документа. И хотя процент таких браузеров и пользователей невелик, но тем не менее они есть.</p>
+<p>Теперь представьте что Вы построили свой сайт с помощью фреймовой структуры и вот некоторые посетители, может быть сами не подозревая в чем проблема, пытаются открыть Ваш сайт, а их браузер выдает ошибку! Что они подумают о Вашем сайте? я думаю, что то типа: "Фу.. ерунда какая то.. больше сроду сюда не зайду!".</p>
+<p>Для того что бы дать понять пользователю, что его браузер/настройки браузера не поддерживают фреймы существует тег <samp><b>&lt;noframes&gt;</b></samp>.</p>
+<p>Тег <samp><b>&lt;noframes&gt;</b></samp> выводит текст, заключенный в него в том случае, если браузер пользователя не поддерживает фреймы или они принудительно выключены в его настройках. Если же фреймы поддерживаются браузером пользователя, то данный тег попросту игнорируется.</p>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;фреймы&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;frameset cols="*,800,*" border="0"&gt;</samp><br>
+<samp class="xx"><b>&lt;noframes&gt;Извините, но Ваш браузер не поддерживает фреймы..&lt;/noframes&gt;</b></samp><br>
+<samp class="xx">&lt;frame src="dekor.html" scrolling="no" noresize&gt;</samp><br>
+<samp class="xx">&lt;frameset rows="120,*" border="0"&gt;</samp><br>
+<samp class="xxx">&lt;frame src="logotype.html" scrolling="no" marginwidth="0" marginheight="0" noresize&gt;</samp><br>
+<samp class="xxx">&lt;frameset cols="200,600" border="0"&gt;</samp><br>
+<samp class="xxxx">&lt;frame src="menu.html" noresize&gt;</samp><br>
+<samp class="xxxx">&lt;frame src="text.html" marginwidth="10" marginheight="10" noresize&gt;</samp><br>
+<samp class="xxx">&lt;/frameset&gt;</samp><br>
+<samp class="xx">&lt;/frameset&gt;</samp><br>
+<samp class="xx">&lt;frame src="dekor.html" scrolling="no" noresize&gt;</samp><br>
+<samp class="x">&lt;/frameset&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer41.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div>
+</div>
+<p>Результат примера будет заметен, если Ваш браузер и в правду не поддерживает фреймы (тут я надолго задумался.. :) если это так, то зачем вообще читать эту главу?) или же Вы в качестве эксперимента выключили поддержку фреймов в своём браузере.</p>
+<p>Тег <samp><b>&lt;noframes&gt;</b></samp> должен быть расположен внутри тега <samp><b>&lt;frameset&gt;</b></samp></p>
+
+<p>С плавающим фреймом всё ещё более просто, достаточно написать нужный текст между <samp><b>&lt;iframe&gt; &lt;/iframe&gt;</b></samp> и данная надпись будет выводится на экран, в том случае если браузер не поддерживает фреймы.</p>
+<p>Вот так:</p>
+<samp class="x">&lt;iframe src="primer.html" width="300" height="250" align ="left" scrolling="auto" frameborder="1"&gt;<b>Извините, но Ваш браузер не поддерживает фреймы..</b>&lt;/iframe&gt;</samp> 
+
+<h2>Полезные советы:</h2>
+<ul>
+<li><p>Перед тем как начать создавать страницу с использованием фрёймовой структуры проанализируйте её макет, размеры каждого окна, наличие или отсутствие в них полос прокруток и т. д.  После этого можно создавать подключаемые HTML файлы особо не переживая за их взаимное расположение относительно друг друга..</p>
+<li><p>Используйте тег <samp><b>&lt;noframes&gt;</b></samp>. Помните что если в Вашем браузере сайт работает и отображается так как Вы и задумывали то у других пользователей дела могут обстоять иначе!</p>  
+</ul>	
+
+
+<div class="url">
+<a href="glava6.html" title="К предыдущей главе">&lt;&lt; предыдущая глава</a> | 
+<a href="glava8.html" title="К следующей главе">следующая глава &gt;&gt;</a>
+</div>
+</div>
+<!-- Конец центральной колонке -->
+<!-- Подвал -->
+<div class="footer">
+&copy; Автор: Семикопенко Алексей Алексеевич. | <a href="http://webremeslo.ru/" class="logo" title="Перейти на сайт webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец подвалу -->
+</body>
+</html>

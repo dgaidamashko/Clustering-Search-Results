@@ -1,0 +1,333 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Учебник CSS для начинающих.</title>
+<meta HTTP-EQUIV="Content-Type" Content="text/html; Charset=Windows-1251">
+<meta name="author" Content="Семикопенко Алексей Алексеевич">
+<meta name="copyright" Content="Семикопенко Алексей Алексеевич">
+<meta name="Publisher-Email" Content="alex@webremeslo.ru">
+<meta name="Publisher-URL" Content="http://webremeslo.ru/">
+<link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+<body>
+<!-- Шапка -->
+<div class="header">
+<h1 class="logo">Учебник CSS</h1>
+</div>
+<!-- Конец шапке -->
+<!--левая колонка "меню" -->
+<div class="left">
+<div class="fixed">
+<ul class="ul_none">
+<li><a href="../index.html" class="menu" title="От автора.">Главная</a></li>
+<li><a href="glava0.html" class="menu" title="Введение.   Что такое CSS?">Что такое CSS?</a></li>
+<li><a href="glava1.html" class="menu" title="Глава 1   Внедрение CSS в HTML документ.">Внедрение CSS.</a></li>
+<li><a href="glava2.html" class="menu" title="Глава 2   Свойства текста.">Свойства текста.</a></li>
+<li><a href="glava3.html" class="menu" title="Глава 3   Свойства шрифта.">Свойства шрифта.</a></li>
+<li><a href="glava4.html" class="activemenu" title="Глава 4   Цвет и фон.">Цвет и фон.</a></li>
+<li><a href="glava5.html" class="menu" title="Глава 5   Границы элемента.">Границы элемента.</a></li>
+<li><a href="glava6.html" class="menu" title="Глава 6   Классы и id селекторы.">Классы и id селекторы.</a></li>
+<li><a href="glava7.html" class="menu" title="Глава 7   Размеры элемента.">Размеры элемента.</a></li>
+<li><a href="glava8.html" class="menu" title="Глава 8   Поля и отступы.">Поля и отступы.</a></li>
+<li><a href="glava9.html" class="menu" title="Глава 9   Курсоры.">Курсоры.</a></li>
+<li><a href="glava10.html" class="menu" title="Глава 10   Форматирование.">Форматирование.</a></li>
+<li><a href="glava11.html" class="menu" title="Глава 11   Поплавки.">Поплавки.</a></li>
+<li><a href="glava12.html" class="menu" title="Глава 12   Позиционирование.">Позиционирование.</a></li>
+<li><a href="glava13.html" class="menu" title="Глава 13   Стиль списка.">Стиль списка.</a></li>
+<li><a href="glava14.html" class="menu" title="Глава 14   Полоса прокрутки.">Полоса прокрутки.</a></li>
+<li><a href="glava15.html" class="menu" title="Глава 15   Псевдоклассы.">Псевдоклассы.</a></li>
+<li><a href="glava16.html" class="menu" title="Глава 16   Псевдоэлементы.">Псевдоэлементы.</a></li>
+</ul>
+</div>
+</div>
+<!-- Конец левой колонке -->
+<!-- Правая колонка -->
+<div class="right">
+<h2>А так же:</h2>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">Как создать сайт?</a>
+<a href="http://www.webremeslo.ru/html/glava0.html" class="menu" title="www.webremeslo.ru">Учебник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka.html" class="menu" title="www.webremeslo.ru">Справочник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka4.html" class="menu" title="www.webremeslo.ru">Справочник CSS</a>
+<a href="http://forum.webremeslo.ru/index.php" class="menu" title="www.webremeslo.ru">Форум</a><br>
+..<em>и многое другое на сайте:</em><br>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец правой колонке -->
+<!-- Центральная колонка -->
+<div class="center">
+   
+<p class="zag">Глава 4</p>
+<h1>Цвет  и фон.</h1>
+
+<p>В этой главе мы поговорим о том, как с помощью  CSS присвоить цвет элементу и его фону, а так же о том, как использовать рисунок в качестве фона элемента  и управлять его положением.</p>
+<p>Перед тем как перейти непосредственно к обучению, проведу краткий экскурс на тему: "Цвета в Интернете"</p>
+<p>Цвет в CSS может быть задан тремя методами:</p>
+<ul>
+<li>Именным значением, например:  <samp><b>red</b></samp> - красный.
+<li>Значением цвета <samp><b>RGB</b></samp>, например: <samp><b>RGB(255,0,0)</b></samp> - опять таки красный.
+<li>Шестнадцатеричным значением цвета <samp><b>RGB</b></samp>, например: <samp><b>#ff0000</b></samp> - всё тот же красный.
+</ul>
+<p>С именным значением цвета всё понятно  <samp><b>black</b></samp> - черный, <samp><b>green</b></samp> - зелёный, <samp><b>olive</b></samp> - оливковый и т.д. (полную палитру базовых красок, т.е. цветов для которых зарезервированы именные значения, смотрите здесь: <a href="http://webremeslo.ru/spravka/spravka1.html" title="Полная палитра базовых красок">http://webremeslo.ru/spravka/spravka1.html</a>)</p>
+<p>Однако по понятным причинам не для всех оттенков цветов зарезервировано индивидуальное имя. Когда возникает необходимость в использовании какого либо "нестандартного" цвета необходимо определить его значение <samp><b>RGB, (Red, Green , Blue )</b></samp> сочетание красного, зеленого и синего цвета в числовом выражении. Каждый оттенок из основных цветов в системе <samp><b>RGB</b></samp> может выражаться в числе от <samp><b>0</b></samp> до <samp><b>255</b></samp>.</p>
+
+<img src="../graphics/rgb.gif" width="152" height="148" alt="RGB" align="left" vspace="5" hspace="30">
+<p>Например, черный цвет будет иметь значение <samp><b>0,0,0</b></samp> то есть отсутствие всякого цвета.. белый - значение <samp><b>255,255,255</b></samp> теоретически если смешать основные цвета должен получится белый, а вот например классический синий цвет имеет значение <samp><b>0,0,255</b></samp> то есть на "мольберте" присутствует только синий. На рисунке наглядно показано, что происходит с красками если их смешать, так смешивая оттенки основных цветов можно добиться любого цвета из видимого спектра.</p>
+
+<p>Однако в большинстве случаев "веб краски" имеют шестнадцатеричное выражение десятичного значения RGB.</p>
+<p>В шестнадцатеричном исчислении цифры от 10 до 15 заменены латинскими буквами и числовой ряд приобретает следующий вид:</p>
+<samp><b>0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F.</b></samp>
+<p>Числа больше 15ти  в шестнадцатеричной системе образуются путём объединения двух и более чисел в одно. Так например, числу <samp><b>255</b></samp> в десятичной системе соответствует число <samp><b>FF</b></samp> в шестнадцатеричной системе.</p>
+
+<p>Значит, для того чтобы выразить нужный оттенок  в шестнадцатеричном виде, нам понадобиться три пары чисел, где первая пара - значение красного цвета, вторая пара значение зелёного и третья пара синего цвета. Так, например, тот же классический синий в  шестнадцатеричном выражении будет выглядеть так: <samp><b>#0000FF</b></samp>. Знак решётки перед числом ставится для указания того что данное число является  шестнадцатеричным,  например в числе <samp><b>#808000</b></samp> нет латинских букв однако со знаком решётки понятно что оно шестнадцатеричное и выражает собой оливковый цвет.</p>
+<p>И еще.. выражая цвет в шестнадцатеричном виде можно обойтись тремя числами, которые затем будут дублироваться, например запись <samp><b>#DAF</b></samp> будет сокращённой формой <samp><b>#DDAAFF</b></samp>.</p>
+
+<p>Фух.. затянул я с водной частью давайте же наконец учить CSS..</p>
+
+<h2>Цвет элемента.</h2>
+
+<p>Для того, что бы перекрасить текст, какого либо, элемента в нужный нам цвет необходимо  воспользоваться свойством <samp><b>color</b></samp> и присвоив ему нужное значение - собственно цвет.</p>
+<p>Как уже сказано выше цвет в CSS может быть задан следующими методами:</p>
+<ul>
+<li><samp><b>#ff0000</b></samp> - шестнадцатеричное значение цвета RGB. 
+<li><samp><b>red</b></samp> - именное значение цвета. 
+<li><samp><b>RGB(255,0,0)</b></samp> - значение цвета RGB. 
+</ul>
+
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Цвет элемента&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;div style="<b>color: red</b>"&gt;Блок 1&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;div style="<b>color: #ff0000</b>"&gt;Блок 2&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;div style="<b>color: RGB(255, 0, 0)</b>"&gt;Блок 3&lt;/div&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer19.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<h2>Цвет фона элемента.</h2>
+
+<p>А вот свойство <samp><b>background-color</b></samp> - определяет цвет фона элемента.</p>
+<p>Цвет фона может иметь следующие значения:</p>
+<ul>
+<li><samp><b>#ff0000</b></samp> - шестнадцатеричное значение цвета RGB. 
+<li><samp><b>red</b></samp> - именное значение цвета. 
+<li><samp><b>RGB(255,0,0)</b></samp> - значение цвета RGB. 
+<li><samp><b>transparent</b></samp> - прозрачный фон. (по умолчанию)
+</ul>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Цвет фона элемента&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body style="<b>background-color: #fffacd</b>"&gt;</samp><br>
+<samp class="xx">&lt;div style="<b>background-color: white</b>"&gt;Белый блок&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;div style="<b>background-color: #0000ff</b>"&gt;Синий блок&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;div style="<b>background-color: RGB(255,0,0)</b>"&gt;Красный блок&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;div style="<b>background-color: transparent</b>"&gt;Прозрачный блок&lt;/div&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer20.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<h2>Фоновое изображение.</h2>
+
+<p>Для любого элемента можно присвоить фоновое изображение с помощью CSS свойства: <samp><b>background-image</b></samp>.</p>
+<p>Возможные значения <samp><b>background-image:</b></samp></p>
+<ul>
+<li><samp><b>url</b></samp> - путь к файлу с изображением. 
+<li><samp><b>none</b></samp> - изображение отсутствует. (по умолчанию)
+</ul>
+<p>Для того чтобы сделать некую картинку фоном для элемента необходимо указать к ней путь согласно следующего синтаксиса  <samp>url(путь к файлу/имя файла)</samp>. Путь к файлу указывается в том случае, если рисунок находится в другой папке.</p>
+<p>В примере ниже в качестве основного фона (элемент <samp><b>body</b></samp>) используется одно графическое изображение, а  для блока <samp><b>div</b></samp> другое, возможность использования различных фоновых изображений для разных элементов страницы позволяет решать практически любые дизайнерские задумки.</p>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Фоновое изображение&lt;/title&gt;</samp><br>
+<samp class="xx">&lt;style type="text/css"&gt;</samp><br>
+<samp class="xxx">body{</samp><br>
+<samp class="xxx"><b>background-image: url(fon.jpg);</b></samp><br>
+<samp class="xxx">}</samp><br>
+<samp class="xxx">div{</samp><br>
+<samp class="xxx"><b>background-image: url(fon1.gif);</b></samp><br>
+<samp class="xxx">border: 5px double #245404; </samp><br>
+<samp class="xxx">height: 250px; </samp><br>
+<samp class="xxx">}</samp><br>
+<samp class="xxx">p{</samp><br>
+<samp class="xxx">text-align: center;</samp><br>
+<samp class="xxx">color: #008040;</samp><br>
+<samp class="xxx">font: bold 24px Arial;</samp><br>
+<samp class="xxx">}</samp><br>
+<samp class="xx">&lt;/style&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;p&gt;Страница с фоновым изображением&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;div&gt;&lt;p&gt;Блок с фоновым изображением&lt;/p&gt;&lt;/div&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer21.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>Если рисунок не заполняет собой весь фон элемента, то он выкладывается "плиткой".</p>
+
+<h2>Фиксация фонового изображения.</h2>
+
+<p>Если на странице или в каком либо блоке присутствует полоса прокрутки, то фоновое изображение будет прокручиваться вместе с остальным содержанием  данного блока.</p>
+<p>Зафиксировать фоновое изображение позволяет свойство <samp><b>background-attachment</b></samp>, которое может принимать одно из двух значений:</p>
+<ul>
+<li><samp><b>fixed</b></samp> - фиксированный фон. 
+<li><samp><b>scroll</b></samp> - подвижный фон (по умолчанию). 
+</ul>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Фиксация фонового изображения&lt;/title&gt;</samp><br>
+<samp class="xx">&lt;style type="text/css"&gt;</samp><br>
+<samp class="xxx">body{</samp><br>
+<samp class="xxx">background-image: url(fon.jpg);</samp><br>
+<samp class="xxx"><b>background-attachment: fixed;</b></samp><br>
+<samp class="xxx">}</samp><br>
+<samp class="xxx">h1{</samp><br>
+<samp class="xxx">color: #0000ff;</samp><br>
+<samp class="xxx">font: bold 28px;</samp><br>
+<samp class="xxx">}</samp><br>
+<samp class="xxx">div{</samp><br>
+<samp class="xxx">line-height: 2;</samp><br>
+<samp class="xxx">white-space: pre;</samp><br>
+<samp class="xxx">color: #0000ff;</samp><br>
+<samp class="xxx">font-size: 24px;</samp><br>
+<samp class="xxx">}</samp><br>
+<samp class="xx">&lt;/style&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;h1&gt;Песенка мамонтенка&lt;/h1&gt;</samp><br>
+<samp class="xx">&lt;div&gt;</samp><br>
+<samp class="xxx">По синему морю, к зелёной земле</samp><br>
+<samp class="xxx">Плыву я на белом своём корабле.</samp><br>
+<samp class="xxx">... ... ...</samp><br>
+<samp class="xxx">... ... ...</samp><br>
+<samp class="xxx">Музыка: В. Шаинский </samp><br>
+<samp class="xxx">Слова: Д. Непомнящий</samp><br>
+<samp class="xx">&lt;/div&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer22.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<h2>Повторение фонового изображения.</h2>
+
+<p>Как уже говорилось выше,  если рисунок не заполняет собой весь фон элемента, то он повторяется и выкладывается "плиткой". Свойство <samp><b>background-repeat</b></samp> - регулирует повторение фонового изображения.</p>
+<p>Возможные значения:</p> 
+<ul>
+<li><samp><b>no-repeat</b></samp> - запретить повторение, показать только одно изображение. 
+<li><samp><b>repeat</b></samp> - повторять изображение (по умолчанию). 
+<li><samp><b>repeat-x</b></samp> - повторять только по горизонтали. 
+<li><samp><b>repeat-y</b></samp> - повторять только по вертикали. 
+</ul>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Повторение фонового изображения&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body style="background-image: url(fon.jpg); <b>background-repeat: repeat-x</b>"&gt;</samp><br>
+<samp class="xx">&lt;samp style="background-color: #ffffff"&gt;Изображение повторяется только по оси х.&lt;/samp&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer23.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<h2>Позиция фонового изображения.</h2>
+<p>При помощи CSS свойства <samp><b>background-position</b></samp> - можно управлять позицией  фонового изображения в элементах где оно задано с помощью <samp><b>background-image</b></samp>.</p>
+<p>Позицию фонового изображения, а точнее его верхнего левого угла, можно задать  в процентах, пикселях, а также любых других единицах измерения CSS, с помощью  двух значений, где первое значение будет являться отступом от левой границы элемента, а второе значение отступом от верхней границы элемента.</p>
+<p></p>
+<p>Например, запись: <samp><b>background-position: 200px 100px;</b></samp> будет обозначать, что фоновое изображение будет смещено по горизонтали на 200 пикселей от левой границы элемента и по вертикали на 100 пикселей от верхней границы элемента.</p>
+<p>Так же можно использовать следующие значения:</p>
+по горизонтали:
+<ul>
+<li><samp><b>left</b></samp> - расположить слева. 
+<li><samp><b>center</b></samp> - расположить по центру. 
+<li><samp><b>right</b></samp> - расположить справа.
+</ul>
+по вертикали:
+<ul> 
+<li><samp><b>top</b></samp> - расположить сверху. 
+<li><samp><b>center</b></samp> - расположить по центру. 
+<li><samp><b>bottom</b></samp> - расположить снизу. 
+</ul>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Позиция фонового изображения&lt;/title&gt;</samp><br>
+<samp class="xx">&lt;style type="text/css"&gt;</samp><br>
+<samp class="xxx">body{</samp><br>
+<samp class="xxx">background-image: url(fon.jpg);</samp><br>
+<samp class="xxx">background-repeat: no-repeat;</samp><br>
+<samp class="xxx"><b>background-position: center 100px;</b></samp><br>
+<samp class="xxx">}</samp><br>
+<samp class="xx">&lt;/style&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;samp&gt;В этом примере фоновое изображение по горизонтали расположено по центру, а по вертикали в ста пикселях от верхней границы элемента.&lt;/samp&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer24.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<h2>Background.</h2>
+
+<p>Ну и в довершении главы немного о базовом свойстве <samp><b>background</b></samp>.</p>
+<p>Являясь базовым свойством, <samp><b>background</b></samp> может одновременно принимать те или иные значения от его дочерних свойств:</p>
+<ul>
+<li><samp><b>background-attachment</b></samp>
+<li><samp><b>background-color</b></samp>
+<li><samp><b>background-image</b></samp>
+<li><samp><b>background-position</b></samp>
+<li><samp><b>background-repeat</b></samp>
+</ul>
+<p>Все эти свойства мы рассмотрели выше, так что вдаваться в подробности нет смысла..</p>
+<p>Нужные значения дочерних свойств указываются через пробел, в любом порядке и по мере необходимости.</p>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Background&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body style="<b>background: url(fon.jpg) fixed repeat-x center</b>"&gt;</samp><br>
+<samp class="xx">&lt;p style="<b>background: red</b>"&gt;Фон этого параграфа такой же красный как если бы мы использовали background-color: red.&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;p&gt;А у элемента body в базовом свойстве background указанно сразу четыре возможных значения взятых от его дочерних свойств&lt;/p&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer25.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<h2>Полезные советы:</h2>
+<ul>
+<li><p>При использовании изображения в качестве фона с помощью свойства <samp><b>background-image</b></samp> заодно заливайте фон альтернативным цветом с помощью <samp><b>background-color</b></samp>. Так если, по каким либо причинам, не загрузится фоновое изображение  или же пользователь умышленно отключит в настройках браузера загрузку рисунков, фон элемента не останется "голым".</p>
+<li><p>Не используйте большие весом "мегабайтные" изображения  берегите время деньги и нервы пользователей..  А если уж без этого не обойтись, то перед тем как выкладывать такие изображения, как следует, поработайте с ней в графических редакторах на предмет "лишнего веса". Почти всегда можно значительно сжать картинку особо не проиграв в качестве изображения.</p>
+</ul>
+<div class="url">
+<a href="glava3.html" title="К предыдущей главе">&lt;&lt; предыдущая глава</a> | 
+<a href="glava5.html" title="К следующей главе">следующая глава &gt;&gt;</a>
+</div>
+</div>
+<!-- Конец центральной колонке -->
+<!-- Подвал -->
+<div class="footer">
+&copy; Автор: Семикопенко Алексей Алексеевич. | <a href="http://webremeslo.ru/" class="logo" title="Перейти на сайт webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец подвалу -->
+</body>
+</html>

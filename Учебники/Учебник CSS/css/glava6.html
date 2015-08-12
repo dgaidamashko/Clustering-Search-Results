@@ -1,0 +1,247 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Учебник CSS для начинающих.</title>
+<meta HTTP-EQUIV="Content-Type" Content="text/html; Charset=Windows-1251">
+<meta name="author" Content="Семикопенко Алексей Алексеевич">
+<meta name="copyright" Content="Семикопенко Алексей Алексеевич">
+<meta name="Publisher-Email" Content="alex@webremeslo.ru">
+<meta name="Publisher-URL" Content="http://webremeslo.ru/">
+<link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+<body>
+<!-- Шапка -->
+<div class="header">
+<h1 class="logo">Учебник CSS</h1>
+</div>
+<!-- Конец шапке -->
+<!--левая колонка "меню" -->
+<div class="left">
+<div class="fixed">
+<ul class="ul_none">
+<li><a href="../index.html" class="menu" title="От автора.">Главная</a></li>
+<li><a href="glava0.html" class="menu" title="Введение.   Что такое CSS?">Что такое CSS?</a></li>
+<li><a href="glava1.html" class="menu" title="Глава 1   Внедрение CSS в HTML документ.">Внедрение CSS.</a></li>
+<li><a href="glava2.html" class="menu" title="Глава 2   Свойства текста.">Свойства текста.</a></li>
+<li><a href="glava3.html" class="menu" title="Глава 3   Свойства шрифта.">Свойства шрифта.</a></li>
+<li><a href="glava4.html" class="menu" title="Глава 4   Цвет и фон.">Цвет и фон.</a></li>
+<li><a href="glava5.html" class="menu" title="Глава 5   Границы элемента.">Границы элемента.</a></li>
+<li><a href="glava6.html" class="activemenu" title="Глава 6   Классы и id селекторы.">Классы и id селекторы.</a></li>
+<li><a href="glava7.html" class="menu" title="Глава 7   Размеры элемента.">Размеры элемента.</a></li>
+<li><a href="glava8.html" class="menu" title="Глава 8   Поля и отступы.">Поля и отступы.</a></li>
+<li><a href="glava9.html" class="menu" title="Глава 9   Курсоры.">Курсоры.</a></li>
+<li><a href="glava10.html" class="menu" title="Глава 10   Форматирование.">Форматирование.</a></li>
+<li><a href="glava11.html" class="menu" title="Глава 11   Поплавки.">Поплавки.</a></li>
+<li><a href="glava12.html" class="menu" title="Глава 12   Позиционирование.">Позиционирование.</a></li>
+<li><a href="glava13.html" class="menu" title="Глава 13   Стиль списка.">Стиль списка.</a></li>
+<li><a href="glava14.html" class="menu" title="Глава 14   Полоса прокрутки.">Полоса прокрутки.</a></li>
+<li><a href="glava15.html" class="menu" title="Глава 15   Псевдоклассы.">Псевдоклассы.</a></li>
+<li><a href="glava16.html" class="menu" title="Глава 16   Псевдоэлементы.">Псевдоэлементы.</a></li>
+</ul>
+</div>
+</div>
+<!-- Конец левой колонке -->
+<!-- Правая колонка -->
+<div class="right">
+<h2>А так же:</h2>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">Как создать сайт?</a>
+<a href="http://www.webremeslo.ru/html/glava0.html" class="menu" title="www.webremeslo.ru">Учебник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka.html" class="menu" title="www.webremeslo.ru">Справочник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka4.html" class="menu" title="www.webremeslo.ru">Справочник CSS</a>
+<a href="http://forum.webremeslo.ru/index.php" class="menu" title="www.webremeslo.ru">Форум</a><br>
+..<em>и многое другое на сайте:</em><br>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец правой колонке -->
+<!-- Центральная колонка -->
+<div class="center">
+   
+<p class="zag">Глава 6</p>
+
+<h1>Классы и идентификаторы.</h1>
+
+<p>Данная  глава является своего рода продолжением главы первой <a href="glava1.html" title="Глава 1   Внедрение CSS в HTML документ.">о способах внедрения CSS в HTML документ.</a> Отложил эту главу "на потом", нарушив тем самым стандартную последовательность обучения CSS, с той лишь целью, чтобы раньше времени не забивать Вам голову информацией, которая в начале была для Вас малопонятной.</p>
+<p>Теперь, когда Вы уже познакомились с некоторыми свойствами CSS, поняли принцип построения и внедрения CSS в HTML, настал час и необходимость поговорить о CSS классах и идентификаторах, так как дальнейшее обучение, хоть и представляется возможным, но не раскроет в полной мере все возможности CSS.</p>
+
+
+<h2>Классы CSS.</h2>
+
+<p>Начнём с классов..</p>
+<p>Как присвоить элементу или группе идентичных элементов индивидуальный стиль, отличный от основного, уже указанного в стилевом описании документа? Не знаю задавались Вы этим вопросом или нет, но рано или поздно на него необходимо найти ответ.</p>
+<p>Итак.. предположим в файле CSS к элементу <samp><b>&lt;p&gt;</b></samp> у нас применён следующий стиль:</p>
+
+<samp class="x"><b>p {color: #0000ff; font-size:14px}</b></samp><br>
+
+<p>И все вроде бы хорошо.. все параграфы синенькие и размер у них 14px, но нам надо сделать так чтобы некоторые из этих параграфов были розовые! И как быть??</p>
+
+<p>На помощь приходят классы.</p>
+<p>Для того чтобы выделить некоторые из параграфов розовым цветом, необходимо присвоить элементу определённое имя и вывести его тем самым в класс, в некую нестандартную, для страницы или сайта в целом, категорию.</p>
+<p>Ну что давайте попробуем? Делается это так:</p>
+
+<samp class="x"><b>p.rose {color: #ff00ff; font: italic 16px Arial}</b></samp><br>
+
+<p>Поясню <b>p</b> -  это элемент HTML (селектор) в данном случае наш параграф,  <samp><b>.rose</b></samp> - это индивидуальное имя класса которое мы сами выдумали, оно может быть любым необязательно <samp><b>rose</b></samp>-розовый, точка между селектором и именем класса  есть дань уважения к синтаксису принятому в CSS - теперь браузер поймет что данный элемент p выведен в класс <samp><b>rose</b></samp>.</p>
+<p>Ну что ж имя мы присвоили теперь нам необходимо в документе HTML указать теги (в нашем случае теги <samp><b>&lt;p&gt;</b></samp>) которым необходим индивидуальный стиль. Делается это с помощью атрибута <samp><b>class</b></samp>.</p>
+<p>Вот так:</p>
+
+<samp><b>&lt;p class="rose"&gt;</b></samp>Этот параграф использует имя класса <b>rose</b> и тем самым выделяется из основной массы<samp><b>&lt;/p&gt;</b></samp><br>
+
+<p>Ну и пример:</p>
+<div class="primer"> 
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Внедрение класса&lt;/title&gt;</samp><br>
+<samp class="xx">&lt;style type="text/css"&gt;</samp><br>
+<samp class="xxx">body {background-color: #c5ffa0}</samp><br>
+<samp class="xxx">p {color: #0000ff; font-size:14px}</samp><br>
+<samp class="xxx"><b>p.rose {color: #ff00ff; font: italic 16px Arial}</b></samp><br>
+<samp class="xx">&lt;/style&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;p&gt;На этом сайте Вы найдёте любую информацию о слонах.&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;p&gt;У нас Вы можете по выгодным ценам приобрести лучших слонов!!&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;p&gt;Только у нас Вы можете взять любых слонов на прокат!!&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;p <b>class="rose"</b>&gt;Специальное предложение для девушек! Розовые слоны!! только у нас!!!&lt;/p&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer32.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>В данном примере класс <samp><b>"rose"</b></samp> может быть присвоен только параграфу - элементу <samp><b>p</b></samp>. Для того чтобы данное стилевое описание могло распространятся на все элементы, в файле CSS (или между тегами <samp><b>&lt;style&gt;&lt;/style&gt;</b></samp> в заголовке документа) элемент явно не указывается и синтаксис приобретает следующий вид:</p>
+
+<samp class="x"><b>.rose {color: #ff00ff}</b></samp><br>
+
+<p>Теперь указав в любом элементе class="rose" он примет стиль данного класса.</p>
+
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Классы&lt;/title&gt;</samp><br>
+<samp class="xx">&lt;style type="text/css"&gt;</samp><br>
+<samp class="xxx">body {background-color: #c5ffa0}</samp><br>
+<samp class="xxx">h1 {color: #0000ff; font-size:22px}</samp><br>
+<samp class="xxx">p {color: #008000; font: italic 16px Arial}</samp><br>
+<samp class="xxx">span {color: #0080ff; font-size:12px}</samp><br>
+<samp class="xxx"><b>.rose {color: #ff00ff}</b></samp><br>
+<samp class="xx">&lt;/style&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;h1&gt;Это заголовак с основным стилем CSS&lt;/h1&gt;</samp><br>
+<samp class="xx">&lt;h1 <b>class="rose"</b>&gt;А этот заголовок использует class="rose"&lt;/h1&gt;</samp><br>
+<samp class="xx">&lt;hr&gt;</samp><br>
+<samp class="xx">&lt;a href="#" title="Обыкновенная ссылка"&gt;Это ссылка по умолчанию&lt;/a&gt;&lt;br&gt;</samp><br>
+<samp class="xx">&lt;a href="#" title="Розовая ссылка" <b>class="rose"</b>&gt;А эта ссылка использует class="rose"&lt;/a&gt;&lt;br&gt;</samp><br>
+<samp class="xx">&lt;hr&gt;</samp><br>
+<samp class="xx">&lt;span&gt;Этот строковый блок использует основной стиль&lt;/span&gt;&lt;br&gt;</samp><br>
+<samp class="xx">&lt;span <b>class="rose</b>"&gt;А этот класс rose&lt;/span&gt;</samp><br>
+<samp class="xx">&lt;hr&gt;</samp><br>
+<samp class="xx">&lt;p&gt;Параграф без указания класса&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;p <b>class="rose"</b>&gt;Параграф с указанием класса&lt;/p&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer33.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>Обратите внимание на тот факт, что недостающие описания стиля выведенного в отдельный класс, элементы черпают из основного стилевого описания или же берут из свойств элемента "по умолчанию".</p>
+<p>Например, заголовок <samp><b>&lt;h1 class="rose"&gt;</b></samp> был синим, а стал розовым, но при этом сохранил свой размер 22 пикселя, так как в нашем классе rose никаких разговоров о размере шрифта не шло.. мы лишь "договорились" с браузером, что элементы из группы  <samp><b>rose</b></samp> будут розовыми.</p>
+
+<h2>Идентификаторы</h2>
+
+<p>Идентификаторы они же id селекторы, весьма схожи с классами, с тем лишь отличием, что идентификатор может иметь одно единственное уникальное имя во всем документе. Идентификаторы, как правило, применяются в том случае, если возникает необходимость управлять стилем элемента динамически с помощью скрипта, обращаясь к его индивидуальному имени.</p>
+
+<p>В файле CSS имя указывается со знаком решётки в его начале.</p>
+<p>Вот так, например:</p>
+
+<samp class="x"><b>#block {color: #ff00ff; font: italic 16px Arial}</b></samp>
+
+<p>А к нужному элементу добавляется атрибут  id="block" например</p>
+<samp class="x">&lt;p <b>id="block"</b>&gt;Параграф с идентификатором&lt;/p&gt;</samp>
+
+<p>Вот пример:</p>
+<div class="primer"> 
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Идентификатор&lt;/title&gt;</samp><br>
+<samp class="xx">&lt;style type="text/css"&gt;</samp><br>
+<samp class="xxx">body {background-color: #c5ffa0}</samp><br>
+<samp class="xxx">p {color: #0000ff; font-size:14px}</samp><br>
+<samp class="xxx"><b>#rose {color: #ff00ff; font: italic 16px Arial}</b></samp><br>
+<samp class="xx">&lt;/style&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;p&gt;Это обыкновенный параграф&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;p <b>id="rose"</b>&gt;А этот параграф уникальный&lt;/p&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer34.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>Ну так в чем же отличие между классом и идентификатором?</p>
+<p>Покажу на примере:</p>
+<div class="primer"> 
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Идентификаторы и скрипты&lt;/title&gt;</samp><br>
+<samp class="xx"><i>&lt;script&gt;</i></samp><br>
+<samp class="xxx"><i>function show_hide(id){</i></samp><br>
+<samp class="xxx"><i>var item = document.getElementById(id);</i></samp><br>
+<samp class="xxx"><i>if (item.style.display == 'none') {item.style.display = 'block';}</i></samp><br>
+<samp class="xxx"><i>else item.style.display = 'none';</i></samp><br>
+<samp class="xxx"><i>}</i></samp><br>
+<samp class="xx"><i>&lt;/script&gt;</i></samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;div <b>id="block"</b> style="display:none"&gt;</samp><br>
+<samp class="xxx">&lt;h2 style="color: #ff00ff"&gt;А вот и я!!&lt;/h2&gt;</samp><br>
+<samp class="xxx">&lt;img src="rosemammoth.gif"&gt;</samp><br>
+<samp class="xx">&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;a href="<i>javascript:show_hide(<b>'block'</b>)</i>" title="Развернуть/Свернуть" style="color: #ff00ff"&gt;Нажми на меня!!&lt;/a&gt;</samp><br>
+<samp class="xx">&lt;hr&gt;</samp><br>
+<samp class="xx">&lt;div <b>id="block1"</b> style="display:none"&gt;</samp><br>
+<samp class="xxx">&lt;h2 style="color: #0000ff"&gt;А здесь я!!&lt;/h2&gt;</samp><br>
+<samp class="xxx">&lt;img src="mammoth.jpg"&gt;</samp><br>
+<samp class="xx">&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;a href="<i>javascript:show_hide(<b>'block1'</b>)</i>" title="Развернуть/Свернуть" style="color: #0000ff"&gt;И на меня нажми!!&lt;/a&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer35.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Курсивом, в данном примере, выделен скрипт, который может динамически обрабатывать блоки <samp><b>&lt;div&gt;</b></samp> с уникальными именами <samp><b>"block"</b></samp> и <samp><b>"block1"</b></samp>  (скрывать и показывать его по нажатии на ссылку), и хотя пока Вам, думаю, мало, что понятно из выше написанного, но цель данного примера показать, как скрипт может обращаться к блоку через атрибут <samp><b>id</b></samp>. А вот с помощью классов мы бы не достигли такого результата.</p>
+
+<p>Ну, думаю, объяснил кое как..</p>
+
+<h2>Полезные советы:</h2>
+<ul>
+<li><p>При построении CSS будьте логичны,  соблюдайте "значимость" элементов и их порядок, так же как они вложены друг в друга в HTML коде.</p>
+<p>Например:</p>
+
+<samp class="x"><b>body</b> {сначала опишите стиль страницы в целом}</samp><br>
+<samp class="x"><b>div</b> {потом её отдельных частей - блоков}</samp><br>
+<samp class="x"><b>a</b> {затем ссылок}</samp><br>
+<samp class="x"><b>h1.-.h6</b> {далее заголовков}</samp><br>
+<samp class="x"><b>p</b> {и в конце параграфов}</samp>
+
+<p>Для чего это нужно?</p>
+
+<p>Ну во-первых, просто для удобного чтения и "навигации" по CSS описанию. Когда Вам потребуется найти какой ни будь элемент Вы уже изначально будете представлять где он приблизительно находится в начале, середине, или конце..</p>
+<p>Во-вторых, что более важно, загрузка страницы происходит не моментально и не всегда приятно наблюдать как содержание данной страницы при загрузке "прыгает" и всячески "шевелится" так как сначала прописываются "малозначимые" стили элементов, например шрифт параграфов, а в конце "значительные" например размеры блоков, с помощью которых свёрстан весь сайт. К тому же загрузка, по каким либо причинам, вообще может пройти не до конца.. </p>
+<p>Что увидит (сначала увидит) пользователь при "неправильном" построении CSS? Красивый шрифт, беспорядочно разбросанный в окне браузера? Или нормальное построение, но без красивого шрифта? - Это уже решать Вам!</p>
+
+<li><p>При использовании классов и идентификаторов придумывайте им осмысленные информативные имена. Варианты тапа: <b>.aaa .123 #abc #cba</b> приведут к путанице!, я уж не говорю о том, что возможно в Вашем коде будет разбираться посторонний человек. Придумайте свою "систему" названий и не нарушайте её, так Вы сэкономите собственное время и затраченные усилия.</p>
+</ul>
+<div class="url">
+<a href="glava5.html" title="К предыдущей главе">&lt;&lt; предыдущая глава</a> | 
+<a href="glava7.html" title="К следующей главе">следующая глава &gt;&gt;</a>
+</div>
+</div>
+<!-- Конец центральной колонке -->
+<!-- Подвал -->
+<div class="footer">
+&copy; Автор: Семикопенко Алексей Алексеевич. | <a href="http://webremeslo.ru/" class="logo" title="Перейти на сайт webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец подвалу -->
+</body>
+</html>

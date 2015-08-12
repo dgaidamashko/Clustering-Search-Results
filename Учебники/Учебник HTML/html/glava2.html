@@ -1,0 +1,371 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Учебник HTML для начинающих.</title>
+<meta HTTP-EQUIV="Content-Type" Content="text/html; Charset=Windows-1251">
+<meta name="author" Content="Семикопенко Алексей Алексеевич">
+<meta name="copyright" Content="Семикопенко Алексей Алексеевич">
+<meta name="Publisher-Email" Content="alex@webremeslo.ru">
+<meta name="Publisher-URL" Content="http://webremeslo.ru/">
+<link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+<body>
+<!-- Шапка -->
+<div class="header">
+<h1 class="logo">Учебник HTML</h1>
+</div>
+<!-- Конец шапке -->
+<!--левая колонка "меню" -->
+<div class="left">
+<div class="fixed">
+<ul class="ul_none">
+<li><a href="../index.html" class="menu" title="От автора.">Главная</a></li>
+<li><a href="glava0.html" class="menu" title="Введение.">Введение</a></li>
+<li><a href="glava1.html" class="menu" title="Перейти к Главе 1   Что такое HTML язык?">Что такое HTML язык</a>  </li>
+<li><a href="glava2.html" class="activemenu" title="Перейти к Главе 2   Редактируем текст">Редактируем текст</a></li>
+<li><a href="glava3.html" class="menu" title="Перейти к Главе 3   Рисунки">Рисунки</a></li>
+<li><a href="glava4.html" class="menu" title="Перейти к Главе 4   Таблицы">Таблицы</a></li>
+<li><a href="glava5.html" class="menu" title="Перейти к Главе 5   Ссылки">Ссылки</a></li>
+<li><a href="glava6.html" class="menu" title="Перейти к Главе 6   И ещё…">И ещё…</a></li>
+<li><a href="glava7.html" class="menu" title="Перейти к Главе 7   Фреймы">Фреймы</a></li>
+<li><a href="glava8.html" class="menu" title="Перейти к Главе 8   Навигационные карты">Навигационные карты</a></li>
+<li><a href="glava9.html" class="menu" title="Перейти к Главе 9   Списки">Списки</a></li>
+<li><a href="glava10.html" class="menu" title="Перейти к Главе 10   Meta теги">Meta теги</a></li>
+<li><a href="glava11.html" class="menu" title="Перейти к Главе 11   Заголовок &lt;!DOCTYPE&gt;">Заголовок &lt;!DOCTYPE&gt;</a></li>
+<li><a href="glava12.html" class="menu" title="Перейти к Главе 12   И снова таблицы..">И снова таблицы..</a></li>
+<li><a href="glava13.html" class="menu" title="Перейти к Главе 13   Фоновая музыка">Фоновая музыка</a></li>
+<li><a href="glava14.html" class="menu" title="Перейти к Главе 14   Текст - логика и физика">Текст - логика и физика</a></li>
+</ul>
+</div>
+</div>
+<!-- Конец левой колонке -->
+<!-- Правая колонка -->
+<div class="right">
+<h2>А так же:</h2>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">Как создать сайт?</a>
+<a href="http://www.webremeslo.ru/css/glava0.html" class="menu" title="www.webremeslo.ru">Учебник CSS</a>
+<a href="http://www.webremeslo.ru/spravka/spravka.html" class="menu" title="www.webremeslo.ru">Справочник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka4.html" class="menu" title="www.webremeslo.ru">Справочник CSS</a>
+<a href="http://forum.webremeslo.ru/index.php" class="menu" title="www.webremeslo.ru">Форум</a><br>
+..<em>и многое другое на сайте:</em><br>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец правой колонке -->
+<!-- Центральная колонка -->
+<div class="center">
+
+<p class="zag">Глава 2</p>
+<h1>Редактируем текст на своей странице..</h1>
+<p>Вы наверняка не раз печатали документы в текстовых редакторах, так вот.. что можно сделать с текстом в том же Word, то же можно сделать и с текстом на нашей страничке.</p>
+<p>В этой главе я расскажу о том, как изменить шрифт и его размер, как сделать текст жирным, курсивом, подчёркнутым и о том как его выравнивать по краям или центру документа.</p>
+
+<h2>Параграф.</h2>
+
+<p>Я думаю, Вы знаете, что такое параграф.. это такой кусочек текста, одно или несколько предложений, который в книгах обычно печатается с новой строки, тем самым, выделяя этот текст из основной массы, Книгу разбитую на параграфы легко читать, потому что, как правило, одному параграфу соответствует одна мысль или логическая часть текста.</p>
+<p>Так вот, для того чтобы на странице сайта разбить текст на параграфы, необходимо воспользоваться тегом <samp><b>&lt;p&gt;</b></samp> - собственно параграф.</p>
+<p>Параграф имеет атрибут <samp><b>align </b></samp>"выравнивание" который в свою очередь может быть равен тому ли иному значению.</p> 
+
+<p>Рассмотрим на примерах:</p>
+<p>С помощью параграфа можно расположить наш текст по центру:</p>
+<samp><b>&lt;p align="center"&gt;Привет мир!!!&lt;/p&gt;</b></samp>
+<p>По левому краю:</p>
+<samp><b>&lt;p align="left"&gt;Привет мир!!!&lt;/p&gt;</b></samp>
+<p>По правому краю:</p>
+<samp><b>&lt;p align="right"&gt;Привет мир!!!&lt;/p&gt;</b></samp>
+<p>Или же обоим краям документа:</p>
+<samp><b>&lt;p align="justify"&gt;Привет мир!!!</b> - здесь нужен текст подлиней чтобы эффект был хорошо виден  при открытии документа<b>&lt;/p&gt;</b></samp>
+
+<p>Давайте слегка изменим нашу первую страничку:</p>
+
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Мой первый сайт &lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx"><b>&lt;p align="center"&gt;</b>Привет мир!!!<b>&lt;/p&gt;</b></samp><br>
+<samp class="xx">&lt;br&gt;</samp><br>
+<samp class="xx"><b>&lt;p align="justify"&gt;</b> </samp><br>
+<samp>Меня зовут Карлсон! Я в меру упитанный мужчина - это моя первая страничка!  
+Здесь я хочу найти себе новых друзей, для того чтобы вместе гулять по крышам! 
+Я очень очень сильно люблю вареньё!!! С нетерпеньем буду ждать Вашего 
+приглашения на чай. Прилечу!! </samp> <br>
+<samp class="xx"><b>&lt;/p&gt;</b></samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer2.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>Так уже лучше, не правда ли?</p>
+<p>Запомним некоторые вещи:</p>
+<p>1) Тег <samp><b>&lt;p&gt;</b></samp> не может содержать в себе других параграфов, то есть писать вот так:<br><br>
+<samp><b>&lt;p&gt;</samp><br>
+<samp class="x">&lt;p&gt;</samp><br> 
+<samp class="x">&lt;/p&gt;</samp><br>
+<samp>&lt;/p&gt;</b></samp>
+<p>Нельзя! - это нелогично, как может один параграф содержать в себе другой?</p>
+<p>2) Так же, нельзя писать пустые теги без текста или других тегов.</p>
+<samp><b>&lt;p&gt; здесь, что-то обязательно должно быть!!!&lt;/p&gt;</b></samp>
+<p>3) По умолчанию Ваш текст выравнивается браузером по левому краю, так что если Вам так и надо атрибут <samp><b>align="left"</b></samp> для параграфа можно не указывать.</p>
+<p>4) Тег <samp><b>&lt;p&gt;</b></samp> подразумевает в себе перенос строки, если это Вам не нужно, используйте вместо тега <samp><b>&lt;p&gt;</b></samp> тег <samp><b>&lt;div&gt;</b></samp> данный тег является альтернативой тегу <samp><b>&lt;p&gt;</b></samp> пшится так:</p>
+
+<samp><b>&lt;div align="center"&gt;Привет мир!!!&lt;/div&gt;<br>
+&lt;div align="left"&gt;Привет мир!!!&lt;/div&gt;<br>
+&lt;div align="right"&gt;Привет мир!!!&lt;/div&gt;<br>
+&lt;div align="justify"&gt;Привет мир!!!&lt;/div&gt;</b></samp>
+<p>Все то же самое, только данный тег не будет переносить текст на следующую строку и в него можно вставлять тег <samp><b>&lt;p&gt;</b></samp> по принципу:</p>
+
+<samp><b>&lt;div&gt;</samp><br>
+<samp class="x">&lt;p align="left"&gt;Пишем слева&lt;/p&gt;</samp><br>
+<samp class="x">&lt;p align="right"&gt;Пишем справа&lt;/p&gt;</samp><br>
+&lt;/div&gt;</b></samp>
+
+<p>А вообще тег <samp><b>&lt;div&gt;</b></samp> многофункциональный.. и по своей сути он является пустым блоком-контейнером, который может содержать в себе как текст, так и другие теги.. в общем, хочу сказать, что работа с текстом это далеко не основная задача тега <samp><b>&lt;div&gt;</b></samp>, но об остальных возможностях данного тега мы поговорим позже..</p>
+<p>5) Еще одним способом выравнивания текста по центру является использование тега <samp><b>&lt;center&gt;</b></samp> любое содержание взятое в данный тег выравнивается по центру экрана. Пишется так:</p>
+<samp><b>&lt;center&gt;Привет мир!!!&lt;/center&gt;</b></samp>
+
+<h2>Заголовки</h2>
+<p>В наборе тегов html языка имеется шесть типов заголовков:</p>
+
+<h1 style="text-align: left; font-size: 30px; color: #000000;">&lt;h1&gt; Привет мир!!! &lt;/h1&gt;</h1>
+<h2 style="text-align: left; font-size: 24px; color: #000000;">&lt;h2&gt;  Привет мир!!! &lt;/h2&gt;</h2>
+<h3 style="text-align: left; font-size: 20px; color: #000000;">&lt;h3&gt; Привет мир!!! &lt;/h3&gt;</h3>
+<h4 style="text-align: left; font-size: 16px; color: #000000;">&lt;h4&gt; Привет мир!!!  &lt;/h4&gt;</h4>
+<h5 style="text-align: left; font-size: 12px; color: #000000;">&lt;h5&gt;  Привет мир!!! &lt;/h5&gt;</h5>
+<h6 style="text-align: left; font-size: 10px; color: #000000;">&lt;h6&gt; Привет мир!!! &lt;/h6&gt;</h6>
+
+<p>Думаю с этим понятно.. <samp><b>&lt;hx&gt;</b></samp> тег заголовка, где значение <b>x</b> является величиной буковок (может быть от одного до шести). Помните, что после использования того или иного заголовка происходит перенос строки - на то он и заголовок.</p>
+<p>Заголовки дело хорошее и достаточно удобное, но ими можно выделять только маленькие кусочки текста, а что если нам надо выделить весь текст?</p>
+<p>Знакомимся тег <samp><b>&lt;font&gt;</b></samp>  в переводе на русский - "шрифт".</p>
+<p>Тег <b><samp>&lt;font&gt;</b></samp> помимо прочих атрибутов, о которых ещё пойдет речь, имеет атрибут <samp><b>size</b></samp> - размер.</p>
+<p>Пишется и выглядит это так:</p>
+
+
+<samp><b>&lt;font size="+4"&gt;</samp><font size="+4"></b>Привет мир!!!</font><samp><b>&lt;/font&gt;</b></samp><br>
+<samp><b>&lt;font size="+2"&gt;</samp><font size="+2"></b>Привет мир!!!</font><samp><b>&lt;/font&gt;</b></samp><br>
+<samp><b>&lt;font size="+0"&gt;</samp><font size="+0"></b>Привет мир!!!</font><samp><b>&lt;/font&gt;</b></samp><br>
+<samp><b>&lt;font size="-1"&gt;</samp><font size="-1"></b>Привет мир!!!</font><samp><b> &lt;/font&gt;</b></samp><br>
+<samp><b>&lt;font size="-2"&gt;</samp><font size="-2"></b>Привет мир!!!</font><samp><b>&lt;/font&gt;</b></samp><br>
+
+<p>Добавим эти теги на нашу страницу.</p>
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Мой первый сайт&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;center&gt;<b>&lt;h2&gt;</b>Привет мир!!!<b>&lt;/h2&gt;</b>&lt;/center&gt;</samp><br>
+<samp class="xx">&lt;br&gt;</samp><br>
+<samp class="xx">&lt;p align="justify"&gt;</samp><br> 
+<samp class="xx"><b>&lt;font size="+1"&gt;</b>Меня зовут Карлсон! Я в меру упитанный мужчина - это моя первая страничка! Здесь я хочу найти себе новых друзей, для того чтобы вместе гулять по крышам! Я очень очень сильно люблю <b> &lt;font size="+2"&gt;</b>вареньё!!!<b>&lt;/font&gt;</b>  С нетерпеньем буду ждать Вашего приглашения на чай. Прилечу!!<b>&lt;/font&gt;</b></samp><br> 
+<samp class="xx">&lt;/p&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer3.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>Попробуйте поэкспериментировать с размерами шрифта и заголовком, подставьте свои значения, измените расположение тегов..</p>  
+
+<h2>Цвет</h2>
+
+<p>Для придания страничке красивого вида не обойтись без палитры с красками..</p>
+<p>В <b>html</b> языке используется своя палитра красок. Вот основные цвета, выглядят они так:</p>
+
+<center>
+<table width="300" bgcolor="#ffffff" cellspacing="0" cellpadding="5" border="0">
+ <tr>
+  <td width="33%" bgcolor="#000000"><font color="#ffffff"><div align="center">#000000 <br>black</div></font></td>
+  <td width="33%" bgcolor="#ffffff"><div align="center">#ffffff <br>white</div></td>
+  <td width="33%" bgcolor="#ff0000"><div align="center">#ff0000 <br>red</div></td>
+ </tr>
+ <tr>
+  <td  bgcolor="#ffa500"><div align="center">#ffa500 <br>orange</div></td>
+  <td  bgcolor="#ffff00"><div align="center">#ffff00 <br>yellow</div></td>
+  <td  bgcolor="#008000"><div align="center">#008000 <br>green</div></td>
+ </tr>
+ <tr>
+  <td  bgcolor="#00ffff"><div align="center">#00ffff <br>cyan</div></td>
+  <td  bgcolor="#0000ff"><div align="center">#0000ff <br>blue</div></td>
+  <td  bgcolor="#800080"><div align="center">#800080 <br>purple</div></td>
+</tr>
+</table><br>
+Полная палитра базовых красок приведена <b>здесь:</b><a href="http://www.webremeslo.ru/spravka/spravka1.html" title="Полная палитра базовых красок на сайте webremeslo.ru">(http://www.webremeslo.ru/spravka/spravka1.html)</a>
+</center>
+
+<br>
+
+<p>Один и тот же цвет можно задать двумя способами:<br>
+используя шестнадцатеричное значение цвета RGB - например <b>#008000</b> - зелёный цвет, 
+либо используя константы цвета - <b>green</b> (для тех кто учил французский, <b>green</b> -зелёный.)</p> 
+
+<p>Краски есть, давайте рисовать!</p>
+<p>Мы уже знакомы с тегом <samp><b>&lt;font&gt;</b></samp> у него есть еще один атрибут - <samp><b>color.</b></samp></p>
+<p>Так вот, если к примеру написать так:</p>
+<p><samp><b>&lt;font color="#ff0000"&gt;</b>Привет мир!!!<b>&lt;/font&gt;</b></samp> - То цвет шрифта станет красным. Попробуйте..</p> 
+<p>А можно так:</p>
+<p><samp><b>&lt;font color="red"&gt;</b>Привет мир!!!<b>&lt;/font&gt;</b></samp> - Будет тоже самое..</p>
+
+<p>Но советую писать всё же шестнадцатеричным числом, во-первых, по понятным причинам не для всех оттенков цветов есть своё название, а во-вторых, поговаривают, что не все браузеры знают названия тех или иных красок…</p>
+<p>Есть еще один способ изменить цвет текста. Тег <samp><b>&lt;body&gt;&lt;/body&gt;</b></samp> "тело" - имеет атрибут <samp><b>text</b></samp> - "текст" если присудить этому атрибуту любой цвет из доступной палитры то весь текст в нашей странице окрасится, кроме тех мест, где мы "принудительно" указали другой цвет.</p>
+<p>В строчке где стоит открывающий тег <samp><b>&lt;body&gt;</b></samp> пишем так:</p>
+<samp><b>&lt;body text="#ff8c40 "&gt;</b></samp>
+
+<p>Теперь весь текст у нас стал оранжевым кроме заголовка "Привет мир!!!" который мы отдельно перекрасили в красный.</p>
+<p>А вот атрибут тега <samp><b>&lt;body&gt;  bgcolor </b></samp>и его значение задает цвет фона страницы </p>
+<p><samp><b>&lt;body bgcolor="#40caff"&gt;</b></samp> - залили всё голубым..</p>
+
+<p>Раскрасьте свою страницу на свой лад.. пробуйте, экспериментируйте!</p>
+<p>Сейчас Вам нужно понять принцип построения html кода иначе рано или поздно станете в тупик.. конечно, я и дальше буду выкладывать готовые примеры, но нет ничего лучше чем самостоятельная практика.</p>
+<p>На данный момент у меня получилось вот так:  .. а у Вас?</p>
+
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Мой первый сайт &lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body <b>text="#484800" bgcolor="#e8e8e8"</b>&gt;</samp><br>
+<samp class="xx">&lt;center&gt;</samp><br> 
+<samp class="xxx">&lt;h2&gt;</samp><br>
+<samp class="xxxx">&lt;font <b>color="#008000"&gt;</b>Привет мир!!!&lt;/font&gt;</samp><br>
+<samp class="xxx">&lt;/h2&gt;</samp><br>
+<samp class="xx">&lt;/center&gt;</samp><br> 
+<samp class="xx">&lt;p align="justify"&gt;</samp><br> 
+<samp class="xxx">&lt;font size="+1"&gt;Меня зовут Карлсон! Я в меру упитанный мужчина - это моя первая страничка! Здесь я хочу найти себе новых друзей, для того чтобы вместе гулять по крышам! Я очень очень сильно люблю &lt;font size="+2" <b>color="#ff0000"</b>&gt;вареньё!!!&lt;/font&gt; С нетерпеньем буду ждать Вашего приглашения на чай. Прилечу!!</samp><br>
+<samp class="xxx">&lt;/font&gt;</samp><br> 
+<samp class="xx">&lt;/p&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer4.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Обратите внимание на то, как пишется код, если в теге присутствует два и более атрибута. В нашей строчке <samp><b>&lt;body text="#ff207b" bgcolor="#1a77f0"&gt;</b></samp> у тега <samp><b>&lt;body&gt;</b></samp> два атрибута <samp><b>text</b></samp> и <samp><b>bgcolor</b></samp> мы просто пишем их подряд через пробел, не разделяя никакими другими знаками..</p>
+
+<h2>Стиль текста</h2>
+
+<p>Здесь все достаточно просто..</p>
+<p>Итак, новые теги:</p>
+
+<table  cellspacing="0" cellpadding="0" border="0">
+ <tr><td><samp><b>&lt;b&gt; &lt;/b&gt;</b></samp></td><td>- <b>Полужирный текст</b></td></tr>
+ <tr><td><samp><b>&lt;i&gt; &lt;/i&gt;</b></samp></td><td>-<i> Наклонный текст</i></td></tr>
+ <tr><td><samp><b>&lt;u&gt; &lt;/u&gt;</b></samp></td><td>- <u>Подчеркнутый текст</u></td></tr>
+ <tr><td><samp><b>&lt;strike&gt; &lt;/strike&gt;</b></samp></td><td>- <s>Перечеркнутый</s></td></tr>
+ <tr><td><samp><b>&lt;s&gt; &lt;/s&gt;</b></samp></td><td>- <s>Перечеркнутый</s> (второй вариант, от первого ничем не отличается)</td></tr>
+ <tr><td><samp><b>&lt;tt&gt; &lt;/tt&gt;</b></samp></td><td>- <tt>моноширинный шрифт</tt></td></tr>
+ <tr><td><samp><b>&lt;small&gt; &lt;/small&gt;</b></samp></td><td>- <small>Малый</small></td></tr>
+ <tr><td><samp><b>&lt;big&gt; &lt;/big&gt;</b></samp></td><td>- <big>Большой</big></td></tr>
+ <tr><td><samp><b>&lt;sup&gt; &lt;/sup&gt;</b></samp></td><td>- Верхний <sup>индекс</sup></td></tr>
+ <tr><td><samp><b>&lt;sub&gt; &lt;/sub&gt;</b></samp></td><td>- Нижний <sub>индекс</sub></td></tr>
+</table>
+
+<p>Ну думаю понятно.. текст заключённый между этими открывающими и закрывающими тегами приобретёт нужный нам стиль.</p>
+<p>Вот пример на всякий случай…</p>
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Стили текста&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx"><b>&lt;big&gt;&lt;b&gt;&lt;u&gt;</b>Научная статья.<b>&lt;/u&gt;&lt;/b&gt;&lt;/big&gt;</b></samp><br>
+<samp class="xx">&lt;br&gt;</samp><br>
+<samp class="xx">&lt;br&gt;</samp><br>
+<samp class="xx">Если разбавить дистиллированную воду Н<b>&lt;sub&gt;</b>2<b>&lt;/sub&gt;</b>О  сорока процентами этилового спирта С<b>&lt;sub&gt;</b>2<b>&lt;/sub&gt;</b>Н<b>&lt;sub&gt;</b>5<b>&lt;/sub&gt;</b>ОН то получится жидкость в 40<b>&lt;sup&gt;</b>о<b>&lt;/sup&gt;</b> более известную широкой публике под названием <b>&lt;i&gt;</b>- водка.<b>&lt;/i&gt;</b></samp><br>
+<samp class="xx">&lt;br&gt;</samp><br>
+<samp class="xx">Впервые данную пропорцию<b> &lt;s&gt;</b>придлажил<b>&lt;/s&gt;</b>  предложил  <b>&lt;tt&gt;</b>Дмитрий Иванович МЕНДЕЛЕЕВ.<b>&lt;/tt&gt;</b></samp><br>
+<samp class="xx">&lt;br&gt;</samp><br>
+<samp class="xx">&lt;br&gt;</samp><br>
+<samp class="xx">&lt;br&gt;</samp><br>
+<samp class="xx"><b>&lt;small&gt;</b>Распитие спиртных напитков вредит вашему здоровью.<b>&lt;/small&gt;</b></samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer5.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<h2>Шрифт</h2>
+<p>Для того чтобы изменить шрифт документа необходимо дать указание браузеру, что мол от сель до сель показывать текст таким шрифтом. Для этого  используем всё тот же тег <b>&lt;font&gt;</b> и его атрибут <b>face</b> - лицо то бишь..</p> 
+<p>Пишется так:</p>
+<p><samp><b>&lt;font face="arial"&gt;</b></samp>Эта строчка будет написана с помощью шрифта Arial<samp><b>&lt;/font&gt;</b></samp></p>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Использование различных шрифтов&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;font<b> face="arial"&gt;</b>Мало кто знает, как много надо знать для того, что бы знать, как мало мы знаем.&lt;/font&gt;</samp><br>
+<samp class="xx">&lt;br&gt;</samp><br>
+<samp class="xx">&lt;font <b>face="times new roman"&gt;</b>Мало кто знает, как много надо знать для того, что бы знать, как мало мы знаем.&lt;/font&gt;</samp><br>
+<samp class="xx">&lt;br&gt;</samp><br>
+<samp class="xx">&lt;font <b>face="comic sans ms"&gt;</b>Мало кто знает, как много надо знать для того, что бы знать, как мало мы знаем.&lt;/font&gt;</samp><br>
+<samp class="xx">&lt;br&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer6.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>Здесь необходимо отметить, что браузер использует библиотеку шрифтов, установленную на компьютере пользователя, и если вдруг указанного Вами шрифта в этой библиотеке не окажется, то он заменит его на тот который присутствует. Следовательно, чтобы не ударить face(ом) в грязь, не стоит указывать какие-то "экзотические" нестандартные шрифты, так как супер модный шрифт на компьютере Вашего друга сильно рискует превратиться в обыкновенный.</p>
+
+
+<h2>Предварительно отформатированный текст.</h2>
+<p>Если Вы обратили внимание, а если не обратили то знайте, что в браузерах текст набранный с помощью текстовых редакторов проходит "обработку" перед выводом его на экран компьютера. Так в набранном Вами тексте удаляются все переносы строк и лишние пробелы, пробелов между словами или просто символами может быть не более одного.</p>
+<p>Проводится данная "обработка", для того чтобы на мониторах с разным расширением экрана текст переносился на следующую строку в тех местах где это действительно необходимо, а не там где были раннее расставлены пробелы и переносы строк.</p>
+<p>Однако такая политика браузеров, в ряде случаев, не всегда оправданна.. Как например, написать стихи? Нет можно конечно после каждой строчки писать тег <samp><b>&lt;br&gt;</b></samp>, но есть вариант куда проще..</p>
+<p>Знакомимся тег <samp><b>&lt;pre&gt;</b></samp>, текст заключённый в данный тег выводится браузерами на экран в том виде в котором он был набран, т.е. со всеми пробелами и переносами строк </p>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp>&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Пробелы и перенос строки&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx"><b>&lt;pre&gt;</b></samp>
+<pre>
+        СЛОН.
+
+Дали туфельки слону.
+Взял он туфельку одну
+И сказал: - Нужны пошире,
+И не две, а все четыре!
+
+         С. Я. Маршак.
+</pre>
+<samp class="xx"><b>&lt;/pre&gt;</b></samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer72.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>Такие вот дела..</p>
+
+
+
+
+
+<h2>Полезные советы:</h2>
+<ul>
+<li><p>Писать странички в блокноте конечно можно, но я Вам настоятельно рекомендую воспользоваться полноценным HTML редактором, благо их на рынке программного обеспечения великое множество. Я не буду давать их подробное описание, скажу лишь что они, как правило, несут в себе одинаковые стандартные наборы инструментов и отличаются друг от друга пожалуй только интерфейсом.. сравнивать их не берусь, так как они носят исключительно характер привычки пользования веб мастером тем или иным редактором html кода.</p>
+<p>Расскажу про основные плюсы  использования подобного редактора.<br>
+<br>
+<ul>
+<li>Как правило, html редакторы имеют два окна, в одном Вы пишите код, а во втором сразу видите результат написанного!  То есть теперь Вам не придётся постоянно сохранять текущий результат, чтобы открыть его браузером и оценить написанное.<br> 
+<li>Как правило, они содержат в себе стандартные  наборы шаблонов кода, в который Вы просто подставляете свою информацию, избавляя себя от прописывания тегов.<br>
+<li>Ну и "общие" удобства - сохранить, открыть, редактировать сразу несколько страниц сайта перелистывая их… много короче разных полезных штук.. одна подсветка синтаксиса чего стоит!<br> 
+</ul>
+<p>P.S. Однако, дальше буду писать эту книгу подразумевая, что Вы тренируетесь в стандартном блокноте… иначе мы друг друга не поймём.</p>
+
+<li><p>Немного об этике и здоровье глаз.. </p>
+<p>Если создаваемый Вами сайт его дизайн и назначение не требуют обратного, то советую избегать следующих вещей:
+Использовать яркие контрастные цвета фона и шрифта. Поверьте, когда у человека начинают слезиться глаза от чтения такой страницы, он резко теряет к ней интерес.
+Это же касается и размеров текста. Не стоит использовать огромные заголовки, впрочем, как и содержание малюсенькими буквами - это напрягает, ищите золотую середину..</p>
+</ul>
+
+
+<div class="url">
+<a href="glava1.html" title="К предыдущей главе">&lt;&lt; предыдущая глава</a> | 
+<a href="glava3.html" title="К следующей главе">следующая глава &gt;&gt;</a>
+</div>
+</div>
+<!-- Конец центральной колонке -->
+<!-- Подвал -->
+<div class="footer">
+&copy; Автор: Семикопенко Алексей Алексеевич. | <a href="http://webremeslo.ru/" class="logo" title="Перейти на сайт webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец подвалу -->
+</body>
+</html>

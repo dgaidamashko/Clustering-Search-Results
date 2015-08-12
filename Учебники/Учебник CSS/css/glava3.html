@@ -1,0 +1,304 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Учебник CSS для начинающих.</title>
+<meta HTTP-EQUIV="Content-Type" Content="text/html; Charset=Windows-1251">
+<meta name="author" Content="Семикопенко Алексей Алексеевич">
+<meta name="copyright" Content="Семикопенко Алексей Алексеевич">
+<meta name="Publisher-Email" Content="alex@webremeslo.ru">
+<meta name="Publisher-URL" Content="http://webremeslo.ru/">
+<link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+<body>
+<!-- Шапка -->
+<div class="header">
+<h1 class="logo">Учебник CSS</h1>
+</div>
+<!-- Конец шапке -->
+<!--левая колонка "меню" -->
+<div class="left">
+<div class="fixed">
+<ul class="ul_none">
+<li><a href="../index.html" class="menu" title="От автора.">Главная</a></li>
+<li><a href="glava0.html" class="menu" title="Введение.   Что такое CSS?">Что такое CSS?</a></li>
+<li><a href="glava1.html" class="menu" title="Глава 1   Внедрение CSS в HTML документ.">Внедрение CSS.</a></li>
+<li><a href="glava2.html" class="menu" title="Глава 2   Свойства текста.">Свойства текста.</a></li>
+<li><a href="glava3.html" class="activemenu" title="Глава 3   Свойства шрифта.">Свойства шрифта.</a></li>
+<li><a href="glava4.html" class="menu" title="Глава 4   Цвет и фон.">Цвет и фон.</a></li>
+<li><a href="glava5.html" class="menu" title="Глава 5   Границы элемента.">Границы элемента.</a></li>
+<li><a href="glava6.html" class="menu" title="Глава 6   Классы и id селекторы.">Классы и id селекторы.</a></li>
+<li><a href="glava7.html" class="menu" title="Глава 7   Размеры элемента.">Размеры элемента.</a></li>
+<li><a href="glava8.html" class="menu" title="Глава 8   Поля и отступы.">Поля и отступы.</a></li>
+<li><a href="glava9.html" class="menu" title="Глава 9   Курсоры.">Курсоры.</a></li>
+<li><a href="glava10.html" class="menu" title="Глава 10   Форматирование.">Форматирование.</a></li>
+<li><a href="glava11.html" class="menu" title="Глава 11   Поплавки.">Поплавки.</a></li>
+<li><a href="glava12.html" class="menu" title="Глава 12   Позиционирование.">Позиционирование.</a></li>
+<li><a href="glava13.html" class="menu" title="Глава 13   Стиль списка.">Стиль списка.</a></li>
+<li><a href="glava14.html" class="menu" title="Глава 14   Полоса прокрутки.">Полоса прокрутки.</a></li>
+<li><a href="glava15.html" class="menu" title="Глава 15   Псевдоклассы.">Псевдоклассы.</a></li>
+<li><a href="glava16.html" class="menu" title="Глава 16   Псевдоэлементы.">Псевдоэлементы.</a></li>
+</ul>
+</div>
+</div>
+<!-- Конец левой колонке -->
+<!-- Правая колонка -->
+<div class="right">
+<h2>А так же:</h2>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">Как создать сайт?</a>
+<a href="http://www.webremeslo.ru/html/glava0.html" class="menu" title="www.webremeslo.ru">Учебник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka.html" class="menu" title="www.webremeslo.ru">Справочник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka4.html" class="menu" title="www.webremeslo.ru">Справочник CSS</a>
+<a href="http://forum.webremeslo.ru/index.php" class="menu" title="www.webremeslo.ru">Форум</a><br>
+..<em>и многое другое на сайте:</em><br>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец правой колонке -->
+<!-- Центральная колонка -->
+<div class="center">
+   
+<p class="zag">Глава 3</p>
+    
+<h1>Свойства шрифта.</h1> 
+
+<p>В предыдущей главе мы рассмотрели свойства текста, в этой поговорим о том что можно сделать с шрифтом используя инструменты CSS.</p> 
+
+<h2>Стиль шрифта</h2>
+
+<p>Свойство <samp><b>font-style</b></samp>, в зависимости от выбранного значения, определяет стиль шрифта.</p>
+
+<p>Шрифт может иметь следующие стили:</p>
+<ul>
+<li><samp><b>normal</b></samp> - обычный (по умолчанию) 
+<li><samp><b>italic</b></samp> - курсив 
+<li><samp><b>oblique</b></samp> - наклонный
+</ul>
+
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Стиль шрифта&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;p style="<b>font-style: italic</b>"&gt;это курсив&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;p style="<b>font-style: oblique</b>"&gt;а это наклонный текст&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;p style="<b>font-style: normal</b>"&gt;И чем спрашивается, они отличаются?&lt;/p&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer13.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Чем отличается курсив от наклонного текста? Курсив - это своего рода шрифт взятый из библиотеки шрифтов, а наклонный текст - это результат работы алгоритма, где каждый символ слегка наклоняется в правую сторону.</p>   
+
+<h2>Начертание шрифта</h2> 
+
+<p>Весьма интересное свойство шрифта <samp><b>font-variant</b></samp> позволяет делать строчные буквы заглавными и уменьшенными.</p>
+
+<p>Значения:</p>
+<ul>
+<li><samp><b>normal</b></samp> - нормальный (по умолчанию) 
+<li><samp><b>small-caps</b></samp> - все буквы заглавные и уменьшенные 
+</ul>
+
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Все буквы заглавные&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;p style="<b>font-variant: small-caps</b>"&gt;Купи слона!!&lt;/p&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer14.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<h2>Размер шрифта</h2>
+
+<p>Свойство CSS <samp><b>font-size</b></samp> - определяет размер шрифта.</p> 
+<p>Размер шрифта может быть задан в процентах или пикселях и любых других допустимых единицах измерения CSS, а так же абсолютным или относительным значением. </p>
+<p>значения абсолютного размера шрифта:</p> 
+<ul>
+<li><samp><b>xx-small</b></samp> - очень очень маленький 
+<li><samp><b>x-small</b></samp> - очень маленький 
+<li><samp><b>small</b></samp> - маленький 
+<li><samp><b>medium</b></samp> - средний 
+<li><samp><b>large</b></samp> - большой 
+<li><samp><b>x-large</b></samp> - очень большой 
+<li><samp><b>xx-large</b></samp> - очень очень большой 
+</ul>
+
+<p>значения относительного размера шрифта:</p>
+
+<ul>
+<li><samp><b>larger</b></samp> - больше чем размер шрифта родительского элемента 
+<li><samp><b>smaller</b></samp> - меньше чем размер шрифта родительского элемента 
+</ul>
+
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Размер шрифта&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;div style="<b>font-size: 18px</b>; background-color: #ecfef2; border: 5px double #245404"&gt;</samp><br>
+<samp class="xxx">&lt;p>Размер шрифта родительского элемента  (блока DIV) равен 18 пикселям&lt;/p&gt;</samp><br>
+<samp class="xxx">&lt;p style="<b>font-size: larger</b>"&gt;Этот шрифт будет крупнее относительно элемента родителя&lt;/p&gt;</samp><br>
+<samp class="xxx">&lt;p style="<b>font-size: smaller</b>"&gt;А этот шрифт будет мельче относительно элемента родителя&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;p style="<b>font-size: 14px;</b>"&gt;В блоке ниже размер штифта элемента родителя огромен (60 пунктов), однако дочерние параграфы расположенные в нём имеют собственное абсолютное значение шрифта и к размеру шрифта элемента родителя никак не привязаны.&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;div style="<b>font-size: 60pt;</b> background-color: #ecfef2; border: 5px double #245404"&gt;</samp><br>
+<samp class="xxx">&lt;p style="<b>font-size: xx-small</b>"&gt;xx-small - очень очень маленький&lt;/p&gt;</samp><br>
+<samp class="xxx">&lt;p style="<b>font-size: x-small</b>"&gt;x-small - очень маленький &lt;/p&gt;</samp><br>
+<samp class="xxx">&lt;p style="<b>font-size: small</b>"&gt;small - маленький &lt;/p&gt;</samp><br>
+<samp class="xxx">&lt;p style="<b>font-size: medium</b>"&gt;medium - средний&lt;/p&gt;</samp><br>
+<samp class="xxx">&lt;p style="<b>font-size: large</b>"&gt;large - большой&lt;/p&gt;</samp><br>
+<samp class="xxx">&lt;p style="<b>font-size: x-large</b>">x-large - очень большой&lt;/p&gt;</samp><br>
+<samp class="xxx">&lt;p style="<b>font-size: xx-large</b>"&gt;xx-large - очень очень большой&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;/div&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+
+
+<div align="right"><a href="primer/primer15.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+
+<h2>Жирность шрифта</h2> 
+
+<p>Свойство <samp><b>font-weight</b></samp> - определяет жирность шрифта. Насыщенность  шрифта может быть задана относительно шрифта элемента родителя  с помощью следующих значений:</p>
+<ul>
+<li><samp><b>normal</b></samp> - обычный шрифт 
+<li><samp><b>bold</b></samp> - полужирный шрифт 
+<li><samp><b>bolder</b></samp> - жирный шрифт 
+<li><samp><b>lighter</b></samp> - тонкий шрифт 
+</ul>
+<p>А также выражается в условном числовом значении от 100 до 900 с шагом 100 (100, 200, 300... 900)  где значение 100 тонкий шрифт, а 900 - сверх жирный.</p>
+
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Жирность шрифта&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;div style="font-size: 18pt"&gt;</samp><br>
+<samp class="xxx">&lt;p style="<b>font-weight: bolder</b>"&gt;жирный шрифт&lt;/p&gt;</samp><br>
+<samp class="xxx">&lt;p style="<b>font-weight: lighter</b>"&gt;тонкий шрифт&lt;/p&gt;</samp><br>
+<samp class="xxx">&lt;p style="<b>font-weight: 600</b>"&gt;жирность шрифта равна 600&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;/div&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer16.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<h2>Семейство шрифта</h2>
+
+<p>Атрибут CSS <samp><b>font-family</b></samp> - указывает одно, два или три имени шрифта из библиотеки шрифтов.</p>
+<p>Возможность указывать до трёх имен шрифтов через запятую используется разработчиками во избежание возможных проблем связанных с отсутствием, по тем или иным причинам, указанных имен в библиотеке шрифтов на компьютере пользователя.</p>
+<p>Так например запись в стилевом описании <samp><b>P {font-family: Times New Roman, Arial, Verdana;}</b></samp> - будет указывать браузеру пользователя, что данный параграф следует писать с помощью шрифта Times New Roman, а если его по каким то мифическим причинам не окажется в его библиотеке шрифтов то следует использовать шрифт  Arial, и уж если и его нет, тогда писать шрифтом  Verdana.</p>
+<p>Если же браузер не найдёт в библиотеке шрифтов пользователя ни одного шрифта из указанных то он будет использовать тот шрифт который указан в его настройках "по умолчанию"</p>
+<p>Однако также можно указать браузеру не только какой то конкретный шрифт, но и обозначить предпочтительное семейство шрифтов из перечисленных ниже возможных</p> 
+
+<ul>
+<li><samp><b>serif</b></samp> - шрифты с засечками 
+<li><samp><b>sans-serif</b></samp> - рубленые шрифты 
+<li><samp><b>cursive</b></samp> - курсивные шрифты 
+<li><samp><b>fantasy</b></samp> - декоративные шрифты 
+<li><samp><b>monospace</b></samp> - моношириные шрифты 
+</ul>
+
+<p>Например, если в файле CSS написать <samp><b>P {font-family: Times New Roman, sans-serif;}</b></samp> то это будет значить что если вдруг не окажится шрифта с именем Times New Roman, то следует использовать любой (или определённый в настройках браузера) доступный шрифт из семейства <samp><b>sans-serif</b></samp> - рубленых шрифтов.</p>
+
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Семейство шрифта&lt;/title&gt;</samp><br>
+<samp class="xx">&lt;style type="text/css"&gt;</samp><br>
+<samp class="xxx">h3 <b>{font-family: Times New Roman, Verdana, sans-serif;}</b></samp><br>
+<samp class="xxx">p <b>{font-family: Monotype Corsiva, Verdana;}</b></samp><br>
+<samp class="xxx">span <b>{font-family: Comic Sans MS;}</b></samp><br>
+<samp class="xx">&lt;/style&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;h3&gt;Купи слона&lt;/h3&gt;</samp><br>
+<samp class="xx">&lt;p&gt;У нас Вы можете по &lt;span&gt;выгодным ценам&lt;/span&gt; приобрести лучших слонов!!&lt;/p&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer17.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div> 
+
+<h2>Прараметры шрифта</h2>
+
+<p>Вы наверняка обратили внимание на тот факт, что все свойства CSS предназначенные для работы со шрифтом начинаются с английского слова  <samp><b>font</b></samp> (собственно шрифт).. <samp><b>font</b>-family, <b>font</b>-size</samp> и т.д..</p>
+<p>Так вот это неспроста.. дело в том, что все эти свойства являются "дочерними" базового атрибута CSS <b>font</b> в довершении главы о нем собственно и пойдёт речь.</p> 
+<p>Речь будет недолгой..  )) Итак <samp><b>font</b></samp> - (шрифт), являясь базовым атрибутом, может определять одновременно сразу несколько параметров шрифта принимая те или иные значения от следующих атрибутов:</p>
+<ul>
+<li><samp><b>font-style</b></samp>
+<li><samp><b>font-variant</b></samp>
+<li><samp><b>font-weight</b></samp> 
+<li><samp><b>font-size</b></samp>
+<li><samp><b>font-family</b></samp>
+</ul>
+<p>Для более детального ознакомления с возможными параметрами смотрите каждый атрибут отдельно.</p>
+<p>Предположим нам необходимо написать стилевое описание шрифта для тега <samp><b>&lt;span&gt;</b></samp> и по нашей задумке шрифт для данного тега должен быть: курсивом, жирным, иметь размер 20 пикселей и использовать шрифт  Arial</p>
+<p>Все это можно осуществить, написав следующие:</p>
+
+<samp><b>
+span{<br>
+font-style: italic;<br>
+font-weight: bolder;<br>
+font-size: 20px;<br>
+font-family: Arial<br>
+}
+</b></samp>
+
+<p>А можно обойтись всего одной строчкой используя базовый атрибут <b>font</b>.</p>
+<p>Вот так:</p> 
+<samp><b>span{font: italic bold 20px Arial}</b></samp>
+<p>Мы просто перечислили нужные нам параметры "марки" <samp><b>font</b></samp>. Согласитесь, по-моему, так писать гораздо проще, к тому же код становится более компактным и лёгким для чтения как браузером, так и человеком.</p>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Параметры шрифта&lt;/title&gt;</samp><br>
+<samp class="xx">&lt;style type="text/css"&gt;</samp><br>
+<samp class="xxx">span{<b>font: italic bold 20px Arial</b>}</samp><br>
+<samp class="xx">&lt;/style&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;span&gt;Этот текст написан курсивом, он жирный, имеет размер 20 пикселей и использует шрифт  Arial&lt;/span&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>  
+<div align="right"><a href="primer/primer18.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+
+<h2>Полезные советы:</h2>
+<ul>
+<li><p>Используйте базовый атрибут <samp><b>font</b></samp> если необходимо применить к шрифту элемента более одного свойства.</p>
+<li><p>Помните что текст, прежде всего, должен быть удобным для чтения и только потом красивым и стильным, а по сему советую избегать следующих вещей:</p>
+<p>Не стоит использовать огромные и малюсенькие шрифты, это напрягает, ищите золотую середину.  Так же не стоит злоупотреблять декоративными шрифтами, конечно, все эти закорючки весьма красивы, но читать длинный текст с таким шрифтом невыносимо. Выделяйте жирным только те фразы и выражения, на которых хотели бы произвести акцент, а курсивом "особые места" в тексте, к примеру, цитаты или афоризмы.</p>
+<li><p>По мнению психологов, в длинном тексте должно использоваться не менее двух шрифтов, но и не более четырёх.. Причем выделение текста "особым" шрифтом должно иметь систематический характер.. Например все заголовки одним шрифтом, "основной текст" вторым,  и "особый текст" третьим.</p>
+</ul>
+<div class="url">
+<a href="glava2.html" title="К предыдущей главе">&lt;&lt; предыдущая глава</a> | 
+<a href="glava4.html" title="К следующей главе">следующая глава &gt;&gt;</a>
+</div>
+</div>
+<!-- Конец центральной колонке -->
+<!-- Подвал -->
+<div class="footer">
+&copy; Автор: Семикопенко Алексей Алексеевич. | <a href="http://webremeslo.ru/" class="logo" title="Перейти на сайт webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец подвалу -->
+</body>
+</html>

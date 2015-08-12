@@ -1,0 +1,264 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Учебник HTML для начинающих.</title>
+<meta HTTP-EQUIV="Content-Type" Content="text/html; Charset=Windows-1251">
+<meta name="author" Content="Семикопенко Алексей Алексеевич">
+<meta name="copyright" Content="Семикопенко Алексей Алексеевич">
+<meta name="Publisher-Email" Content="alex@webremeslo.ru">
+<meta name="Publisher-URL" Content="http://webremeslo.ru/">
+<link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+<body>
+<!-- Шапка -->
+<div class="header">
+<h1 class="logo">Учебник HTML</h1>
+</div>
+<!-- Конец шапке -->
+<!--левая колонка "меню" -->
+<div class="left">
+<div class="fixed">
+<ul class="ul_none">
+<li><a href="../index.html" class="menu" title="От автора.">Главная</a></li>
+<li><a href="glava0.html" class="menu" title="Введение.">Введение</a></li>
+<li><a href="glava1.html" class="menu" title="Перейти к Главе 1   Что такое HTML язык?">Что такое HTML язык</a>  </li>
+<li><a href="glava2.html" class="menu" title="Перейти к Главе 2   Редактируем текст">Редактируем текст</a></li>
+<li><a href="glava3.html" class="menu" title="Перейти к Главе 3   Рисунки">Рисунки</a></li>
+<li><a href="glava4.html" class="menu" title="Перейти к Главе 4   Таблицы">Таблицы</a></li>
+<li><a href="glava5.html" class="menu" title="Перейти к Главе 5   Ссылки">Ссылки</a></li>
+<li><a href="glava6.html" class="activemenu" title="Перейти к Главе 6   И ещё…">И ещё…</a></li>
+<li><a href="glava7.html" class="menu" title="Перейти к Главе 7   Фреймы">Фреймы</a></li>
+<li><a href="glava8.html" class="menu" title="Перейти к Главе 8   Навигационные карты">Навигационные карты</a></li>
+<li><a href="glava9.html" class="menu" title="Перейти к Главе 9   Списки">Списки</a></li>
+<li><a href="glava10.html" class="menu" title="Перейти к Главе 10   Meta теги">Meta теги</a></li>
+<li><a href="glava11.html" class="menu" title="Перейти к Главе 11   Заголовок &lt;!DOCTYPE&gt;">Заголовок &lt;!DOCTYPE&gt;</a></li>
+<li><a href="glava12.html" class="menu" title="Перейти к Главе 12   И снова таблицы..">И снова таблицы..</a></li>
+<li><a href="glava13.html" class="menu" title="Перейти к Главе 13   Фоновая музыка">Фоновая музыка</a></li>
+<li><a href="glava14.html" class="menu" title="Перейти к Главе 14   Текст - логика и физика">Текст - логика и физика</a></li>
+</ul>
+</div>
+</div>
+<!-- Конец левой колонке -->
+<!-- Правая колонка -->
+<div class="right">
+<h2>А так же:</h2>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">Как создать сайт?</a>
+<a href="http://www.webremeslo.ru/css/glava0.html" class="menu" title="www.webremeslo.ru">Учебник CSS</a>
+<a href="http://www.webremeslo.ru/spravka/spravka.html" class="menu" title="www.webremeslo.ru">Справочник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka4.html" class="menu" title="www.webremeslo.ru">Справочник CSS</a>
+<a href="http://forum.webremeslo.ru/index.php" class="menu" title="www.webremeslo.ru">Форум</a><br>
+..<em>и многое другое на сайте:</em><br>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец правой колонке -->
+<!-- Центральная колонка -->
+<div class="center">
+
+<p class="zag">Глава 6</p>
+<h1>И ещё…</h1>
+
+<p>Прежде чем перейти к изучению очередной большой главы, расскажу немного о некоторых мелочах, которые как-то выпали из общего строя, но порой без них никак не обойтись. Эти, фигурально выражаясь, элементы html языка помогут решить ряд задач с которыми частенько приходится сталкиваться при создании той или иной странички, так что не стоит относится к ним с пренебрежением. </p>
+
+<h2>Спецсимволы</h2>
+
+<p>Иногда, а порой даже часто, как например в этом сайте, в тексте не обойтись без знаков "меньше чем"-&lt; и "больше чем"- &gt; , но как быть если браузеры определяют &lt;слово&gt; или фразу заключенные в эти знаки как тег и следовательно не будут его отображать на мониторе? Или допустим Вам и вправду в тексте надо написать некий &lt;тег&gt;, но не для того чтобы  дать очередную команду браузеру, а чтобы привести пример его написания посетителям страницы?</p> 
+<p>Для этих целей были придуманы так называемые спецсимволы.</p> 
+<p>Так например спецсимвол <samp><b>&amp;lt;</b></samp> - будет значить что в этом месте текста нужно поставить знак &lt; а спецсимвол <samp><b>&amp;gt;</b></samp> обозначит символ &gt;.</p>
+<p>Все спецсимволы начинают писаться со знака <samp>&amp;</samp>- амперсант этот знак указывает браузеру, что далее будет идти имя спецсимвола и воспринимать его следует не как текст, а как команду. Тут встаёт очередной вопрос, а как собственно в тексте предназначенного для вывода на экран поставить сам знак  <samp>&amp;</samp>- амперсант?</p>
+<p>Для знака <samp>&amp;</samp> тоже есть свой спецсимвол - <samp><b>&amp;amp;</b></samp></p>
+<p>Такая вот путаница получается..</p>
+<p>Ещё, пожалуй, отдельного внимания заслуживает спецсимвол <samp><b>&amp;nbsp;</b></samp> - это неразрывный пробел мы с ним уже сталкивались. Дело в том, что когда Вы пишите текст в блокноте или html редакторе "простых" пробелов между словами  можно поставить сколь угодно много, но вот при чтении страницы браузером все они "удаляются" и между словами на странице будет не более одного пробела. Отсюда часто возникают проблемы с оформлением текста, красную строку, например, никак не сделать... вот и придумали люди спецсимвол <samp><b>&amp;nbsp;</b></samp> он воспринимается браузером не как пробел, а как знак, только невидимый человеческому глазу.</p>
+<p>А неразрывным он называется по тому, что группа<samp><b>&amp;nbsp;&amp;nbsp;&amp;nbsp;</b></samp>таких пробелов воспринимается как цельное слово, следовательно, не переносится на следующую строку, если предложение подходит к установленным рамкам или же к краю окна. Так что в окне может появиться горизонтальная полоса прокрутки, если Вам это ненужно, ставьте между ними обыкновенные пробелы <samp><b>&amp;nbsp; &amp;nbsp; &amp;nbsp;</b></samp></p> 
+
+<p>Пример использования спецсимволов:</p>
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;пример в примере&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body bgcolor="#dddddd" text="#222222"&gt;</samp><br>     
+<samp class="xx">&lt;table width="600" bgcolor="#ffffff" cellspacing="0" cellpadding="5" border="0"&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td width="10" bgcolor="#808080"><b>&amp;nbsp;&lt;</b>/td&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt;</samp><br>
+   
+
+<samp class="xxxxx"><b>&amp;lt;</b>html<b>&amp;gt;</b>&lt;br&gt;</samp><br>
+<samp class="xxxxx"><b>&amp;lt;</b>head<b>&amp;gt;</b>&lt;br&gt;</samp><br>
+<samp class="xxxxx"><b>&amp;lt;</b>title<b>&amp;gt;</b>Моя первая страничка<b>&amp;lt;</b>/title<b>&amp;gt;</b>&lt;br&gt;</samp><br>
+<samp class="xxxxx"><b>&amp;lt;</b>/head<b>&amp;gt;</b>&lt;br&gt;</samp><br>
+<samp class="xxxxx"><b>&amp;lt;</b>body<b>&amp;gt;</b>&lt;br&gt;</samp><br>
+<samp class="xxxxx"><b>&amp;lt;</b>center<b>&amp;gt;&amp;lt;</b>h2<b>&amp;gt;</b>Привет мир!!!<b>&amp;lt;</b>/h2<b>&amp;gt;&amp;lt;</b>/center<b>&amp;gt;</b>&lt;br&gt;</samp><br>
+<samp class="xxxxx"><b>&amp;lt;</b>br<b>&amp;gt;</b>&lt;br&gt;</samp><br>
+<samp class="xxxxx">Это моя первая страничка!&lt;br&gt;</samp><br>
+<samp class="xxxxx"><b>&amp;lt;</b>/body<b>&amp;gt;</b>&lt;br&gt;</samp><br>
+<samp class="xxxxx"><b>&amp;lt;</b>/html<b>&amp;gt;</b>&lt;br&gt;</samp><br>
+
+
+<samp class="xxxx">&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xx">&lt;/table&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer31.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>Пример в примере… навивает на философские мысли о бесконечности… </p>
+<p>Ну вот теперь Вы знаете, как примерно выглядят все эти примерчики по "ту сторону экрана". Кстати, раз уж начал открывать военные тайны, данный пример является таблицей из двух ячеек, одна тоненькая слева выполняет сугубо декоративную функцию.. так вот если перед Вами встанет задача нарисовать ячейку таблицы без какого либо содержания вставляйте в неё знак пробела <samp><b>&amp;nbsp;</b></samp>. Помните правило &lt;тег&gt;здесь что то обязательно должно быть&lt;/тег&gt;? Спецсимвол пробела один из выходов в данном случае.</p>
+<p>Кроме выше указанных есть еще целый ряд спецсимволов, чего там только нет: знаки зодиака, карточные масти, палочки, точечки, ёлочки, кругляшки, дроби.. Предназначены они уже не для каких-то "особых" задач, а просто выполняют свою роль ввиду отсутствия данных знаков на клавиатуре. Мою "коллекцию" спецсимволов можете <b>посмотреть здесь: </b><a href="http://www.webremeslo.ru/spravka/spravka2.html" title="Коллекция спецсимволов на сайте www.webremeslo.ru Представлена в виде таблицы.">(http://www.webremeslo.ru/spravka/spravka2.html)</a></p>
+
+<h2>Горизонтальная линия</h2>
+
+<p>Простой новый тег <samp><b>&lt;hr&gt;</b></samp> рисует в окне горизонтальную линию, не требует закрывающего тега. Часто применяется при верстке страницы в качестве декоративного элемента.</p>
+<p>Имеет ряд атрибутов, <samp><b>align</b></samp> -выравнивание с одним из трёх значений (<samp><b>center, left, right</b></samp>) может быть применен, если задана длина линии атрибут <samp><b>width</b></samp> в пикселях или процентах. Так же  можно задать толщину линии атрибут - <samp><b>size</b></samp>, цвет атрибут - <samp><b>color</b></samp>, и при необходимости отключить тень линии <samp><b>noshade</b></samp>.</p>  
+
+<p>Пример: </p> 
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Горизонтальная линия&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">Это просто линия по умолчанию: &amp;lt;hr&amp;gt;</samp><br>
+<samp class="xx"><b>&lt;hr&gt;</b></samp><br>
+<samp class="xx">Это линия без тени: &amp;lt;hr noshade &amp;gt;</samp><br>
+<samp class="xx"><b>&lt;hr noshade&gt;</b></samp><br>
+<samp class="xx">Это линия окрашенная в кранный цвет: &amp;lt;hr color="#ff0000"&amp;gt;</samp><br>
+<samp class="xx"><b>&lt;hr color="#ff0000"&gt;</b></samp><br>
+<samp class="xx">Линия длиной 250 пикселей: &amp;lt;hr width="250"&amp;gt;</samp><br>
+<samp class="xx"><b>&lt;hr  width="250"&gt;</b></samp><br>     
+<samp class="xx">Линия длиной 250 и толщиной 5 пикселей: &amp;lt;hr width="250" size="5"&amp;gt;</samp><br>
+<samp class="xx"><b>&lt;hr  width="250" size="5"&gt;</b></samp><br> 
+<samp class="xx">Линия длиной 500, толщиной 50, синяя: &amp;lt;hr width="500" size="50" color="#0000ff"&amp;gt;</samp><br>
+<samp class="xx"><b>&lt;hr  width="500" size="50" color="#0000ff"&gt;</b></samp><br>
+<samp class="xx">Примеры выравнивания:</samp><br> 
+<samp class="xx"><b>&lt;hr align="left" width="250" size="5"&gt;</b></samp><br>  
+<samp class="xx"><b>&lt;hr align="center" width="250" size="5"&gt;</b></samp><br>  
+<samp class="xx"><b>&lt;hr align="right"  width="250" size="5"&gt;</b></samp><br> 
+<samp class="xx"><b>&lt;hr&gt;</b></samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer32.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<br>
+<p>По моему достаточно просто и эффективно.</p>
+<h2>Бегущая строка</h2>
+
+<p>Тег <samp><b>&lt;marquee&gt;</b></samp> заставляет текст помещённый в него двигаться в том или ином направлении, проще говоря делает его бегущей строкой. Бегущая строка имеет ряд настроек скроллинга, которые задаются следующими атрибутами:</p>
+<samp><b>behavior</b></samp> - определяет тип скроллинга, может иметь следующие значения: 
+<ul>
+<li><samp><b>alternate</b></samp> - колебательные движения от края к краю 
+<li><samp><b>scroll</b></samp> - прокручивание текста. текст будет выходить за рамки экрана и снова появляться с противоположной его стороны
+<li><samp><b>slide</b></samp> -   прокручивание текста c остановкой.
+</ul>
+<samp><b>scrollamount</b></samp> - скорость бегущей строки от  1 до 10.<br>
+<samp><b>loop</b></samp> задает количество прокруток  бегущей строки.<br>
+<br>
+<samp><b>direction</b></samp> - направление движения текста. значения:
+<ul>
+<li><samp><b>up</b></samp> - вверх, 
+<li><samp><b>down</b></samp> - вниз,  
+<li><samp><b>left</b></samp> - влево, 
+<li><samp><b>right</b></samp> - вправо.   
+</ul>
+<samp><b>bgcolor</b></samp> - цвет фона бегущей строки,<br> 
+<samp><b>height</b></samp> - высота строки,<br> 
+<samp><b>width</b></samp> - ширина строки.<br> 
+
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Бегущая строка&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;div align="center"&gt;&lt;h2>Бегающие строки&lt;/h2>&lt;/div&gt;</samp><br>
+<samp class="xx"><b>&lt;marquee&gt;</b>Бегущая строка по умолчанию<b>&lt;/marquee&gt;</b></samp><br>
+<samp class="xx"><b>&lt;marquee direction="right"&gt;</b>Бегущая строка слева направо<b>&lt;/marquee&gt;</b></samp><br>
+<samp class="xx"><b>&lt;marquee behavior="alternate"&gt;</b>Бегущая строка бегает от края к краю<b>&lt;/marquee&gt;</b></samp><br>
+<samp class="xx"><b>&lt;marquee scrollamount="10"&gt;</b>Бегущая строка со скоростью 10<b>&lt;/marquee&gt;</b></samp><br>
+<samp class="xx"><b>&lt;marquee scrollamount="1"&gt;</b>Бегущая строка со скоростью 1<b>&lt;/marquee&gt;</b></samp><br>
+<samp class="xx"><b>&lt;marquee direction="right" loop="2"&gt;</b>Эта строка будет прокручиваться только два раза<b>&lt;/marquee&gt;</b></samp><br>
+<samp class="xx"><b>&lt;marquee behavior="slide"&gt;</b>Бегущая строка с остановкой<b>&lt;/marquee&gt;</b></samp><br>
+<samp class="xx"><b>&lt;marquee bgcolor="#b40000"&gt;</b>Бегущая строка с фоном<b>&lt;/marquee&gt;</b></samp><br>
+<samp class="xx"><b>&lt;marquee width=400&gt;</b>Бегущая строка с ограничением ширены прокрутки<b>&lt;/marquee&gt;</b></samp><br>
+<samp class="xx"><b>&lt;marquee direction="up"&gt;</b>Бегущая строка снизу вверх<b>&lt;/marquee&gt;</b></samp><br>
+<samp class="xx"><b>&lt;marquee hspace="300"&gt;</b>Бегущая строка с отступами от границ<b>&lt;/marquee&gt;</b></samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer33.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Ну думаю, сами разберётесь, что к чему. Попробуйте использовать различные сочетания атрибутов для достижения нужного Вам эффекта. Добавлю лишь то, что с текстом бегущей строки можно делать то же самое, что и с обыкновенным текстом: менять размер, цвет, стиль, шрифт, сделать фразу из строки ссылкой.. прописывая нужные теги внутри тега <samp><b>&lt;marquee&gt;</b></samp></p>
+
+<h2>Комментарии</h2>
+<p>Комментарии используются для того, чтобы облегчить свой собственный труд, а так же упростить понимание другим человеком кода Вашей странички. Пишутся они непосредственно в коде html документа, однако браузер не выводит эти "пометки" на экран. Для того чтобы заставить браузер игнорировать какой либо текст его необходимо заключить вот в такой набор символов:</p>
+<samp class="x"><b>&lt;!-- --&gt;</b></samp>
+<p>По принципу:</p>
+
+<samp class="x"><b>&lt;!-- здесь может быть любой текст  --&gt;</b></samp> 
+
+<p>Использовать комментарии очень полезно, разрабатывая большие и сложные по своей структуре документы, для того, чтобы потом самому с легкостью в нём ориентироваться..</p>
+
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp>&lt;head&gt;</samp><br>
+<samp class="x">&lt;title&gt;Мой первый сайт&lt;/title&gt;</samp><br>
+<samp>&lt;/head&gt;</samp><br>
+<samp>&lt;body text="#484800" bgcolor="#ffffff" background="graphics/fon.jpg"&gt;</samp><br>
+<samp class="x">&lt;center&gt;</samp><br>
+<samp><b>&lt;!-- Начало таблицы  --&gt;</b></samp><br>
+<samp class="xx">&lt;table width="640" height="480" cellpadding="5" cellspacing="2" border="1"&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td colspan="3" height="30" bgcolor="#b2ff80"&gt;</samp><br>
+<samp class="xxxxx">&lt;center&gt;&lt;img src="graphics/privet.jpg" width="200" height="40" alt="Привет мир!!!"&gt;&lt;/center&gt;</samp><br>
+<samp class="xxxx">&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp><b>&lt;!-- Строка с меню  --&gt;</b></samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td height="30" width="33%" bgcolor="#ffa0cf"&gt;</samp><br>
+<samp class="xxxxx">&lt;center&gt;&lt;b&gt;&lt;a href=" index.html"&gt;Обо мне!!!&lt;/a&gt;&lt;/b&gt;&lt;/center&gt;</samp><br>
+<samp class="xxxx">&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;td width="33%" bgcolor="#c0e4ff"&gt;</samp><br>
+<samp class="xxxxx">&lt;center&gt;&lt;b&gt;&lt;a href=" myfoto.html"&gt;Здесь мои фотки!!&lt;/a&gt;&lt;/b&gt;&lt;/center&gt;</samp><br>
+<samp class="xxxx">&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;td bgcolor="#c0e4ff"&gt;</samp><br>
+<samp class="xxxxx">&lt;center&gt;&lt;b&gt;&lt;a href="mailto:karlson@kruha.ru"&gt;Напишите мне письмо..&lt;/a&gt;&lt;/b&gt;&lt;/center&gt;</samp><br>
+<samp class="xxxx">&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp><b>&lt;!-- Конец меню  --&gt;</b></samp><br>
+<samp><b>&lt;!-- Основное содержание  --&gt;</b></samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td colspan="3" valign="top" bgcolor="#b2ff80"&gt;</samp><br>
+<samp class="xxxxx">&lt;img src="graphics/foto.jpg" align="left" hspace="10" width="100" height="90" alt="Это моя фотка!!!"&gt;</samp><br>
+<samp class="xxxxx">&lt;p align="justify"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;Разрешите представиться Карлсон! … … …&lt;/p&gt;</samp><br>
+<samp class="xxxx">&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp><b>&lt;!-- Конец оновному содержанию  --&gt;</b></samp><br>
+<samp class="xx">&lt;/table&gt;</samp><br>
+<samp><b>&lt;!-- Конец таблицы  --&gt;</b></samp><br>
+<samp class="x">&lt;/center&gt;</samp><br>
+<samp>&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer30.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>Как видите старый пример ничем не изменился зато ориентироваться в его коде стало значительно легче.</p>
+<h2>Полезные советы:</h2>
+<ul>
+<li><p>Писать сайты на своём компьютере конечно дело хорошее, но пора задумываться о том, как Ваше творчество разместить в сети Интернет. О том как это сделать читайте в статье <b>Публикация сайта:</b> <a href="http://www.webremeslo.ru/publication/publication2.html" title="Статья на сайте webremeslo.ru о том как разместить свой сайт в Интернете,   Что нужно знать и иметь для публикации сайта?   Рассматриваются платный и бесплатный варианты   приобретения домена и хостинга.">(http://www.webremeslo.ru/publication/publication2.html)</a>. А совет собственно заключается в том, что на данном этапе обучения Вам пора обзавестись своим собственным местом (хостом) "тренировочным плацдармом" на каком либо сервере.. а также собственным именем сайта (доменом)... для начала, это место и имя могут быть бесплатными, даже я бы сказал должны быть бесплатными.. Там, в этом месте на сервере, Вы будите тренироваться выкладывать свои страницы., смотреть как и с какой скоростью они загружаются, так же Вы сможете показать своё творение миру (а можете и не показывать) и друзьям. Почему этим стоит заняться именно на данной стадии обучения? Да потому что с помощью того, что мы изучили, Вы уже можете делать вполне пристойные сайты!! нет конечно до конца обучения ещё рано, да и предела совершенствования мастерства как известно нет.., но это послужит хорошей тренировкой и так сказать поднимет Ваш морально боевой дух!!)) Знаете как это приятно, увидеть свою работу в действии!? Но, ещё раз повторюсь, о том как это дело провернуть читайте в статье "Публикация сайта".</p>
+</ul>	
+
+
+<div class="url">
+<a href="glava5.html" title="К предыдущей главе">&lt;&lt; предыдущая глава</a> | 
+<a href="glava7.html" title="К следующей главе">следующая глава &gt;&gt;</a>
+</div>
+</div>
+<!-- Конец центральной колонке -->
+<!-- Подвал -->
+<div class="footer">
+&copy; Автор: Семикопенко Алексей Алексеевич. | <a href="http://webremeslo.ru/" class="logo" title="Перейти на сайт webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец подвалу -->
+</body>
+</html>

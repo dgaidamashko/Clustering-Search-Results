@@ -1,0 +1,427 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Учебник HTML для начинающих.</title>
+<meta HTTP-EQUIV="Content-Type" Content="text/html; Charset=Windows-1251">
+<meta name="author" Content="Семикопенко Алексей Алексеевич">
+<meta name="copyright" Content="Семикопенко Алексей Алексеевич">
+<meta name="Publisher-Email" Content="alex@webremeslo.ru">
+<meta name="Publisher-URL" Content="http://webremeslo.ru/">
+<link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+<body>
+<!-- Шапка -->
+<div class="header">
+<h1 class="logo">Учебник HTML</h1>
+</div>
+<!-- Конец шапке -->
+<!--левая колонка "меню" -->
+<div class="left">
+<div class="fixed">
+<ul class="ul_none">
+<li><a href="../index.html" class="menu" title="От автора.">Главная</a></li>
+<li><a href="glava0.html" class="menu" title="Введение.">Введение</a></li>
+<li><a href="glava1.html" class="menu" title="Перейти к Главе 1   Что такое HTML язык?">Что такое HTML язык</a></li>
+<li><a href="glava2.html" class="menu" title="Перейти к Главе 2   Редактируем текст">Редактируем текст</a></li>
+<li><a href="glava3.html" class="menu" title="Перейти к Главе 3   Рисунки">Рисунки</a></li>
+<li><a href="glava4.html" class="menu" title="Перейти к Главе 4   Таблицы">Таблицы</a></li>
+<li><a href="glava5.html" class="menu" title="Перейти к Главе 5   Ссылки">Ссылки</a></li>
+<li><a href="glava6.html" class="menu" title="Перейти к Главе 6   И ещё…">И ещё…</a></li>
+<li><a href="glava7.html" class="menu" title="Перейти к Главе 7   Фреймы">Фреймы</a></li>
+<li><a href="glava8.html" class="menu" title="Перейти к Главе 8   Навигационные карты">Навигационные карты</a></li>
+<li><a href="glava9.html" class="menu" title="Перейти к Главе 9   Списки">Списки</a></li>
+<li><a href="glava10.html" class="activemenu" title="Перейти к Главе 10   Meta теги">Meta теги</a></li>
+<li><a href="glava11.html" class="menu" title="Перейти к Главе 11   Заголовок &lt;!DOCTYPE&gt;">Заголовок &lt;!DOCTYPE&gt;</a></li>
+<li><a href="glava12.html" class="menu" title="Перейти к Главе 12   И снова таблицы..">И снова таблицы..</a></li>
+<li><a href="glava13.html" class="menu" title="Перейти к Главе 13   Фоновая музыка">Фоновая музыка</a></li>
+<li><a href="glava14.html" class="menu" title="Перейти к Главе 14   Текст - логика и физика">Текст - логика и физика</a></li>
+</ul>
+</div>
+</div>
+<!-- Конец левой колонке -->
+<!-- Правая колонка -->
+<div class="right">
+<h2>А так же:</h2>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">Как создать сайт?</a>
+<a href="http://www.webremeslo.ru/css/glava0.html" class="menu" title="www.webremeslo.ru">Учебник CSS</a>
+<a href="http://www.webremeslo.ru/spravka/spravka.html" class="menu" title="www.webremeslo.ru">Справочник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka4.html" class="menu" title="www.webremeslo.ru">Справочник CSS</a>
+<a href="http://forum.webremeslo.ru/index.php" class="menu" title="www.webremeslo.ru">Форум</a><br>
+..<em>и многое другое на сайте:</em><br>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец правой колонке -->
+<!-- Центральная колонка -->
+<div class="center">
+
+<p class="zag">Глава 10</p>
+
+<h1>Meta теги</h1>
+
+<p>В первой главе этого учебника, об общем построении html документа, я говорил о том, что все html документы должны иметь вот такой шаблон кода:</p>
+<samp><b>&lt;html&gt;</b></samp> - начало документа<br>
+<samp class="x"><b>&lt;head&gt;</b></samp> - начало головы<br>
+<samp class="x"><b>&lt;/head&gt;</b></samp> - закрытие головы<br>
+<samp class="x"><b>&lt;body&gt;</b></samp> - начало тела<br>
+<samp class="x"><b>&lt;/body&gt;</b></samp> - закрытие тела<br>
+<samp><b>&lt;/html&gt;</b></samp> - конец документа
+
+<p>Где между тегами <samp><b>&lt;body&gt; &lt;/body&gt;</b></samp> указывается информация предназначенная для вывода на экран в нужном нам виде, а между тегами <samp><b>&lt;head&gt; &lt;/head&gt;</b></samp> исключительно служебная информация предназначенная для поисковых систем и браузеров тех или иных пользователей. Так что же это за информация такая и для чего она нужна? Отвечу, планомерно и порционально в этой главе.</p>
+<p>С тегом <samp><b>&lt;title&gt;</b></samp> мы уже знакомы, с помощью него мы указываем имя документа в заголовке страницы. Теперь новый  тег  <samp><b>&lt;meta&gt;</b></samp> (закрывающего тега не требует) с помощью него мы и будем указывать эту самую служебную информацию на нашей страничке.</p>
+<samp class="x"><b>&lt;meta&gt;</b></samp> тег имеет следующие атрибуты:
+<ul>
+<li><samp><b>http-equiv</b></samp>  - указывает браузеру как следует обработать основное содержание документа, точнее на основе каких данных.<br>
+<li><samp><b>name</b></samp> - информационное имя. (применяется в паре с атрибутом <samp><b>content</b></samp>)<br>
+<li><samp><b>content</b></samp> - информационное содержание, связанное с мета именем (<samp><b>name</b></samp>)
+</ul>
+<p>Теперь на примерах будем вникать в суть дела. </p>
+
+<h2>Кодировка символов и язык</h2>
+<p>Пример (очень нужный и важный):</p>
+<div class="primer">
+<samp class="x"><b>&lt;meta http-equiv="Content-Type" Content="text/html; Charset=Windows-1251"&gt;</b></samp>
+</div>
+<p>Сначала расскажу зачем необходима эта строка в заголовке html документа. Данная запись указывает браузеру кодировку в которой была написана данная страница - формат документа и раскладку клавиатуры, в данном случае это кириллица для Windows. Если эту строку не писать в заголовке страницы, то есть большая вероятность что весь текст на Вашей странице отобразится в виде непонятных человеку "иероглифов" у разных пользователей тех или иных браузеров. Конечно, пользователь может применить к такому документу команду в браузере <b>Вид->Кодировка->Кириллица</b>, но он может не знать о данной функции, да и зачем утруждать человека данным действием.</p>
+<p>
+Теперь разберём по "слогам" нашу запись:<br>
+<samp><b>&lt;meta http-equiv="Content-Type"</b></samp> - указываем что в этом мета теге мы будем заниматься <samp><b>Content-Type</b></samp> - типом содержания<br>
+<samp><b>Content="text/html;</b></samp> - а именно его текстом<br>
+<samp><b>Charset=Windows-1251"&gt;</b></samp> - документ для Windows - Кириллица где <samp><b>1251</b></samp> кодировка раскладки клавиатуры, так например Английская клавиатура будет задаваться  <samp><b>Charset=Windows-1252</b></samp> 
+</p>
+<p>В настоящее время продвинутые веб-мастера рекомендуют использовать кодировку <strong>UTF 8</strong></p>
+<p>То есть писать в голове документа вот так:</p>
+<div class="primer">
+<samp class="x"><b>&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;</b></samp>
+</div>
+
+<p>Пример:</p>
+<div class="primer">
+<samp><b>&lt;meta http-equiv="Content-Language" Content="ru"&gt;</b></samp>
+</div>
+<p>В этой строчке говорится о том что язык <samp><b>Language</b></samp> документа является русским <samp><b>Content="ru"</b></samp></p>
+<p>Неправильная установка языка и раскладки клавиатуры может привести к печальным последствиям.</p>
+
+<h2>Информация о документе</h2>
+
+<p>Пример:</p>
+<div class="primer">
+<samp><b>&lt;meta name="author" Content="Остап Бендер"&gt;</b></samp><br>
+<samp><b>&lt;meta name="copyright" Content=""Рога и копыта" Остап Бендер"&gt;</b></samp>
+</div>
+<p>Данные метаописатели предназначены для заявления об авторских правах непосредственно в заголовке html кода, так <samp><b>name="author"</b></samp> указывает имя автора страницы, а  <samp><b>name="copyright"</b></samp> авторское право (копирайт) в котором может указываться фамилия, имя, отчество автора сайта, название фирмы, бренда.. и т. д. Кроме того включив в заголовок документа такое описание Вы значительно упростите задачу поисковой машине при поиске Вашего сайта по имени автора, названию фирмы, бренду...</p>
+
+<p>Пример:</p>
+<div class="primer">
+<samp><b>&lt;meta name ="Generator" Content="Microsoft Notepad"&gt;</b></samp>
+</div>
+<p>Если хотите можете указать с помощью какого  html редактора была написана данная страница. </p>
+
+<h2>Описание страницы и ключевые слова</h2>
+
+<p>Пример:</p>
+<div class="primer">
+<samp><b>&lt;meta name="description" Content="Производим закупку по выгодным ценам рогов и копыт!"&gt;</b></samp>
+</div>
+<p><samp><b>Description</b></samp> - краткое описание страницы. Данное описание частенько используется поисковыми системами для вывода в результатах поиска, по какому либо запросу, информации о сайте и его назначении.</p>
+
+<p>Пример:</p>
+<div class="primer">
+<samp><b>&lt;meta name="keywords" Content ="рога, копыта, рожки, рог, копыто, копытце, закупка, покупка, приобретение, выгодно, продать, купить, сбыть, реализовать, корова, бык, коровьи, бычьи, оплата, деньги, наличные, цена, цене"&gt;</b></samp>
+</div>
+<p><samp><b>Keywords</b></samp> - ключевые слова веб-страницы, опять таки предназначены для поисковых машин.</p>
+<p>Представьте что Вы ищете в какой либо поисковой системе сайт с информацией о том где можно продать те же рога и копыта :) Какие слова и фразы Вы будите вводить в строке "Поиск"? ну наверно что то типа: "Где продать коровьи рога?" или "Реализовать копыта по выгодной цене" Так вот если определить ключевые слова и так сказать предугадать мысли потенциального посетителя  можно надеяться на то, что та или иная поисковая система выдаст ссылку на Ваш сайт в первых строчках результата поиска. Конечно ввод данного метоописателя не есть гарант того что именно Ваш сайт займет первые места в поиске по данным словам, но всё же не стоит им пренебрегать. Впрочем, оптимизация и раскрутка сайта это отдельная тема для разговора.</p>
+<p>Помните что описание <samp><b>description</b></samp> не должно превышать по длине более 200 символов, а ключевые слова <samp><b>keywords</b></samp> 1000 символов, иначе это может пагубно отразится при индексации Вашей страницы поисковыми системами.</p>
+
+<h2>Адрес</h2> 
+<p>Пример:</p>
+<div class="primer">
+<samp><b>&lt;meta name="Publisher-Email" Content="Ваш_e-mail@сервер.домен"&gt;</b></samp><br>
+<samp><b>&lt;meta name="Publisher-URL" Content="http://www.Ваш_сайт/"&gt;</b></samp>
+</div>
+<p>Думаю понятно.. здесь указывается адрес Вашего почтового ящика <samp><b>Publisher-Email</b></samp> и адрес сайта <samp><b>Publisher-URL</b></samp></p>
+
+<h2>Обновление страницы</h2>
+<p>Пример:</p>
+<div class="primer">
+<samp><b>&lt;meta name ="revisit-after" Content="15 days"&gt;</b></samp>
+</div>
+<p>Если некая страница на Вашем сайте подразумевает постоянное обновление и/или дополнение информационным содержанием, то хорошо было бы включить данное описание в заголовок данной страницы. Такое введение позволит программе роботу своевременно посещать Ваш сайт и индексировать его содержание. В нашем примере мы заявили о том, что собираемся обновлять содержание на странице не менее одного раза в 15 дней, можете не сомневаться программа робот возьмет Ваши планы себе на заметку и будет приходить "к Вам в гости" раз в пятнадцать дней, для того чтобы проверить ничего ли у Вас не изменилось..</p>
+
+<h2>Время действия документа и кэш</h2>
+<p>Пример:</p>
+<div class="primer">
+<samp><b>&lt;meta http-equiv="expires" content="Sun, 24 jan 2010 12:28:36 GMT+03:00"&gt;</b></samp>
+</div>
+<p>Для того чтобы ускорить загрузку страницы, а так же сэкономить трафик современные браузеры сохраняют посещаемые пользователем страницы в кэш (на жёсткий диск), и при повторном посещении загружают их не с сервера, а непосредственно с кэша. На самом деле такая функция  хороша собой.. но есть одно "но", дело в том что в браузере может отображаться уже устаревшая информация, какой либо страницы. Представьте, к примеру, Ваш сайт представляет собой некое периодическое новостное интернет издание, а пользователь получит, вместо самых свежих новостей, уже устаревшую информацию, ту которая хранится у него в кэше!! и не разобравшись в чем "беда" примет Ваш сайт за "мертвый" заброшенный и никем не обновляемый.</p>
+<p>Для того чтобы принудительно заставить браузер загружать ту или иную страницу не с жёсткого диска, а с сервера необходим мета тег с данным синтаксисом, где указывается день недели, число месяц год время (чч:мм:сс) и часовой пояс(<samp><b>GMT+03:00</b></samp> - время Московское + три часа). День недели и время дня можно не указывать. Теперь при чтении страницы браузером страница будет грузится с сервера, если указанная дата и время настало или просрочено,  и напротив из кэша если указанное время еще не наступило.</p> 
+
+<p>Ниже на всякий случай приведены таблицы сокращений от Английских слов на месяцы и дни недели</p>
+<center>
+<table border="0" width="100%">
+ <tr>
+  <td valign="top">
+  <table width="100%"  bgcolor="#e8e8e8" cellspacing="2" cellpadding="5" border="0" align="center">
+ <tr>
+  <th>Месяцы:</th><th>От Английского:</th><th>Сокращения:</th>
+ </tr>
+  <tr class="trc">
+  <td>Январь</td><td>January</td><td>Jan</td>
+ </tr>
+  <tr class="trn">
+  <td>Февраль</td><td>February</td><td>Feb</td>
+ </tr>
+ <tr class="trc">
+  <td>Март</td><td>March</td><td>Mar</td>
+ </tr>
+ <tr class="trn">
+  <td>Апрель</td><td>April</td><td>Apr</td>
+ </tr>
+ <tr class="trc">
+  <td>Май</td><td>May</td><td>May</td>
+ </tr>
+ <tr class="trn">
+  <td>Июнь</td><td>June</td><td>Jun</td>
+ </tr>
+ <tr class="trc">
+  <td>Июль</td><td>July</td><td>Jul</td>
+ </tr>
+ <tr class="trn">
+  <td>Август</td><td>August</td><td>Aug</td>
+ </tr>
+ <tr class="trc">
+  <td>Сентябрь</td><td>September</td><td>Sep</td>
+ </tr>
+ <tr class="trn">
+  <td>Октябрь</td><td>October</td><td>Oct</td>
+ </tr>
+ <tr class="trc">
+  <td>Ноябрь</td><td>November</td><td>Nov</td>
+ </tr>
+ <tr class="trn">
+  <td>Декабрь</td><td>December</td><td>Dec</td>
+ </tr>
+</table>
+</td>
+
+  <td valign="top">
+  <table width="100%"  bgcolor="#e8e8e8" cellspacing="2" cellpadding="5" border="0" align="center">
+ <tr>
+  <th>Дни недели:</th><th>От Английского:</th><th>Сокращения:</th>
+ </tr>
+  <tr class="trc">
+  <td>Понедельник</td><td>Monday</td><td>Mon</td>
+ </tr>
+  <tr class="trn">
+  <td>Вторник</td><td>Tuesday</td><td>Tue</td>
+ </tr>
+ <tr class="trc">
+  <td>Среда</td><td>Wednesday</td><td>Wed</td>
+ </tr>
+ <tr class="trn">
+  <td>Четверг</td><td>Thursday</td><td>Thu</td>
+ </tr>
+ <tr class="trc">
+  <td>Пятница</td><td>Friday</td><td>Fri</td>
+ </tr>
+ <tr class="trn">
+  <td>Суббота</td><td>Saturday</td><td>Sat</td>
+ </tr>
+ <tr class="trc">
+  <td>Воскресенье</td><td>Sunday</td><td>Sun</td>
+ </tr>
+</table>
+
+</td>
+ </tr>
+</table>
+</center>
+<p>Атрибуту <samp><b>content</b></samp> можно присвоить значение <samp><b>"0" &lt;meta http-equiv="Expires" content="0"&gt;</b></samp> в этом случае страница всегда будет загружаться с сервера. </p>
+
+<p>И еще.. некоторые поисковые роботы могут отказаться индексировать документ с заведомо устаревшей датой. - не искушайте судьбу.. </p>
+
+<p>Пример:</p>
+<div class="primer">
+<samp><b>&lt;meta http-equiv="pragma" content="no-cache"&gt;</b></samp>
+</div>
+<p>А такая запись вовсе запретит браузеру кэшировать данную страницу.</p>
+
+<h2></h2>
+<p>Пример:</p>
+<div class="primer">
+<samp><b>&lt;meta name="robots" content="Index,follow"&gt;</b></samp>
+</div>
+<p>Данный мета тег предназначен для подачи поисковому роботу той или иной команды.</p> 
+
+<p>Список возможных команд роботу:</p>
+
+<ul>
+<li><samp><b>Index</b></samp> - индексировать страницу
+<li><samp><b>Noindex</b></samp> - не индексировать страницу  
+<li><samp><b>Follow</b></samp> - прослеживать гиперссылки на странице
+<li><samp><b>Nofollow</b></samp> -  не прослеживать гиперссылки на странице
+<li><samp><b>All</b></samp> - индексировать страницу и прослеживать гиперссылки на странице (по умолчанию)
+<li><samp><b>None</b></samp> - не индексировать страницу и не прослеживать гиперссылки на странице
+</ul>
+
+<h2>Автоматический переход на другую страницу</h2>
+<p>Пример:</p>
+<div class="primer">
+<samp><b>&lt;meta http-equiv="Refresh" content="10; URL=http://www.mysite/index.html"&gt;</b></samp>
+</div>
+<p>Если вдруг по каким либо причинам Вы задумаете поменять URL адрес Вашего сайта то хорошо было бы на старом месте оставить страницу вроде этой:</p>
+<div class="primer">
+<samp>&lt;html&gt;</samp><br> 
+<samp class="x">&lt;head&gt;</samp><br> 
+<samp class="xx">&lt;meta http-equiv="Content-Type" Content="text/html; Charset=Windows-1251"&gt;</samp><br>
+<samp class="xx"><b>&lt;meta http-equiv="Refresh" content="10; URL=http://www.mysite/index.html"&gt;</b></samp><br>
+<samp class="xx">&lt;title&gt;Переадресация&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;font size="+1"&gt;</samp><br>
+<samp class="xxx">Адрес сайта был изменен, через 10 секунд Ваш браузер будет автоматически перенаправлен по новому адресу:&lt;br&gt;</samp><br>
+<samp class="xxx">&lt;a href="http://www.mysite.ru/index.html"&gt;&lt;b&gt;http://www.mysite.ru/&lt;/b&gt;&lt;/a&gt;&lt;br&gt;</samp><br> 
+<samp class="xxx">Нажмите &lt;a href="http://www.mysite.ru/index.html"&gt;здесь&lt;/a&gt; для того чтобы выполнить переход немедленно.&lt;br&gt;</samp><br>
+<samp class="xxx">Приносим извинения за доставленные неудобства.</samp><br>
+<samp class="xx">&lt;/font&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer58.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div> 
+<p>Разберём и осмыслим строчку из примера:</p>
+
+<samp><b>&lt;meta http-equiv="Refresh" content="10; URL=http://www.mysite/index.html"&gt;</b></samp><br><br>
+
+<samp><b>meta http-equiv="Refresh"</b></samp> - Refresh (восстановление) указывает браузеру что данную страницу необходимо обновить<br> 
+<samp><b>content="10;</b></samp> - обновить через заданное количество секунд (в нашем случае десять)<br>
+<samp><b>URL=http://www.mysite/index.html"</b></samp>- адрес новой/другой страницы на которую следует перейти. 
+
+<p>Пример:</p>
+<div class="primer">
+<samp><b>&lt;meta http-equiv="Refresh" content="30"&gt;</b></samp>
+</div>
+<p>А вот если в заголовке <samp><b>Refresh</b></samp> URL адрес упустить, как показано в примере, то тогда браузер будет постоянно через каждые 30 секунд (ну или не 30.. сколько пропишите через столько и будет..) обновлять содержимое данной страницы.</p>
+<p>Такой метод широко используется в новостных лентах, где информация идет так сказать потоком и требует постоянного обновления.</p>
+
+<h2>Эффекты при переходе по ссылке</h2>
+
+<p>Пример:</p>
+<div class="primer">
+<samp><b>&lt;meta http-equiv ="Page-Enter" Content="RevealTrans(Duration=1.0, Transition=0)"&gt;</b></samp><br>
+<samp><b>&lt;meta http-equiv ="Page- Exit " Content="RevealTrans(Duration=3.0, Transition=23)"&gt;</b></samp>
+</div>
+<p>Данные заголовки создают визуальные эффекты при переходе с одной страницы на другую.</p>
+<ul>
+<li><samp><b>Page-Enter</b></samp> - Эффект появления страницы  
+<li><samp><b>Page- Exit</b></samp> - Эффект исчезновения страницы
+</ul>
+<p>В которых:</p>
+<ul>
+<li><samp><b>Duration</b></samp> - время действия эффекта в секундах
+<li><samp><b>Transition</b></samp> - Один из номеров предлагаемых эффектов (от 0 до 23) перечисленных в таблице:
+</ul>
+<table width="100%"  bgcolor="#e8e8e8" cellspacing="2" cellpadding="5" border="0" align="center">
+  <tr>
+    <th>Номер</th><th>Описание эффекта</th><th>Номер</th><th>Описание эффекта</th>
+  </tr>
+  <tr class="trc">
+    <td>0</td><td>Прямоугольники внутрь</td><td>12</td><td>Растворение</td>
+  </tr>
+  <tr class="trn">
+    <td>1</td><td>Прямоугольники наружу</td><td>13</td><td>Вертикальная панорама внутрь</td>
+  </tr>
+  <tr class="trc">
+    <td>2</td><td>Круг внутрь</td><td>14</td><td>Вертикальная панорама наружу</td>
+  </tr>
+  <tr class="trn">
+    <td>3</td><td>Круг наружу</td><td>15</td><td>Горизонтальная панорама внутрь</td>
+  </tr>
+  <tr class="trc">
+    <td>4</td><td>Наплыв наверх</td><td>16</td><td>Горизонтальная панорама наружу</td>
+  </tr>
+  <tr class="trn">
+    <td>5</td><td>Наплыв вниз</td><td>17</td><td>Уголки влево - вниз</td>
+  </tr>
+  <tr class="trc">
+    <td>6</td><td>Наплыв вправо</td><td>18</td><td>Уголки влево - вверх</td>
+  </tr>
+  <tr class="trn">
+    <td>7</td><td>Наплыв влево</td><td>19</td><td>Уголки вправо – вниз</td>
+  </tr>
+  <tr class="trc">
+    <td>8</td><td>Вертикальные жалюзи</td><td>20</td><td>Уголки вправо – вверх</td>
+  </tr>
+  <tr class="trn">
+    <td>9</td><td>Горизонтальные жалюзи</td><td>21</td><td>Случайные горизонтальные полосы</td>
+  </tr>
+  <tr class="trc">
+    <td>10</td><td>Шажки горизонтальные</td><td>22</td><td>Случайные вертикальные полосы</td>
+  </tr>
+  <tr class="trn">
+    <td>11</td><td>Шажки вертикальные</td><td>23</td><td>Случайный выбор эффекта</td>
+  </tr>
+</table>
+
+<p>Пример:</p>
+<div class="primer">
+Файл page1.html<br><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;meta http-equiv=&quot;Content-Type&quot; Content=&quot;text/html; Charset=Windows-1251&quot;&gt;</samp><br>
+<samp class="xx"><b>&lt;meta http-equiv =&quot;Page-Enter&quot; Content=&quot;RevealTrans(Duration=1.0, Transition=12)&quot;&gt;</b></samp><br>
+<samp class="xx">&lt;title&gt;Эффекты перехода страниц&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body bgcolor=&quot;#c5ffa0&quot;&gt;</samp><br>
+<samp class="xx">&lt;center&gt;</samp><br>
+<samp class="xxx">&lt;h2&gt;На заметку:&lt;/h2&gt;</samp><br>
+<samp class="xxx">&lt;font size=&quot;+1&quot;&gt;Эффекты перехода с одной страницы на другую работают не во всех браузерах.&lt;/font&gt;&lt;hr&gt;&lt;br&gt;</samp><br>
+<samp class="xxx">&lt;font size=&quot;+1&quot;&gt;Нажмите на &quot;Перейти&quot; чтобы перейти к следующей странице&lt;br&gt;</samp><br>
+<samp class="xxx">и оценить эффект перехода от одной странице к другой.&lt;/font&gt;&lt;br&gt;&lt;br&gt;</samp><br>
+<samp class="xxx">&lt;a href=&quot;page2.html&quot;&gt;&lt;font size=&quot;+2&quot;&gt;&quot;Перейти&quot;&lt;/font&gt;&lt;/a&gt;</samp><br>
+<samp class="xx">&lt;/center&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<hr>
+Файл page2.html<br><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;meta http-equiv=&quot;Content-Type&quot; Content=&quot;text/html; Charset=Windows-1251&quot;&gt;</samp><br>
+<samp class="xx"><b>&lt;meta http-equiv =&quot;Page-Enter&quot; Content=&quot;RevealTrans(Duration=2.0, Transition=23)&quot;&gt;</b></samp><br>
+<samp class="xx">&lt;title&gt;Эффекты перехода страниц&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body bgcolor=&quot;#c0e4ff&quot;&gt;</samp><br>
+<samp class="xx">&lt;center&gt;</samp><br>
+<samp class="xxx">&lt;h2&gt;На заметку:&lt;/h2&gt;</samp><br>
+<samp class="xxx">&lt;font size=&quot;+1&quot;&gt;Эффекты открытия и закрытия веб-страниц будут видны только при переходе &lt;br&gt;</samp><br>
+<samp class="xxx">от одной страницы к другой или же при помощи кнопок &quot;назад&quot; &quot;вперёд&quot;. &lt;br&gt;</samp><br>
+<samp class="xxx">При первом открыти страницы, а также во время перезагрузки&lt;br&gt;</samp><br>
+<samp class="xxx">эффекты перехода видны не будут.&lt;/font&gt;&lt;hr&gt;&lt;br&gt;</samp><br>
+<samp class="xxx">&lt;font size=&quot;+1&quot;&gt;Нажмите на &quot;Перейти&quot; чтобы перейти к следующей странице&lt;br&gt;</samp><br>
+<samp class="xxx">и оценить эффект перехода от одной странице к другой.&lt;/font&gt;&lt;br&gt;&lt;br&gt;</samp><br>
+<samp class="xxx">&lt;a href=&quot;page1.html&quot;&gt;&lt;font size=&quot;+2&quot;&gt;&quot;Перейти&quot;&lt;/font&gt;&lt;/a&gt;</samp><br>
+<samp class="xx">&lt;/center&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>   
+<div align="right"><a href="primer/primer59.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+
+<h2>Полезные советы:</h2>
+<ul>
+<li><p>Ещё раз напомню о том что мета теги стоит применять умело и грамотно особенно это касается команд для робота и кодировки символов, иначе весь Ваш труд может пойти насмарку.. </p>
+<li><p>Заголовок <samp><b>Refresh</b></samp> (автоматический переход на другую страницу) можно использовать не совсем стандартно.. Некоторые авторы используют его для создания своего рода "презентации" слайд шоу, где сменяющиеся страницы и есть кадры презентации. Представьте заходит человек на такой сайт а тут ему "Откинетесь на спинку кресла и расслабьтесь..":) а далее сами по себе пошли  картинки, графики, тексты.. а последняя страница тупиковая где пользователь берёт сайт "в свои руки" или же может замыкаться на первую. Только всегда помните о золотом правиле веб-мастера: Главное не переборщить!</p>
+</ul>
+
+
+<div class="url">
+<a href="glava9.html" title="К предыдущей главе">&lt;&lt; предыдущая глава</a> | 
+<a href="glava11.html" title="К следующей главе">следующая глава &gt;&gt;</a>
+</div>
+</div>
+<!-- Конец центральной колонке -->
+<!-- Подвал -->
+<div class="footer">
+&copy; Автор: Семикопенко Алексей Алексеевич. | <a href="http://webremeslo.ru/" class="logo" title="Перейти на сайт webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец подвалу -->
+</body>
+</html>

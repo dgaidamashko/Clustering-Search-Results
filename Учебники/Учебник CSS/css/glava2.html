@@ -1,0 +1,398 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Учебник CSS для начинающих.</title>
+<meta HTTP-EQUIV="Content-Type" Content="text/html; Charset=Windows-1251">
+<meta name="author" Content="Семикопенко Алексей Алексеевич">
+<meta name="copyright" Content="Семикопенко Алексей Алексеевич">
+<meta name="Publisher-Email" Content="alex@webremeslo.ru">
+<meta name="Publisher-URL" Content="http://webremeslo.ru/">
+<link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+<body>
+<!-- Шапка -->
+<div class="header">
+<h1 class="logo">Учебник CSS</h1>
+</div>
+<!-- Конец шапке -->
+<!--левая колонка "меню" -->
+<div class="left">
+<div class="fixed">
+<ul class="ul_none">
+<li><a href="../index.html" class="menu" title="От автора.">Главная</a></li>
+<li><a href="glava0.html" class="menu" title="Введение.   Что такое CSS?">Что такое CSS?</a></li>
+<li><a href="glava1.html" class="menu" title="Глава 1   Внедрение CSS в HTML документ.">Внедрение CSS.</a></li>
+<li><a href="glava2.html" class="activemenu" title="Глава 2   Свойства текста.">Свойства текста.</a></li>
+<li><a href="glava3.html" class="menu" title="Глава 3   Свойства шрифта.">Свойства шрифта.</a></li>
+<li><a href="glava4.html" class="menu" title="Глава 4   Цвет и фон.">Цвет и фон.</a></li>
+<li><a href="glava5.html" class="menu" title="Глава 5   Границы элемента.">Границы элемента.</a></li>
+<li><a href="glava6.html" class="menu" title="Глава 6   Классы и id селекторы.">Классы и id селекторы.</a></li>
+<li><a href="glava7.html" class="menu" title="Глава 7   Размеры элемента.">Размеры элемента.</a></li>
+<li><a href="glava8.html" class="menu" title="Глава 8   Поля и отступы.">Поля и отступы.</a></li>
+<li><a href="glava9.html" class="menu" title="Глава 9   Курсоры.">Курсоры.</a></li>
+<li><a href="glava10.html" class="menu" title="Глава 10   Форматирование.">Форматирование.</a></li>
+<li><a href="glava11.html" class="menu" title="Глава 11   Поплавки.">Поплавки.</a></li>
+<li><a href="glava12.html" class="menu" title="Глава 12   Позиционирование.">Позиционирование.</a></li>
+<li><a href="glava13.html" class="menu" title="Глава 13   Стиль списка.">Стиль списка.</a></li>
+<li><a href="glava14.html" class="menu" title="Глава 14   Полоса прокрутки.">Полоса прокрутки.</a></li>
+<li><a href="glava15.html" class="menu" title="Глава 15   Псевдоклассы.">Псевдоклассы.</a></li>
+<li><a href="glava16.html" class="menu" title="Глава 16   Псевдоэлементы.">Псевдоэлементы.</a></li>
+</ul>
+</div>
+</div>
+<!-- Конец левой колонке -->
+<!-- Правая колонка -->
+<div class="right">
+<h2>А так же:</h2>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">Как создать сайт?</a>
+<a href="http://www.webremeslo.ru/html/glava0.html" class="menu" title="www.webremeslo.ru">Учебник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka.html" class="menu" title="www.webremeslo.ru">Справочник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka4.html" class="menu" title="www.webremeslo.ru">Справочник CSS</a>
+<a href="http://forum.webremeslo.ru/index.php" class="menu" title="www.webremeslo.ru">Форум</a><br>
+..<em>и многое другое на сайте:</em><br>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец правой колонке -->
+<!-- Центральная колонка -->
+<div class="center">
+   
+<p class="zag">Глава 2</p>
+<h1>Свойства текста.</h1>
+<p>В этой главе пойдет речь о том, что можно сделать с текстом, применяя к элементам HTML содержащие в себе некий текст те или иные свойства CSS.</p>
+
+<p>Ну поехали..</p>
+
+<h2>Выравнивание текста.</h2>
+
+<p>Если Вы помните, из курса HTML, для того что бы выровнять текст, например по центру экрана, мы применяли к тегу содержащему в себе текст атрибут <samp><b>align</b></samp>(выравнивание) и одно из его возможных значений <samp><b>center</b></samp>(по центру)</p> 
+<p>Запись имела такой вид:</p>
+<samp class="x"><b>&lt;p align="center"&gt;текст по центру&lt;/p&gt;</b></samp>
+<p>В CSS данную задачу берет на себя свойство <samp><b>text-align</b></samp>, которое выравнивает текстовое содержание относительно элемента родителя (например, блока <samp><b>div</b></samp>) или же окна браузера.</p> 
+<samp><b>text-align</b></samp> (так же как и htmlловский атрибут <samp><b>align</b></samp>) имеет следующие значения:
+<ul>
+<li><samp><b>left</b></samp> - Выровнять текст по левому краю элемента (по умолчанию). 
+<li><samp><b>right</b></samp> - Выровнять текст по правому краю. 
+<li><samp><b>center</b></samp> - Выровнять текст по центру. 
+<li><samp><b>justify</b></samp> - Выровнять текст по обоим краям. 
+</ul>
+<p>Теперь для того чтобы выровнять текст того же параграфа  по центру следует писать так:</p>
+
+<samp class="x"><b>&lt;p style="text-align: center"&gt;текст по центру &lt;/p&gt;</b></samp>
+
+<p>- это в этом случае если мы, с помощью атрибута <samp><b>style</b></samp>, внедряем CSS непосредственно в HTML тег.</p>
+
+<p>А вот в примере ниже используется тег <samp><b>&lt;style&gt;</b></samp> в заголовке документа:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Выравнивание текста&lt;/title&gt;</samp><br>
+<samp class="xx">&lt;style type="text/css"&gt;</samp><br>
+<samp class="xxx"><b>h1 { text-align: center }</b></samp><br>
+<samp class="xxx"><b>p { text-align: justify }</b></samp><br>
+<samp class="xx">&lt;/style&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;h1&gt;Всё о слонах&lt;/h1&gt;</samp><br>
+<samp class="xx">&lt;p&gt;Слон - самое крупное млекопитающее на нашей планете! Самый большой слон из когда-либо живущих на Земле был зарегистрирован в Анголе в 1956 году. Этот самец весил около 12 тон, а в высоту достигал 4,2 метра, что на метр выше среднего Африканского слона.&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;p&gt;Слоны являются королевским символом Азиатской культуры и известны своей отличной памятью и высоким интеллектом. Аристотель однажды сказал, что слон - "животное, которое превосходит всех других в остроумии и интеллекте".&lt;/p&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer4.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+	
+<h2>Оформление текста.</h2>
+
+<p>Свойство <samp><b>text-decoration</b></samp> позволяет декорировать текст, присвоив ему одно или несколько значений из ниже представленных вариантов оформления текста.</p> 
+
+<p>Возможные значения:</p>
+<ul>
+<li><samp><b>blink</b></samp> - Текст будет мигать. 
+<li><samp><b>line-through</b></samp> - Делает текст перечеркнутым. 
+<li><samp><b>overline</b></samp> - Надчёркивание текста. 
+<li><samp><b>underline</b></samp> - Подчеркивание текста. 
+<li><samp><b>none</b></samp> - Текст без оформления. 
+</ul>
+<p>Пишется так:</p>
+
+<samp class="x"><b>&lt;a href="index.html" style="text-decoration:none"&gt;Ссылка без подчёркивания&lt;/a&gt;</b></samp>
+
+<p>Пример:</p>
+<div class="primer">
+Файл mystyle.css<br><br>
+<samp class="x">h1 {text-align: center}</samp><br>
+<samp class="x">h3 {text-align: left; <b>text-decoration: underline</b>}</samp><br>
+<samp class="x"><b>a {text-decoration: underline</b>}</samp><br>
+<samp class="x"><b>a:hover {text-decoration:none</b>}</samp><br>
+<samp class="x">p {text-align: justify}</samp>
+<hr>
+Файл index.html<br><br>
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Оформление текста&lt;/title&gt;</samp><br>
+<samp class="xx">&lt;link rel="stylesheet" href="mystyle.css" type="text/css"&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;h3&gt;Меню:&lt;/h3&gt;</samp><br>
+<samp class="xx">&lt;a href="index.html"&gt;Всё о слонах.&lt;/a&gt;&lt;br&gt;</samp><br>
+<samp class="xx">&lt;a href="elephant.html"&gt;Купить слона.&lt;/a&gt;</samp><br>
+<samp class="xx">&lt;hr&gt;</samp><br>
+<samp class="xx">&lt;h1&gt;Всё о слонах&lt;/h1&gt;</samp><br>
+<samp class="xx">&lt;p&gt; Слон - самое крупное … … …&lt;/p&gt;</samp><br> 
+<samp class="xx">&lt;p&gt;Слоны являются … … …&lt;/p&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer5.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>Обратите внимание на внешний файл CSS в нем мы "декорировали" ссылку элемент <samp><b>&lt;a&gt;</b></samp>, причем делали это два раза первый раз <samp><b>a {text-decoration: underline}</b></samp> сделали её подчёркнутой, хотя можно было этого и не делать, так как тег <samp><b>&lt;a&gt;</b></samp> подчёркнут по умолчанию, а второй раз использовали так называемый псевдокласс <samp><b>hover</b></samp> и запретили подчеркивание <samp><b>a:hover {text-decoration:none}</b></samp></p>
+<p>Данный псевдокласс указывает на то, что применять к нему стилевое описание стоит лишь в том случае если пользователь навел курсор на этот элемент. Так если в примере навести курсор на одну из ссылок в меню то подчеркивание исчезнет, что создаёт определенный динамический эффект.. меню становиться "живым".</p> 
+<p>Впрочем, мы немного забежали вперёд.. о <a href="glava15.html" title="Глава 15   Псевдоклассы.">псевдоклассах</a> речь пойдёт в отдельной главе. </p>
+
+<h2>Отступ первой строки.</h2>
+
+<p>Свойство <samp><b>text-indent</b></samp> - задаёт отступ первой строки в текстовом блоке с левой стороны, проще говоря делает "красную строку".</p>
+
+<p>Расстояние от левого края окна браузера или же элемента родителя (блока в который помещен блок с текстом) может быть заданно в процентах от ширины окна браузера или же единицах измерения принятых в CSS.</p>
+  
+<p>В примере ниже расстояние отступа от левого края задаётся в пикселях <samp><b>(px)</b></samp>:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Красная строка&lt;/title&gt;</samp><br>
+<samp class="xx">&lt;style type="text/css"&gt;</samp><br>
+<samp class="xxx">h1 {text-align: center}</samp><br>
+<samp class="xxx">p {text-align: justify; <b>text-indent: 20px</b>}</samp><br>
+<samp class="xx">&lt;/style&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;h1&gt;Всё о слонах&lt;/h1&gt;</samp><br>
+<samp class="xx">&lt;p&gt;Слон - самое крупное млекопитающее на нашей планете! Самый большой слон из когда-либо живущих на Земле был зарегистрирован в Анголе в 1956 году. Этот самец весил около 12 тон, а в высоту достигал 4,2 метра, что на метр выше среднего Африканского слона.&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;p&gt;Слоны являются королевским символом Азиатской культуры и известны своей отличной памятью и высоким интеллектом. Аристотель однажды сказал, что слон - "животное, которое превосходит всех других в остроумии и интеллекте".&lt;/p&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer6.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<h2>Трансформация текста</h2>
+
+<p>Своийство <samp><b>text-transform</b></samp> трансформирует символы в указанном текстовом блоке, делая их заглавными или прописными по одному из правил в зависимости от присужденного значения данному свойству.</p> 
+
+<p>Значения:</p>
+<ul>
+<li><samp><b>none</b></samp> - Текст отображается без каких-либо изменений.(по умолчанию) 
+<li><samp><b>capitalize</b></samp> - Каждое слово в тексте отображается с заглавного символа. 
+<li><samp><b>lowercase</b></samp> - Все символы преобразуются в нижний регистр. 
+<li><samp><b>uppercase</b></samp> - Все символы преобразуются в верхний регистр. 
+</ul>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Трансформация текста&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;p style="<b>text-transform: capitalize</b>"&gt;союз советских социалистических республик&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;p style="<b>text-transform: lowercase</b>"&gt;СССР ссср&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;p style="<b>text-transform: uppercase</b>"&gt;ссср СССР&lt;/p&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer7.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<h2>Вертикальное выравнивание</h2>
+
+<p>Вертикальное выравнивание текста в строке устанавливает свойство <samp><b>vertical-align</b></samp></p>
+
+<p>Возможные значения свойства <samp><b>vertical-align:</b></samp></p>
+<ul>
+<li><samp><b>baseline</b></samp> - Выравнивает базовую линию элемента по базовой линии родителя. 
+<li><samp><b>bottom</b></samp> - Выравнивает элемент по нижней части строки. 
+<li><samp><b>middle</b></samp> - Выравнивает средину элемента по базовой линии родителя и прибавляет половину высоты родительского элемента. 
+<li><samp><b>sub</b></samp> - Нижний индекс (размер шрифта не меняется). 
+<li><samp><b>super</b></samp> - Верхний индекс (размер шрифта не меняется). 
+<li><samp><b>text-bottom</b></samp> - Нижняя граница элемента выравнивается по нижнему краю строки. 
+<li><samp><b>text-top</b></samp> - Верхняя граница элемента выравнивается по верхнему краю строки. 
+<li><samp><b>top</b></samp> - Выравнивает элемент по верхней части строки. 
+</ul>
+<p>Базовая линия - это линия, на которой располагаются "сидят" символы в текстовой строке, Например буква "А" сидит прямо на этой линии, а вот строчная буква "у" сидит на ней же, но свесив ноги..</p>
+
+<p>Взгляните на рисунок с разметкой строки:</p>
+
+<img src="../graphics/baseline.gif" alt="базовая линия">
+
+<p>Так же вертикальное выравнивание элемента относительно строки может выражаться в процентах, пикселях или любых других принятых в CSS единицах измерения, причем эти единицы могут принимать как положительные, так и отрицательные значения.</p>
+
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Вертикальное выравнивание текста&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;font size="+3"&gt;А и Б &lt;/font&gt;</samp><br>
+<samp class="xx">&lt;span style="<b>vertical-align: +5px</b>"&gt;сидели на трубе &lt;/span&gt;</samp><br>
+<samp class="xx">&lt;span style="<b>vertical-align: bottom</b>"&gt;А упало &lt;/span&gt;</samp><br>
+<samp class="xx">&lt;span style="<b>vertical-align: top</b>"&gt;Б пропало.. &lt;/span&gt;</samp><br>
+<samp class="xx">&lt;span style="<b>vertical-align: 50%</b>"&gt;что осталось на трубе?&lt;/span&gt;</samp><br>
+<samp class="xx">&lt;hr&gt;</samp><br>
+<samp class="xx">формула воды: H&lt;span style="<b>vertical-align: sub</b>"&gt;2&lt;/span&gt;O</samp><br>
+<samp class="xx">&lt;hr&gt;</samp><br>
+<samp class="xx">&lt;span&gt;н&lt;/span&gt;</samp><br>
+<samp class="xx">&lt;span style="<b>vertical-align: -10px</b>"&gt;а&lt;/span&gt;</samp><br>
+<samp class="xx">&lt;span style="<b>vertical-align: -20px</b>"&gt;и&lt;/span&gt;</samp><br>
+<samp class="xx">&lt;span style="<b>vertical-align: -30px</b>"&gt;с&lt;/span&gt;</samp><br>
+<samp class="xx">&lt;span style="<b>vertical-align: -40px</b>"&gt;к&lt;/span&gt;</samp><br>
+<samp class="xx">&lt;span style="<b>vertical-align: -50px</b>"&gt;о&lt;/span&gt;</samp><br>
+<samp class="xx">&lt;span style="<b>vertical-align: -60px</b>"&gt;с&lt;/span&gt;</samp><br>
+<samp class="xx">&lt;span style="<b>vertical-align: -70px</b>"&gt;о&lt;/span&gt;</samp><br>
+<samp class="xx">&lt;span style="<b>vertical-align: -80px</b>"&gt;к&lt;/span&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer8.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<h2>Пробелы и перенос строки.</h2>
+
+<p>Набранный текст, в каком либо текстовом редакторе браузерами по умолчанию выводится на экран в виде сплошного текста, где переносы строк расставляются автоматически, а так же убираются лишние (более одного) пробелы между символами.</p>
+
+<p>Свойство <samp><b>white-space</b></samp> имитирует работу тега <samp><b>&lt;pre&gt;</b></samp>, определяя показывать или нет пробелы между символов, если таковых больше чем один, а так же разрешает или запрещает перенос строки.</p>
+ 
+<p>Может иметь следующие значения:</p>
+<ul>
+<li><samp><b>normal</b></samp> - текст выводится как обычно (лишние пробелы убираются), переносы строк определяются автоматически. (по умолчанию) 
+<li><samp><b>nowrap</b></samp> - запрещает автоматический перенос строки. 
+<li><samp><b>pre</b></samp> - показывает текст в том виде в котором он был набран. пробелы и переносы строки не удаляются.
+</ul>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Пробелы и перенос строки&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;p style="<b>white-space: pre</b>"&gt;</samp><br>   
+<samp>
+Слон.<br>
+<br>
+Дали туфельки слону.<br>
+Взял он туфельку одну<br>
+И сказал: - Нужны пошире,<br>
+И не две, а все четыре!<br>
+<br>
+</samp>
+<samp class="xxxxx">С. Я. Маршак.</samp><br>
+<samp class="xx">&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;hr&gt;</samp><br>
+<samp class="xx">&lt;p style="<b>white-space: nowrap</b>"&gt;</samp><br>   
+<samp>Это длинный предлинный текст, который вряд ли полностью поместится в одной строчке, по умолчанию в нужном месте, браузер перенес бы его на следующую строку, однако мы принудительно запретили это делать, с помощью значения nowrap свойства white-space. Так что теперь, по всей вероятности, в окне браузера появиться горизонтальная полоса прокрутки.. и зачем, спрашивается, мы это сделали?</samp><br>
+<samp class="xx">&lt;/p&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer9.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>При использовании  nowrap текст в нужном месте можно переносить на следующую строку используя тег <samp><b>&lt;br&gt;</b></samp></p>
+
+<h2>Расстояние между словами.</h2>
+
+<p>Свойство <samp><b>word-spacing</b></samp> задаёт расстояние между словами (группами символов не разделенными пробелом) в строке.</p> 
+
+<p>Значения:</p>
+<ul>
+<li><samp><b>normal</b></samp> - Нормальное расстояние. (по умолчанию) 
+<li><samp><b>px</b></samp> - Расстояние задаётся в пикселях или любых других единицах измерения принятых в CSS. 
+</ul>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Расстояние между словами&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;p align="left" style="<b>word-spacing: 10px</b>"&gt;Расстояние между словами равно десяти пикселям&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;p align="left" style="<b>word-spacing: -10px</b>"&gt;Расстояние между словами может иметь отрицательное значение&lt;/p&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer10.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<h2>Межсимвольное расстояние.</h2> 
+
+<p>А вот свойство <samp><b>letter-spacing</b></samp> определяет расстояние между символами в тексте и так же как и может <samp><b>word-spacing</b></samp> быть задано следующими значениями:</p> 
+<ul>
+<li><samp><b>normal</b></samp> - Нормальное расстояние. (по умолчанию)
+<li><samp><b>px</b></samp> - Расстояние задаётся в пикселях или любых других единицах измерения принятых в CSS. 
+</ul>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Расстояние между символами&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;p style="<b>letter-spacing: 5px</b>"&gt;Расстояние между буковками равно пяти пикселям&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;p style="<b>letter-spacing: -3px</b>"&gt;А здесь буквы, из за отрицательного значения, будут наплывать друг на друга&lt;/p&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer11.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<h2>Интерлиньяж</h2>
+
+<p>Интерлиньяж - это расстояние между строками текста.</p>
+<p>Расстояние между строками текста можно задать используя свойство <samp><b>line-height</b></samp>, сделать это можно следующими способами:</p>
+<ul>
+<li><samp><b>normal</b></samp> - Норма (по умолчанию). 
+<li><samp><b>%</b></samp> - Проценты. за сто процентов берется высота шрифта 
+<li><samp><b>0.5</b></samp> - Множитель. Может быть использовано любое число больше ноля. Так, например множитель 0.5 будет равняться половинному межстрочному расстоянию, а 2 - двойному. 
+<li><samp><b>px</b></samp> - Пиксели и любые другие единицы измерения, принятые в CSS. 
+</ul>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Интерлиньяж&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;div style="<b>line-height: 150%</b>"&gt;</samp><br>
+<samp class="xxx">строка первая &lt;br&gt; строка вторая &lt;br&gt; строка третья &lt;br&gt; строка четвертая &lt;br&gt; строка пятая</samp><br>
+<samp class="xx">&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;hr&gt;</samp><br>
+<samp class="xx">&lt;div style="<b>line-height: 0.5</b>"&gt;</samp><br>
+<samp class="xxx">строка первая &lt;br&gt; строка вторая &lt;br&gt; строка третья &lt;br&gt; строка четвертая &lt;br&gt; строка пятая</samp><br>
+<samp class="xx">&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;hr&gt;</samp><br>
+<samp class="xx">&lt;div style="<b>line-height: 25px</b>"&gt;</samp><br>
+<samp class="xxx">строка первая &lt;br&gt; строка вторая &lt;br&gt; строка третья &lt;br&gt; строка четвертая &lt;br&gt; строка пятая</samp><br>
+<samp class="xx">&lt;/div&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer12.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<h2>Полезные советы:</h2>
+<ul>
+<li><p>При декорировании текста, свойство - <samp><b>text-decoration</b></samp>, будьте благоразумны используя подчеркивание текста это может ввести в заблуждение посетителя страницы, он может подумать, что данный текст является ссылкой.</p>
+<li><p>А Вам точно нужно использовать значение <samp><b>nowrap</b></samp> свойства <samp><b>white-space</b></samp>, запрет переноса строки? Появление горизонтальной полосы прокрутки мало кого вдохновляет..</p>
+<li><p>Используя <a href="glava15.html#hover" title="Глава 15   Псевдоклассы.   &quot;Псевдокласс hover&quot;">псевдокласс hover</a> в сочетании с различными элементами и их возможными CSS свойствами можно добиться весьма интересных эффектов.</p>
+</ul>
+<div class="url">
+<a href="glava1.html" title="К предыдущей главе">&lt;&lt; предыдущая глава</a> | 
+<a href="glava3.html" title="К следующей главе">следующая глава &gt;&gt;</a>
+</div>
+</div>
+<!-- Конец центральной колонке -->
+<!-- Подвал -->
+<div class="footer">
+&copy; Автор: Семикопенко Алексей Алексеевич. | <a href="http://webremeslo.ru/" class="logo" title="Перейти на сайт webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец подвалу -->
+</body>
+</html>

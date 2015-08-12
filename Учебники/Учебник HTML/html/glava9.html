@@ -1,0 +1,277 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Учебник HTML для начинающих.</title>
+<meta HTTP-EQUIV="Content-Type" Content="text/html; Charset=Windows-1251">
+<meta name="author" Content="Семикопенко Алексей Алексеевич">
+<meta name="copyright" Content="Семикопенко Алексей Алексеевич">
+<meta name="Publisher-Email" Content="alex@webremeslo.ru">
+<meta name="Publisher-URL" Content="http://webremeslo.ru/">
+<link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+<body>
+<!-- Шапка -->
+<div class="header">
+<h1 class="logo">Учебник HTML</h1>
+</div>
+<!-- Конец шапке -->
+<!--левая колонка "меню" -->
+<div class="left">
+<div class="fixed">
+<ul class="ul_none">
+<li><a href="../index.html" class="menu" title="От автора.">Главная</a></li>
+<li><a href="glava0.html" class="menu" title="Введение.">Введение</a></li>
+<li><a href="glava1.html" class="menu" title="Перейти к Главе 1   Что такое HTML язык?">Что такое HTML язык</a></li>
+<li><a href="glava2.html" class="menu" title="Перейти к Главе 2   Редактируем текст">Редактируем текст</a></li>
+<li><a href="glava3.html" class="menu" title="Перейти к Главе 3   Рисунки">Рисунки</a></li>
+<li><a href="glava4.html" class="menu" title="Перейти к Главе 4   Таблицы">Таблицы</a></li>
+<li><a href="glava5.html" class="menu" title="Перейти к Главе 5   Ссылки">Ссылки</a></li>
+<li><a href="glava6.html" class="menu" title="Перейти к Главе 6   И ещё…">И ещё…</a></li>
+<li><a href="glava7.html" class="menu" title="Перейти к Главе 7   Фреймы">Фреймы</a></li>
+<li><a href="glava8.html" class="menu" title="Перейти к Главе 8   Навигационные карты">Навигационные карты</a></li>
+<li><a href="glava9.html" class="activemenu" title="Перейти к Главе 9   Списки">Списки</a></li>
+<li><a href="glava10.html" class="menu" title="Перейти к Главе 10   Meta теги">Meta теги</a></li>
+<li><a href="glava11.html" class="menu" title="Перейти к Главе 11   Заголовок &lt;!DOCTYPE&gt;">Заголовок &lt;!DOCTYPE&gt;</a></li>
+<li><a href="glava12.html" class="menu" title="Перейти к Главе 12   И снова таблицы..">И снова таблицы..</a></li>
+<li><a href="glava13.html" class="menu" title="Перейти к Главе 13   Фоновая музыка">Фоновая музыка</a></li>
+<li><a href="glava14.html" class="menu" title="Перейти к Главе 14   Текст - логика и физика">Текст - логика и физика</a></li>
+</ul>
+</div>
+</div>
+<!-- Конец левой колонке -->
+<!-- Правая колонка -->
+<div class="right">
+<h2>А так же:</h2>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">Как создать сайт?</a>
+<a href="http://www.webremeslo.ru/css/glava0.html" class="menu" title="www.webremeslo.ru">Учебник CSS</a>
+<a href="http://www.webremeslo.ru/spravka/spravka.html" class="menu" title="www.webremeslo.ru">Справочник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka4.html" class="menu" title="www.webremeslo.ru">Справочник CSS</a>
+<a href="http://forum.webremeslo.ru/index.php" class="menu" title="www.webremeslo.ru">Форум</a><br>
+..<em>и многое другое на сайте:</em><br>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец правой колонке -->
+<!-- Центральная колонка -->
+<div class="center">
+
+<p class="zag">Глава 9</p>
+<h1>Списки</h1>
+<p>В этой главе пойдёт речь о списках, которые могут быть:</p>
+<ul>
+<li> неупорядоченные(маркированные)
+<li> упорядоченные (нумерованные)
+<li> и являться списком определений
+</ul>
+<p>Такое вот нестандартное начало главы.. зато теперь Вам понятно, что есть список  в html.</p>
+
+<p>Ну что ж давайте пройдёмся по нашему списку.</p>
+
+<h2>Неупорядоченные списки</h2>
+
+<p>Неупорядоченный список задаётся тегом <samp><b>&lt;ul&gt;</b></samp>. Любой список состоит из элементов, "пунктов", каждый элемент в свою очередь задаётся тегом  <samp><b>&lt;li&gt;</b></samp> после которого собственно и идёт текст нужного нам "пункта". Для тега <samp><b>&lt;li&gt;</b></samp> закрывающий тег <samp><b>&lt;/li&gt;</b></samp> необязателен.</p>
+<p>Вместе данные теги приобретают следующий вид:</p>
+<b>
+<samp class="x">&lt;ul&gt;</samp><br>
+<samp class="xx">&lt;li&gt; Пункт первый..</samp><br>
+<samp class="xx">&lt;li&gt; Пункт второй..</samp><br>
+<samp class="xx">&lt;li&gt; Пункт третий..</samp><br>
+<samp class="x">&lt;/ul&gt;</samp>
+</b>
+<p>Пример неупорядоченного списка:</p>
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;неупорядоченный список&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">Купить и доставить домой:</samp><br>
+<samp class="xx"><b>&lt;ul&gt;</b></samp><br>
+<samp class="xxx"><b> &lt;li&gt;</b> 2 кг. клубней картофеля</samp><br>
+<samp class="xxx"><b>&lt;li&gt;</b> 1 булку ржаного чёрного хлеба</samp><br> 
+<samp class="xxx"><b>&lt;li&gt;</b> пачку макарон "спагетти" (длинные не менее 200мм. тонкие)</samp><br>  
+<samp class="xxx"><b>&lt;li&gt;</b> 1 кг. шлифованного риса (сложно объяснить.. спросишь..)</samp><br>
+<samp class="xxx"><b>&lt;li&gt;</b> 1 дес. куриных яиц.</samp><br>
+<samp class="xxx"><b>&lt;li&gt;</b> 1 пачку 500г. Натрия двууглекислого (Сода)</samp><br>  
+<samp class="xx"><b>&lt;/ul&gt;</b></samp><br>
+<samp class="xx">Смотри ничего не перепутай.. целую..</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer51.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>Теги <samp><b>&lt;li&gt;</b></samp> и <samp><b>&lt;ul&gt;</b></samp> имеют атрибут <samp><b>type</b></samp> который присуждает элементу списка или же всему списку целиком  определённый стиль.</p>
+<p>Может иметь одно и трёх значений:</p>
+<ul>
+<li type="disk"> <samp><b>disk </b></samp>- кружок, диск (по умолчанию)
+<li type="circle"> <samp><b>circle</b></samp> - полый круг
+<li type="square"> <samp><b>square</b></samp> - квадрат 
+</ul>
+<p align="left">Пример:</p>
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;стили неупорядоченного списка&lt;/title&gt;</samp><br> 
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">В этом списке каждый элемент имеет свой стиль:</samp><br>
+<samp class="xx">&lt;ul&gt;</samp><br>
+<samp class="xxx">&lt;li <b>type="disk"&gt;</b> кружок, диск (по умолчанию)</samp><br>
+<samp class="xxx">&lt;li <b>type="circle"&gt;</b> полый круг</samp><br>
+<samp class="xxx">&lt;li <b>type="square"&gt;</b> квадрат</samp><br> 
+<samp class="xx">&lt;/ul&gt;</samp><br>
+<samp class="xx">А здесь стиль задан всему списку</samp><br>
+<samp class="xx">&lt;ul <b>type="circle"&gt;</b></samp><br>
+<samp class="xxx">&lt;li&gt; Пункт 1</samp><br>
+<samp class="xxx">&lt;li&gt; Пункт 2</samp><br>
+<samp class="xxx">&lt;li&gt; Пункт 3</samp><br>
+<samp class="xx">&lt;/ul&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer52.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<h2>Упорядоченные списки</h2>
+
+<p>Упорядоченный или нумерованный список задаётся тегом <samp><b>&lt;ol&gt;</b></samp>,  так же как и в неупорядоченном списке элемент списка присуждается тегом <samp><b>&lt;li&gt;.</b></samp></p>
+<p>Построение кода полностью схоже с неупорядоченным списком поэтому сразу пример:</p>
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;упорядоченный список&lt;/title&gt;</samp><br> 
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">Купить товары в следующем порядке:</samp><br>
+<samp class="xx"><b>&lt;ol&gt;</b></samp><br>
+<samp class="xxx"><b>&lt;li&gt;</b> Водка</samp><br>
+<samp class="xxx"><b>&lt;li&gt;</b> Пиво</samp><br>
+<samp class="xxx"><b>&lt;li&gt;</b> Сырок (необязательно)</samp><br> 
+<samp class="xx"><b>&lt;/ol&gt;</b></samp><br>
+<samp class="xx">Жду!!!</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer53.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>А вот атрибут <samp><b>type</b></samp> в сочетании с упорядоченным списком может иметь следующие значения:</p>
+<ul>
+<li><b>А</b> - Заглавные буквы
+<li><b>а</b> - Строчные буквы
+<li><b>I</b> - Заглавные римские цифры
+<li><b>i</b> - Строчные римские цифры
+<li><b>1</b> - Арабские цифры (по умолчанию)
+</ul>
+<p>Вот пример их применения:</p>
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Стили упорядоченного список&lt;/title&gt;</samp><br> 
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">Арабские цифры</samp><br>
+<samp class="xx">&lt;ol <b>type="1"&gt;</b></samp><br>
+<samp class="xxx">&lt;li&gt;Во-первых</samp><br>
+<samp class="xxx">&lt;li&gt;Во-вторых</samp><br>   
+<samp class="xx">&lt;/ol&gt;</samp><br>
+<samp class="xx">Строчные буквы</samp><br>
+<samp class="xx">&lt;ol <b>type="a"&gt;</b></samp><br>
+<samp class="xxx">&lt;li&gt;Во-первых</samp><br>
+<samp class="xxx">&lt;li&gt;Во-вторых</samp><br>  
+<samp class="xx">&lt;/ol&gt;</samp><br>
+<samp class="xx">Заглавные буквы</samp><br>
+<samp class="xx">&lt;ol <b>type="A"&gt;</b></samp><br>
+<samp class="xxx">&lt;li&gt;Во-первых</samp><br>
+<samp class="xxx">&lt;li&gt;Во-вторых</samp><br>
+<samp class="xxx">&lt;li&gt;В-третьих</samp><br> 
+<samp class="xx">&lt;/ol&gt;</samp><br>
+<samp class="xx">Строчные римские цифры</samp><br>
+<samp class="xx">&lt;ol <b>type="i"&gt;</b></samp><br>
+<samp class="xxx">&lt;li&gt;Во-первых</samp><br>
+<samp class="xxx">&lt;li&gt;Во-вторых</samp><br>
+<samp class="xxx">&lt;li&gt;В-третьих</samp><br>
+<samp class="xxx">&lt;li&gt;В-четвёртых</samp><br>     
+<samp class="xx">&lt;/ol&gt;</samp><br>
+<samp class="xx">Заглавные римские цифры</samp><br>
+<samp class="xx">&lt;ol <b>type="I"&gt;</b></samp><br>
+<samp class="xxx">&lt;li&gt;Во-первых</samp><br>
+<samp class="xxx">&lt;li&gt;Во-вторых</samp><br>
+<samp class="xxx">&lt;li&gt;В-третьих</samp><br>
+<samp class="xxx">&lt;li&gt;В-четвёртых</samp><br>    
+<samp class="xx">&lt;/ol&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer54.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>В упорядоченном списке есть ещё один атрибут <samp><b>start</b></samp> его числовое значение говорит о том с какого номера следует строить упорядоченный список.</p>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Начало упорядоченного списка&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;ol type="1" <b>start="24"</b>&gt;</samp><br>
+<samp class="xxx">&lt;li&gt;Сразу переходим к двадцать четвёртому пункту!!</samp><br>
+<samp class="xxx">&lt;li&gt;Идём дальше</samp><br>
+<samp class="xxx">&lt;li&gt;И дальше</samp><br>
+<samp class="xx">&lt;/ol&gt;</samp><br>
+<samp class="xx">Аналогично можно "стартовать" при любом стиле упорядоченного списка</samp><br>
+<samp class="xx">&lt;ol type="I" <b>start="8"</b>&gt;</samp><br>
+<samp class="xxx">&lt;li&gt;Сразу переходим к восьмому пункту..</samp><br>
+<samp class="xxx">&lt;li&gt;Идём дальше</samp><br>
+<samp class="xxx">&lt;li&gt;И дальше</samp><br>
+<samp class="xx">&lt;/ol&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer55.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<h2>Списки определений</h2>
+<p>Со списком определений дело обстоит немного иначе нежели чем с уже знакомыми списками. Задаётся данный вид списка тегом <samp><b>&lt;dl&gt;</b></samp>. Пункты списка определений размечаются тегом <samp><b>&lt;dt&gt;</b></samp>, а определения этих пунктов тегом <samp><b>&lt;dd&gt;</b></samp>.</p>
+<p>Всё вместе пишется по следующей схеме:</p>
+
+<b>
+<samp class="x">&lt;dl&gt;</samp><br>
+<samp class="xx">&lt;dt&gt;</samp><br>
+<samp class="xxx">&lt;dd&gt;</samp><br>
+<samp class="x">&lt;/dl&gt;</samp> 
+</b>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Список определений&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx"><b>&lt;dl&gt;</b></samp><br>
+<samp class="xxx"><b>&lt;dt&gt;</b> Слово коса может иметь следующие определения:</samp><br>
+<samp class="xxxx"><b>&lt;dd&gt;</b> сельскохозяйственный инструмент</samp><br>
+<samp class="xxxx"><b>&lt;dd&gt;</b> хитрая девичья причёска</samp><br>
+<samp class="xxxx"><b>&lt;dd&gt;</b> отмель реки</samp><br>
+<samp class="xxx"><b>&lt;dt&gt;</b> Слово ключ тоже имеет несколько значений:</samp><br> 
+<samp class="xxxx"><b>&lt;dd&gt;</b> гаечный</samp><br> 
+<samp class="xxxx"><b>&lt;dd&gt;</b> источник, родник</samp><br>
+<samp class="xx"><b>&lt;/dl&gt;</b></samp><br> 
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer56.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>Собственно вот и вся премудрость..</p>
+
+<h2>Полезные советы:</h2>
+<p>Психология посетителя страницы.</p>
+<ul>
+<li><p>Не могу, не согласится с тем утверждением, что посетители страницы чаще просматривают документы, нежели чем вдумчиво читают их.. По-крайней мере так происходит практически всегда при первом визите посетителя на страничку. Первое на что обращает внимание пользователь просматривая какой либо документ это: заголовки в тексте, выделенные фрагменты текста, и списки. Умелое и ненавязчивое размещение таковых элементов залог того что посетитель окунётся в чтение Вашего документа более глубоко.</p>
+<li><p>Что касается списков.. следует понимать что: Маркированные перечни <samp><b>&lt;ul&gt;</b></samp> используются тогда, когда порядок следования пунктов не важен.. и делаются они для того чтобы изложенная информация воспринималась легче. А нумерованные списки <samp><b>&lt;ol&gt;</b></samp> наоборот, применяются тогда, когда важен именно порядок следования пунктов, например - когда список является изложением последовательности каких либо действий.</p>
+</ul>
+
+<div class="url">
+<a href="glava8.html" title="К предыдущей главе">&lt;&lt; предыдущая глава</a> | 
+<a href="glava10.html" title="К следующей главе">следующая глава &gt;&gt;</a>
+</div>
+</div>
+<!-- Конец центральной колонке -->
+<!-- Подвал -->
+<div class="footer">
+&copy; Автор: Семикопенко Алексей Алексеевич. | <a href="http://webremeslo.ru/" class="logo" title="Перейти на сайт webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец подвалу -->
+</body>
+</html>

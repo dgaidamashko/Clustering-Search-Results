@@ -1,0 +1,369 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Учебник CSS для начинающих.</title>
+<meta HTTP-EQUIV="Content-Type" Content="text/html; Charset=Windows-1251">
+<meta name="author" Content="Семикопенко Алексей Алексеевич">
+<meta name="copyright" Content="Семикопенко Алексей Алексеевич">
+<meta name="Publisher-Email" Content="alex@webremeslo.ru">
+<meta name="Publisher-URL" Content="http://webremeslo.ru/">
+<link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+<body>
+<!-- Шапка -->
+<div class="header">
+<h1 class="logo">Учебник CSS</h1>
+</div>
+<!-- Конец шапке -->
+<!--левая колонка "меню" -->
+<div class="left">
+<div class="fixed">
+<ul class="ul_none">
+<li><a href="../index.html" class="menu" title="От автора.">Главная</a></li>
+<li><a href="glava0.html" class="menu" title="Введение.   Что такое CSS?">Что такое CSS?</a></li>
+<li><a href="glava1.html" class="menu" title="Глава 1   Внедрение CSS в HTML документ.">Внедрение CSS.</a></li>
+<li><a href="glava2.html" class="menu" title="Глава 2   Свойства текста.">Свойства текста.</a></li>
+<li><a href="glava3.html" class="menu" title="Глава 3   Свойства шрифта.">Свойства шрифта.</a></li>
+<li><a href="glava4.html" class="menu" title="Глава 4   Цвет и фон.">Цвет и фон.</a></li>
+<li><a href="glava5.html" class="menu" title="Глава 5   Границы элемента.">Границы элемента.</a></li>
+<li><a href="glava6.html" class="menu" title="Глава 6   Классы и id селекторы.">Классы и id селекторы.</a></li>
+<li><a href="glava7.html" class="menu" title="Глава 7   Размеры элемента.">Размеры элемента.</a></li>
+<li><a href="glava8.html" class="menu" title="Глава 8   Поля и отступы.">Поля и отступы.</a></li>
+<li><a href="glava9.html" class="menu" title="Глава 9   Курсоры.">Курсоры.</a></li>
+<li><a href="glava10.html" class="menu" title="Глава 10   Форматирование.">Форматирование.</a></li>
+<li><a href="glava11.html" class="menu" title="Глава 11   Поплавки.">Поплавки.</a></li>
+<li><a href="glava12.html" class="menu" title="Глава 12   Позиционирование.">Позиционирование.</a></li>
+<li><a href="glava13.html" class="menu" title="Глава 13   Стиль списка.">Стиль списка.</a></li>
+<li><a href="glava14.html" class="menu" title="Глава 14   Полоса прокрутки.">Полоса прокрутки.</a></li>
+<li><a href="glava15.html" class="activemenu" title="Глава 15   Псевдоклассы.">Псевдоклассы.</a></li>
+<li><a href="glava16.html" class="menu" title="Глава 16   Псевдоэлементы.">Псевдоэлементы.</a></li>
+</ul>
+</div>
+</div>
+<!-- Конец левой колонке -->
+<!-- Правая колонка -->
+<div class="right">
+<h2>А так же:</h2>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">Как создать сайт?</a>
+<a href="http://www.webremeslo.ru/html/glava0.html" class="menu" title="www.webremeslo.ru">Учебник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka.html" class="menu" title="www.webremeslo.ru">Справочник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka4.html" class="menu" title="www.webremeslo.ru">Справочник CSS</a>
+<a href="http://forum.webremeslo.ru/index.php" class="menu" title="www.webremeslo.ru">Форум</a><br>
+..<em>и многое другое на сайте:</em><br>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец правой колонке -->
+<!-- Центральная колонка -->
+<div class="center">
+   
+<p class="zag">Глава 15</p>
+
+<h1>Псевдоклассы.</h1>
+
+<p>Псевдоклассы - это особые свойства, которые позволяют менять стиль элемента в зависимости от действий пользователя,  а так же положения этого элемента (тега)  в общем потоке документа, что позволяет разбавить дизайн страницы некой динамикой и логикой. Классическим примером применения псевдоклассов является ссылка, которая меняет свой цвет при наведении на  неё курсором.</p>
+<p>Вот список всех псевдоклассов:</p>
+<ul>
+<li><b>hover</b> - Стиль элемента на который наведён курсор мыши.
+<li><b>active</b> - Стиль для ссылки которая становится активной, но переход по ней еще не совершен.
+<li><b>visited</b> - Стиль для недавно посещённой ссылки.
+<li><b>link</b> - Стиль для нечасто посещаемой ссылки.
+<li><b>focus</b> - Стиль элемента находящегося в фокусе.
+<li><b>first-child</b> - Стиль первого дочернего элемента.
+<li><b>lang</b> - Определяет язык, который используется в фрагменте документа.
+</ul>
+<p>О каждом псевдоклассе мы отдельно поговорим ниже, а сейчас пару слов о синтаксисе.</p>
+<p>Для того чтобы применить тот или иной псевдокласс к элементу и определить его стиль нужно следовать следующим правилам синтаксиса: </p>
+<samp class="x"><b>a:hover { color:#ff0000</b>}</samp><br><br>
+<samp class="x">где:</samp><br><br>
+<samp class="x"><b>a</b> - элемент (селектор), а проще тег к которому мы решили применить псевдокласс в нашем случае это ссылка.</samp><br>
+<samp class="x"><b>:hover</b> - после двоеточия собственно нужный нам псевдокласс.</samp><br>
+<samp class="x"><b>{color:#ff0000}</b> - ну и блок объявления стилей в фигурных скобках.</samp>
+<p>А вся эта запись вместе будет говорить о том, что если навести курсором на такую ссылку - то она покраснеет.</p>
+<p>Так собственно мы подошли к первому, самому популярному, псевдоклассу <b>hover</b>.</p>
+
+<h2>Псевдокласс hover.</h2>
+
+<p>Как Вы уже, наверное, догадались, псевдокласс <b>hover</b> активизируется в том случае, если на элемент  наведен курсор.</p>
+<p>Ну а раз уж догадались просто покажу пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Псевдоклассы&lt;/title&gt;</samp><br>
+<samp class="xx">&lt;style type="text/css"&gt;</samp><br>
+<samp class="xxx">.menu {</samp><br>
+<samp class="xxxx">display: block;</samp><br>
+<samp class="xxxx">width: 180px; </samp><br>
+<samp class="xxxx">background-color:#fff8dc;</samp><br>
+<samp class="xxxx">color:#008; </samp><br>
+<samp class="xxxx">font-size: 16px; </samp><br>
+<samp class="xxxx">text-decoration: none;</samp><br>
+<samp class="xxxx">padding: 3px;</samp><br>
+<samp class="xxx">}</samp><br>
+<samp class="xxx"><b>.menu:hover</b> {</samp><br>
+<samp class="xxxx">display: block;</samp><br>
+<samp class="xxxx">width: 180px; </samp><br>
+<samp class="xxxx">background-color:#b8860b;</samp><br>
+<samp class="xxxx">color:#fff;</samp><br>
+<samp class="xxxx">padding: 3px;</samp><br>
+<samp class="xxxx">font-size: 16px;</samp><br>
+<samp class="xxxx">text-decoration: none;</samp><br>
+<samp class="xxx">}</samp><br>
+<samp class="xxx"><b>tr:hover</b> {</samp><br>
+<samp class="xxxx">background-color:#b8860b;</samp><br>
+<samp class="xxx">}</samp><br>
+<samp class="xx">&lt;/style&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;p&gt;Чем Вам не блок навигации по сайту?&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;a href="#" class="menu"&gt;Главная&lt;/a&gt;</samp><br>
+<samp class="xx">&lt;a href="#" class="menu"&gt;Карта сайта&lt;/a&gt;</samp><br>
+<samp class="xx">&lt;a href="#" class="menu"&gt;Купить слона&lt;/a&gt;</samp><br>
+<samp class="xx">&lt;a href="#" class="menu"&gt;Продать слона&lt;/a&gt;</samp><br>
+<samp class="xx">&lt;a href="#" class="menu"&gt;Взять слона на прокат&lt;/a&gt;</samp><br>
+<samp class="xx">&lt;hr&gt;</samp><br>
+<samp class="xx">&lt;p&gt;А вот ещё один распространенный трюк.. строки в таблице подсвечиваются при наведении на них курсором.&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;table border="1" bordercolor="#ccc" width="600" cellpadding="1" cellspacing="0"&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt;Иванов&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt;Петров&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt;Сидоров&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xx">&lt;/table&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer65.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>Несколько слов к примеру выше..</p>
+
+<p>Как Вы наверное заметили в качестве селектора псевдокласса может выступать не только какой либо элемент - тег, но и <a href="glava6.html" title="Глава 6   Классы и id селекторы.">класс</a> или <a href="glava6.html" title="Глава 6   Классы и id селекторы.">идентификатор</a>. Так в примере к классу <samp><b>.menu</b></samp> применён псевдокласс <samp><b>hover</b></samp> и синтаксис приобретает следующий вид:</p>
+<samp class="x"><b>.menu:hover { color:#ff0000;}</b></samp><br>
+<p>Не запутались в терминологии?</p>
+<p>Простыми словами мы сказали браузеру что мол подсвечивай красным только те ссылки которые находится в навигационном блоке (выведены в класс<samp><b>.menu</b></samp> ), а остальное оставь как есть!</p>
+<p>Псевдокласс <samp><b>hover</b></samp> может быть применён к любому элементу, выводимому на экран, так в нашем примере, для того чтобы организовать подсветку строк таблицы мы применили его к тегу <samp><b>&lt;tr&gt;</b></samp>. Однако следует отметить, что браузер <samp>Internet Explorer 6</samp> и его более ранние версии поддерживает псевдокласс <samp><b>hover</b></samp> только для ссылок - тег <samp><b>&lt;a&gt;</b></samp>, так что, к примеру, строки таблицы, при наведении на них курсора, в  браузерах <samp>IE6</samp> и ниже подсвечиваться не будут!</p>
+
+<h2>Псевдоклассы и ссылки.</h2>
+
+<p>Рассмотрим сразу три псевдокласса созданных для работы со ссылками.</p>
+<ul>
+<li><b>active</b> - Стиль активной ссылки. 
+<li><b>visited</b> - Стиль для недавно посещённой ссылки. 
+<li><b>link</b> - Стиль для нечасто посещаемой ссылки. 
+</ul>
+<p>Сначала покажу пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Псевдоклассы и ссылки&lt;/title&gt;</samp><br>
+<samp class="xx">&lt;style type="text/css"&gt;</samp><br>
+<samp class="xxx">a:<b>link</b> {color:#0000ff}</samp><br>
+<samp class="xxx">a:<b>active</b> {color:#ff0000}</samp><br>
+<samp class="xxx">a:<b>visited</b> {color:#008000}</samp><br>
+<samp class="xx">&lt;/style&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt; </samp><br>
+<samp class="xx">&lt;a href="#1"&gt;Ссылка на первый якорь&lt;/a&gt;</samp><br>
+<samp class="xx">&lt;a href="#2"&gt;Ссылка на второй якорь&lt;/a&gt;</samp><br>
+<samp class="xx">&lt;a href="#3"&gt;Ссылка на третий якорь&lt;/a&gt;</samp><br>
+<samp class="xx">&lt;hr&gt;</samp><br>
+<samp class="xx">&lt;a name="1"&gt;&lt;h4&gt;Первый якорь&lt;/h4&gt;&lt;/a&gt;</samp><br>
+<samp class="xx">&lt;p&gt;Псевдокласс link, в этом примере, указывает, что все не посещенные ссылки должны отображаться синим цветом.&lt;/p&gt; </samp><br>
+<samp class="xx">&lt;a name="2"&gt;&lt;h4&gt;Второй якорь&lt;/h4&gt;&lt;/a&gt;</samp><br>
+<samp class="xx">&lt;p&gt;Попробуйте нажить и удерживать на одну из не посещенных ссылок, чтобы увидеть для работу псевдокласса active.&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;a name="3"&gt;&lt;h4&gt;Третий якорь&lt;/h4&gt;&lt;/a&gt;</samp><br>
+<samp class="xx">&lt;p&gt;visited - псевдокласс который, в этом примере, говорит о том, что все посещенные ссылки должны отображаться зеленым цветом.&lt;/p&gt; </samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer66.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>Теперь расскажу более подробно.</p>
+<p>Псевдокласс <samp><b>active</b></samp> присваивает ссылке определённый стиль в тот момент когда эта ссылка активна, то есть в тот момент когда пользователь нажал на ссылку, но еще не отпустил кнопку мыши. Короче <b>active</b> - это стиль ссылки в момент клика по ней.</p>
+<p>Браузеры некоторое время помнят, на какие ссылки нажимал пользователь в последнее время, так вот, псевдокласс <samp><b>visited</b></samp> указывает стиль ссылки которая недавно посещалась пользователем.</p>
+<p>Псевдокласс <samp><b>link</b></samp> описывает стиль ссылки, которая ранее не посещалась пользователем. Надо отметить, что никакой ощутимой разницы между записью <samp><b>a {...}</b></samp> и <samp><b>a:link {...}</b></samp> нет, так что применение данного псевдокласса в этом случае ровным счетом ничего не меняет.</p>
+<p>Все три вышеперечисленных псевдокласса предназначены для работы с ссылками, однако псевдокласс <samp><b>active</b></samp> может быть применён к любому  элементу -  работать будет везде,  кроме браузера <samp>Internet Explorer 6</samp> и ниже.</p>
+
+<h2>Псевдокласс focus.</h2>
+
+<p>Данный псевдокласс определяет стиль элемента, если тот находится в фокусе. Теперь собственно о том, что такое фокус?.. как в случае с оптикой и иллюзией, слово фокус в CSS обозначат, что некий объект, а точнее элемент, находится в центре внимания наблюдателя - пользователя. Такими элементами могут быть теги <b><samp>&lt;a&gt; &lt;input&gt; &lt;select&gt;</samp></b> и <b><samp>&lt;textarea&gt;</samp></b>.</p>
+<p>Посмотрите на пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Псевдокласс focus&lt;/title&gt;</samp><br>
+<samp class="xx">&lt;style type="text/css"&gt;</samp><br>
+<samp class="xxx">input:<b>focus</b> {color: red}</samp><br>
+<samp class="xx">&lt;/style&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;form&gt;</samp><br>
+<samp class="xxx">&lt;input type="text" value="Введите текст в эту форму" size="30"&gt;</samp><br>
+<samp class="xx">&lt;/form&gt;</samp><br>
+<samp class="xx">&lt;p&gt;Вели? а теперь щелкните по пустому месту на экране чтобы форма потеряла фокус.&lt;/p&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer67.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>В примере текст в текстовом поле <b><samp>&lt;input&gt;</samp></b> изначально чёрный, но как только элемент получает фокус - то есть тогда когда пользователь кликнет по данному полю и начнет набирать текст, он окрасится красным.</p>
+<p>Вот и весь фокус-покус..</p>
+
+<h2>Псевдокласс first-child.</h2>
+
+<p>Думаю, в ходе обучения CSS Вы уже поняли, что все элементы можно определить как родительские или дочерние и что элемент родитель может содержать в себе несколько дочерних элементов, ну например:</p>
+
+<samp class="x"><b>&lt;div&gt;</b><i>- блок родитель</i></samp><br>
+<samp class="xx"><b>&lt;p&gt;&lt;/p&gt;</b><i> - первый дочерний элемент</i></samp><br>
+<samp class="xx"><b>&lt;p&gt;&lt;/p&gt;</b><i> - второй дочерний элемент</i></samp><br>
+<samp class="x"><b>&lt;/div&gt;</b></samp>
+
+<p>Так вот псевдокласс <samp><b>first-child</b></samp> определят стиль первого дочернего элемента находящегося в родительском контейнере.</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Псевдокласс first-child&lt;/title&gt;</samp><br>
+<samp class="xx">&lt;style type="text/css"&gt;</samp><br>
+<samp class="xxx">div {</samp><br>
+<samp class="xxxx">margin: 20px;</samp><br>
+<samp class="xxxx">padding: 30px;</samp><br>
+<samp class="xxxx">background-color: #c0e4ff;</samp><br>
+<samp class="xxxx">border: 2px solid #008000</samp><br>
+<samp class="xxx">}</samp><br>
+<samp class="xxx">p {</samp><br>
+<samp class="xxxx">color: #555;</samp><br>
+<samp class="xxxx">background-color: #dcdcdc;</samp><br>
+<samp class="xxxx">border: 2px solid #555</samp><br>
+<samp class="xxx">}</samp><br>
+<samp class="xxx">p<b>:first-child</b> {</samp><br>
+<samp class="xxxx">color: #f00;</samp><br>
+<samp class="xxxx">background-color: #c5ffa0;</samp><br>
+<samp class="xxxx">border: 2px solid #008000</samp><br>
+<samp class="xxx">}</samp><br>
+<samp class="xx">&lt;/style&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;div&gt;</samp><br>
+<samp class="xxx">&lt;p&gt;первый дочерний параграф - он выделен псевдоклассом first-child&lt;/p&gt; </samp><br>
+<samp class="xxx">&lt;p&gt;второй дочерний параграф&lt;/p&gt;</samp><br>
+<samp class="xxx">&lt;p&gt;третий дочерний параграф&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;/div&gt; </samp><br>
+<samp class="xx">&lt;div&gt;</samp><br>
+<samp class="xxx">&lt;p&gt;и здесь первый дочерний параграф выделен хотя блок родитель уже другой&lt;/p&gt; </samp><br>
+<samp class="xxx">&lt;p&gt;второй дочерний параграф&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;/div&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer68.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Обратите внимание на тот факт, что если бы в блоке родителе перед дочерними параграфами стоял любой другой тег, заголовок <samp><b>&lt;h1&gt;</b></samp> к примеру, то псевдокласс <samp><b>first-child</b></samp> уже не действовал бы к первому параграфу.. так как хоть параграф то он и первый, но элемент в блоке родителе уже второй.</p>
+<p>Применяют данный псевдокласс в тех случаях , если требуется задать разный стиль для первого и последующих элементов, например сделать "буквицу"- одну единственную в начале документа или обозначить первый абзац текста на всех страницах сайта , выделить первый пункт в списках...и т.д.</p>
+
+<h2>Язык текста.</h2>
+
+<p>Псевдокласс <samp><b>lang</b></samp> определяет язык текста того или иного элемента или документа в целом.</p>
+<p>Если Вы помните из курса HTML, язык документа определяют атрибуты: <samp><b>charset</b></samp> - <strong>кодировка документа</strong> и <samp><b>content</b></samp> - <strong>язык документа</strong> (<a href="http://webremeslo.ru/html/glava10.html#charset" title="Учебник HTML   Глава 10   Мета теги   &quot;Кодировка символов и язык&quot;">http://webremeslo.ru/html/glava10.html#charset</a>) для тега <samp><b>&lt;meta&gt;</b></samp>.</p>
+<div class="primer">
+<samp><b>&lt;meta http-equiv="Content-Type" Content="text/html; Charset=Windows-1251"&gt;</b></samp><br>
+<samp><b>&lt;meta http-equiv="Content-Language" Content="ru"&gt;</b></samp>
+</div>
+<p>Так вот для того чтобы определить язык отдельно взятого текстового блока используют псевдокласс <samp><b>lang()</b></samp> - в круглых скобках которого собственно и указывается язык.</p>
+<p>Язык может быть:</p>
+<ul>
+<li><samp><b>ru</b> - Русский</samp>
+<li><samp><b>en</b> - Английский</samp>
+<li><samp><b>de</b> - Немецкий</samp>
+<li><samp><b>fr</b> - Французский</samp>
+<li><samp><b>it</b> - Итальянский</samp> 
+</ul>
+<p>Всё вместе пишется так:</p>
+<samp class="x"><b>span:lang(en) {font-style: italic}</b></samp><br>
+<p>- здесь мы указали, что текст взятый в контейнер <samp><b>&lt;span&gt;</b></samp> английский и что он должен отображаться курсивом.</p>
+
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Псевдокласс lang&lt;/title&gt;</samp><br>
+<samp class="xx">&lt;meta http-equiv="Content-Type" Content="text/html; Charset=Windows-1251"&gt;</samp><br>
+<samp class="xx">&lt;meta http-equiv="Content-Language" Content="ru"&gt;</samp><br>
+<samp class="xx">&lt;style type="text/css"&gt;</samp><br>
+<samp class="xxx">p:<b>lang(ru)</b> {color: #00f;} </samp><br>
+<samp class="xxx">p:<b>lang(en</b>) {color: #f00;} </samp><br>
+<samp class="xx">&lt;/style&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;p <b>lang="ru"</b>&gt;Русский текст выделен синим&lt;/p&gt;</samp><br>
+<samp class="xx">&lt;p <b>lang="en"</b>&gt;English text is chosen red&lt;/p&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer69.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Обратите внимание, что в теге, в нашем случая параграфе, мы указываем с помощью атрибута <samp><b>lang</b></samp> используемый язык и его стиль: <samp><b>&lt;p lang="en"&gt;текст&lt;/p&gt;</b></samp> прописанный в блоке CSS.</p>
+<p>Так же псевдокласс <samp><b>lang</b></samp> позволяет определять вид кавычек для цитат (тег <samp><b>&lt;q&gt;</b></samp>) с помощью значения <samp><b>quotes</b></samp> - кавычки. В России привычно использовать двойные кавычки, в других странах дела обстоят иначе.</p>
+<p>Пишется так:</p>
+<samp class="x"><b>q:lang(en) {quotes: "\201C" "\201D"}</b></samp>
+<p>В фигурных скобках после значения <samp><b>quotes</b></samp> указывается юникод символа/ов или просто смвол/ы для открывающей и закрывающей кавычки.</p>
+
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Псевдокласс lang. Цитаты.&lt;/title&gt;</samp><br>
+<samp class="xx">&lt;meta http-equiv="Content-Type" Content="text/html; Charset=Windows-1251"&gt;</samp><br>
+<samp class="xx">&lt;meta http-equiv="Content-Language" Content="ru"&gt;</samp><br>
+<samp class="xx">&lt;style type="text/css"&gt;</samp><br>
+<samp class="xxx">div {</samp><br>
+<samp class="xxxx">color:#000;</samp><br>
+<samp class="xxxx">font-size: 24px;</samp><br>
+<samp class="xxx">}</samp><br>
+<samp class="xxx"><b>q:lang(en) {quotes: "\201C" "\201D"}</b></samp><br>
+<samp class="xxx"><b>q:lang(de) {quotes: "\201E" "\201C"}</b></samp><br>
+<samp class="xxx"><b>q:lang(fr) {quotes: "\00AB" "\00BB"}</b></samp><br>
+<samp class="xxx"><b>q:lang(ru) {quotes: "ёклмн.." "..ёпрст"}</b></samp><br>
+<samp class="xx">&lt;/style&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;div&gt;</samp><br>
+<samp class="xxx">&lt;p&gt;Обратите внимание на вид кавычек для цитат:&lt;p&gt;</samp><br>
+<samp class="xxx">&lt;q&gt;Цитата по умолчанию&lt;/q&gt;&lt;br&gt;</samp><br>
+<samp class="xxx">&lt;q <b>lang="fr"</b>&gt;Французская цитата&lt;/q&gt;&lt;br&gt;</samp><br>
+<samp class="xxx">&lt;q <b>lang="de"</b>&gt;Немецкая цитата&lt;/q&gt;&lt;br&gt;</samp><br>
+<samp class="xxx">&lt;q <b>lang="en"</b>&gt;Английская цитата&lt;/q&gt;&lt;br&gt;</samp><br>
+<samp class="xxx">&lt;q <b>lang="ru"</b>&gt;Русская цитата&lt;/q&gt;&lt;br&gt;</samp><br>
+<samp class="xx">&lt;/div&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer70.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<h2>Полезные советы:</h2>
+
+<ul>
+<li><p>Псевдоклассы нельзя внедрять в HTML документ с помощью атрибута <samp><b>style</b></samp>. Можно только с помощью тега <samp><b>&lt;style&gt;</b></samp> в голове документа или внешнего CSS файла.</p>
+<li><p>Если селектор, какого либо псевдокласса, явно не указывать, а написать вот так, например:</p>
+<samp class="x"><b>:hover {color: #ff0}</b></samp> 
+<p>- то это будет значить, что действие данного псевдокласса будет распространятся на все элементы документа.</p>
+<li><p>Браузер IE6 и ниже игнорирует практически все псевдоклассы.</p> 
+</ul>
+<div class="url">
+<a href="glava14.html" title="К предыдущей главе">&lt;&lt; предыдущая глава</a> | 
+<a href="glava16.html" title="К следующей главе">следующая глава &gt;&gt;</a>
+</div>
+</div>
+<!-- Конец центральной колонке -->
+<!-- Подвал -->
+<div class="footer">
+&copy; Автор: Семикопенко Алексей Алексеевич. | <a href="http://webremeslo.ru/" class="logo" title="Перейти на сайт webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец подвалу -->
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Идентификаторы и скрипты</title>
+<script>
+function show_hide(id){
+var item = document.getElementById(id);
+if (item.style.display == 'none') {item.style.display = 'block';}
+else item.style.display = 'none';
+}
+</script>
+</head>
+<body>
+<div id="block" style="display:none">
+<h2 style="color: #ff00ff">А вот и я!!</h2>
+<img src="graphics/rose.gif">
+</div>
+<a href="javascript:show_hide('block')" title="Развернуть/Свернуть" style="color: #ff00ff">Нажми на меня!!</a>
+<hr>
+<div id="block1" style="display:none">
+<h2 style="color: #0000ff">А здесь я!!</h2>
+<img src="graphics/fon.jpg">
+</div>
+<a href="javascript:show_hide('block1')" title="Развернуть/Свернуть" style="color: #0000ff">И на меня нажми!!</a>
+</body>
+</html>
+

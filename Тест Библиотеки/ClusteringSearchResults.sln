@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClusteringSearchResults", "Тест Библиотеки\ClusteringSearchResults.csproj", "{574A2505-5C78-4A00-891E-3868942CC727}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{574A2505-5C78-4A00-891E-3868942CC727}.Debug|x86.ActiveCfg = Debug|x86
+		{574A2505-5C78-4A00-891E-3868942CC727}.Debug|x86.Build.0 = Debug|x86
+		{574A2505-5C78-4A00-891E-3868942CC727}.Release|x86.ActiveCfg = Release|x86
+		{574A2505-5C78-4A00-891E-3868942CC727}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

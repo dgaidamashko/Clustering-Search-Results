@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>ѕсевдокласс first-child</title>
+<style type="text/css">
+div {
+margin: 20px;
+padding: 30px;
+background-color: #c0e4ff;
+border: 2px solid #008000
+}
+p {
+color: #555;
+background-color: #dcdcdc;
+border: 2px solid #555
+}
+p:first-child {
+color: #f00;
+background-color: #c5ffa0;
+border: 2px solid #008000
+}
+</style>
+</head>
+<body>
+<div>
+   <p>первый дочерний параграф - он выделен псевдоклассом first-child</p> 
+   <p>второй дочерний параграф</p>
+   <p>третий дочерний параграф</p>
+</div> 
+<div>
+   <p>и здесь первый дочерний параграф выделен хот€ блок родитель уже другой</p> 
+   <p>второй дочерний параграф</p>
+</div>
+</body>
+</html>

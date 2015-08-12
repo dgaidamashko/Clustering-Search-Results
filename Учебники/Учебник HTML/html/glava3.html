@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Учебник HTML для начинающих.</title>
+<meta HTTP-EQUIV="Content-Type" Content="text/html; Charset=Windows-1251">
+<meta name="author" Content="Семикопенко Алексей Алексеевич">
+<meta name="copyright" Content="Семикопенко Алексей Алексеевич">
+<meta name="Publisher-Email" Content="alex@webremeslo.ru">
+<meta name="Publisher-URL" Content="http://webremeslo.ru/">
+<link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+<body>
+<!-- Шапка -->
+<div class="header">
+<h1 class="logo">Учебник HTML</h1>
+</div>
+<!-- Конец шапке -->
+<!--левая колонка "меню" -->
+<div class="left">
+<div class="fixed">
+<ul class="ul_none">
+<li><a href="../index.html" class="menu" title="От автора.">Главная</a></li>
+<li><a href="glava0.html" class="menu" title="Введение.">Введение</a></li>
+<li><a href="glava1.html" class="menu" title="Перейти к Главе 1   Что такое HTML язык?">Что такое HTML язык</a>  </li>
+<li><a href="glava2.html" class="menu" title="Перейти к Главе 2   Редактируем текст">Редактируем текст</a></li>
+<li><a href="glava3.html" class="activemenu" title="Перейти к Главе 3   Рисунки">Рисунки</a></li>
+<li><a href="glava4.html" class="menu" title="Перейти к Главе 4   Таблицы">Таблицы</a></li>
+<li><a href="glava5.html" class="menu" title="Перейти к Главе 5   Ссылки">Ссылки</a></li>
+<li><a href="glava6.html" class="menu" title="Перейти к Главе 6   И ещё…">И ещё…</a></li>
+<li><a href="glava7.html" class="menu" title="Перейти к Главе 7   Фреймы">Фреймы</a></li>
+<li><a href="glava8.html" class="menu" title="Перейти к Главе 8   Навигационные карты">Навигационные карты</a></li>
+<li><a href="glava9.html" class="menu" title="Перейти к Главе 9   Списки">Списки</a></li>
+<li><a href="glava10.html" class="menu" title="Перейти к Главе 10   Meta теги">Meta теги</a></li>
+<li><a href="glava11.html" class="menu" title="Перейти к Главе 11   Заголовок &lt;!DOCTYPE&gt;">Заголовок &lt;!DOCTYPE&gt;</a></li>
+<li><a href="glava12.html" class="menu" title="Перейти к Главе 12   И снова таблицы..">И снова таблицы..</a></li>
+<li><a href="glava13.html" class="menu" title="Перейти к Главе 13   Фоновая музыка">Фоновая музыка</a></li>
+<li><a href="glava14.html" class="menu" title="Перейти к Главе 14   Текст - логика и физика">Текст - логика и физика</a></li>
+</ul>
+</div>
+</div>
+<!-- Конец левой колонке -->
+<!-- Правая колонка -->
+<div class="right">
+<h2>А так же:</h2>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">Как создать сайт?</a>
+<a href="http://www.webremeslo.ru/css/glava0.html" class="menu" title="www.webremeslo.ru">Учебник CSS</a>
+<a href="http://www.webremeslo.ru/spravka/spravka.html" class="menu" title="www.webremeslo.ru">Справочник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka4.html" class="menu" title="www.webremeslo.ru">Справочник CSS</a>
+<a href="http://forum.webremeslo.ru/index.php" class="menu" title="www.webremeslo.ru">Форум</a><br>
+..<em>и многое другое на сайте:</em><br>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец правой колонке -->
+<!-- Центральная колонка -->
+<div class="center">
+
+<p class="zag">Глава 3</p>
+<h1>Рисунки.</h1>
+<p>В этой главе я расскажу о том как добавить на нашу страничку графические изображения фотографию например, или рисунок, а также о том, что можно с ними вытворять используя предложенный набор тегов html языка.</p>
+<h2>Путь к файлу</h2>
+<p>Итак, допустим Вы пишете сайт о себе любимом и хотите вставить в него свою фотографию, чтобы люди зашедшие на страничку смогли не только читать Ваши рукописи, но и вдоволь полюбоваться Вашим портретом.</p>
+<p>Есть у Вас значит фотография, которая где-то лежит на Вашем жёстком диске.. копируем ёе и вставляем в ту папку (директорию) где уже лежит заготовка будущей страницы, ну то есть туда же, куда сохраняете блокнотом html документ. Так, вот для того чтобы теперь вставить её в нашу страничку к ней нужно указать путь.</p>
+<p>делается это так:</p> 
+<samp><b>&lt;img src="foto.jpg"&gt;</b></samp>
+<p>Где <samp><b>foto.jpg</b></samp> это название Вашей фотографии в данном случае, так как фото лежит рядом с html документом, путь к ней мы не указываем.</p>
+<p>Да, помните, тег <samp><b>&lt;img&gt;</b></samp> не требует закрывающего тега!</p>
+<p>Теперь приведу ряд примеров где путь указывается:</p>
+<samp><b>&lt;img src="myfoto/foto.jpg"&gt;</b></samp> -  Такая запись подразумевает, что в директории где расположен наш html документ есть папка  myfoto в которой расположен файл foto.jpg<br>
+<samp><b>&lt;img src="myfoto/graphics/foto.jpg"&gt;</b></samp> - Значит рядом с документом расположена папка myfoto, в ней еще одна папка с названием graphics, и уже в ней нужная нам фотография foto.jpg которую нужно выложить для всеобщего обозрения.<br>
+<samp><b>&lt;img src="../foto.jpg"&gt;</b></samp> - А это значит, что фото размещено на уровень выше от документа<br>
+<samp><b>&lt;img src="../../foto.jpg"&gt;</b></samp> - Так соответственно на два уровня выше, сколько поставите../ настолько и поднимитесь.<br>
+<p>Так же можно указывая место фотографии, ссылаться на тот или иной интернет ресурс<br>
+<samp><b>&lt;img src="http://www.site.ru/foto/foto.jpg"&gt;</b></samp></p>
+<p>Ну что, давайте попробуем выложить фото.</p> 
+<p>Вот мой пример:</p>
+
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Моя первая страничка с фото&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body text="#484800" bgcolor="#e8e8e8"&gt;</samp><br>
+<samp class="xx">&lt;center&gt;</samp><br>  
+<samp class="xxx">&lt;h2&gt; &lt;font color="#008000"&gt; Привет мир!!!&lt;/font&gt; &lt;/h2&gt;</samp><br>
+<samp class="xx">&lt;/center&gt;</samp><br>  
+<samp class="xx">&lt;p align="justify"&gt;</samp><br> 
+<samp class="xxx">&lt;font size="+1"&gt;</samp><br>
+<samp class="xxxx"><b>&lt;img src="graphics/foto.jpg"&gt;</b></samp><br>
+<samp class="xxxx">Меня зовут Карлсон! Я в меру упитанный мужчина - это моя первая страничка!  Здесь я хочу найти себе новых друзей, для того чтобы вместе гулять по крышам! Я очень очень сильно люблю &lt;font size="+2" color="#ff0000"&gt;вареньё!!!&lt;/font&gt; С нетерпеньем буду ждать Вашего приглашения на чай. Прилечу!!</samp><br>
+<samp class="xxx">&lt;/font&gt;</samp><br> 
+<samp class="xx">&lt;/p&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer7.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Как видно из этого примера фотография появилась, но вместе со своим появлением сдвинула текст, а не хотелось бы..</p>
+<h2>Атрибуты тега &lt;img&gt;</h2>
+<p>Поговорим о расположении изображений относительно текста.</p>
+<p>Как и другие теги <samp><b>&lt;img&gt;</b></samp> тоже имеет свои атрибуты.. уже знакомый нам атрибут <samp><b>align</b></samp> "выравнивание" применим и к данному тегу</p>
+<samp><b>&lt;img src="foto.jpg" align="left"&gt;</b></samp> - фото слева от текста<br>
+<samp><b>&lt;img src="foto.jpg" align="right"&gt;</b></samp> - фото справа от текста<br>
+<samp><b>&lt;img src="foto.jpg" align="top"&gt;</b></samp> - текст выше фото<br>
+<samp><b>&lt;img src="foto.jpg" align="bottom"&gt;</b></samp> - текст ниже фото<br>
+<samp><b>&lt;img src="foto.jpg" align="middle"&gt;</b></samp> - ну и соответственно текст посередине<br>
+<p>Помимо <samp><b>align</b></samp> тег<b> &lt;img&gt; </b> имеет еще ряд атрибутов, но сначала расскажу немного о пикселях. Пиксель (точка), наверное Вы не раз слышали это слово и думаю основная масса народа которая держала мышку в руках знает что это такое, но всё же.. Пиксель -это элементарная неделимая единица изображения. Каждый пиксель имеет свои координаты, например, самый верхний левый пиксель на мониторе имеет координаты x=1, y=1, а самый нижний правый в зависимости от разрешения монитора..  x=800, y=600 - будет соответственно при разрешении  800 на 600 точек. Впрочем, эта информация пригодится нам потом, а сейчас нужно усвоить, что все расстояния в графических изображениях меряются пикселями..  так картинка длинной 800 пикселей и шириной в 600 пикселей при указанном разрешении заполнит весь экран.</p>
+<p>Теперь продолжим..</p>
+<samp><b>&lt;img src="foto.jpg" vspace="15"&gt;</b></samp> - Атрибут <samp><b>vspace</b></samp> задаёт расстояние по вертикали от рисунка до текста, в данном случае мы задали расстояние в 15 пикселей<br>
+<samp><b>&lt;img src="foto.jpg" hspace="25"&gt;</b></samp> - Расстояние по горизонтали соответственно <br>  
+<samp><b>&lt;img src="foto.jpg" width="180"&gt;</b></samp> - Ширина непосредственно самого изображения <br>
+<samp><b>&lt;img src="foto.jpg" height="240"&gt;</b></samp> - Высота изображения. Если атрибуты <samp><b>width</b></samp> и <samp><b>height</b></samp> не использовать, то ширина и высота изображения по умолчанию будет равна реальным её размерам, без каких либо искажений.<br> 
+<samp><b>&lt;img src="foto.jpg" border="5"&gt;</b></samp>- Бордюр, рамка вокруг изображения и её толщина в пикселях.<br>
+<samp><b>&lt;img src="foto.jpg" border="5"  bordercolor="#008000 "&gt; - bordercolor</b></samp> - это цвет рамки.<br>  
+<samp><b>&lt;img src="foto.jpg" alt="Это моя фотка!!!"&gt;</b></samp> -Атрибут <samp><b>alt</b></samp> - это описание изображения. Если навести курсор на наше фото и подержать его там несколько секунд, выскочит надпись -Это моя фотка!!!<br>
+<samp><b>&lt;img src="foto.jpg" title="Это моя фотка!!!"&gt;</b></samp> - альтернатива <samp><b>alt</b></samp> в данном случае.<br>
+<p>А еще изображение можно сделать фоном страницы.. для этого используем атрибут <samp><b>background</b></samp> "фон" открывающего тега <samp><b>&lt;body&gt;</b></samp></p>
+<p>Вот так:</p>
+<samp><b>&lt;body background="foto.jpg"&gt;</b></samp>
+<h2>Выравнивание рисунка.</h2>
+<p>Теперь расскажу о том как разместить нашу фотографию в нужном месте страницы. На самом деле об этом я уже рассказывал.. вспомните вторую главу, где говорилось о том как можно выровнять текст.. эти же теги применимы и к выравниванию изображения… так что, пожалуй, повторятся не буду, просто приведу пример, а Вы уж самими подумайте почему одно и тоже фото очутилось в том или ином месте..</p>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;html&gt; </samp><br>
+<samp class="x">&lt;head&gt; </samp><br>
+<samp class="xx">&lt;title&gt;Расположение изображения&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;img src="foto.jpg "&gt; </samp><br>
+<samp class="xx"><b>&lt;center&gt;</b>&lt;img src="foto.jpg "&gt;<b>&lt;/center&gt;</b></samp><br>
+<samp class="xx"><b>&lt;div align="left"</b>&gt;&lt;img src="foto.jpg"&gt;<b>&lt;/div&gt;</b></samp><br>
+<samp class="xx">&lt;br&gt;</samp><br>
+<samp class="xx"><b>&lt;div align="right"&gt;</b>&lt;img src="foto.jpg"&gt;<b>&lt;/div&gt;</b></samp><br>
+<samp class="xx">&lt;br&gt; </samp><br>
+<samp class="xx"><b>&lt;div align="center</b>"&gt;&lt;img src="foto.jpg"&gt;<b>&lt;/div&gt;</b></samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer8.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Советую Вам самостоятельно поупражняется с размещением фотографии на своей странице. Меняйте размеры, положения, используйте различные сочетания с текстом, отступы, рамки.. Тренируйтесь!</p>
+<p>Итог главы:</p>
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Моя первая страничка с фото&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body text="#484800" bgcolor="#ffffff" <b>background="graphics/fon.jpg"&gt;</b></samp><br>
+<samp class="xx">&lt;center&gt;</samp><br>
+<samp class="xxx"><b>&lt;img src="graphics/privet.png" width="400" height="80" alt="Привет мир!!!"&gt;</b></samp><br>
+<samp class="xx">&lt;/center&gt;</samp><br>
+<samp class="xx">&lt;p align="justify"&gt;</samp><br>
+<samp class="xxx"><b>&lt;img src="graphics/foto.jpg" align="left" hspace="15" width="140" height="120" alt="Это моя фотка!!!"&gt;</b></samp><br>
+<samp class="xxx">&lt;font size="+1"&gt;</samp><br> 
+<samp class="xxxx">&amp;nbsp;&amp;nbsp;Меня зовут Карлсон! Я в меру упитанный мужчина - это моя первая страничка! Здесь я хочу найти себе новых друзей, для того чтобы вместе гулять по крышам! Я очень очень сильно люблю &lt;font  size="+2" color="#ff0000"&gt;вареньё!!!&lt;/font&gt; С нетерпеньем буду ждать Вашего  приглашения на чай. Прилечу!!</samp><br>
+<samp class="xxx">&lt;/font&gt;</samp><br>  
+<samp class="xx">&lt;/p&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer9.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Единственное, что Вам в этом примере не знакомо так это надпись - <samp><b>&amp;nbsp;</b></samp> - это есть так называемый спецсимвол в данном случае - пробел.. о спецсимволах и их назначении я расскажу более подробно в отдельной <a href="glava6.html" title="Перейти к главе 6. И еще..">главе.</a></p> 
+<p>Честно говоря, мне мой пример не сильно по вкусу, неряшливо как-то.. Но цель показать, что можно делать с изображениями думаю достигнута..</p>
+
+<h2>Полезные советы:</h2>
+<ul>
+<li><p>Используя графику, будьте осторожны.. не стоит размещать на своей странице большие весом мегабайтные изображения, пожалейте время и деньги посетителей страницы. Большой объём графики при низкой скорости интернета может привести к тому, что посетитель закроет Вашу страницу ещё до того момента как она загрузится.</p>
+<li><p>Помните, что есть пользователи, которые умышленно в своём браузере отключают загрузку рисунков, дабы сэкономить на трафике, а по сему рекомендую соблюдать следующие советы:</p>
+<li><p>Если рисунки выполняют роль кнопок <a href="glava5.html" title="Перейти к главе 5. Ссылки.">(см. глава ссылки)</a>, обязательно подписывайте их (атрибут <samp><b>alt</b></samp>) к примеру: "Перейти на главную страницу" или "Скачать" дабы человек с отключенной графикой мог хоть как-то ориентироваться на Вашей странице.</p>
+<li><p>Используя картинку в качестве фона документа дублируйте ёё заливкой фона каким либо подходящим для фона страницы цветом  (атрибут <samp><b>bgcolor</b></samp> тега <samp><b>&lt;body&gt;</b></samp>)</p> 
+<p>вот так например:</p>
+<samp><b>&lt;body bgcolor="#008000" background="fon.jpg"&gt;</b></samp> 
+<p>Это будет значить, что если к примеру не загрузится Ваша изысканная зелёная текстура, фон будет просто зелёным - что лучше, нежели чем белый цвет  в общем дизайнерском решении сайта.</p>
+</ul>
+
+
+<div class="url">
+<a href="glava2.html" title="К предыдущей главе">&lt;&lt; предыдущая глава</a> | 
+<a href="glava4.html" title="К следующей главе">следующая глава &gt;&gt;</a>
+</div>
+</div>
+<!-- Конец центральной колонке -->
+<!-- Подвал -->
+<div class="footer">
+&copy; Автор: Семикопенко Алексей Алексеевич. | <a href="http://webremeslo.ru/" class="logo" title="Перейти на сайт webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец подвалу -->
+</body>
+</html>

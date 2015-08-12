@@ -1,0 +1,646 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Учебник HTML для начинающих.</title>
+<meta HTTP-EQUIV="Content-Type" Content="text/html; Charset=Windows-1251">
+<meta name="author" Content="Семикопенко Алексей Алексеевич">
+<meta name="copyright" Content="Семикопенко Алексей Алексеевич">
+<meta name="Publisher-Email" Content="alex@webremeslo.ru">
+<meta name="Publisher-URL" Content="http://webremeslo.ru/">
+<link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+<body>
+<!-- Шапка -->
+<div class="header">
+<h1 class="logo">Учебник HTML</h1>
+</div>
+<!-- Конец шапке -->
+<!--левая колонка "меню" -->
+<div class="left">
+<div class="fixed">
+<ul class="ul_none">
+<li><a href="../index.html" class="menu" title="От автора.">Главная</a></li>
+<li><a href="glava0.html" class="menu" title="Введение.">Введение</a></li>
+<li><a href="glava1.html" class="menu" title="Перейти к Главе 1   Что такое HTML язык?">Что такое HTML язык</a></li>
+<li><a href="glava2.html" class="menu" title="Перейти к Главе 2   Редактируем текст">Редактируем текст</a></li>
+<li><a href="glava3.html" class="menu" title="Перейти к Главе 3   Рисунки">Рисунки</a></li>
+<li><a href="glava4.html" class="menu" title="Перейти к Главе 4   Таблицы">Таблицы</a></li>
+<li><a href="glava5.html" class="menu" title="Перейти к Главе 5   Ссылки">Ссылки</a></li>
+<li><a href="glava6.html" class="menu" title="Перейти к Главе 6   И ещё…">И ещё…</a></li>
+<li><a href="glava7.html" class="menu" title="Перейти к Главе 7   Фреймы">Фреймы</a></li>
+<li><a href="glava8.html" class="menu" title="Перейти к Главе 8   Навигационные карты">Навигационные карты</a></li>
+<li><a href="glava9.html" class="menu" title="Перейти к Главе 9   Списки">Списки</a></li>
+<li><a href="glava10.html" class="menu" title="Перейти к Главе 10   Meta теги">Meta теги</a></li>
+<li><a href="glava11.html" class="menu" title="Перейти к Главе 11   Заголовок &lt;!DOCTYPE&gt;">Заголовок &lt;!DOCTYPE&gt;</a></li>
+<li><a href="glava12.html" class="activemenu" title="Перейти к Главе 12   И снова таблицы..">И снова таблицы..</a></li>
+<li><a href="glava13.html" class="menu" title="Перейти к Главе 13   Фоновая музыка">Фоновая музыка</a></li>
+<li><a href="glava14.html" class="menu" title="Перейти к Главе 14   Текст - логика и физика">Текст - логика и физика</a></li>
+</ul>
+</div>
+</div>
+<!-- Конец левой колонке -->
+<!-- Правая колонка -->
+<div class="right">
+<h2>А так же:</h2>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">Как создать сайт?</a>
+<a href="http://www.webremeslo.ru/css/glava0.html" class="menu" title="www.webremeslo.ru">Учебник CSS</a>
+<a href="http://www.webremeslo.ru/spravka/spravka.html" class="menu" title="www.webremeslo.ru">Справочник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka4.html" class="menu" title="www.webremeslo.ru">Справочник CSS</a>
+<a href="http://forum.webremeslo.ru/index.php" class="menu" title="www.webremeslo.ru">Форум</a><br>
+..<em>и многое другое на сайте:</em><br>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец правой колонке -->
+<!-- Центральная колонка -->
+<div class="center">
+
+<p class="zag">Глава 12</p>
+<h1>И снова таблицы..</h1>
+<p>Данная глава является продолжением 4 главы <a href="glava4.html" title="Перейти к Главе 4   Таблицы">про таблицы</a>, отложил я её на потом по нескольким причинам. Во-первых, четвёртая глава и без того получилась длинноватой и "неповоротливой".. Во-вторых, не хотел, что бы Вы на тот момент погрязли в изучении таблиц и так сказать топтались на месте.. обучение, на мой взгляд, должно происходить живенько, интересно, а главное результативно! Зато теперь, когда у Вас сложилось общее представление о HTML, Вы разобрались с его базовой частью, сделали свой первый нехитрый сайт,  можно наращивать багаж знаний, умений и навыков.   Ну и в-третьих, я надеюсь, что Вы к этому времени, параллельно начали <b>изучать CSS:</b> <a href="http://www.webremeslo.ru/css/glava0.html" title="Раздел &quot;Учебник CSS&quot; сайта webremeslo.ru">(http://www.webremeslo.ru/css/glava0.html)</a>.. что разве ещё нет? жаль.. Дело в том, что далее в этом учебнике нет нет будут попадаться вещи, которые сами по себе могут показаться бесполезными и бессмысленными, однако в купе с другими науками они порой незаменимы!</p>
+<p>Ладно, вернёмся к таблицам..</p>
+
+<p>В качестве "полигона" для изучения нового материала возьмём вот такую жутко скучную таблицу:</p>
+
+<table border="1" width="400" cellpadding="3" cellspacing="0">
+ <tr>
+   <td>Продукт</td><td>Белки</td><td>Жиры</td><td>Углеводы</td><td>ккал</td>
+ </tr>
+ <tr>
+   <td>Хлеб ржаной</td><td>4,7</td><td>0,7</td><td>49,8</td><td>214</td>
+ </tr>
+ <tr>
+   <td>Молоко</td><td>2,8</td><td>3,2</td><td>4,7</td><td>58</td>
+ </tr>
+ <tr>
+   <td>Картофель</td><td>2</td><td>0,1</td><td>19,7</td><td>83</td>
+ </tr>
+ <tr>
+   <td>Свинина</td><td>11,4</td><td>49,3</td><td>9</td><td>489</td>
+ </tr>
+ <tr>
+   <td>Итого:</td><td>20,9</td><td>53,3</td><td>83,2</td><td>844</td>
+ </tr>
+</table>
+
+<p>Ну что ж, давайте поколдуем над ней..</p>
+<h2>Заголовки таблиц.</h2>
+
+<p>Любая ячейка таблицы может быть определена как заголовок. Для того чтобы сделать ячейку таблицы заголовком нужно вместо знакомого тега <samp><b>&lt;td&gt;</b></samp> использовать тег <samp><b>&lt;th&gt;</b></samp>.</p>
+<p>Например, вот так:</p>
+<samp class="x">&lt;table&gt;</samp><br>
+<samp class="xx">&lt;tr&gt;</samp><br>
+<samp class="xxx"><b>&lt;th&gt;Данная ячейка является заголовком&lt;/th&gt;</b></samp><br> 
+<samp class="xx">&lt;/tr&gt;</samp><br>
+<samp class="x">&lt;/table&gt;</samp>
+
+<p>Как правило, текст ячейки определённый в качестве заголовка отображается браузерами жирным шрифтом по центру ячейки.</p>
+<p>Ну что давайте попробуем сделать некоторые ячейки нашей таблицы заголовками? смотрим пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Заголовок таблицы&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;table border="1" width="400" cellpadding="3" cellspacing="0"&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx"><b>&lt;th&gt;</b>Продукт<b>&lt;/th&gt;&lt;th&gt;</b>Белки<b>&lt;/th&gt;&lt;th&gt;</b>Жиры<b>&lt;/th&gt;&lt;th&gt;</b>Углеводы<b>&lt;/th&gt;&lt;th&gt;</b>ккал<b>&lt;/th&gt;</b></samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx"><b>&lt;th&gt;</b>Хлеб ржаной<b>&lt;/th&gt;</b>&lt;td&gt;4,7&lt;/td&gt;&lt;td&gt;0,7&lt;/td&gt;&lt;td&gt;49,8&lt;/td&gt;&lt;td&gt;214&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx"><b>&lt;th&gt;</b>Молоко<b>&lt;/th&gt;</b>&lt;td&gt;2,8&lt;/td&gt;&lt;td&gt;3,2&lt;/td&gt;&lt;td&gt;4,7&lt;/td&gt;&lt;td&gt;58&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx"><b>&lt;th&gt;</b>Картофель<b>&lt;/th&gt;</b>&lt;td&gt;2&lt;/td&gt;&lt;td&gt;0,1&lt;/td&gt;&lt;td&gt;19,7&lt;/td&gt;&lt;td&gt;83&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;th&gt;Свинина&lt;/th&gt;&lt;td&gt;11,4&lt;/td&gt;&lt;td&gt;49,3&lt;/td&gt;&lt;td&gt;9&lt;/td&gt;&lt;td&gt;489&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx"><b>&lt;th&gt;</b>Итого:<b>&lt;/th&gt;</b>&lt;td&gt;20,9&lt;/td&gt;&lt;td&gt;53,3&lt;/td&gt;&lt;td&gt;83,2&lt;/td&gt;&lt;td&gt;844&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xx">&lt;/table&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer61.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>К тегу <samp><b>&lt;th&gt;</b></samp> могут применятся точно такие же атрибуты как и к тегу <samp><b>&lt;td&gt;</b></samp> о них мы говорили в 4 главе поэтому повторятся не буду, а просто перечислю их:</p>
+<ul>
+<li><samp><b>width</b></samp> - Ширина ячейки в процентах или пикселях.
+<li><samp><b>height</b></samp> - Высота ячейки в процентах или пикселях.
+
+<li><samp><b>align</b></samp> - Выравнивает текст в ячейке: 
+<ul>
+<li><samp><b>left</b></samp> - по левому краю.
+<li><samp><b>right</b></samp> - по правому краю.
+<li><samp><b>center</b></samp> - по центру.
+<li><samp><b>justify</b></samp> - по левому и правому краю.
+</ul>
+<li><samp><b>valign</b></samp> - Выравнивает текст в ячейке по вертикали: 
+<ul>
+<li><samp><b>top</b></samp> - по верхнему краю.
+<li><samp><b>middle</b></samp> - по центру.
+<li><samp><b>bottom</b></samp> - по нижнему краю.
+<li><samp><b>baseline</b></samp> - по базовой линии.
+</ul>
+<li><samp><b>colspan</b></samp> - количество столбцов занимаемое ячейкой.
+<li><samp><b>rowspan</b></samp> - количество рядов занимаемое ячейкой.
+<li><samp><b>bgcolor</b></samp> - Цвет фона ячейки.
+<li><samp><b>background</b></samp> - Задает фоновый рисунок в ячейке.
+<li><samp><b>bordercolor</b></samp> - Цвет бордюра.
+<li><samp><b>title</b></samp> - Всплывающая подсказка
+<li><samp><b>nowrap</b></samp> - Запрещает перенос строк в ячейке.
+</ul>
+
+<p>Думаю понятно, а посему идем дальше..</p>
+
+<h2>Название таблицы и её описание</h2>
+<p>Тег <samp><b>&lt;caption&gt;</b></samp> позволяет озаглавить таблицу, подписать её каким либо текстом. Данный тег должен располагаться внутри таблицы сразу после <samp><b>&lt;table&gt;</b></samp></p>
+
+<samp class="x">&lt;table&gt;</samp><br>
+<samp class="xx"><b>&lt;caption&gt;Название таблицы&lt;/caption&gt;</b></samp><br> 
+<samp class="xx">&lt;tr&gt;</samp><br>
+<samp class="xxx">&lt;td&gt;ячейка&lt;/td&gt;</samp><br> 
+<samp class="xx">&lt;/tr&gt;</samp><br>
+<samp class="x">&lt;/table&gt;</samp><br>
+<p>Вот пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Название таблицы&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;table border="1" width="400" cellpadding="3" cellspacing="0"&gt;</samp><br>
+<samp class="xxx"><b>&lt;caption&gt;</b>&lt;b&gt;Энергетическая ценность продуктов питания:&lt;/b&gt;<b>&lt;/caption&gt;</b></samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;th&gt;Продукт&lt;/th&gt;&lt;th&gt;Белки&lt;/th&gt;&lt;th&gt;Жиры&lt;/th&gt;&lt;th&gt;Углеводы&lt;/th&gt;&lt;th&gt;ккал&lt;/th&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;th&gt;Хлеб ржаной&lt;/th&gt;&lt;td&gt;4,7&lt;/td&gt;&lt;td&gt;0,7&lt;/td&gt;&lt;td&gt;49,8&lt;/td&gt;&lt;td&gt;214&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;th&gt;Молоко&lt;/th&gt;&lt;td&gt;2,8&lt;/td&gt;&lt;td&gt;3,2&lt;/td&gt;&lt;td&gt;4,7&lt;/td&gt;&lt;td&gt;58&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;th&gt;Картофель&lt;/th&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;0,1&lt;/td&gt;&lt;td&gt;19,7&lt;/td&gt;&lt;td&gt;83&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;th&gt;Свинина&lt;/th&gt;&lt;td&gt;11,4&lt;/td&gt;&lt;td&gt;49,3&lt;/td&gt;&lt;td&gt;9&lt;/td&gt;&lt;td&gt;489&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;th&gt;Итого:&lt;/th&gt;&lt;td&gt;20,9&lt;/td&gt;&lt;td&gt;53,3&lt;/td&gt;&lt;td&gt;83,2&lt;/td&gt;&lt;td&gt;844&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xx">&lt;/table&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer62.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>К тегу <samp><b>&lt;caption&gt;</b></samp> может быть применён атрибут <samp><b>align</b></samp> - выравнивание названия таблицы по горизонтали с возможными значениями <samp><b>left</b>, <b>right</b> и <b>center</b></samp>, а также атрибут <samp><b>valign</b></samp> который говорит от том где должно располагаться название сверху - <samp><b>top</b></samp> или снизу - <samp><b>bottom</b></samp> таблицы.</p>
+<p>Однако хочу отметить, что данные атрибуты в разных браузерах ведут себя по разному, так например, запись:</p>
+<samp class="x"><b>&lt;caption align="left"&gt;Текст&lt;/caption&gt;</b></samp>
+<p>- для браузеров IE и Opera разместит название сверху таблицы по её левому краю, а для браузера Firefox это будет значить, что название следует размещать слева от самой таблицы.</p>
+<p>Так же название таблицы или её краткое описание можно указывать с помощью атрибута <samp><b>summary</b></samp> тега <samp><b>&lt;table&gt;</b></samp></p>
+<p>Вот так:</p>
+<samp class="x"><b>&lt;table summary="описание таблицы"&gt;</b></samp>
+<p>Такое описание никак не отображается и не выводится на экран обычными браузерами, однако может быть использовано поисковыми системами, а так же речевыми браузерами.</p>
+<p>Пример:</p>
+
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Описание таблицы&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;table border="1" width="400" cellpadding="3" cellspacing="0" <b>summary="Энергетическая ценность продуктов питания"</b>&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;th&gt;Продукт&lt;/th&gt;&lt;th&gt;Белки&lt;/th&gt;&lt;th&gt;Жиры&lt;/th&gt;&lt;th&gt;Углеводы&lt;/th&gt;&lt;th&gt;ккал&lt;/th&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;th&gt;Хлеб ржаной&lt;/th&gt;&lt;td&gt;4,7&lt;/td&gt;&lt;td&gt;0,7&lt;/td&gt;&lt;td&gt;49,8&lt;/td&gt;&lt;td&gt;214&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;th&gt;Молоко&lt;/th&gt;&lt;td&gt;2,8&lt;/td&gt;&lt;td&gt;3,2&lt;/td&gt;&lt;td&gt;4,7&lt;/td&gt;&lt;td&gt;58&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;th&gt;Картофель&lt;/th&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;0,1&lt;/td&gt;&lt;td&gt;19,7&lt;/td&gt;&lt;td&gt;83&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;th&gt;Свинина&lt;/th&gt;&lt;td&gt;11,4&lt;/td&gt;&lt;td&gt;49,3&lt;/td&gt;&lt;td&gt;9&lt;/td&gt;&lt;td&gt;489&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;th&gt;Итого:&lt;/th&gt;&lt;td&gt;20,9&lt;/td&gt;&lt;td&gt;53,3&lt;/td&gt;&lt;td&gt;83,2&lt;/td&gt;&lt;td&gt;844&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xx">&lt;/table&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer69.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<h2>Группировка строк.</h2>
+<p>Знакомимся с тегами: <samp><b>&lt;thead&gt;</b>, <b>&lt;tbody&gt;</b> и <b>&lt;tfoot&gt;</b></samp>. Данные теги являют собой емкость для строк таблицы (тег <samp><b>&lt;tr&gt;</b></samp>) позволяя тем самым группировать и логически ими управлять.</p>
+<p>Так:</p>
+<ul>
+<li>Тег <samp><b>&lt;thead&gt;</b></samp> - (От Англ. table head - "голова" таблицы) Предназначен для группировки одной или нескольких верхних строк в таблице, делая тем самым "шапку" таблицы.
+<li>Тег <samp><b>&lt;tbody&gt;</b></samp> - (От Англ. table body - "тело" таблицы), Как правило этим тегом группируют центральные строки в таблице с основным содержанием.
+<li>Тег <samp><b>&lt;tfoot&gt;</b></samp> - (От Англ. table footer - нижний колонтитул таблицы) Определяет "подвал" таблицы, состоящий из одной или нескольких нижних строк.
+</ul>
+<p>Следует отметить несколько правил использования данных тегов:</p>
+
+<p>Данные теги могут быть расположены  только внутри таблицы - контейнера <samp><b>&lt;table&gt;</b></samp>.</p>
+<p>Теги <samp><b>&lt;thead&gt;</b></samp> и <samp><b>&lt;tfoot&gt;</b></samp> допускается использовать только один раз для одной таблицы, на тег <samp><b>&lt;tbody&gt;</b></samp> данное правило не распространяется.</p>
+<p>Структура таблицы при использовании всех трёх данных тегов должна выглядеть вот так:</p>
+
+<samp class="x">&lt;table&gt;</samp><br>
+<samp class="xx"><b>&lt;thead&gt;</b></samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt;голова&lt;/td&gt; </samp><br>
+<samp class="xxx">&lt;/tr&gt; </samp><br>
+<samp class="xx"><b>&lt;/thead&gt;</b></samp><br>
+<samp class="xx"><b>&lt;tbody&gt;</b></samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt; тело&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt; </samp><br>
+<samp class="xx"><b>&lt;/tbody&gt;</b></samp><br>
+<samp class="xx"><b>&lt;tfoot&gt;</b></samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt;подвал&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt; </samp><br>
+<samp class="xx"><b>&lt;/tfoot&gt;</b></samp><br>
+<samp class="x">&lt;/table&gt;</samp>
+
+<p>То есть сверху всегда должен быть контейнер <samp><b>&lt;thead&gt;</b></samp> потом <samp><b>&lt;tbody&gt;</b></samp> и <samp><b>&lt;tfoot&gt;</b></samp>, данные теги не могут пересекаться   и быть вложенными друг в друга. А вот тег <samp><b>&lt;tfoot&gt;</b></samp> можно поменять местами с <samp><b>&lt;tbody&gt;</b></samp>, и что примечательно строки  взятые в данный тег всё равно браузерами будут отображаться внизу таблицы.</p>
+<p>К данным тегам допускается применять атрибуты выравнивания текста в ячейках <samp><b>align</b></samp> и <samp><b>valign</b></samp>, указывать цвет фона строк взятых в группу с помощью <samp><b>bgcolor</b></samp>, делать всплывающую подсказку с помощью <samp><b>title</b></samp>, однако на практике  работать во всех браузерах будет только <samp><b>align</b></samp> и <samp><b>title</b></samp>.</p>
+<p>Просто ради информации.. есть ещё атрибуты:</p>
+<ul>
+<li><i><samp><b>char</b></samp> - Выравнивание относительно заданного символа.</i>
+<li><i><samp><b>charoff</b></samp> - Смещение относительно указанного символа.</i>
+</ul>
+<p>Но эти товарищи вообще не прижились ни в одном из известных браузеров! Толку с них как с козла молока.</p>
+<p>Так зачем спросите Вы вообще нужны теги группирования строк если с помощью них практически ничего не сделать? Отвечу чуть ниже, а пока смотрим пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Группировка строк&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;table border="1" width="400" cellpadding="3" cellspacing="0"&gt;</samp><br>
+<samp class="xxx">&lt;caption&gt;&lt;b&gt;Энергетическая ценность продуктов питания:&lt;/b&gt;&lt;/caption&gt;</samp><br>
+<samp class="xxx"><b>&lt;thead bgcolor ="#deb887" title="Шапка"&gt;</b></samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;th&gt;Продукт&lt;/th&gt;&lt;th&gt;Белки&lt;/th&gt;&lt;th&gt;Жиры&lt;/th&gt;&lt;th&gt;Углеводы&lt;/th&gt;&lt;th&gt;ккал&lt;/th&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx"><b>&lt;/thead&gt;</b></samp><br>
+<samp class="xxx"><b>&lt;tbody align="left" bgcolor ="#faebd7" title="Энергетическая ценность продуктов питания"&gt;</b></samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;th&gt;Хлеб ржаной&lt;/th&gt;&lt;td&gt;4,7&lt;/td&gt;&lt;td&gt;0,7&lt;/td&gt;&lt;td&gt;49,8&lt;/td&gt;&lt;td&gt;214&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;th&gt;Молоко&lt;/th&gt;&lt;td&gt;2,8&lt;/td&gt;&lt;td&gt;3,2&lt;/td&gt;&lt;td&gt;4,7&lt;/td&gt;&lt;td&gt;58&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;th&gt;Картофель&lt;/th&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;0,1&lt;/td&gt;&lt;td&gt;19,7&lt;/td&gt;&lt;td&gt;83&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;th&gt;Свинина&lt;/th&gt;&lt;td&gt;11,4&lt;/td&gt;&lt;td&gt;49,3&lt;/td&gt;&lt;td&gt;9&lt;/td&gt;&lt;td&gt;489&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx"><b>&lt;/tbody&gt;</b></samp><br>
+<samp class="xxx"><b>&lt;tfoot align="left" bgcolor ="#f5f5dc" title="Итого:"&gt;</b></samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;th&gt;Итого:&lt;/th&gt;&lt;td&gt;20,9&lt;/td&gt;&lt;td&gt;53,3&lt;/td&gt;&lt;td&gt;83,2&lt;/td&gt;&lt;td&gt;844&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx"><b>&lt;/tfoot&gt;</b></samp><br>
+<samp class="xx">&lt;/table&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer63.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Теперь отвечу, зачем вообще нужны <samp><b>&lt;thead&gt;</b>, <b>&lt;tbody&gt;</b> и <b>&lt;tfoot&gt;</b></samp>..</p>
+<p>Основное предназначение данных тегов это логическая группировка строк в группы, а это в свою очередь облегчает работу с таблицей, например через стили или скрипты, теперь не нужно определять тот же стиль для каждой строчки, а достаточно указать его для всей группы.. Я сказал стиль? Ах да я же забыл, что Вы еще незнакомы с CSS..</p>
+<p>Выходя за рамки темы данной главы, хочу отметить, что практически к любому тегу применим замечательный атрибут <samp><b>style</b></samp>, с помощью которого можно сделать практически все, что касается дизайна того или иного элемента..  А еще есть не менее замечательный тег <samp><b>&lt;style&gt;</b></samp> который внедряет в страницу стили CSS.. но это всё материал из другого <b>учебника:</b> <a href="http://www.webremeslo.ru/css/glava0.html" title="Раздел &quot;Учебник CSS&quot; сайта webremeslo.ru">(http://www.webremeslo.ru/css/glava0.html)</a>, поэтому здесь мы говорить об этом не будем.</p>
+<p>Просто покажу пока что малопонятный для Вас пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Группировка строк и CSS&lt;/title&gt;</samp><br>
+<i><samp class="xx">&lt;style type="text/css"&gt;</samp><br>
+<samp class="xxx">table {width: 600px; margin: 30px; border: #b8860b 6px ridge; border-collapse: collapse;}</samp><br>
+<samp class="xxx">td,th,tr {border: #b8860b 2px outset; padding: 3px;}</samp><br>
+<samp class="xxx">caption{font: italic bold 16px Arial; padding: 10px;}</samp><br>
+<samp class="xxx"><b>thead</b> {background-color: #deb887; text-align: center;}</samp><br>
+<samp class="xxx"><b>tbody</b> {background-color: #faebd7; text-align: left;}</samp><br>
+<samp class="xxx"><b>tfoot</b> {background-color: #f5f5dc; text-align: left; font: italic 14px Arial;}</samp><br>
+<samp class="xxx">tr:hover {background-color:#b8860b; color: #ffffff;}</samp><br>
+<samp class="xx">&lt;/style&gt;</samp></i><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;table&gt;</samp><br>
+<samp class="xxx">&lt;caption&gt;Энергетическая ценность продуктов питания:&lt;/caption&gt;</samp><br>
+<samp class="xxx">&lt;<b>thead</b> title="Шапка"&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;th&gt;Продукт&lt;/th&gt;&lt;th&gt;Белки&lt;/th&gt;&lt;th&gt;Жиры&lt;/th&gt;&lt;th&gt;Углеводы&lt;/th&gt;&lt;th&gt;ккал&lt;/th&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx"><b>&lt;/thead&gt;</b></samp><br>
+<samp class="xxx">&lt;<b>tbody</b> title="Энергетическая ценность продуктов питания"&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;th&gt;Хлеб ржаной&lt;/th&gt;&lt;td&gt;4,7&lt;/td&gt;&lt;td&gt;0,7&lt;/td&gt;&lt;td&gt;49,8&lt;/td&gt;&lt;td&gt;214&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;th&gt;Молоко&lt;/th&gt;&lt;td&gt;2,8&lt;/td&gt;&lt;td&gt;3,2&lt;/td&gt;&lt;td&gt;4,7&lt;/td&gt;&lt;td&gt;58&lt;/td&gt;</samp><br>
+<samp class="xxxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;th&gt;Картофель&lt;/th&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;0,1&lt;/td&gt;&lt;td&gt;19,7&lt;/td&gt;&lt;td&gt;83&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;th&gt;Свинина&lt;/th&gt;&lt;td&gt;11,4&lt;/td&gt;&lt;td&gt;49,3&lt;/td&gt;&lt;td&gt;9&lt;/td&gt;&lt;td&gt;489&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx"><b>&lt;/tbody&gt;</b></samp><br>
+<samp class="xxx">&lt;<b>tfoot</b> title="Итого:"&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;th&gt;Итого:&lt;/th&gt;&lt;td&gt;20,9&lt;/td&gt;&lt;td&gt;53,3&lt;/td&gt;&lt;td&gt;83,2&lt;/td&gt;&lt;td&gt;844&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx"><b>&lt;/tfoot&gt;</b></samp><br>
+<samp class="xx">&lt;/table&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer64.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>Курсивом в данном примере выделено стилевое описание тегов написанное с помощью средств CSS.</p>
+
+
+<h2>Группировка столбцов.</h2>
+
+<p>Группировать можно не только строки, но и столбцы таблицы с помощью тегов <samp><b>&lt;col&gt;</b></samp> и/или <samp><b>&lt;colgroup&gt;</b></samp> данные теги позволяют определить основные параметры столбцов таблицы с помощью следующих атрибутов:</p>
+<ul>
+<li><samp><b>width</b></samp> - Ширина столбца в процентах или пикселях.
+<li><samp><b>align</b></samp> - Выравнивает текст в ячейке:
+<ul>
+<li><samp><b>left</b></samp> - по левому краю. 
+<li><samp><b>right</b></samp> - по правому краю. 
+<li><samp><b>center</b></samp> - по центру. 
+<li><samp><b>justify</b></samp> - по левому и правому краю.
+</ul>
+<li><samp><b>valign</b></samp> - Выравнивает текст в ячейке по вертикали: 
+<ul>
+<li><samp><b>top</b></samp> - по верхнему краю. 
+<li><samp><b>middle</b></samp> - по центру. 
+<li><samp><b>bottom</b></samp> - по нижнему краю. 
+<li><samp><b>baseline</b></samp> - по базовой линии.
+</ul>
+<li><samp><b>bgcolor</b></samp> - Цвет фона ячейки.
+<li><samp><b>span</b></samp> - Количество столбцов, к которым следует применять параметры.
+</ul>
+<p>Давайте сгруппируем колонки нашей пробной таблицы про энергетическую ценность продуктов питания, она у нас состоит из пяти столбцов, значит, после тега <samp><b>&lt;table&gt;</b></samp> следует написать, что-то типа:</p>
+<b>
+<samp class="x">&lt;col width="140" bgcolor="#deb887"&gt;</samp><br>
+<samp class="x">&lt;col width="100" bgcolor="#faebd7"&gt;</samp><br>
+<samp class="x">&lt;col width="100" bgcolor="#faebd7"&gt;</samp><br>
+<samp class="x">&lt;col width="100" bgcolor="#faebd7"&gt;</samp><br>
+<samp class="x">&lt;col width="60" bgcolor="#f5f5dc"&gt;</samp>
+</b>
+<p>Для каждой колонки свой тег <samp><b>&lt;col&gt;</b></samp> с указанными параметрами, где первый тег это описание левой колонки таблицы. второй тег - группирует вторую колонку и далее по порядку..</p>
+<p>Обратите внимание, что в нашей таблице вторая, третья и четвертая колонки имеют одинаковые параметры <samp><b>width="100" bgcolor="#faebd7"</b></samp> так вот чтобы не прописывать каждую одинаковую колонку отдельно можно воспользоваться атрибутом <samp><b>span</b></samp>, который указывает какое количество последующих колонок имеет идентичные параметры. В нашем случае запись приобретёт следующий вид:</p>
+
+<samp class="x">&lt;col width="140" bgcolor="#deb887"&gt;</samp><br>
+<samp class="x">&lt;col <b>span="3"</b> width="100" bgcolor="#faebd7"&gt;</samp><br>
+<samp class="x">&lt;col width="60" bgcolor="#f5f5dc"&gt;</samp><br>
+
+<p>Таким образом мы указали, что три колонки, начиная со второй, имеют одинаковую ширину и цвет фона. Представьте, если бы таких колонок было штук пятьдесят? как бы мы облегчили код.</p>
+<p>Ну а вот собственно рабочий пример наших стараний:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Группировка столбцов&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;table width="500" border="1" cellpadding="3" cellspacing="0"&gt;</samp><br>
+<samp class="xxx">&lt;caption&gt;&lt;b&gt;Энергетическая ценность продуктов питания:&lt;/b&gt;&lt;/caption&gt;</samp><br>
+<samp class="xxx"><b>&lt;col width="140" bgcolor="#deb887"&gt;</b></samp><br>
+<samp class="xxx"><b>&lt;col span="3" width="100" bgcolor="#faebd7"&gt;</b></samp><br>
+<samp class="xxx"><b>&lt;col width="60" bgcolor="#f5f5dc"&gt;</b></samp><br>
+<samp class="xxx">&lt;thead title="Шапка"&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;th&gt;Продукт&lt;/th&gt;&lt;th&gt;Белки&lt;/th&gt;&lt;th&gt;Жиры&lt;/th&gt;&lt;th&gt;Углеводы&lt;/th&gt;&lt;th&gt;ккал&lt;/th&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;/thead&gt;</samp><br>
+<samp class="xxx">&lt;tbody align="left" title="Энергетическая ценность продуктов питания"&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;th&gt;Хлеб ржаной&lt;/th&gt;&lt;td&gt;4,7&lt;/td&gt;&lt;td&gt;0,7&lt;/td&gt;&lt;td&gt;49,8&lt;/td&gt;&lt;td&gt;214&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;th&gt;Молоко&lt;/th&gt;&lt;td&gt;2,8&lt;/td&gt;&lt;td&gt;3,2&lt;/td&gt;&lt;td&gt;4,7&lt;/td&gt;&lt;td&gt;58&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;th&gt;Картофель&lt;/th&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;0,1&lt;/td&gt;&lt;td&gt;19,7&lt;/td&gt;&lt;td&gt;83&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;th&gt;Свинина&lt;/th&gt;&lt;td&gt;11,4&lt;/td&gt;&lt;td&gt;49,3&lt;/td&gt;&lt;td&gt;9&lt;/td&gt;&lt;td&gt;489&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;/tbody&gt;</samp><br>
+<samp class="xxx">&lt;tfoot align="left" title="Итого:"&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;th&gt;Итого:&lt;/th&gt;&lt;td&gt;20,9&lt;/td&gt;&lt;td&gt;53,3&lt;/td&gt;&lt;td&gt;83,2&lt;/td&gt;&lt;td&gt;844&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;/tfoot&gt;</samp><br>
+<samp class="xx">&lt;/table&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer65.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Тег <samp><b>&lt;colgroup&gt;</b></samp> практически идентичен тегу <samp><b>&lt;col&gt;</b></samp> и имеет точно такие же атрибуты, так наш выше изложенный пример мог бы иметь такой вид:</p>
+<b>
+<samp class="x">&lt;colgroup width="140" bgcolor="#deb887"&gt;</samp><br>
+<samp class="x">&lt;colgroup span="3" width="100" bgcolor="#faebd7"&gt;</samp><br>
+<samp class="x">&lt;colgroup width="60" bgcolor="#f5f5dc"&gt;</samp>
+</b>
+<p>Никакой заметной разницы мы бы не увидели. Однако, некоторые отличия всё же есть.. Во-первых, <samp><b>&lt;colgroup&gt;</b></samp> может служить емкостью тля тегов <samp><b>&lt;col&gt;</b></samp>, конструкция такая:</p>
+
+<b>
+<samp class="x">&lt;colgroup&gt;</samp><br>
+<samp class="xx">&lt;col&gt;</samp><br>
+<samp class="x">&lt;/colgroup&gt;</samp><br>
+</b>
+
+<p>Во-вторых, если бы мы к тегу <samp><b>&lt;table&gt;</b></samp> применили атрибут <samp><b>rules</b></samp> со значением <samp><b>groups</b></samp> (об этом атрибуте речь пойдёт ниже)  эффект будет достигнут только при использовании <samp><b>&lt;colgroup&gt;</b></samp>.</p>
+<p>Больше никакой разницы между этими тегами нет.</p>
+<p>Пример:</p> 
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;colgroup&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;table  border="1"&gt;</samp><br>
+<samp class="xxx"><b>&lt;colgroup bgcolor="#deb887" align="left"&gt;</b></samp><br>
+<samp class="xxxx">&lt;col span="3" width="20"&gt;</samp><br>
+<samp class="xxx"><b>&lt;/colgroup&gt;</b></samp><br>
+<samp class="xxx"><b>&lt;colgroup bgcolor="#faebd7" align="center"&gt;</b></samp><br>
+<samp class="xxxx">&lt;col span="2" width="40"&gt;</samp><br>
+<samp class="xxxx">&lt;col width="60"&gt;</samp><br>
+<samp class="xxx"><b>&lt;/colgroup&gt;</b></samp><br>
+<samp class="xxx"><b>&lt;colgroup bgcolor="#f5f5dc" align="right"&gt;</b></samp><br>
+<samp class="xxxx">&lt;col width="20"&gt;</samp><br>
+<samp class="xxxx">&lt;col width="30"&gt;</samp><br>
+<samp class="xxxx">&lt;col width="50"&gt;</samp><br>
+<samp class="xxx"><b>&lt;/colgroup&gt;</b></samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt;20&lt;/td&gt;&lt;td&gt;20&lt;/td&gt;&lt;td&gt;20&lt;/td&gt;&lt;td&gt;40&lt;/td&gt;&lt;td&gt;40&lt;/td&gt;&lt;td&gt;60&lt;/td&gt;&lt;td&gt;20&lt;/td&gt;&lt;td&gt;30&lt;/td&gt;&lt;td&gt;50&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt;20&lt;/td&gt;&lt;td&gt;20&lt;/td&gt;&lt;td&gt;20&lt;/td&gt;&lt;td&gt;40&lt;/td&gt;&lt;td&gt;40&lt;/td&gt;&lt;td&gt;60&lt;/td&gt;&lt;td&gt;20&lt;/td&gt;&lt;td&gt;30&lt;/td&gt;&lt;td&gt;50&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt;20&lt;/td&gt;&lt;td&gt;20&lt;/td&gt;&lt;td&gt;20&lt;/td&gt;&lt;td&gt;40&lt;/td&gt;&lt;td&gt;40&lt;/td&gt;&lt;td&gt;60&lt;/td&gt;&lt;td&gt;20&lt;/td&gt;&lt;td&gt;30&lt;/td&gt;&lt;td&gt;50&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td&gt;20&lt;/td&gt;&lt;td&gt;20&lt;/td&gt;&lt;td&gt;20&lt;/td&gt;&lt;td&gt;40&lt;/td&gt;&lt;td&gt;40&lt;/td&gt;&lt;td&gt;60&lt;/td&gt;&lt;td&gt;20&lt;/td&gt;&lt;td&gt;30&lt;/td&gt;&lt;td&gt;50&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xx">&lt;/table&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer66.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>Обратите внимание, что в этом примере колонки таблицы поделены на три группы с помощью <samp><b>&lt;colgroup&gt;</b></samp>, в этих группах мы указали цвет фона и способ выравнивания, а ширину колонок мы задаём с помощью тегов <samp><b>&lt;col&gt;</b></samp>, которые находятся внутри контейнеров <samp><b>&lt;colgroup&gt;</b></samp>.</p>
+<p>Как и в случае с группировкой строк, колонки группируются с основной целью дальнейшего воздействия на них через стили или скрипты.</p>
+
+<h2>Границы таблицы.</h2>
+<p>Ранее в главе <a href="glava4.html" title="Перейти к Главе 4   Таблицы">"Таблицы"</a> мы с Вами познакомились с атрибутами <samp><b>border</b></samp> - ширина границы и <samp><b>bordercolor</b></samp> - цвет границы, но это не весь набор инструментов применимых к границам таблицы.. Есть ещё два атрибута: <samp><b>frame</b></samp> и <samp><b>rules</b></samp> о них мы и поговорим ниже.</p>
+<p>Начнём с атрибута <samp><b>frame</b></samp> - рамка, данный атрибут применяется к тегу <samp><b>&lt;table&gt;</b></samp> и указывает на то, как следует отображать внешние границы таблицы, т.е. то есть вокруг самой таблицы, а не между её отдельными ячейками</p>
+<p>Атрибут <samp><b>frame</b></samp> может принимать следующие значения:</p>
+<ul>
+<li><samp><b>void</b></samp> - не отображать границы вокруг таблицы.
+<li><samp><b>border</b></samp> - отображать границы вокруг таблицы (по умолчанию).
+<li><samp><b>hsides</b></samp> - отображать только горизонтальные границы сверху и снизу.
+<li><samp><b>vsides</b></samp> - отображать только вертикальные границы слева и справа.
+<li><samp><b>above</b></samp> - отображать только верхнюю границу таблицы.
+<li><samp><b>below</b></samp> - отображать только нижнюю границу таблицы.
+<li><samp><b>lhs</b></samp> - отображать только левую границу.
+<li><samp><b>rhs</b></samp> - отображать только правую границу.
+</ul>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;frame&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;table border="8" <b>frame="hsides"</b> width="400" cellpadding="3" cellspacing="0"&gt;</samp><br>
+<samp class="xxx">&lt;caption&gt;&lt;b&gt;Энергетическая ценность продуктов питания:&lt;/b&gt;&lt;/caption&gt;</samp><br>
+<samp class="xxx">&lt;thead bgcolor ="#deb887" title="Шапка"&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;th&gt;Продукт&lt;/th&gt;&lt;th&gt;Белки&lt;/th&gt;&lt;th&gt;Жиры&lt;/th&gt;&lt;th&gt;Углеводы&lt;/th&gt;&lt;th&gt;ккал&lt;/th&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;/thead&gt;</samp><br>
+<samp class="xxx">&lt;tbody align="left" bgcolor ="#faebd7" title="Энергетическая ценность продуктов питания"&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;th&gt;Хлеб ржаной&lt;/th&gt;&lt;td&gt;4,7&lt;/td&gt;&lt;td&gt;0,7&lt;/td&gt;&lt;td&gt;49,8&lt;/td&gt;&lt;td&gt;214&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;th&gt;Молоко&lt;/th&gt;&lt;td&gt;2,8&lt;/td&gt;&lt;td&gt;3,2&lt;/td&gt;&lt;td&gt;4,7&lt;/td&gt;&lt;td&gt;58&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;th&gt;Картофель&lt;/th&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;0,1&lt;/td&gt;&lt;td&gt;19,7&lt;/td&gt;&lt;td&gt;83&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;th&gt;Свинина&lt;/th&gt;&lt;td&gt;11,4&lt;/td&gt;&lt;td&gt;49,3&lt;/td&gt;&lt;td&gt;9&lt;/td&gt;&lt;td&gt;489&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;/tbody&gt;</samp><br>
+<samp class="xxx">&lt;tfoot align="left" bgcolor ="#f5f5dc" title="Итого:"&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;th&gt;Итого:&lt;/th&gt;&lt;td&gt;20,9&lt;/td&gt;&lt;td&gt;53,3&lt;/td&gt;&lt;td&gt;83,2&lt;/td&gt;&lt;td&gt;844&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;/tfoot&gt;</samp><br>
+<samp class="xx">&lt;/table&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer67.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>А вот атрибут <samp><b>rules</b></samp> в отличие от <samp><b>frame</b></samp> наоборот указывает на то, как следует рисовать границы между ячейками таблицы.</p>
+<p>Атрибут <samp><b>rules</b></samp> может принимать следующие значения:</p>
+<ul>
+<li><samp><b>all</b></samp> - отображать все границы между ячейками. 
+<li><samp><b>none</b></samp> - не отображать границы между ячейками. 
+<li><samp><b>rows</b></samp> - отображать  границы только между строками. 
+<li><samp><b>cols</b></samp> - отображать границы только между стобцами. 
+<li><samp><b>groups</b></samp> - отображать границы только между группами строк и группами столбцов образованными с помощью тегов: <samp><b>&lt;thead&gt;</b>, <b>&lt;tbody&gt;</b>, <b>&lt;tfoot&gt;</b> и <b>&lt;colgroup&gt;</b></samp>. 
+</ul>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;rules&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;table border="1" <b>rules="groups"</b> width="500" cellpadding="3" cellspacing="0"&gt;</samp><br>
+<samp class="xxx">&lt;caption&gt;&lt;b&gt;Энергетическая ценность продуктов питания:&lt;/b&gt;&lt;/caption&gt;</samp><br>
+<samp class="xxx">&lt;thead bgcolor ="#deb887" title="Шапка"&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;th&gt;Продукт&lt;/th&gt;&lt;th&gt;Белки&lt;/th&gt;&lt;th&gt;Жиры&lt;/th&gt;&lt;th&gt;Углеводы&lt;/th&gt;&lt;th&gt;ккал&lt;/th&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;/thead&gt;</samp><br>
+<samp class="xxx">&lt;tbody align="left" bgcolor ="#faebd7" title="Энергетическая ценность продуктов питания"&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;th&gt;Хлеб ржаной&lt;/th&gt;&lt;td&gt;4,7&lt;/td&gt;&lt;td&gt;0,7&lt;/td&gt;&lt;td&gt;49,8&lt;/td&gt;&lt;td&gt;214&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;th&gt;Молоко&lt;/th&gt;&lt;td&gt;2,8&lt;/td&gt;&lt;td&gt;3,2&lt;/td&gt;&lt;td&gt;4,7&lt;/td&gt;&lt;td&gt;58&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;th&gt;Картофель&lt;/th&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;0,1&lt;/td&gt;&lt;td&gt;19,7&lt;/td&gt;&lt;td&gt;83&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;th&gt;Свинина&lt;/th&gt;&lt;td&gt;11,4&lt;/td&gt;&lt;td&gt;49,3&lt;/td&gt;&lt;td&gt;9&lt;/td&gt;&lt;td&gt;489&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;/tbody&gt;</samp><br>
+<samp class="xxx">&lt;tfoot align="left" bgcolor ="#f5f5dc" title="Итого:"&gt;</samp><br>
+<samp class="xxxx">&lt;tr&gt;</samp><br>
+<samp class="xxxxx">&lt;th&gt;Итого:&lt;/th&gt;&lt;td&gt;20,9&lt;/td&gt;&lt;td&gt;53,3&lt;/td&gt;&lt;td&gt;83,2&lt;/td&gt;&lt;td&gt;844&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;/tfoot&gt;</samp><br>
+<samp class="xx">&lt;/table&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer68.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Атрибут <samp><b>rules</b></samp> напрочь игнорирует браузер Opera, но как я уже не раз намекал такие проблемы можно решить с помощью средств CSS.</p>
+
+<h2>Полезные советы:</h2>
+<ul>
+<li><p>Тег <samp><b>&lt;col&gt;</b></samp> помимо своей прямой задачи, решает еще одну полезную штуку..<br> 
+При загрузке таблицы браузеры не показывают её содержание до тех пор пока таблица полностью не загрузилась. Так вот при использовании тега <samp><b>&lt;col&gt;</b></samp>, браузер зная количество и будущие размеры колонок, сразу начинает показывать содержание, не дожидаясь полной загрузки.. что есть гуд! особенно при медленном соединении Интернета. Сайты свёрстанные табличным способом перестают "плясать" во время загрузки.</p>
+<li><p>По наблюдениям, на тег <samp><b>&lt;th&gt;</b></samp> обращают внимание поисковые системы, и слова в заголовке таблицы имеют больший "вес", в глазах поисковиков, нежели чем текст в обычных ячейках, что в свою очередь может повлиять на результаты выдачи по тому или иному поисковому запросу.</p>
+<li><p>Всё что написано в этой главе, по большей своей части, ориентированно на логику таблиц, что облегчает жизнь всем!:<br>
+- Веб-мастерам, для более простого управления таблицей через стили или скрипты.<br>
+- Браузерам, и речевым браузерам для более корректного отображения или чтения таблиц.<br> 
+- Алгоритмам поисковых систем, которые стараются найти эту самую логику на той или иной странице, чтобы выдать пользователю наиболее релевантные результаты.</p>
+<p>Так что не стоит пренебрегать тегами: <samp><b>&lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt;, &lt;th&gt;, &lt;col&gt;, &lt;caption&gt;, &lt;colgroup&gt;</b></samp> - они весьма полезны!</p>
+</ul>
+
+
+<div class="url">
+<a href="glava11.html" title="К предыдущей главе">&lt;&lt; предыдущая глава</a> | 
+<a href="glava13.html" title="К следующей главе">следующая глава &gt;&gt;</a>
+</div>
+</div>
+<!-- Конец центральной колонке -->
+<!-- Подвал -->
+<div class="footer">
+&copy; Автор: Семикопенко Алексей Алексеевич. | <a href="http://webremeslo.ru/" class="logo" title="Перейти на сайт webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец подвалу -->
+</body>
+</html>

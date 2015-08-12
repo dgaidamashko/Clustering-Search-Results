@@ -1,0 +1,320 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Учебник CSS для начинающих.</title>
+<meta HTTP-EQUIV="Content-Type" Content="text/html; Charset=Windows-1251">
+<meta name="author" Content="Семикопенко Алексей Алексеевич">
+<meta name="copyright" Content="Семикопенко Алексей Алексеевич">
+<meta name="Publisher-Email" Content="alex@webremeslo.ru">
+<meta name="Publisher-URL" Content="http://webremeslo.ru/">
+<link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+<body>
+<!-- Шапка -->
+<div class="header">
+<h1 class="logo">Учебник CSS</h1>
+</div>
+<!-- Конец шапке -->
+<!--левая колонка "меню" -->
+<div class="left">
+<div class="fixed">
+<ul class="ul_none">
+<li><a href="../index.html" class="menu" title="От автора.">Главная</a></li>
+<li><a href="glava0.html" class="menu" title="Введение.   Что такое CSS?">Что такое CSS?</a></li>
+<li><a href="glava1.html" class="menu" title="Глава 1   Внедрение CSS в HTML документ.">Внедрение CSS.</a></li>
+<li><a href="glava2.html" class="menu" title="Глава 2   Свойства текста.">Свойства текста.</a></li>
+<li><a href="glava3.html" class="menu" title="Глава 3   Свойства шрифта.">Свойства шрифта.</a></li>
+<li><a href="glava4.html" class="menu" title="Глава 4   Цвет и фон.">Цвет и фон.</a></li>
+<li><a href="glava5.html" class="menu" title="Глава 5   Границы элемента.">Границы элемента.</a></li>
+<li><a href="glava6.html" class="menu" title="Глава 6   Классы и id селекторы.">Классы и id селекторы.</a></li>
+<li><a href="glava7.html" class="menu" title="Глава 7   Размеры элемента.">Размеры элемента.</a></li>
+<li><a href="glava8.html" class="menu" title="Глава 8   Поля и отступы.">Поля и отступы.</a></li>
+<li><a href="glava9.html" class="menu" title="Глава 9   Курсоры.">Курсоры.</a></li>
+<li><a href="glava10.html" class="menu" title="Глава 10   Форматирование.">Форматирование.</a></li>
+<li><a href="glava11.html" class="menu" title="Глава 11   Поплавки.">Поплавки.</a></li>
+<li><a href="glava12.html" class="activemenu" title="Глава 12   Позиционирование.">Позиционирование.</a></li>
+<li><a href="glava13.html" class="menu" title="Глава 13   Стиль списка.">Стиль списка.</a></li>
+<li><a href="glava14.html" class="menu" title="Глава 14   Полоса прокрутки.">Полоса прокрутки.</a></li>
+<li><a href="glava15.html" class="menu" title="Глава 15   Псевдоклассы.">Псевдоклассы.</a></li>
+<li><a href="glava16.html" class="menu" title="Глава 16   Псевдоэлементы.">Псевдоэлементы.</a></li>
+</ul>
+</div>
+</div>
+<!-- Конец левой колонке -->
+<!-- Правая колонка -->
+<div class="right">
+<h2>А так же:</h2>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">Как создать сайт?</a>
+<a href="http://www.webremeslo.ru/html/glava0.html" class="menu" title="www.webremeslo.ru">Учебник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka.html" class="menu" title="www.webremeslo.ru">Справочник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka4.html" class="menu" title="www.webremeslo.ru">Справочник CSS</a>
+<a href="http://forum.webremeslo.ru/index.php" class="menu" title="www.webremeslo.ru">Форум</a><br>
+..<em>и многое другое на сайте:</em><br>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец правой колонке -->
+<!-- Центральная колонка -->
+<div class="center">
+   
+<p class="zag">Глава 12</p>
+
+<h1>Позиционирование.</h1>
+
+<p>Для начала разберемся с самим понятием позиционирование. Позиционированием называют определение конкретного месторасположения на странице того или иного элемента (бокса). Позиционирование бывает абсолютным, относительным, фиксированным и статическим.</p>
+<p>Потороплюсь с примером, ниже будем разбираться, что в нем написано.</p>
+
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="x">&lt;title&gt;Позиционирование.&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;div style="float: left; background: #c00;  border-style: double; padding: 5px; height: 1500px;  width: 300px"&gt;</samp><br>
+<samp class="xxx">&lt;div style="<b>position: relative; left: 10px; top: 50px;</b> background: #c0c; border-style: double; padding: 5px; width: 200px"&gt;Блок позиционирован относительно крёв элемента родителя.&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;div style="<b>position: absolute; left:200px; top: 350px;</b> background: #cc0; border-style: double; padding: 5px; width: 200px"&gt;Блок абсолютно позицонорован и выведен из общего потока, его положение задаётся от краёв окна браузера. Как видите данный блок может накладываться на другие элементы страницы.&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;div style="<b>position: fixed; left: 150px; top: 150px;</b> background: #0cc; border-style: double; padding: 5px; width: 200px"&gt;А это фиксированный блок, тоже выведен из общего потока однако при прокручивании страницы он не меняет своего положения. Ранние версии браузера Internet Explorer игнорируют данное свойство.&lt;/div&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer54.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Итак, для  того, что бы позиционировать какой либо элемент к нему применяют свойство <samp><b>position</b></samp>  и одно из его возможных значений:</p>
+<ul>
+<li><samp><b>absolute</b></samp> - Абсолютное позиционирование элемента. 
+<li><samp><b>relative</b></samp> - Относительное позиционирование элемента.
+<li><samp><b>fixed</b></samp> - Фиксированное позиционирование элемента.
+<li><samp><b>static</b></samp> - Статическое позиционирование элемента. (Элемент отображаются как обычно.)
+<li><samp><b>inherit</b></samp> - Наследует значение элемента родителя.
+</ul>
+<p>Теперь давайте углубляться..</p> 
+
+<h2>Абсолютное позиционирование.</h2>
+<p> Абсолютно позиционированный элемент (<samp><b>position: absolute</b></samp>) выводится из общего потока и несмотря на другие элементы и их взаимное расположение, занимает указанное место на странице от края/краёв окна браузера. При таком способе позиционирования один элемент может накладываться поверх другого.</p> 
+<p> Для того чтобы позиционировать элемент от края/краёв окна браузера,  нам понадобятся следующие свойства CSS:</p> 
+<ul>
+<li><samp><b>bottom</b></samp> - Расстояние от нижнего края окна браузера. 
+<li><samp><b>left</b></samp> - Расстояние от левого края окна браузера. 
+<li><samp><b>right</b></samp> - Расстояние от правого края окна браузера. 
+<li><samp><b>top</b></samp> - Расстояние от верхнего края окна браузера. 
+</ul>
+<p>Данные расстояния могут быть заданы в пикселях, процентах или любых других принятых единицах измерения CSS, значение по умолчанию - <samp><b>auto</b></samp>.</p> 
+
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Абсолютное позиционирование.&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;div style="background: #0f0; border: #000000 2px solid; padding: 5px; margin: 10px; width: 300px; height: 200px;"&gt;&lt;h1&gt;Блок №1&lt;/h1&gt;&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;div style="background: #00f; border: #000000 2px solid; padding: 5px; margin: 10px; width: 500px; height: 100px;"&gt;&lt;h1&gt;Блок №2&lt;/h1&gt;&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;div style="<b>position: absolute; left:200px; top: 100px;</b> background: #f00; border: #000 2px solid; padding: 5px; width: 200px; height: 200px;"&gt;&lt;h1&gt;Блок №3&lt;/h1&gt; Данный блок абсолютно позиционирован! &lt;br&gt;&lt;br&gt; Блоки 1 и 2 никак не влияют на его месторасположение.&lt;/div&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer55.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Как видите, в примере третий блок вышел из общего потока элементов и живёт по своим собственным правилам, остальная разметка страницы никак не влияет на месторасположение данного блока.</p>
+
+<h2>Относительное позиционирование.</h2>
+<p>Относительное позиционирование (<samp><b>position: relative</b></samp>) определяет место элемента относительно краёв элемента родителя и не выводится из общего потока.</p>
+<p>Так же как и в случае с абсолютным позиционированием расстояния от края/краёв родительского элемента задаётся с помощью свойств:  <samp><b>bottom, left, right, top.</b></samp></p>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Относительное позиционирование.&lt;/title&gt;</samp><br>
+<samp class="xx">&lt;style type="text/css"&gt;</samp><br>
+<samp class="xxx">h1 {</samp><br>
+<samp class="xxxx">color: #008000;</samp><br>
+<samp class="xxxx">font-size:20px</samp><br>
+<samp class="xxx">}</samp><br>
+<samp class="xxx">div.blok1 {</samp><br>
+<samp class="xxxx">background: #c0e4ff;</samp><br>
+<samp class="xxxx">border: #000000 2px solid;</samp><br>
+<samp class="xxxx">padding: 5px;</samp><br>
+<samp class="xxxx">width: 500px;</samp><br>
+<samp class="xxxx">height: 400px;</samp><br>
+<samp class="xxx">}</samp><br>
+<samp class="xxx">div.blok2 { </samp><br>
+<samp class="xxxx"><b>position: relative;</b></samp><br>
+<samp class="xxxx"><b>left: 150px;</b></samp><br>
+<samp class="xxxx">background: #ffa0c5; </samp><br>
+<samp class="xxxx">border: #000 2px solid;</samp><br>
+<samp class="xxxx">padding: 5px; width: 250px;</samp><br>
+<samp class="xxxx">height: 200px;</samp><br>
+<samp class="xxx">}</samp><br>
+<samp class="xx">&lt;/style&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;div class="blok1"&gt;</samp><br>
+<samp class="xxx">&lt;h1&gt;Элемент родитель - блок №1&lt;/h1&gt;</samp><br>
+<samp class="xxx">&lt;div class="blok2"&gt;</samp><br>
+<samp class="xxxx">&lt;h1&gt;Блок №2&lt;/h1&gt; </samp><br>
+<samp class="xxxx">Данный блок позиционирован относительно левого края элемента родителя.</samp><br>
+<samp class="xxx">&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;/div&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<div align="right"><a href="primer/primer56.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>В случае если элемент родитель явно не задан, то отчет ведётся от края/краёв окна браузера.</p>
+
+<h2>Фиксированное позиционирование.</h2>
+
+<p>Фиксированное позиционирование <samp><b>(position: fixed)</b></samp> похоже на абсолютное, элемент выводится из общего потока, его координаты рассчитываются от краёв окна браузера, но при прокрутке страницы элемент не меняет своего положения.</p>
+<p>Пример:</p>
+<div class="primer">
+<samp>Файл style.css</samp><br><br>
+<samp class="x">h1 {</samp><br>
+<samp class="xx">color: #800;</samp><br>
+<samp class="xx">text-align: center; </samp><br>
+<samp class="xx">font-size:30px</samp><br>
+<samp class="x">}</samp><br>
+<samp class="x">h2 {</samp><br>
+<samp class="xx">color: #088;</samp><br>
+<samp class="xx">text-align: center; </samp><br>
+<samp class="xx">font-size:18px</samp><br>
+<samp class="x">}</samp><br>
+<samp class="x">div.blok1 {</samp><br>
+<samp class="xx">background-image: url(fon.gif);</samp><br>
+<samp class="xx">border: #000 2px solid;</samp><br>
+<samp class="xx">padding: 5px;</samp><br>
+<samp class="xx">width: 800px;</samp><br>
+<samp class="xx">height: 4000px</samp><br>
+<samp class="x">}</samp><br>
+<samp class="x">div.blok2 {</samp><br>
+<samp class="xx"><b>position: fixed;</b></samp><br>
+<samp class="xx"><b>left: 250px;</b></samp><br>
+<samp class="xx"><b>top: 300px;</b></samp><br>
+<samp class="xx">border: #080 6px double;</samp><br>
+<samp class="xx">padding: 5px;</samp><br>
+<samp class="xx">width: 300px</samp><br>
+<samp class="x">}</samp><br>
+<hr>
+<samp>Файл index.html</samp><br><br>
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Фиксированное позиционирование.&lt;/title&gt;</samp><br>
+<samp class="xx">&lt;link rel="stylesheet" href="style.css" type="text/css"&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;div class="blok1"&gt;</samp><br>
+<samp class="xxx">&lt;h1&gt;Какая то страничка&lt;/h1&gt;</samp><br>
+<samp class="xx">&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;div class="blok2"&gt;</samp><br>
+<samp class="xxx">&lt;h2&gt;Фиксированный блок с навязчивой рекламой&lt;/h2&gt; </samp><br>
+<samp class="xxx">&lt;h1&gt;Купи слона!!&lt;/h1&gt; </samp><br>
+<samp class="xxx">Фиксированный блок, выведен из общего потока элементов, при прокручивании страницы он не меняет своего положения. Ранние версии браузера Internet Explorer игнорируют данное свойство.</samp><br>
+<samp class="xx">&lt;/div&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer57.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+
+<p>P.S. Ранние версии браузера Internet Explorer игнорируют данное свойство и элемент выводится на странице так как будто его вовсе не позиционировали.</p>
+
+<h2>z-index</h2>
+<img src="../graphics/z-index.gif" width="250" height="250" alt="z-index" align="right" vspace="5" hspace="30">
+<p>Как уже говорилось, выше позиционированные элементы могут накладываться один поверх другого, имитируя тем самым некую трёхмерность страницы, где каждый последующий наложенный друг на друга элемент является слоем.</p>
+<p>Свойство <samp><b>z-index</b></samp> позволяет веб-мастеру управлять позициями этих слоёв в глубину экрана (по оси Z.) , другими словами позволяет  указывать браузеру какие элементы следует показывать на переднем плане, а какие  на заднем.</p>
+
+<p>Значения свойства <samp><b>z-index</b></samp>:</p>
+<ul>
+<li><samp><b>auto</b></samp> - Элементы накладываются друг на друга в том порядке, каком они указаны в коде HTML. (по умолчанию).
+<li><samp><b>целое число</b></samp> - Чем выше данное значение, тем более высокую позицию занимает элемент по отношению к тем элементам, значение которых ниже.
+</ul>
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;z-index&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;div align="center" style="position: absolute; <b>z-index:5;</b> width: 350px; height: 100px; top: 120px; left: 0px; color: #0000ff; font-size:100px"&gt;z-index&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;div style="position: absolute; <b>z-index:3;</b> width: 150px; height: 150px; top: 0px; left: 100px; background-color: #ff00ff"&gt;&nbsp;&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;div style="position: absolute; <b>z-index:4;</b> width: 150px; height: 150px; top: 100px; left: 0px; background-color: #ff0000"&gt;&nbsp;&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;div style="position: absolute; <b>z-index:2;</b> width: 150px; height: 150px; top: 100px; left: 200px; background-color: #ffff00"&gt;&nbsp;&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;div style="position: absolute; <b>z-index:1;</b> width: 150px; height: 150px; top: 200px; left: 100px; background-color: #00ff00"&gt;&nbsp;&lt;/div&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer58.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Числовое значение <samp><b>z-index</b></samp> может быть и отрицательным, однако не все браузеры правильно интерпретируют отрицательные значения.</p>
+<p>Еще следует отметить, что при равном значении <samp><b>z-index</b></samp>, на переднем плане находится тот элемент, который в коде HTML идет ниже остальных.</p>
+<p>Это же правило действует при <samp><b>z-index</b></samp> равным <samp><b>auto</b></samp> или же в том случае если бы данное свойство и вовсе не применялось к тем или иным элементам.</p>
+<p>Ну и какой смысл, спросите Вы, вообще использовать <samp><b>z-index</b></samp> если можно просто в нужном порядке расположить элементы в HTML коде?</p>
+
+<p>Покажу на примере:</p>
+
+<div class="primer">
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;z-index&lt;/title&gt;</samp><br>
+<samp class="xx">&lt;style type="text/css"&gt;</samp><br>
+<samp class="xxx">body {background-color: #c5ffa0}</samp><br>
+<samp class="xxx">a {</samp><br>
+<samp class="xxxx">position: absolute;</samp><br>
+<samp class="xxxx"><b>z-index: auto;</b></samp><br>
+<samp class="xxxx">top: 100px;</samp><br>
+<samp class="xxxx">border: #000000 1px solid;</samp><br>
+<samp class="xxx">}</samp><br>
+<samp class="xxx">a:hover {</samp><br>
+<samp class="xxxx">position: absolute;</samp><br>
+<samp class="xxxx"><b>z-index:1;</b></samp><br>
+<samp class="xxxx">top: 80px;</samp><br>
+<samp class="xxxx">border: #800000 1px solid;</samp><br>
+<samp class="xxx">}</samp><br>
+<samp class="xx">&lt;/style&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;h2&gt;Проведите курсором по картам&lt;/h2&gt;</samp><br>
+<samp class="xx">&lt;a href="#"  style="left: 10px"&gt;&lt;img src="karta1.gif"&gt;&lt;/a&gt;</samp><br>
+<samp class="xx">&lt;a href="#"  style="left: 30px"&gt;&lt;img src="karta2.gif"&gt;&lt;/a&gt;</samp><br>
+<samp class="xx">&lt;a href="#"  style="left: 50px"&gt;&lt;img src="karta3.gif"&gt;&lt;/a&gt;</samp><br>
+<samp class="xx">&lt;a href="#"  style="left: 70px"&gt;&lt;img src="karta4.gif"&gt;&lt;/a&gt;</samp><br>
+<samp class="xx">&lt;a href="#"  style="left: 90px"&gt;&lt;img src="karta5.gif"&gt;&lt;/a&gt;</samp><br>
+<samp class="xx">&lt;a href="#"  style="left: 110px"&gt;&lt;img src="karta6.gif"&gt;&lt;/a&gt;</samp><br>
+<samp class="xx">&lt;p style="position: absolute; left: 10px; top: 250px;"&gt;В злосчастном IE6, в отличии от других браузеров, псевдокласс &lt;b&gt;:hover&lt;/b&gt; работает только для ссылок, поэтому в качестве контейнера для рисунков/карт использую никуда не ведущую ссылку. (&lt;b&gt;a href="#"&lt;/b&gt;)&lt;/p&gt; </samp><br>
+<samp class="xx">&lt;p style="position: absolute; left: 10px; top: 300px;"&gt;Впрочем, IE можно "надурить" используя скрипты, просто не хочу лишний раз выходить за рамки обучения CSS.&lt;/p&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer59.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Как видите свойство <samp><b>z-index</b></samp> незаменимо там, где присутствует некая динамика.</p>
+	
+<h2>Полезные советы:</h2>
+
+<p>Попугаю немного:</p>
+<ul>
+<li><p>Списки, созданные с помощью тега <samp><b>select</b></samp>, в Internet Exolorer отображаются поверх других элементов, несмотря на то, какое указано значение <samp><b>z-index</b></samp>.</p>
+<li><p>В браузере Netscape 4.x поля форм всегда отображаются поверх всех других элементов, независимо от значения <samp><b>z-index</b></samp>..</p>
+<li><p>Браузер Netscape 4.x относительно <samp><b>(position: relative)</b></samp>  не позиционирует поля форм, списки, изображения, таблицы и их ячейки, а абсолютное позиционирование <samp><b>(position: absolute)</b></samp> не работает со списками и элементами форм.</p>
+<li><p>Ранние версии Internet Explorer, до Internet Explorer 5.5, игнорируют свойство <samp><b>z-index</b></samp> примененное к фреймам <samp><b>(frame)</b></samp> и плавающим фреймам <samp><b>(iframe)</b></samp>.</p>
+<li><p>В IE 4 абсолютное позиционирование <samp><b>(position: absolute)</b></samp> примененное к ссылкам и спискам не работает, ссылки так вообще теряют свою функциональность.. а относительное позиционирование <samp><b>(position: relative)</b></samp> не дружит с ячейками таблицы (<samp><b>td</b></samp> и <samp><b>th</b></samp>).</p> 
+<li><p>Про фиксированное позиционирование <samp><b>(position: fixed)</b></samp> и ранние версии Internet Explorer уже говорил.. не работает фиксация блоков в ранних IE и все тут..</p>
+</ul>
+<p>Такие дела.. ну хочу заметить, что поклонников браузера IE (домохозяек, для которых Интернет и встроенный в комплектацию Windows Internet Explorer это одно и тоже) остаётся с каждым днем всё меньше и меньше тем более его старых версий, так что можно и рискнуть.. если по-другому никак..</p>
+<div class="url">
+<a href="glava11.html" title="К предыдущей главе">&lt;&lt; предыдущая глава</a> | 
+<a href="glava13.html" title="К следующей главе">следующая глава &gt;&gt;</a>
+</div>
+</div>
+<!-- Конец центральной колонке -->
+<!-- Подвал -->
+<div class="footer">
+&copy; Автор: Семикопенко Алексей Алексеевич. | <a href="http://webremeslo.ru/" class="logo" title="Перейти на сайт webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец подвалу -->
+</body>
+</html>

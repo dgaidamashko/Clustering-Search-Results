@@ -1,0 +1,428 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Учебник HTML для начинающих.</title>
+<meta HTTP-EQUIV="Content-Type" Content="text/html; Charset=Windows-1251">
+<meta name="author" Content="Семикопенко Алексей Алексеевич">
+<meta name="copyright" Content="Семикопенко Алексей Алексеевич">
+<meta name="Publisher-Email" Content="alex@webremeslo.ru">
+<meta name="Publisher-URL" Content="http://webremeslo.ru/">
+<link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+<body>
+<!-- Шапка -->
+<div class="header">
+<h1 class="logo">Учебник HTML</h1>
+</div>
+<!-- Конец шапке -->
+<!--левая колонка "меню" -->
+<div class="left">
+<div class="fixed">
+<ul class="ul_none">
+<li><a href="../index.html" class="menu" title="От автора.">Главная</a></li>
+<li><a href="glava0.html" class="menu" title="Введение.">Введение</a></li>
+<li><a href="glava1.html" class="menu" title="Перейти к Главе 1   Что такое HTML язык?">Что такое HTML язык</a>  </li>
+<li><a href="glava2.html" class="menu" title="Перейти к Главе 2   Редактируем текст">Редактируем текст</a></li>
+<li><a href="glava3.html" class="menu" title="Перейти к Главе 3   Рисунки">Рисунки</a></li>
+<li><a href="glava4.html" class="menu" title="Перейти к Главе 4   Таблицы">Таблицы</a></li>
+<li><a href="glava5.html" class="activemenu" title="Перейти к Главе 5   Ссылки">Ссылки</a></li>
+<li><a href="glava6.html" class="menu" title="Перейти к Главе 6   И ещё…">И ещё…</a></li>
+<li><a href="glava7.html" class="menu" title="Перейти к Главе 7   Фреймы">Фреймы</a></li>
+<li><a href="glava8.html" class="menu" title="Перейти к Главе 8   Навигационные карты">Навигационные карты</a></li>
+<li><a href="glava9.html" class="menu" title="Перейти к Главе 9   Списки">Списки</a></li>
+<li><a href="glava10.html" class="menu" title="Перейти к Главе 10   Meta теги">Meta теги</a></li>
+<li><a href="glava11.html" class="menu" title="Перейти к Главе 11   Заголовок &lt;!DOCTYPE&gt;">Заголовок &lt;!DOCTYPE&gt;</a></li>
+<li><a href="glava12.html" class="menu" title="Перейти к Главе 12   И снова таблицы..">И снова таблицы..</a></li>
+<li><a href="glava13.html" class="menu" title="Перейти к Главе 13   Фоновая музыка">Фоновая музыка</a></li>
+<li><a href="glava14.html" class="menu" title="Перейти к Главе 14   Текст - логика и физика">Текст - логика и физика</a></li>
+</ul>
+</div>
+</div>
+<!-- Конец левой колонке -->
+<!-- Правая колонка -->
+<div class="right">
+<h2>А так же:</h2>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">Как создать сайт?</a>
+<a href="http://www.webremeslo.ru/css/glava0.html" class="menu" title="www.webremeslo.ru">Учебник CSS</a>
+<a href="http://www.webremeslo.ru/spravka/spravka.html" class="menu" title="www.webremeslo.ru">Справочник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka4.html" class="menu" title="www.webremeslo.ru">Справочник CSS</a>
+<a href="http://forum.webremeslo.ru/index.php" class="menu" title="www.webremeslo.ru">Форум</a><br>
+..<em>и многое другое на сайте:</em><br>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец правой колонке -->
+<!-- Центральная колонка -->
+<div class="center">
+
+<p class="zag">Глава 5</p>
+<h1>Ссылки</h1>
+
+<p>Думаю, Вам уже понятно о чём пойдет речь в этой главе.. и Вы знаете, что из себя представляет ссылка, если нет, то <a href="primer/primer29.html" target="_blank">нажмите сюда..</a> 
+Существует несколько видов ссылок, а так же "механизмов" перехода по ним. В этой главе постараюсь подробно рассказать о том как прописать ссылки, а так же посвятить в тонкости дела по работе с ними.</p>
+
+<p>Лирическое отступление:<br>
+Как-то в армии подходит ко мне начальник штаба и отдаёт приказ, цитирую: <br>
+Принеси мне вот тот документ, правда я не знаю где он и какой!! Что стоишь? Бегом давай!! Опаздываю я!!!</p> 
+<p>Так вот, к чему я это,  чтобы браузер, как я тогда, не впал в ступор, ему необходимо знать: точное название документа,  путь к документу, и место куда его принести, точнее где его открыть.</p>
+<p>На данный момент с помощью блокнота мы создали только один HTML документ у меня он с именем index.html (зачем выбрал такое странное название index.html и зачем оно нужно смотрите в <a href="#sovetu" title="Читать полезные советы   (Навигация внутри страницы)">полезных советах</a>) у Вас не знаю с каким, Вы сами имя придумывали, но думаю, Вы его помните и знаете где он лежит, если конечно Вы не мой начальник штаба :)..  В этом документе мы попробуем создать ссылку на другой документ, которого у нас еще нет.. Так что прежде чем на него ссылаться, его нужно создать, благо Вы это уже умеете.</p>
+
+<ol>
+<li>Открываем блокнот.
+<li>Пишем код на html языке. к примеру страничку с рядом фотографий.
+<li>Сохраняем его как html страничку в ту же рабочею папку, где уже есть созданный нами первый документ. Давайте, что б не путаться назовем его primer.html, да и первый тоже пожалуй переименуйте в index.html 
+</ol>
+<p>Теперь я знаю, что у Вас два html документа  index.html и primer.html и что теперь у Вас есть минимальный набор для дальнейшего обучения.</p>
+<h2>Текстовые ссылки.</h2>
+
+<p>Знакомимся тег <samp><b>&lt;a&gt;</b></samp> (от anchor- якорь), в него можно заключить текст или рисунок, которые станут ссылкой на те или иные документы. Атрибут тега <samp><b>&lt;a&gt; href</b></samp> задаёт имя и путь к документу на который указывает ссылка.</p>
+<p>Всё вместе пишется так:</p>   
+<samp class="x"><b>&lt;a href="primer.html"&gt;Здесь мои фотки!!&lt;/a&gt;</b></samp>
+<p>Как Вы наверное поняли primer.html это имя нашего второго html  документа, а надпись "Здесь мои фотки!!" это кусочек текста из файла index.html.</p>
+<p>По аналогии с рисунками тег <b>&lt;img&gt;</b> путь  ссылки к открываемому документу прописывается теми же способами:</p>
+<samp class="x"><b>&lt;a href=" stranica/primer.html"&gt;Здесь мои фотки!!&lt;/a&gt;</b></samp> -  Такая запись подразумевает, что в директории, где расположен наш первый html документ есть папка  stranica в которой расположен файл primer.html<br>
+<samp class="x"><b>&lt;a href="../primer.html"&gt;Здесь мои фотки!!&lt;/a&gt;</b></samp> - А это значит, что файл myfoto.html размещен на уровень выше от документа<br>
+<samp class="x"><b>&lt;a href="http://www.site.ru/primer.html"&gt;Здесь мои фотки!!&lt;/a&gt;</b></samp> - документ расположен на сайте www.site.ru..
+<p>Ну что давайте попробуем? Ниже приведен пример сразу двух документов в которых прописаны ссылки указывающие друг на друга.</p>
+
+<p>Пример:</p>
+<div class="primer">
+Файл index.html:<br><br> 
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Делаем ссылкой кусочек текста&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;div align="center"&gt;</samp><br>
+<samp class="xxx">&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Скажи мне, милый ребёнок: в каком ухе у меня жужжит?&lt;/b&gt;</samp><br>
+<samp class="xxx">&lt;br&gt;&lt;br&gt;&lt;br&gt;</samp><br>
+<samp class="xxx">В <b>&lt;a href="primer.html"&gt;правом&lt;/a&gt;</b> или <b>&lt;a href="primer.html"&gt;левом&lt;/a&gt;</b>?</samp><br>
+<samp class="xx">&lt;/div&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<hr>
+Файл primer.html:<br><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Перешли по ссылке сюда&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;</samp><br>
+<samp class="xx">&lt;div align="center"&gt;&lt;font size="+2"&gt;А вот и не угадал! У меня жужжит в обоих ухах.&lt;/font&gt;&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;br&gt;&lt;br&gt;&lt;br&gt;</samp><br>
+<samp class="xx">&lt;div align="center"&gt;<b>&lt;a href=" index.html"&gt;Ну я так не играю...&lt;/a&gt;</b>&lt;/div&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer23.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<br>
+<p>Из примера видно, что ссылки выделяются цветом, по умолчанию синеньким - ссылка, а красненьким - уже посещенная ссылка, эти цвета можно изменить с помощью уже хорошо известного нам открывающего тега <samp><b>&lt; body &gt;</b></samp> и его атрибутов.</p>
+
+<samp class="x"><b>link</b></samp> - цвет ссылки.<br>
+<samp class="x"><b>alink</b></samp> - цвет нажатой, активной ссылки.<br>
+<samp class="x"><b>vlink</b></samp> - цвет посещенной ссылки.<br>
+
+<p>Пишется так:</p>
+<samp class="x"><b>&lt;body link="#008000" alink="# ff0000 " vlink="# ffff00"</b>&gt;</samp>  
+
+<p>Продолжая говорить о цвете текстовой ссылки стоит упомянуть, что при необходимости можно принудительно выделять цветом как всю ссылку, так и отдельные её части (фразы слова буквы) знакомым тегом <samp><b>&lt;font&gt; &lt;/font&gt;</b></samp> и его атрибутом <samp><b>color.</b></samp>  Впрочем, это касается не только цвета так же отдельно можно задать размер, стиль и шрифт текста. Но помните, что манипуляции с цветом нужно проводить внутри тега <samp><b>&lt;a&gt;вот здесь&lt;/a&gt;</b></samp> а не за бортом, иначе цвет ссылки будет либо по умолчанию, либо так как прописано в теге <samp><b>&lt;body&gt;</b></samp></p>
+<p>Пример:</p>
+<div class="primer">
+Файл index.html:<br><br> 
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Радуга&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body <b>link="#008000" alink="# ff0000 " vlink="# ffff00"&gt;</b></samp><br> 
+<samp class="xx">&lt;center&gt;</samp><br>
+<samp class="xxx">&lt;h3&gt;Посмотрите на фразу которая поможет Вам запомнить места цветов в радуге&lt;/h3&gt;</samp><br>
+<samp class="xxx">&lt;br&gt;</samp><br>
+<samp class="xxx"><b>&lt;a href="primer2.html"&gt;</b></samp><br>
+<samp class="xxxx">&lt;font size="+1" color=#ff0000&gt;Р&lt;/font&gt;</samp><br>
+<samp class="xxxx">&lt;font size="+2" color=#ff8c40&gt;А&lt;/font&gt;</samp><br>
+<samp class="xxxx">&lt;font size="+3" color=#ffff00&gt;Д&lt;/font&gt;</samp><br>
+<samp class="xxxx">&lt;font size="+3" color=#008000&gt;У&lt;/font&gt;</samp><br>
+<samp class="xxxx">&lt;font size="+2" color=#0000ff&gt;Г&lt;/font&gt;</samp><br>
+<samp class="xxxx">&lt;font size="+1" color=#800080&gt;А&lt;/font&gt;</samp><br>
+<samp class="xxx"><b>&lt;/a&gt;</b></samp><br>
+<samp class="xx">&lt;/center&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<hr>
+Файл primer.html:<br><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Радуга&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body <b>link="#008000" alink="# ff0000 " vlink="# ffff00"&gt;</b></samp><br> 
+<samp class="xx">&lt;center&gt;</samp><br>      
+<samp class="xxx">&lt;font size="+3"&gt;</samp><br>
+<samp class="xxxx">&lt;font color=#ff0000&gt;Каждый&lt;/font&gt;</samp><br>
+<samp class="xxxx">&lt;font color=#ff8c40&gt;охотник&lt;/font&gt;</samp><br>
+<samp class="xxxx">&lt;font color=#ffff00&gt;желает&lt;/font&gt;</samp><br>
+<samp class="xxxx">&lt;font color=#008000&gt;знать&lt;/font&gt;</samp><br>
+<samp class="xxxx">&lt;font color=#40caff&gt;где&lt;/font&gt;</samp><br>
+<samp class="xxxx">&lt;font color=#0000ff&gt;сидит&lt;/font&gt;</samp><br> 
+<samp class="xxxx">&lt;font color=#800080&gt;фазан&lt;/font&gt;</samp><br>
+<samp class="xxx">&lt;/font&gt;</samp><br>
+<samp class="xxx">&lt;br&gt;&lt;br&gt;&lt;br&gt;</samp><br> 
+<samp class="xxx"><b>&lt;a href="index.html"&gt;вернуться на главную&lt;/a&gt;</b></samp><br>
+<samp class="xx"> &lt;/center&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer24.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Такие вот дела…</p>
+
+<h2>Рисунок ссылка.</h2>
+
+<p>Ссылкой может являться не только текст, но и рисунок.. Здесь принцип такой же как и в текстовой ссылке, просто вместо текста мы заключаем рисунок который хотим сделать ссылкой.</p>
+<p>Вот так:</p> 
+<samp class="x"><b>&lt;a href="primer3.html"&gt;&lt;img src="knopa.gif"&gt;&lt;/a&gt;</b></samp>
+<p>Перед тем как привести очередной пример расскажу про то, как при переходе по ссылке открыть документ в новом окне браузера, до этого если Вы обратили внимание он у нас открывался в текущем, что не всегда удобно. Решает эту проблему атрибут <samp><b>target</b></samp> (цель) и его значение <samp><b>_blank.</b></samp></p>
+<p>Пишется так:</p>
+<samp class="x"><b>&lt;a href="primer3.html" target="_blank"&gt;открыть в новом окне&lt;/a&gt;</b></samp>
+
+<p>Пример:</p>
+<div class="primer">
+Файл index.html:<br><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;кнопка&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br> 
+<samp class="xx">&lt;center&gt;</samp><br>
+<samp class="xxx">&lt;h1&gt; Не в коем случае не нажимайте на эту кнопку!!!&lt;/h1&gt;</samp><br>
+<samp class="xxx">&lt;br&gt;</samp><br>
+<samp class="xxx"><b>&lt;a href="primer3.html" title="Не нажимать!!!" target="_blank"&gt;&lt;img src="graphics/knopa.gif" border="0" alt="Не нажимать!!!" &gt;&lt;/a&gt;</b></samp><br>
+<samp class="xx">&lt;/center&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<hr>
+Файл primer.html:<br><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;итог..&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;div align="center"&gt;&lt;font size="+3"&gt;Ракеты ушли... Америки больше нет...&lt;/font&gt;&lt;/div&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer25.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Я надеюсь, Вы не додумались нажать большую красную кнопку? Ох уж этот русский менталитет.. :)</p>
+<p>Что ещё можно почерпнуть из этого примера?</p>
+<p>Во-первых. Мы применили уже знакомые атрибуты описания <samp><b>title="Не нажимать!!!"</b></samp> для тега <samp><b>&lt;a&gt;</b></samp> и одновременно <samp><b>alt="Не нажимать!!!"</b></samp> для тега <samp><b>&lt;img&gt;</b></samp> если Вы помните, эти атрибуты позволяют сделать нам всплывающие подсказки. Но зачем я их продублировал? Один для ссылки, а другой для рисунка, если сам по себе рисунок является ссылкой?.. долгая история, когда ни будь напишу статью: "Спецификации HTML, браузеры и головная боль.." - а сейчас скажу лишь то, что разные браузеры не всегда воспринимают те или иные теги и их атрибуты. А описание для ссылки картинки нам просто таки необходимо! Помните, я рассказывал, что есть люди, умышленно отключающие загрузку рисунков?- это для них.</p>  
+<p>Во-вторых. В примере использован атрибут тега <samp><b>&lt;img&gt; border="0"</b></samp> - рамка рисунка. 0 - это значит выключить рамку, так как она портит весь вид страницы в данном примере, но бывают случаи когда рамки рисунка вполне актуальны и так сказать вписываются в страницу. Здесь нужно помнить, что когда рисунок является ссылкой, его рамка окрашивается в цвета ссылки: <samp><b>link</b></samp> - цвет ссылки, <samp><b>alink</b></samp> - цвет нажатой, активной ссылки, <samp><b>vlink</b></samp> - цвет посещенной ссылки тега <samp><b>&lt;body&gt;</b></samp>.</p>
+
+<h2>Ссылка на e-mail</h2>
+<p>Я тут Вас чуть-чуть с толку сбил, вроде бы договаривались вместе писать полноценный сайт, а я тут какие то мелкие примерчики выкладываю.. Не волнуйтесь! В конце главы покажу готовый сайт про Карлсона целиком. А  сейчас думаю так будет удобнее Вам читать,  и мне писать.. :   Да и подразумеваю  что Вы уже самостоятельно можете вставлять теги в нужные места.</p>
+<p>Напишите мне письмо.. - строчка из того примера..</p>
+<p>Для того что бы сделать текст или рисунок ссылкой на e-mail - почтовый ящик его нужно заключить в тег <samp><b>&lt;a&gt;</b></samp>, но не простой, а с использованием <samp><b>mailto</b></samp></p>
+<p>Пишем так:</p>
+<samp class="x"><b>&lt;a href="mailto:karlson@kruha.ru"&gt; Напишите мне письмо.. &lt;/a&gt;</b></samp>
+<p>Эта непривычная запись будет говорить что, кликнув по тексту ссылке "Напишите мне письмо.." посетитель  сайта попадет в свою почтовую программу, которая выдаст ему бланк для отправки письма, где в строчке Кому: уже будет указан нужный нам почтовый ящик karlson@kruha.ru</p>
+<p>Пример:</p> 
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;e-mail&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;center&gt;&lt;h2&gt;</samp><br>
+<samp class="xxx"><b>&lt;a href="mailto:karlson@kruha.ru"&gt; Напишите мне письмо.. &lt;/a&gt;</b></samp><br> 
+<samp class="xx">&lt;/h2&gt;&lt;/center&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer26.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<p>Помимо этого в почтовом бланке можно заранее прописать следующие вещи:</p>
+
+<samp class="x"><b>?subject=</b></samp> - Тема пиcьма<br>
+<samp class="x"><b>&amp;Body=</b></samp>  - Текст сообщения<br>
+<samp class="x"><b>&amp;cc=</b> maluh@kruha.ru,maluh2@kruha.ru</samp> - Копии письма<br>
+<samp class="x"><b>&amp;bcc=</b> freken_bok@kruha.ru,freken_bok2@kruha.ru</samp> - Скрытые копии письма<br>
+
+<p>Адреса ящиков для копий и скрытых копий письма пишутся через запятую.</p> 
+<p>Пример:</p>
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;e-mail&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;center&gt;&lt;h2&gt;</samp><br>
+<samp class="xxx"><b>&lt;a href="mailto:karlson@kruha.ru?subject=А у вас молоко убежало.. &amp;Body=Текст письма &amp;cc=maluh@kruha.ru &amp;bcc=freken_bok@kruha.ru&gt;Напишите мне письмо.. &lt;/a&gt;</b></samp><br>
+<samp class="xx">&lt;/h2&gt;&lt;/center&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer27.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<br>
+<h2>Закладки.</h2>
+
+<p>Закладки или якоря - это особый вид ссылок. Данные ссылки, как правило, не ведут к какому либо документу, а предназначены для навигации внутри страницы.</p>
+<p>Предположим на  странице в удобном месте находится некое содержание или меню.. по принципу:</p>
+<samp class="x">Глава1</samp><br>
+<samp class="x">Глава2</samp><br>
+<samp class="x">Глава3</samp><br>
+<p>А далее идет большой текст с этими главами, так вот чтобы посетитель страницы нажав на одну из этих глав "перенёсся" в нужное место текста нам нужно сделать две вещи:</p>
+<p>Присвоить индивидуальное имя каждой главе. Ищем, значит, в большом-большом тексте нужные главы и делаем их адресами ссылок закладок, присваиваем им имена.</p>
+<p>Вот так:</p>
+<b>
+<samp class="x">&lt;а name="glava1"&gt;Глава1 &lt;/а&gt;</samp><br>
+<samp class="x">&lt;а name="glava2"&gt;Глава2 &lt;/а&gt;</samp><br>
+<samp class="x">&lt;а name="glava3"&gt;Глава3 &lt;/а&gt;</samp><br>
+</b>
+<p>Имя можно присвоить любое необязательно glava1</p>
+<p>А теперь собственно прописываем на них ссылки в нашем меню, содержании.</p>
+<p>Вот так:</p>
+<b>
+<samp class="x">&lt;a href="#glava1"&gt; Глава1&lt;/a&gt;</samp><br>
+<samp class="x">&lt;a href="#glava2"&gt; Глава3&lt;/a&gt;</samp><br>
+<samp class="x">&lt;a href="#glava3"&gt; Глава3&lt;/a&gt;</samp><br>
+</b>
+<p>Замете перед каждым именем ставим знак <b>решётки #</b>.</p>
+<p>Ладно, думаю, на примере будет понятнее:</p>
+<div class="primer">
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Закладки&lt;/title&gt;</samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;h2&gt;А. С. ПУШКИН&lt;/h2&gt;</samp><br>
+<samp class="xx"><b>&lt;a href="#skazka1"&gt;</b>Сказка о попе и работнике его Балде<b>&lt;/a&gt;</b>&lt;br&gt;</samp><br>
+<samp class="xx"><b>&lt;a href="#skazka2"&gt;</b>Сказка о рыбаке и рыбке<b>&lt;/a&gt;</b>&lt;br&gt;</samp><br>
+<samp class="xx"><b>&lt;a href="#skazka3"&gt;</b>Сказка о царе Cалтане<b>&lt;/a&gt;</b></samp><br>
+<samp class="xx">&lt;h3&gt;<b>&lt;a name="skazka1"&gt;</b>Сказка о попе и работнике его Балде<b>&lt;/a&gt;</b>&lt;/h3&gt;</samp><br>
+<samp class="xx">&lt;pre&gt;</samp><br>
+<samp class="xxx">Жил-был поп,</samp><br>
+<samp class="xxx">Толоконный лоб.</samp><br>
+<samp class="xxx">... ... ...</samp><br>
+<samp class="xx">&lt;/pre&gt;</samp><br>
+<samp class="xx">&lt;h3&gt;<b>&lt;a name="skazka2"&gt;</b>Сказка о рыбаке и рыбке<b>&lt;/a&gt;</b>&lt;/h3&gt;</samp><br>
+<samp class="xx">&lt;pre&gt;</samp><br>
+<samp class="xxx">Жил старик со своею старухой</samp><br>
+<samp class="xxx">У самого синего моря.</samp><br>
+<samp class="xxx">... ... ...</samp><br>
+<samp class="xx">&lt;/pre&gt;</samp><br>
+<samp class="xx">&lt;h3&gt;<b>&lt;a name="skazka3"&gt;</b>Сказка о царе Cалтане<b>&lt;/a&gt;</b>&lt;/h3&gt;</samp><br>
+<samp class="xx">&lt;pre&gt;</samp><br>
+<samp class="xxx">Три девицы под окном</samp><br>
+<samp class="xxx">Пряли поздно вечерком.</samp><br>
+<samp class="xxx">... ... ...</samp><br>
+<samp class="xx">&lt;/pre&gt;</samp><br> 
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer28.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>Хотя, как я уже говорил, закладки используют для навигации внутри страницы, на них всё же можно ссылаться с других страниц или сайтов</p>
+<samp class="x"><b>&lt;a href="primer.html#glava1"&gt;</b> идем к главе1 с другой страницы сайта<b>&lt;/a&gt;</b></samp><br>
+<samp class="x"><b>&lt;a href="http://www.site.ru/ primer.html#glava2"&gt;</b> разместив такую ссылку на любом другом сайте мы согласно указанному пути сначала попадаем на наш сайт www.site.ru надём там документ primer.html и  сразу начинам читать главу2<b>&lt;/a&gt;</b></samp><br>
+<p>Ну а теперь, как и обещал, выкладываю "большой" пример он тоже состоит из двух отдельных страниц:</p> 
+<div class="primer">
+Файл index.html:<br><br>  
+<samp>&lt;html&gt;</samp><br>
+<samp>&lt;head&gt;</samp><br>
+<samp class="x">&lt;title&gt;Мой первый сайт&lt;/title&gt;</samp><br>
+<samp>&lt;/head&gt;</samp><br>
+<samp>&lt;body text="#484800" bgcolor="#ffffff" background="graphics/fon.jpg"&gt;</samp><br>
+<samp class="x">&lt;center&gt;</samp><br>
+<samp class="xx">&lt;table width="640" height="480" cellpadding="5" cellspacing="2" border="1"&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td colspan="3" height="30" bgcolor="#b2ff80"&gt;</samp><br>
+<samp class="xxxxx">&lt;center&gt;&lt;img src="graphics/privet.png" width="200" height="40" alt="Привет мир!!!"&gt;&lt;/center&gt;</samp><br>
+<samp class="xxxx">&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td height="30" width="33%" bgcolor="#ffa0cf"&gt;</samp><br>
+<samp class="xxxxx">&lt;center&gt;&lt;b&gt;&lt;<b>a href=" index.html"&gt;</b>Обо мне!!!<b>&lt;/a&gt;</b>&lt;/b&gt;&lt;/center&gt;</samp><br>
+<samp class="xxxx">&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;td width="33%" bgcolor="#c0e4ff"&gt;</samp><br>
+<samp class="xxxxx">&lt;center&gt;&lt;b&gt;<b>&lt;a href=" myfoto.html"&gt;</b>Здесь мои фотки!!<b>&lt;/a&gt;</b>&lt;/b&gt;&lt;/center&gt;</samp><br>
+<samp class="xxxx">&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;td bgcolor="#c0e4ff"&gt;</samp><br>
+<samp class="xxxxx">&lt;center&gt;&lt;b&gt;<b>&lt;a href="mailto:karlson@kruha.ru"&gt;</b>Напишите мне письмо..<b>&lt;/a&gt;</b>&lt;/b&gt;&lt;/center&gt;</samp><br>
+<samp class="xxxx">&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td colspan="3" valign="top" bgcolor="#b2ff80"&gt;</samp><br>
+<samp class="xxxxx">&lt;img src="graphics/foto.jpg" align="left" hspace="10" width="100" height="90" alt="Это моя фотка!!!"&gt;</samp><br>
+<samp class="xxxxx">&lt;p align="justify"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;Разрешите представиться Карлсон! … … …&lt;/p&gt;</samp><br>
+<samp class="xxxx">&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xx">&lt;/table&gt;</samp><br>
+<samp class="x">&lt;/center&gt;</samp><br>
+<samp>&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp><br>
+<hr>
+Файл myfoto.html: <br><br> 
+<samp>&lt;html&gt;</samp><br>
+<samp>&lt;head&gt;</samp><br>
+<samp class="x">&lt;title&gt;Мой первый сайт&lt;/title&gt;</samp><br>
+<samp>&lt;/head&gt;</samp><br>
+<samp>&lt;body text="#484800" bgcolor="#ffffff" background="graphics/fon.jpg"&gt;</samp><br>
+<samp class="x">&lt;center&gt;</samp><br>
+<samp class="xx">&lt;table width="640" height="480" cellpadding="5" cellspacing="2" border="1"&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td colspan="3" height="30" bgcolor="#b2ff80"&gt;</samp><br>
+<samp class="xxxxx">&lt;center&gt;&lt;img src="graphics/privet.png" width="200" height="40" alt="Привет мир!!!"&gt;&lt;/center&gt;</samp><br> 
+<samp class="xxxx">&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td height="30" width="33%" bgcolor="#c0e4ff"&gt;</samp><br>
+<samp class="xxxxx">&lt;center&gt;&lt;b&gt;<b>&lt;a href=" index.html"&gt;</b>Обо мне!!!<b>&lt;/a&gt;</b>&lt;/b&gt;&lt;/center&gt;</samp><br>
+<samp class="xxxx">&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;td width="33%" bgcolor="#ffa0cf"&gt;</samp><br>
+<samp class="xxxxx">&lt;center&gt;&lt;b&gt;<b>&lt;a href=" myfoto.html"&gt;</b>Здесь мои фотки!!<b>&lt;/a&gt;</b>&lt;/b&gt;&lt;/center&gt;</samp><br>
+<samp class="xxxx">&lt;/td&gt;</samp><br>
+<samp class="xxxx">&lt;td bgcolor="#c0e4ff"&gt;</samp><br>
+<samp class="xxxxx">&lt;center&gt;&lt;b&gt;<b>&lt;a href="mailto:karlson@kruha.ru"&gt;</b>Напишите мне письмо..<b>&lt;/a&gt;</b>&lt;/b&gt;&lt;/center&gt;</samp><br>
+<samp class="xxxx">&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xxx">&lt;tr&gt;</samp><br>
+<samp class="xxxx">&lt;td colspan="3" valign="top" bgcolor="#b2ff80"&gt;</samp><br>      
+<samp class="xxxxx">&lt;img src="graphics/foto1.jpg" align="middle" vspace="10" hspace="10" width="140" height="120" alt="Это моя фотка!!!"&gt;</samp><br>
+<samp class="xxxxx">это я &lt;br&gt;</samp><br>
+<samp class="xxxxx">&lt;img src="graphics/foto2.jpg" align="middle" vspace="10" hspace="10" width="140" height="120" alt="Это моя фотка!!!"&gt;</samp><br> 
+<samp class="xxxxx">и это я &lt;br&gt;</samp><br>
+<samp class="xxxxx">&lt;img src="graphics/foto3.jpg" align="middle" vspace="10" hspace="10" width="140" height="120" alt="Это моя фотка!!!"&gt;</samp><br> 
+<samp class="xxxxx">снова я</samp><br>
+<samp class="xxxx">&lt;/td&gt;</samp><br>
+<samp class="xxx">&lt;/tr&gt;</samp><br>
+<samp class="xx">&lt;/table&gt;</samp><br>
+<samp class="x">&lt;/center&gt;</samp><br> 
+<samp>&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer30.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+<p>Фух.. ну вроде всё.. Думаю, на этом примере с Карлсоном мы распрощаемся, разросся он через чур.. да и как сайт с точки зрения построения имеет законченный  вид...</p>
+<p>Он улетел - но обещал вернуться!.. :)</p>
+<p>Вполне нормальный сайт-визитка получился.. конечно, дизайн не вдохновляет, но зато теперь у Вас будет стимул сделать лучше!! Теперь этот сайт можно выложить в свет, как это сделать читайте в статье <b>Публикация сайта:</b> <a href="http://www.webremeslo.ru/publication/publication2.html" title="Статья на сайте webremeslo.ru о том как разместить свой сайт в Интернете,   Что нужно знать и иметь для публикации сайта?   Рассматриваются платный и бесплатный варианты   приобретения домена и хостинга.">(http://www.webremeslo.ru/publication/publication2.html)</a></p>
+
+
+<p>Ну а мы пойдем дальше, впереди нас ждет еще много интересных всяких разных штук.</p>
+<h2><a name="sovetu">Полезные советы:</a></h2>
+<ul>
+<li><p>Одна из Ваших страничек на сайте <b>обязательно</b> должна называться <b>index.html.</b> Именно файл с таким названием на Вашем сайте будет искать программа робот, когда человек введет имя Вашего сайта. Так как страница <b>index.html</b> будет открываться первой, делайте её главной. Остальные страницы можете называть, как угодно… больше никаких нюансов с именами нет.</p>
+<li><p>Про регистр.. Прописывая путь и имена документов помните, что, к примеру: Page.html, page.html и PAGE.html это имена разных документов! Это же касается имен закладок и рисунков. Всегда учитывайте регистр при написании кода, есть большая вероятность, что такие имена не будут распознаны тем или иным браузером. Возьмите за правило все писать и обзывать маленькими латинскими буквами, тогда риск человеческого фактора и капризов программ сведется к нулю.</p>
+<li><p>Правило трех кликов.. </p>
+<p>Старайтесь формировать "дерево ссылок" таким образом, чтобы посетитель сайта мог из любой его страницы попасть в любое место сайта за минимальное число переходов по ссылкам. Больше трёх переходов к нужному месту на сайте это уже не есть хорошо.. Бесконечные загрузки ненужных человеку страниц могут привести к нервному расстройству и преждевременному закрытию сайта. Берегите время деньги и нервы людей.</p>   
+</ul>
+
+
+<div class="url">
+<a href="glava4.html" title="К предыдущей главе">&lt;&lt; предыдущая глава</a> | 
+<a href="glava6.html" title="К следующей главе">следующая глава &gt;&gt;</a>
+</div>
+</div>
+<!-- Конец центральной колонке -->
+<!-- Подвал -->
+<div class="footer">
+&copy; Автор: Семикопенко Алексей Алексеевич. | <a href="http://webremeslo.ru/" class="logo" title="Перейти на сайт webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец подвалу -->
+</body>
+</html>

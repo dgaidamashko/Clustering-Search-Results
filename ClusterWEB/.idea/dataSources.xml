@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="579600136">
+    <data-source source="LOCAL" name="Django default" uuid="10a1f7b0-0086-47b4-a5df-82c347fa5c36">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\ClusterWEB\db.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>

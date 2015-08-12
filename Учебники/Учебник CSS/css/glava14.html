@@ -1,0 +1,258 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Учебник CSS для начинающих.</title>
+<meta HTTP-EQUIV="Content-Type" Content="text/html; Charset=Windows-1251">
+<meta name="author" Content="Семикопенко Алексей Алексеевич">
+<meta name="copyright" Content="Семикопенко Алексей Алексеевич">
+<meta name="Publisher-Email" Content="alex@webremeslo.ru">
+<meta name="Publisher-URL" Content="http://webremeslo.ru/">
+<link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+<body>
+<!-- Шапка -->
+<div class="header">
+<h1 class="logo">Учебник CSS</h1>
+</div>
+<!-- Конец шапке -->
+<!--левая колонка "меню" -->
+<div class="left">
+<div class="fixed">
+<ul class="ul_none">
+<li><a href="../index.html" class="menu" title="От автора.">Главная</a></li>
+<li><a href="glava0.html" class="menu" title="Введение.   Что такое CSS?">Что такое CSS?</a></li>
+<li><a href="glava1.html" class="menu" title="Глава 1   Внедрение CSS в HTML документ.">Внедрение CSS.</a></li>
+<li><a href="glava2.html" class="menu" title="Глава 2   Свойства текста.">Свойства текста.</a></li>
+<li><a href="glava3.html" class="menu" title="Глава 3   Свойства шрифта.">Свойства шрифта.</a></li>
+<li><a href="glava4.html" class="menu" title="Глава 4   Цвет и фон.">Цвет и фон.</a></li>
+<li><a href="glava5.html" class="menu" title="Глава 5   Границы элемента.">Границы элемента.</a></li>
+<li><a href="glava6.html" class="menu" title="Глава 6   Классы и id селекторы.">Классы и id селекторы.</a></li>
+<li><a href="glava7.html" class="menu" title="Глава 7   Размеры элемента.">Размеры элемента.</a></li>
+<li><a href="glava8.html" class="menu" title="Глава 8   Поля и отступы.">Поля и отступы.</a></li>
+<li><a href="glava9.html" class="menu" title="Глава 9   Курсоры.">Курсоры.</a></li>
+<li><a href="glava10.html" class="menu" title="Глава 10   Форматирование.">Форматирование.</a></li>
+<li><a href="glava11.html" class="menu" title="Глава 11   Поплавки.">Поплавки.</a></li>
+<li><a href="glava12.html" class="menu" title="Глава 12   Позиционирование.">Позиционирование.</a></li>
+<li><a href="glava13.html" class="menu" title="Глава 13   Стиль списка.">Стиль списка.</a></li>
+<li><a href="glava14.html" class="activemenu" title="Глава 14   Полоса прокрутки.">Полоса прокрутки.</a></li>
+<li><a href="glava15.html" class="menu" title="Глава 15   Псевдоклассы.">Псевдоклассы.</a></li>
+<li><a href="glava16.html" class="menu" title="Глава 16   Псевдоэлементы.">Псевдоэлементы.</a></li>
+</ul>
+</div>
+</div>
+<!-- Конец левой колонке -->
+<!-- Правая колонка -->
+<div class="right">
+<h2>А так же:</h2>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">Как создать сайт?</a>
+<a href="http://www.webremeslo.ru/html/glava0.html" class="menu" title="www.webremeslo.ru">Учебник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka.html" class="menu" title="www.webremeslo.ru">Справочник HTML</a>
+<a href="http://www.webremeslo.ru/spravka/spravka4.html" class="menu" title="www.webremeslo.ru">Справочник CSS</a>
+<a href="http://forum.webremeslo.ru/index.php" class="menu" title="www.webremeslo.ru">Форум</a><br>
+..<em>и многое другое на сайте:</em><br>
+<a href="http://webremeslo.ru/" class="menu" title="www.webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец правой колонке -->
+<!-- Центральная колонка -->
+<div class="center">
+   
+<p class="zag">Глава 14</p>
+
+<h1>Полоса прокрутки.</h1>
+<p>Коротенькая и совсем несложная глава про цвет полосы прокрутки.</p>
+<p>Для того чтобы изменить дизайн полосы прокрутки, раскрасить её на свой лад, необходимо воспользоваться свойствами из семейства <samp><b>scrollbar</b></samp>, присвоив их нужному элементу.</p>
+<p>В качестве элементов могут выступать любые блоки, в которых гипотетически может появляться полоса прокрутки <samp><b>&lt;div&gt;, &lt;textarea&gt;, &lt;iframe&gt;</b></samp> и т.д.. в том числе и сама страница - тег <samp><b>&lt;body&gt;</b></samp>.</p>
+<p>В таблице ниже перечислены все свойства CSS из семейства <samp><b>scrollbar</b></samp>, а также показан результат применения этих свойств.</p>
+<table width="99%" bgcolor="#e8e8e8" cellspacing="2" cellpadding="0" border="0" align="center">
+  <tr>
+   <th>Свойство полосы прокрутки:</th>
+   <th>Внешний вид:</th>
+ </tr>
+ <tr class="trn">
+   <td class="tdl">
+   <samp class="x"><b>scrollbar-3dlight-color: #ff0000;</b></samp> - Цвет верхней и левой тени ползунка и кнопок.
+   </td>
+   <td width="150">
+    <div style="scrollbar-3dlight-color: #ff0000; overflow: auto; width: 150px; height: 50px">
+	  <img src="../graphics/1x1.gif" width="200" height="1" alt="">
+	</div>
+   </td>
+ </tr>
+ <tr class="trc">
+   <td class="tdl">
+<samp class="x"><b>scrollbar-arrow-color: #ff0000;</b></samp> - Цвет стрелок на кнопках полосы прокрутки.
+</td>
+   <td>
+    <div style="scrollbar-arrow-color: #ff0000; overflow: auto; width: 150px; height: 50px">
+	  <img src="../graphics/1x1.gif" width="200" height="1" alt="">
+	</div>
+   </td>
+ </tr>
+ <tr class="trn">
+   <td class="tdl">
+<samp class="x"><b>scrollbar-base-color: #ff0000;</b></samp> - Базовый цвет полосы прокрутки.
+</td>
+   <td>
+    <div style="scrollbar-base-color: #ff0000; overflow: auto; width: 150px; height: 50px">
+	  <img src="../graphics/1x1.gif" width="200" height="1" alt="">
+	</div>
+   </td>
+ </tr>
+ <tr class="trc">
+   <td class="tdl">
+   <samp class="x"><b>scrollbar-darkshadow-color: #ff0000;</b></samp> - Цвет нижней и правой тени.(dark shadow - темная тень)
+   </td>
+   <td>
+    <div style="scrollbar-darkshadow-color: #ff0000; overflow: auto; width: 150px; height: 50px">
+	  <img src="../graphics/1x1.gif" width="200" height="1" alt="">
+	</div>
+   </td>
+ </tr>
+ <tr class="trn">
+   <td class="tdl">
+   <samp class="x"><b>scrollbar-face-color: #ff0000;</b></samp> - Цвет лицевой части полосы прокрутки.
+   </td>
+   <td>
+    <div style="scrollbar-face-color: #ff0000; overflow: auto; width: 150px; height: 50px">
+	  <img src="../graphics/1x1.gif" width="200" height="1" alt="">
+	</div>
+   </td>
+ </tr>
+ <tr class="trc">
+   <td class="tdl">
+   <samp class="x"><b>scrollbar-highlight-color: #ff0000;</b></samp> - Цвет подсветки полосы прокрутки.
+   </td>
+   <td>
+    <div style="scrollbar-highlight-color: #ff0000; overflow: auto; width: 150px; height: 50px">
+	  <img src="../graphics/1x1.gif" width="200" height="1" alt="">
+	</div>
+   </td>
+ </tr>
+ <tr class="trn">
+   <td class="tdl">
+   <samp class="x"><b>scrollbar-shadow-color: #ff0000;</b></samp> - Цвет тени полосы прокрутки (shadow-тень).
+   </td>
+   <td>
+    <div style="scrollbar-shadow-color: #ff0000; overflow: auto; width: 150px; height: 50px">
+	  <img src="../graphics/1x1.gif" width="200" height="1" alt="">
+	</div>
+   </td>
+ </tr>
+ <tr class="trc">
+   <td class="tdl">
+   <samp class="x"><b>scrollbar-track-color: #ff0000;</b></samp> - Цвет дорожки для полосы прокрутки.
+   </td>
+   <td>
+    <div style="scrollbar-track-color: #ff0000; overflow: auto; width: 150px; height: 50px">
+	  <img src="../graphics/1x1.gif" width="200" height="1" alt="">
+	</div>
+   </td>
+ </tr>
+</table>
+
+<p>Ну вот Вам ещё и рисунок для наглядности:</p>
+
+<img src="../graphics/scrollbar.gif" border="0" width="469" height="178" title="Свойство CSS scrollbar.   Увеличенный вид полосы прокрутки" alt="Свойство CSS scrollbar.   Увеличенный вид полосы прокрутки">
+
+<p>Возможные значения свойств из семейства <b>scrollbar</b>:</p> 
+<ul>
+<li><b><samp>#ff0000</samp></b> - Шестнадцатеричное значение цвета RGB. 
+<li><b><samp>red</samp></b> - Именное значение цвета. 
+<li><b><samp>RGB(255, 0, 0)</samp></b> - Значение цвета RGB.
+<li><b><samp>inherit</samp></b> - применяется значение родительского элемента.(по умолчанию) 
+</ul>
+
+<p>Пример:</p>
+
+<div class="primer">
+<samp>Файл primer3.css</samp><br>
+<samp class="x">body{</samp><br>
+<samp class="xx">background-color: #fff8dc;</samp><br>
+<samp class="xx"><b>scrollbar-3dlight-color: #ffebcd;</b></samp><br>
+<samp class="xx"><b>scrollbar-arrow-color: #ffffff;</b></samp><br>
+<samp class="xx"><b>scrollbar-base-color: #ffebcd;</b></samp><br>
+<samp class="xx"><b>scrollbar-darkshadow-color: #f5f5dc;</b></samp><br>
+<samp class="xx"><b>scrollbar-face-color: #b8860b;</b></samp><br>
+<samp class="xx"><b>scrollbar-highlight-color: #f5f5dc;</b></samp><br>
+<samp class="xx"><b>scrollbar-shadow-color: #f5f5dc;</b></samp><br>
+<samp class="xx"><b>scrollbar-track-color: #f5f5dc;</b></samp><br>
+<samp class="x">}</samp><br>
+<samp class="x">div{</samp><br>
+<samp class="xx">padding: 20px;</samp><br>
+<samp class="xx">overflow: auto;</samp><br>
+<samp class="xx">width: 200px;</samp><br>
+<samp class="xx">height: 100px;</samp><br>
+<samp class="xx">border: solid 2px #deb887;</samp><br> 
+<samp class="xx">background-color: #ffffff;</samp><br>
+<samp class="x">}</samp><br>
+<hr>
+<samp>Файл index.html</samp><br>
+<samp>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"&gt;</samp><br>
+<samp>&lt;html&gt;</samp><br>
+<samp class="x">&lt;head&gt;</samp><br>
+<samp class="xx">&lt;title&gt;Полоса прокрутки&lt;/title&gt;</samp><br>
+<samp class="xx"><b>&lt;link rel="stylesheet" href="primer3.css" type="text/css"&gt;</b></samp><br>
+<samp class="x">&lt;/head&gt;</samp><br>
+<samp class="x">&lt;body&gt;</samp><br>
+<samp class="xx">&lt;div&gt;</samp><br>
+<samp class="xxx">&lt;h3 align="center"&gt;Диктант&lt;/h3&gt;</samp><br>
+<samp class="xxx">На террасе, близ конопляника, небезызвестная вдова Агриппина Саввична, потчевала, отставного коллежского асессора Аполлона Карповича, моллюсками, под аккомпанемент виолончели.</samp><br>
+<samp class="xx">&lt;/div&gt;</samp><br>
+<samp class="xx">&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;</samp><br>
+<samp class="xx">&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;</samp><br>
+<samp class="xx">&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;</samp><br>
+<samp class="xx">&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;</samp><br>
+<samp class="x">&lt;/body&gt;</samp><br>
+<samp>&lt;/html&gt;</samp>
+<div align="right"><a href="primer/primer64.html" target="_blank">смотреть пример</a>&nbsp;&nbsp;</div> 
+</div>
+
+<h2>Кроссбраузерность свойства scrollbar.</h2>
+
+<p>Хочу отметить, что свойства CSS из семейства <samp><b>scrollbar</b></samp> являются расширением спецификации CSS2, введенным компаний Microsoft, и реализованным в браузерах Internet Explorer начиная с версии IE 5.5,  соответственно другие браузеры, на тот момент, полностью игнорировали данное свойство. Но прошло время и многие браузеры стали подстраиваться под это дополнение к спецификации от Microsoft.</p>
+<p>Однако, до сих пор всё не так уж гладко! Так что во многих браузерах  стиль полосы прокрутки или игнорируется или работает не совсем корректно.. например многие игнорируют данное свойство для тега <samp><b>&lt;body&gt;</b></samp>  или не понимают  некоторые отдельные свойства скроллбара.</p>
+<p>Ниже приведу несколько советов, которые возможно помогут решить данную проблему  в тех или иных браузерах. Употребляю слово "возможно" потому что очень трудно отследить в динамике за всеми изменениями разных браузеров. Мир не стоит на месте каждый день, там или здесь, что-то меняется! Жаль вот только что кроссбраузерность всегда остаётся головной болью!</p>
+<p>Но что то я заговорился.. Итак, ряд "таблеток":</p>
+
+<p>1. По возможности используйте вот такой заголовок <samp><b>&lt;!DOCTYPE&gt;</b></samp>:</p>
+<div class="primer">
+<samp><b>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"&gt;</b></samp>
+</div>
+<p>2. Указывайте свойства скроллбара не только для тега <samp><b>&lt;body&gt;</b></samp> но и для тега <samp><b>&lt;html&gt;</b></samp></p>
+<p>Вот так:</p>
+<div class="primer">
+<samp><b>html,body</b>{</samp><br>
+<samp class="x">scrollbar-3dlight-color: #ffebcd;</samp><br>
+<samp class="x">scrollbar-arrow-color: #ffffff;</samp><br>
+<samp>}</samp>
+</div>
+<p>3. Попробуйте, если это более менее рационально для Вашего сайта, внедрять стили полосы прокрутки используя атрибут <samp><b>style</b></samp>, а не одноименный тег в "голове" документа или внешний css файл</p>
+<p>Вот так:</p>
+<div class="primer">
+<samp><b>&lt;div style=" scrollbar-3dlight-color: #ffebcd; scrollbar-arrow-color: #ffffff;"&gt;блок&lt;/div&gt;</b></samp>
+</div>
+
+<p>Возможно, данные рекомендации сработают в некоторых браузерах, в любом случае в  IE (начиная с версии 5.5) всё будет работать корректно, а раз хоть где-то работает это уже хорошо! </p>
+
+<h2>Полезные советы:</h2>
+<ul>
+<li><p>Так как <samp><b>scrollbar</b></samp> является одним из важных элементов интерфейса, постарайтесь не вести пользователя в заблуждение, используя совсем уж нестандартный дизайн полосы прокрутки.</p>
+<li><p>Если Вам прямо таки совсем необходим нестандартный скроллбар, не только нестандартный цвет, он и нестандартная форма, да и еще и работающий во всех браузерах используйте скрипты, но не забывайте про первый совет!!</p>
+<li><p>В браузере внешний вид полосы прокрутки черпается из настроек  Windows и например у меня, она имеет вот такой вид:</p>
+<img src="../graphics/scrollbar1.gif" border="0" width="150" height="16" title="скроллбар" alt="скроллбар">
+<p>Но как только Вы примените к полосе прокрутки любое свойство из семейства <samp><b>scrollbar</b></samp>, связь с настройками Windows потеряется, точнее станет "по умолчанию" и полоса приобретёт вот такой вид:</p>
+<img src="../graphics/scrollbar2.gif" border="0" width="150" height="16" title="скроллбар" alt="скроллбар">
+</ul>
+<div class="url">
+<a href="glava13.html" title="К предыдущей главе">&lt;&lt; предыдущая глава</a> | 
+<a href="glava15.html" title="К следующей главе">следующая глава &gt;&gt;</a>
+</div>
+</div>
+<!-- Конец центральной колонке -->
+<!-- Подвал -->
+<div class="footer">
+&copy; Автор: Семикопенко Алексей Алексеевич. | <a href="http://webremeslo.ru/" class="logo" title="Перейти на сайт webremeslo.ru">www.webremeslo.ru</a>
+</div>
+<!-- Конец подвалу -->
+</body>
+</html>

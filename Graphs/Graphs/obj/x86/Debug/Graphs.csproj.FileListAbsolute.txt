@@ -1,0 +1,9 @@
+D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Graphs\Graphs\bin\Debug\Graphs.exe
+D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Graphs\Graphs\bin\Debug\Graphs.pdb
+D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Graphs\Graphs\obj\x86\Debug\Graphs.csprojResolveAssemblyReference.cache
+D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Graphs\Graphs\obj\x86\Debug\Graphs.Form1.resources
+D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Graphs\Graphs\obj\x86\Debug\Graphs.Properties.Resources.resources
+D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Graphs\Graphs\obj\x86\Debug\Graphs.csproj.GenerateResource.Cache
+D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Graphs\Graphs\obj\x86\Debug\Graphs.exe
+D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Graphs\Graphs\obj\x86\Debug\Graphs.pdb
+D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Graphs\Graphs\obj\x86\Debug\Graphs.Form2.resources

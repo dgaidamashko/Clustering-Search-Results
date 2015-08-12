@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title>Относительное позиционирование.</title>
+<style type="text/css">
+h1 {
+color: #008000; 
+font-size:20px
+}
+div.blok1 {
+background: #c0e4ff; 
+border: #000000 2px solid; 
+padding: 5px;
+width: 500px; 
+height: 400px;
+}
+div.blok2 { 
+position: relative; 
+left: 150px; 
+background: #ffa0c5; 
+border: #000 2px solid; 
+padding: 5px; width: 250px; 
+height: 200px;
+}
+</style>
+ </head>
+ <body>
+<div class="blok1">
+ <h1>Элемент родитель - блок №1</h1>
+ <div class="blok2">
+  <h1>Блок №2</h1> 
+  Данный блок позиционирован относительно левого края элемента родителя.
+ </div>
+</div>
+</body>
+</html>
+
