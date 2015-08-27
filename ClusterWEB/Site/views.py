@@ -11,43 +11,73 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.template import RequestContext, loader
 from django.core.urlresolvers import reverse
 from django import forms
-from grab import Grab
+from grab import Grab, GrabNetworkError, GrabTimeoutError
+from django.utils.http import urlquote_plus
 from Stemmer import *
+from Site import models
 
 
 def main_page(request):
-    form = SearchForm(request.GET)
+    form = SearchForm(request.GET, auto_id=False)
+    # Выполнение поиска
     if form.is_valid():
         search_request_string = form.cleaned_data['search_request']
-        return HttpResponseRedirect('/search/results/request=' + str(search_request_string) + '&group=1/')
-    return render(request, "Site/Main_Page.html", {'form': form})
+        return HttpResponseRedirect('/search/results/request=' + str(search_request_string).replace(' ', '_')
+                                    + '&group=1/')
 
+    return render(request, "Site/Main_Page.html", {'form': form})
 
 def main_page_runserver(request):
     return HttpResponseRedirect('/search/')
 
-
 def search_page_redirect(request, search_request):
     return HttpResponseRedirect('/search/results/request=' + str(search_request) + '&group=1/')
 
-
 def search_page(request, search_request, group):
-    return render(request, "Site/Result_Page.html")
+    form1 = SearchForm(request.GET, auto_id=False)
+    form1.search_request = search_request
+    if form1.is_valid():
+        search_request_string = form1.cleaned_data['search_request']
+        search_request_string = regex_chars_unspec(search_request_string)
+        return HttpResponseRedirect('/search/results/request=' + str(search_request_string).replace(' ', '_')
+                                    + '&group=1/')
+    return render(request, "Site/Result_Page.html", {'form1': form1}, )
 
-def search_page_string(request, search_request):
-    form = SearchForm(request.GET)
-    form.search_request = search_request
-    if form.is_valid():
-        search_request_string = form.cleaned_data('search_request')
-        return HttpResponseRedirect('/search/results/request=' + str(search_request_string) + '&group=1/')
-    return render(request, "Site/Search_string.html", {'form': form})
+def yandex_search(query, group):
+    g = Grab()
+    g.setup(connect_timeout=30, timeout=30)
+    for i in range(10):
+        yandex_url = 'http://yandex.ru/yandsearch?text=%s&numdoc=50' % urlquote_plus(query)
+        page = group-1+i
+        if page:
+            yandex_url += '&p=%d' % page
 
-def search_page_results(request, ):
-    return render(request, "Site/Results.html")
+        g.go(yandex_url)
+        urls = g.doc.select('//div[@class="serp-list" and @role="main"]/' +
+                             'div[contains(@class,"serp-block serp-block-")]/div/' +
+                             'h2[@class="serp-item__title"]/a/@href')
+        titles = g.doc.select('//div[@class="serp-list" and @role="main"]' +
+                              '/div[contains(@class,"serp-block serp-block-")]/div/h2[@class="serp-item__title"]')
+        snippets = g.doc.select('//div[@class="serp-item__text"]')
+        for j in range(len(urls.selector_list)):
+            result = models.SearchResult(title=titles.selector_list[i].text(), url=urls.selector_list[i]._node,
+                                         snippet=snippets.selector_list[i].text())
+            result.save()
+
+
+
+
 
 class SearchForm(forms.Form):
-    search_request = forms.CharField(widget=forms.TextInput(attrs={'size': 200, 'lang': 100}))
+    search_request = forms.CharField(widget=forms.TextInput(attrs={'size': 200, 'lang': 100, 'width': 40}))
 
+def regex_chars_unspec(string):
+    chars = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '{', '}', '[', ']', '\"', '\'', '|', ':', ';',
+             '.', ',', '?', '-', '+', '=', '№', '*', '\\', '/']
+    for elem in chars:
+        string = string.replace(elem, '\\' + elem)
+
+    return string
 
 stop_words_eng = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0",
                   "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t",

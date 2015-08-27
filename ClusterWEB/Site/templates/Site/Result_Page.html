@@ -3,9 +3,42 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Cluster Web Searcher</title>
+    <script>
+         function show_hide(id){
+         var item = document.getElementById(id);
+         if (item.style.display == 'none') {item.style.display = 'block';}
+         else item.style.display = 'none';
+         }
+    </script>
+    <style>
+        body {background-color: beige}
+        h2.title {color: black; font-style: normal; font-size: x-large; font-weight: bolder; font-family: Gungsuh, Arial Black; }
+        label.comment {color: darkgray; font-style: normal; font-size: medium;
+        font-weight: bold; font-family: Gungsuh, Arial Black; }
+        div.request {color: black; font-family: Arial; border-style: outset; background-color: white}
+    </style>
 </head>
-<frameset rows="20%, 80%">
-    <frame src="Search_string.html" noresize frameborder="0">
-    <frame src="Results.html" noresize frameborder="0">
-</frameset>
+<body>
+    <h2 class="title">Cluster Web Searcher</h2>
+    <hr color="black" size="5">
+    <div class="request">
+        <br><label class="comment">Введите поисковый запрос / Input a search request</label><br><br>
+        <form action="" method="GET">
+            {% for field in form %}
+                {{ field }}
+            {% endfor %}
+            <input type="submit" value="Найти / Search">
+            <br><br>
+        </form>
+    </div>
+
+    <div class="results">
+        {% for cluster in clusters %}
+            <div
+        {% endfor %}
+    </div>
+
+    
+
+</body>
 </html>

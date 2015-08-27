@@ -3,25 +3,28 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Cluster Web Searcher</title>
+    <style>
+        body {background-color: beige}
+        h2.title {color: black; font-style: normal; font-size: x-large; font-weight: bolder; font-family: Gungsuh, Arial Black; }
+        label.comment {color: darkgray; font-style: normal; font-size: medium;
+        font-weight: bold; font-family: Gungsuh, Arial Black; }
+        div.request {color: black; font-family: Arial; border-style: outset; background-color: white}
+    </style>
 </head>
 <body>
-    <h2><font color="black" face="Arial Black"><b>Добро пожаловать на кластерный веб-поисковик!</b></font></h2>
-    <font color="red" face="Arial Black"></font>
-    <hr color="red" size="5">
-    <h2><font color="black" face="Arial Black"><b>Welcome to the Cluster Web Searcher!</b></font></h2>
+    <h2 class="title">Добро пожаловать на кластерный веб-поисковик!</h2>
+    <h2 class="title">Welcome to the Cluster Web Searcher!</h2>
     <br><br><br>
-
-
-    <form action="" method="GET">
-        <label><font color="#808080" size="3" face="Arial Black">Введите поисковый запрос / Input a search request</font></label><br><br>
-        <div style="background-color: red">
+    <div class="request">
+        <br><label class="comment">Введите поисковый запрос / Input a search request</label><br><br>
+        <form action="" method="GET">
+            {% for field in form %}
+                {{ field }}
+            {% endfor %}
+            <input type="submit" value="Найти / Search">
             <br><br>
-            {{ form }}
-            <font face="Times New Roman"><input type="submit" value="Найти / Search"></font>
-            <br><br>
-        </div>
-        <div style="background-color: black">" "</div>
         </form>
+    </div>
 
 
 </body>
