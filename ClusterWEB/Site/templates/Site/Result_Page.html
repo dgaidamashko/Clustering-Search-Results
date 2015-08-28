@@ -16,11 +16,11 @@
         label.comment {color: darkgray; font-style: normal; font-size: medium;
         font-weight: bold; font-family: Gungsuh, Arial Black; }
         div.request {color: black; font-family: Arial; border-style: outset; background-color: white}
+        div.cluster {color: midnightblue; font-family: Arial; border-style: solid; background-color: azure}
     </style>
 </head>
 <body>
     <h2 class="title">Cluster Web Searcher</h2>
-    <hr color="black" size="5">
     <div class="request">
         <br><label class="comment">Введите поисковый запрос / Input a search request</label><br><br>
         <form action="" method="GET">
@@ -31,10 +31,12 @@
             <br><br>
         </form>
     </div>
-
+    <br><br>
     <div class="results">
         {% for cluster in clusters %}
-            <div
+            <div class="cluster">
+
+            </div>
         {% endfor %}
     </div>
 
