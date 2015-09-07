@@ -17,13 +17,15 @@ from Stemmer import *
 from Site import models
 
 
+class SearchForm(forms.Form):
+    search_request = forms.CharField(widget=forms.TextInput(attrs={'size': 140, 'lang': 50, 'width': 40}))
+
 def main_page(request):
     form = SearchForm(request.GET, auto_id=False)
     # Выполнение поиска
     if form.is_valid():
-        search_request_string = form.cleaned_data['search_request']
-        return HttpResponseRedirect('/search/results/request=' + str(search_request_string).replace(' ', '_')
-                                    + '&group=1/')
+        query = form.cleaned_data['search_request']
+        return HttpResponseRedirect('/search/results/request=' + urlquote_plus(query) + '&group=1/')
 
     return render(request, "Site/Main_Page.html", {'form': form})
 
@@ -34,14 +36,14 @@ def search_page_redirect(request, search_request):
     return HttpResponseRedirect('/search/results/request=' + str(search_request) + '&group=1/')
 
 def search_page(request, search_request, group):
-    form1 = SearchForm(request.GET, auto_id=False)
-    form1.search_request = search_request
-    if form1.is_valid():
-        search_request_string = form1.cleaned_data['search_request']
-        search_request_string = regex_chars_unspec(search_request_string)
-        return HttpResponseRedirect('/search/results/request=' + str(search_request_string).replace(' ', '_')
+    form = SearchForm(request.GET, auto_id=False)
+    form.search_request = search_request
+    if form.is_valid():
+        query = form.cleaned_data['search_request']
+        a = str(urlquote_plus(query))
+        return HttpResponseRedirect('/search/results/request=' + a.replace(' ', '_')
                                     + '&group=1/')
-    return render(request, "Site/Result_Page.html", {'form1': form1}, )
+    return render(request, "Site/Result_Page.html", {'form': form}, )
 
 def yandex_search(query, group):
     g = Grab()
@@ -63,13 +65,6 @@ def yandex_search(query, group):
             result = models.SearchResult(title=titles.selector_list[i].text(), url=urls.selector_list[i]._node,
                                          snippet=snippets.selector_list[i].text())
             result.save()
-
-
-
-
-
-class SearchForm(forms.Form):
-    search_request = forms.CharField(widget=forms.TextInput(attrs={'size': 200, 'lang': 100, 'width': 40}))
 
 def regex_chars_unspec(string):
     chars = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '{', '}', '[', ']', '\"', '\'', '|', ':', ';',
