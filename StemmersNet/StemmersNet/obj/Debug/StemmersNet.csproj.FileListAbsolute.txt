@@ -1,0 +1,5 @@
+D:\Users\user\Documents\ДАНЯ\Clustering-Search-Results\StemmersNet\StemmersNet\bin\Debug\StemmersNet.dll
+D:\Users\user\Documents\ДАНЯ\Clustering-Search-Results\StemmersNet\StemmersNet\bin\Debug\StemmersNet.pdb
+D:\Users\user\Documents\ДАНЯ\Clustering-Search-Results\StemmersNet\StemmersNet\obj\Debug\StemmersNet.csprojResolveAssemblyReference.cache
+D:\Users\user\Documents\ДАНЯ\Clustering-Search-Results\StemmersNet\StemmersNet\obj\Debug\StemmersNet.dll
+D:\Users\user\Documents\ДАНЯ\Clustering-Search-Results\StemmersNet\StemmersNet\obj\Debug\StemmersNet.pdb
