@@ -3,3 +3,8 @@ D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\StopWords\StopWords\bin
 D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\StopWords\StopWords\obj\Debug\StopWords.csprojResolveAssemblyReference.cache
 D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\StopWords\StopWords\obj\Debug\StopWords.dll
 D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\StopWords\StopWords\obj\Debug\StopWords.pdb
+C:\Users\Karpenko.Maksim\Desktop\Диплом\Clustering-Search-Results\StopWords\StopWords\bin\Debug\StopWords.dll
+C:\Users\Karpenko.Maksim\Desktop\Диплом\Clustering-Search-Results\StopWords\StopWords\bin\Debug\StopWords.pdb
+C:\Users\Karpenko.Maksim\Desktop\Диплом\Clustering-Search-Results\StopWords\StopWords\obj\Debug\StopWords.csprojResolveAssemblyReference.cache
+C:\Users\Karpenko.Maksim\Desktop\Диплом\Clustering-Search-Results\StopWords\StopWords\obj\Debug\StopWords.dll
+C:\Users\Karpenko.Maksim\Desktop\Диплом\Clustering-Search-Results\StopWords\StopWords\obj\Debug\StopWords.pdb

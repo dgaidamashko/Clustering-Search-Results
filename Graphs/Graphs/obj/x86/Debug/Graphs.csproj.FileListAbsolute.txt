@@ -7,3 +7,12 @@ D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Graphs\Graphs\obj\x86\D
 D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Graphs\Graphs\obj\x86\Debug\Graphs.exe
 D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Graphs\Graphs\obj\x86\Debug\Graphs.pdb
 D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Graphs\Graphs\obj\x86\Debug\Graphs.Form2.resources
+C:\Users\Karpenko.Maksim\Desktop\Диплом\Clustering-Search-Results\Graphs\Graphs\obj\x86\Debug\Graphs.exe
+C:\Users\Karpenko.Maksim\Desktop\Диплом\Clustering-Search-Results\Graphs\Graphs\obj\x86\Debug\Graphs.pdb
+C:\Users\Karpenko.Maksim\Desktop\Диплом\Clustering-Search-Results\Graphs\Graphs\bin\Debug\Graphs.exe
+C:\Users\Karpenko.Maksim\Desktop\Диплом\Clustering-Search-Results\Graphs\Graphs\bin\Debug\Graphs.pdb
+C:\Users\Karpenko.Maksim\Desktop\Диплом\Clustering-Search-Results\Graphs\Graphs\obj\x86\Debug\Graphs.csprojResolveAssemblyReference.cache
+C:\Users\Karpenko.Maksim\Desktop\Диплом\Clustering-Search-Results\Graphs\Graphs\obj\x86\Debug\Graphs.Form1.resources
+C:\Users\Karpenko.Maksim\Desktop\Диплом\Clustering-Search-Results\Graphs\Graphs\obj\x86\Debug\Graphs.Form2.resources
+C:\Users\Karpenko.Maksim\Desktop\Диплом\Clustering-Search-Results\Graphs\Graphs\obj\x86\Debug\Graphs.Properties.Resources.resources
+C:\Users\Karpenko.Maksim\Desktop\Диплом\Clustering-Search-Results\Graphs\Graphs\obj\x86\Debug\Graphs.csproj.GenerateResource.Cache

@@ -22,7 +22,7 @@ namespace Graphs
                     G.E.Add(new Edge(G.V[i], G.V[j]));
                 }
             }
-            G.FindMinSpanTree(G.V[0]);
+                G.FindMinSpanTree(G.V[0]);
             for (int i = 0; i < G.E.Count; i++)
             {
                 if (!G.E[i].optimal)
@@ -31,6 +31,12 @@ namespace Graphs
                     i--;
                 }
             }
+            for (int i = 0; i < G.E.Count(); i++)
+            {
+                Form1.el += Convert.ToString(Math.Round(G.E[i].Weight, 2));
+                Form1.el += "; ";
+            }
+            Form1.al = Convert.ToString(AverageEdgeWeight(1, G));
             LongestEdge(G);
             r =  RelCount(G);
             if (n == 1)

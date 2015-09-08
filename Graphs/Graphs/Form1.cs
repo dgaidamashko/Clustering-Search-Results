@@ -23,6 +23,8 @@ namespace Graphs
         static double k = 2;
         string kstring = "";
         Form2 ParScroll;
+        public static string el;
+        public static string al;
 
         public Form1()
         {
@@ -326,6 +328,8 @@ namespace Graphs
             }
             ClOperations.ClusterSelection(k, G, 2);
             textBox2.Text = Convert.ToString(ClOperations.r);
+            textBox3.Text = el;
+            textBox4.Text = al;
             Invalidate();
         }
 

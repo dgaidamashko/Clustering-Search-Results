@@ -5,7 +5,7 @@
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:E:\Документы\Даня\Диплом\Clustering-Search-Results\ClusterWEB\db.sqlite3</jdbc-url>
+      <jdbc-url>jdbc:sqlite:D:\Users\user\Documents\ДАНЯ\Clustering-Search-Results\ClusterWEB\db.sqlite3</jdbc-url>
       <libraries />
     </data-source>
   </component>

@@ -124,7 +124,7 @@ Output parameters:
                 LongestEdge();
                 if (n == 1)
                 {
-                    while (lEdgeWeight > k * slEdgeWeight)
+                    while (lEdgeWeight > k * slEdgeWeight && G.E.Count != 1)
                     {
                         G.E.Remove(G.E[longestEdgeindex]);
                         LongestEdge();
@@ -134,7 +134,7 @@ Output parameters:
                 {
                     if (n == 2)
                     {
-                        while (lEdgeWeight > k * AverageEdgeWeight(1))
+                        while (lEdgeWeight > k * AverageEdgeWeight(1) && G.E.Count != 1)
                         {
                             G.E.Remove(G.E[longestEdgeindex]);
                             LongestEdge();
@@ -145,7 +145,7 @@ Output parameters:
                         if (n == 3)
                         {
                             double temp = AverageEdgeWeight(1);
-                            while (lEdgeWeight > k * temp)
+                            while (lEdgeWeight > k * temp && G.E.Count != 1)
                             {
                                 G.E.Remove(G.E[longestEdgeindex]);
                                 LongestEdge();
@@ -155,7 +155,7 @@ Output parameters:
                         {
                             if (n == 4)
                             {
-                                while (lEdgeWeight > k * AverageEdgeWeight(2))
+                                while (lEdgeWeight > k * AverageEdgeWeight(2) && G.E.Count != 1)
                                 {
                                     G.E.Remove(G.E[longestEdgeindex]);
                                     LongestEdge();
@@ -165,7 +165,7 @@ Output parameters:
                             {
                                 k = lEdgeWeight / AverageEdgeWeight(1);
                                 r = k;
-                                while (lEdgeWeight > k * AverageEdgeWeight(1))
+                                while (lEdgeWeight > k * AverageEdgeWeight(1) && G.E.Count != 1)
                                 {
                                     G.E.Remove(G.E[longestEdgeindex]);
                                     LongestEdge();
