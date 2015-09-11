@@ -13,3 +13,5 @@ D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Тест Библиот
 D:\Users\user\Documents\ДАНЯ\ClusteringSearchResults\Тест Библиотеки\Тест Библиотеки\obj\x86\Debug\ClusteringSearchResults.Form3.resources
 D:\Users\user\Documents\ДАНЯ\Clustering-Search-Results\Тест Библиотеки\Тест Библиотеки\obj\x86\Debug\Тест Библиотеки.exe
 D:\Users\user\Documents\ДАНЯ\Clustering-Search-Results\Тест Библиотеки\Тест Библиотеки\obj\x86\Debug\Тест Библиотеки.pdb
+C:\Users\maxim_000\Desktop\ДипломV2\Clustering-Search-Results\Research tool\Тест Библиотеки\obj\x86\Debug\Тест Библиотеки.exe
+C:\Users\maxim_000\Desktop\ДипломV2\Clustering-Search-Results\Research tool\Тест Библиотеки\obj\x86\Debug\Тест Библиотеки.pdb

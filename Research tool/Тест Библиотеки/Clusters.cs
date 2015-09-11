@@ -12,13 +12,20 @@ namespace ClusteringSearchResults
         int slongestEdgeindex;
         double lEdgeWeight;
         double slEdgeWeight;
+        Edge shortestEdge;
+        Edge sshortestEdge;
+        List<Edge> revbuild;
         List<Cluster> C;
         Cluster Texts;
         Tags[] textTitles;
+        bool firstlaunch;
         public double r = 0;
 
         public Clusters(double[,] A, Tags[] texts, Tags[] words)
         {
+            firstlaunch = true;
+            revbuild = new List<Edge>();
+
             textTitles = texts;
             C = new List<Cluster>();
             G = new Graph();
@@ -108,9 +115,9 @@ Output parameters:
             }
         }
 
-        public void ClusterSelection(double k, int n) //При параметре n равном 1, удаление зависит от длины второго по длине ребра. При n = 2, удаление зависит от средней длины ребра. При других n удаление зависит от средней длины ребра без учёта самого длинного
+        public void ClusterSelection(double k, int n) 
         {
-            
+            revbuild = new List<Edge>();
                 G.FindMinSpanTree(G.V[0]);
                 for (int i = 0; i < G.E.Count; i++)
                 {
@@ -122,7 +129,10 @@ Output parameters:
                 }
             
                 LongestEdge();
-                if (n == 1)
+
+                // methods
+                #region
+                if (n == 1)//    самое длинное/второе по длине ребро
                 {
                     while (lEdgeWeight > k * slEdgeWeight && G.E.Count != 1)
                     {
@@ -132,7 +142,7 @@ Output parameters:
                 }
                 else
                 {
-                    if (n == 2)
+                    if (n == 2)// самое длинное/нормальная динамическая средняя длина
                     {
                         while (lEdgeWeight > k * AverageEdgeWeight(1) && G.E.Count != 1)
                         {
@@ -142,7 +152,7 @@ Output parameters:
                     }
                     else 
                     {
-                        if (n == 3)
+                        if (n == 3)// самое длинное/нормальная статическая средняя длина
                         {
                             double temp = AverageEdgeWeight(1);
                             while (lEdgeWeight > k * temp && G.E.Count != 1)
@@ -153,7 +163,7 @@ Output parameters:
                         }
                         else
                         {
-                            if (n == 4)
+                            if (n == 4)//   самое длинное/средняя длина без самого длинного
                             {
                                 while (lEdgeWeight > k * AverageEdgeWeight(2) && G.E.Count != 1)
                                 {
@@ -163,17 +173,24 @@ Output parameters:
                             }
                             else
                             {
-                                k = lEdgeWeight / AverageEdgeWeight(1);
-                                r = k;
-                                while (lEdgeWeight > k * AverageEdgeWeight(1) && G.E.Count != 1)
+                                if (n == 5)
                                 {
-                                    G.E.Remove(G.E[longestEdgeindex]);
-                                    LongestEdge();
+                                    while (shortestEdge.Weight * k > sshortestEdge.Weight && G.E.Count != 1)
+                                    {
+                                        revbuild.Add(sshortestEdge);
+                                        LongestEdge();
+                                    }
+                                }
+                                else 
+                                {
+
                                 }
                             }
                         }
                     }
                 }
+                #endregion    
+
                 Clusterize();
                 
                 for (int i = 0; i < Texts.Data.Count; i++)
@@ -214,8 +231,34 @@ Output parameters:
         {
             if (G.E.Count > 1)
             {
+                List<Edge> temp = new List<Edge>();
+                for (int i = 0; i < G.E.Count; i++)
+                {
+                    bool exists = false;
+                    for (int j = 0; j < revbuild.Count; j++)
+                    {
+                        if (G.E[i] == revbuild[j])
+                        {
+                            exists = true;
+                        }
+                    }
+                    if (!exists)
+                    {
+                        temp.Add(G.E[i]);
+                    }
+                }
+                
                 longestEdgeindex = 0;
                 lEdgeWeight = G.E[0].Weight;
+                if (firstlaunch)
+                {
+                    shortestEdge = G.E[0];
+                }
+                else 
+                {
+                    shortestEdge = sshortestEdge;
+                }
+                
                 for (int i = 0; i < G.E.Count; i++)
                 {
                     if (G.E[i].Weight > lEdgeWeight)
@@ -226,6 +269,15 @@ Output parameters:
                         longestEdgeindex = i;
                     }
                 }
+                for (int i = 0; i < temp.Count; i++)
+                {
+                    if (firstlaunch && temp[i].Weight < shortestEdge.Weight)
+                    {
+                        sshortestEdge = shortestEdge;
+                        shortestEdge = temp[i];
+                    }
+                }
+
                 for (int i = 0; i < G.E.Count; i++)
                 {
                     if (i != longestEdgeindex)
@@ -237,6 +289,17 @@ Output parameters:
                         }
                     }
                 }
+                for (int i = 0; i < temp.Count; i++)
+                {
+                    if (temp[i] != shortestEdge)
+                    {
+                        if (temp[i].Weight < sshortestEdge.Weight)
+                        {
+                            sshortestEdge = temp[i];
+                        }
+                    }
+                }
+                firstlaunch = false;
             }
         }
 
