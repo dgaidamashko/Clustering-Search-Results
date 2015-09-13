@@ -15,3 +15,14 @@ D:\Users\user\Documents\ДАНЯ\Clustering-Search-Results\Тест Библио
 D:\Users\user\Documents\ДАНЯ\Clustering-Search-Results\Тест Библиотеки\Тест Библиотеки\obj\x86\Debug\Тест Библиотеки.pdb
 C:\Users\maxim_000\Desktop\ДипломV2\Clustering-Search-Results\Research tool\Тест Библиотеки\obj\x86\Debug\Тест Библиотеки.exe
 C:\Users\maxim_000\Desktop\ДипломV2\Clustering-Search-Results\Research tool\Тест Библиотеки\obj\x86\Debug\Тест Библиотеки.pdb
+C:\Users\maxim_000\Desktop\ДипломV2\Clustering-Search-Results\Research tool\Тест Библиотеки\bin\Debug\Тест Библиотеки.exe
+C:\Users\maxim_000\Desktop\ДипломV2\Clustering-Search-Results\Research tool\Тест Библиотеки\bin\Debug\Тест Библиотеки.pdb
+C:\Users\maxim_000\Desktop\ДипломV2\Clustering-Search-Results\Research tool\Тест Библиотеки\bin\Debug\alglibnet2.dll
+C:\Users\maxim_000\Desktop\ДипломV2\Clustering-Search-Results\Research tool\Тест Библиотеки\bin\Debug\StopWords.dll
+C:\Users\maxim_000\Desktop\ДипломV2\Clustering-Search-Results\Research tool\Тест Библиотеки\bin\Debug\StopWords.pdb
+C:\Users\maxim_000\Desktop\ДипломV2\Clustering-Search-Results\Research tool\Тест Библиотеки\obj\x86\Debug\ClusteringSearchResults.csprojResolveAssemblyReference.cache
+C:\Users\maxim_000\Desktop\ДипломV2\Clustering-Search-Results\Research tool\Тест Библиотеки\obj\x86\Debug\ClusteringSearchResults.Form1.resources
+C:\Users\maxim_000\Desktop\ДипломV2\Clustering-Search-Results\Research tool\Тест Библиотеки\obj\x86\Debug\ClusteringSearchResults.Form2.resources
+C:\Users\maxim_000\Desktop\ДипломV2\Clustering-Search-Results\Research tool\Тест Библиотеки\obj\x86\Debug\ClusteringSearchResults.Form3.resources
+C:\Users\maxim_000\Desktop\ДипломV2\Clustering-Search-Results\Research tool\Тест Библиотеки\obj\x86\Debug\ClusteringSearchResults.Properties.Resources.resources
+C:\Users\maxim_000\Desktop\ДипломV2\Clustering-Search-Results\Research tool\Тест Библиотеки\obj\x86\Debug\ClusteringSearchResults.csproj.GenerateResource.Cache

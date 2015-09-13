@@ -144,7 +144,7 @@ Output parameters:
                 {
                     if (n == 2)// самое длинное/нормальная динамическая средняя длина
                     {
-                        while (lEdgeWeight > k * AverageEdgeWeight(1) && G.E.Count != 1)
+                        while (lEdgeWeight > k * AverageEdgeWeight(G.E) && G.E.Count != 1)
                         {
                             G.E.Remove(G.E[longestEdgeindex]);
                             LongestEdge();
@@ -154,7 +154,7 @@ Output parameters:
                     {
                         if (n == 3)// самое длинное/нормальная статическая средняя длина
                         {
-                            double temp = AverageEdgeWeight(1);
+                            double temp = AverageEdgeWeight(G.E);
                             while (lEdgeWeight > k * temp && G.E.Count != 1)
                             {
                                 G.E.Remove(G.E[longestEdgeindex]);
@@ -165,11 +165,7 @@ Output parameters:
                         {
                             if (n == 4)//   самое длинное/средняя длина без самого длинного
                             {
-                                while (lEdgeWeight > k * AverageEdgeWeight(2) && G.E.Count != 1)
-                                {
-                                    G.E.Remove(G.E[longestEdgeindex]);
-                                    LongestEdge();
-                                }
+                                //free
                             }
                             else
                             {
@@ -180,6 +176,7 @@ Output parameters:
                                         revbuild.Add(sshortestEdge);
                                         LongestEdge();
                                     }
+                                    G.E = revbuild;
                                 }
                                 else 
                                 {
@@ -232,6 +229,18 @@ Output parameters:
             if (G.E.Count > 1)
             {
                 List<Edge> temp = new List<Edge>();
+
+                if (firstlaunch)
+                {
+                    for (int i = 0; i < G.E.Count; i++)
+                    {
+                        if (G.E[i].Weight == 0)
+                        {
+                            revbuild.Add(G.E[i]);
+                        }
+                    }
+                }
+
                 for (int i = 0; i < G.E.Count; i++)
                 {
                     bool exists = false;
@@ -252,11 +261,13 @@ Output parameters:
                 lEdgeWeight = G.E[0].Weight;
                 if (firstlaunch)
                 {
-                    shortestEdge = G.E[0];
+                    shortestEdge = temp[0];
+                    sshortestEdge = new Edge(new Vertex(new Word("s"), Double.MaxValue, Double.MaxValue, Double.MaxValue), new Vertex(new Word("s"), 0, 0, 0));
                 }
                 else 
                 {
                     shortestEdge = sshortestEdge;
+                    sshortestEdge = new Edge(new Vertex(new Word("s"), Double.MaxValue, Double.MaxValue, Double.MaxValue), new Vertex(new Word("s"), 0, 0, 0));
                 }
                 
                 for (int i = 0; i < G.E.Count; i++)
@@ -293,7 +304,7 @@ Output parameters:
                 {
                     if (temp[i] != shortestEdge)
                     {
-                        if (temp[i].Weight < sshortestEdge.Weight)
+                        if (temp[i].Weight <= sshortestEdge.Weight)
                         {
                             sshortestEdge = temp[i];
                         }
@@ -303,32 +314,16 @@ Output parameters:
             }
         }
 
-        public double AverageEdgeWeight(int a)
+        public double AverageEdgeWeight(List<Edge> sourse)
         {
             double sum = 0;
-            if (a == 1)
-            {
-                for (int i = 0; i < G.E.Count; i++)
+            
+                for (int i = 0; i < sourse.Count; i++)
                 {
-                    sum += G.E[i].Weight;
+                    sum += sourse[i].Weight;
                 }
-                return sum / G.E.Count;
-            }
-            else
-            {
-                for (int i = 0; i < G.E.Count; i++)
-                {
-                    if (i != longestEdgeindex)
-                    {
-                        sum += G.E[i].Weight;
-                    }
-                }
-                return sum / (G.E.Count - 1);
-            }
-            /*
-             Метод возвращает среднюю длину ребра графа при значении параметра, равном 1
-             Метод возвращает сребнюю длину ребра без учёта самого длинного при любом другом значении параметра
-             */
+                return sum / sourse.Count;
+            
         }
 
         //распределяет вершины по кластерам
@@ -587,6 +582,30 @@ Output parameters:
                         }
                     }
                 }
+        }
+
+        //Нахождение моды
+        public double FindMode(List<Edge> sourse)
+        {
+            double le = Double.MinValue;
+            double se = Double.MaxValue;
+            for (int i = 0; i < sourse.Count; i++)
+            {
+                if (sourse[i].Weight < se)
+                {
+                    se = sourse[i].Weight;
+                }
+                if (sourse[i].Weight > le)
+                {
+                    le = sourse[i].Weight;
+                }
+            }
+            List<List<Edge>> gaps = new List<List<Edge>>();
+            for (int i = 0; i < 10; i++)
+            {
+                gaps.Add(new List<Edge>());
+            }
+            double av = (le - se) / 10;
         }
 
         public Graph GetGraph
