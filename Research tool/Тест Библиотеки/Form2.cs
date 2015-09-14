@@ -18,6 +18,9 @@ namespace ClusteringSearchResults
         PointF movestart;
         bool EnableClusterPainting;
         Form3 ParScroll;
+        public static string modeval = "";
+        public static string ael = "";
+        string kstring;
 
         public Form2()
         {
@@ -33,6 +36,7 @@ namespace ClusteringSearchResults
             movestart = new PointF();
             TestData.SetData();
             ParScroll = new Form3();
+            kstring = textBox1.Text;
         }
 
         private void CBaction()
@@ -68,6 +72,8 @@ namespace ClusteringSearchResults
                     }
                 }
             }
+            textBox2.Text = modeval;
+            textBox4.Text = ael;
         }
 
         private void UpdateParameter(object sender, ParameterEventArgs e)
@@ -174,8 +180,9 @@ namespace ClusteringSearchResults
                             vselected = true;
                             label2.Text += " ";
                             label2.Text += C.GetGraph.V[i].Data.GetTag;
-                            //label2.Left = C.GetGraph.V[i].GetCoordX + 20;
-                            //label2.Top = C.GetGraph.V[i].GetCoordY + 20;
+                            //
+                            label2.Left = C.GetGraph.V[i].GetCoordX + 20;
+                            label2.Top = C.GetGraph.V[i].GetCoordY + 20;
 
                         }
                     }
@@ -336,6 +343,41 @@ namespace ClusteringSearchResults
         private void comboBox2_DropDownClosed(object sender, EventArgs e)
         {
             label1.Focus();
+        }
+
+        private void textBox2_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            bool error = false;
+            double k;
+            try
+            {
+                if (textBox1.Text != "")
+                {
+                    button1.Enabled = true;
+                    button2.Enabled = true;
+                    k = Convert.ToDouble(textBox1.Text);
+                }
+                else
+                {
+                    button1.Enabled = false;
+                    button2.Enabled = false;
+                }
+            }
+            catch (System.Exception)
+            {
+                error = true;
+                MessageBox.Show("Невертый формат текста");
+                textBox1.Text = kstring;
+            }
+            if (!error)
+            {
+                kstring = textBox1.Text;
+            }
         }
     }
 }

@@ -12,19 +12,13 @@ namespace ClusteringSearchResults
         int slongestEdgeindex;
         double lEdgeWeight;
         double slEdgeWeight;
-        Edge shortestEdge;
-        Edge sshortestEdge;
-        List<Edge> revbuild;
         List<Cluster> C;
         Cluster Texts;
         Tags[] textTitles;
-        bool firstlaunch;
         public double r = 0;
 
         public Clusters(double[,] A, Tags[] texts, Tags[] words)
         {
-            firstlaunch = true;
-            revbuild = new List<Edge>();
 
             textTitles = texts;
             C = new List<Cluster>();
@@ -117,7 +111,6 @@ Output parameters:
 
         public void ClusterSelection(double k, int n) 
         {
-            revbuild = new List<Edge>();
                 G.FindMinSpanTree(G.V[0]);
                 for (int i = 0; i < G.E.Count; i++)
                 {
@@ -129,7 +122,9 @@ Output parameters:
                 }
             
                 LongestEdge();
-
+            //
+                Form2.ael = Convert.ToString(AverageEdgeWeight(G.E));
+                //
                 // methods
                 #region
                 if (n == 1)//    самое длинное/второе по длине ребро
@@ -163,25 +158,21 @@ Output parameters:
                         }
                         else
                         {
-                            if (n == 4)//   самое длинное/средняя длина без самого длинного
+                            if (n == 4)//   статическая мода
                             {
-                                //free
+                                double temp = FindMode(G.E);
+                                //
+                                Form2.modeval = Convert.ToString(temp);
+                                //
+                                while (lEdgeWeight > k * temp && G.E.Count != 1)
+                                {
+                                    G.E.Remove(G.E[longestEdgeindex]);
+                                    LongestEdge();
+                                }
                             }
-                            else
+                            else//    статическая мода
                             {
-                                if (n == 5)
-                                {
-                                    while (shortestEdge.Weight * k > sshortestEdge.Weight && G.E.Count != 1)
-                                    {
-                                        revbuild.Add(sshortestEdge);
-                                        LongestEdge();
-                                    }
-                                    G.E = revbuild;
-                                }
-                                else 
-                                {
-
-                                }
+                                
                             }
                         }
                     }
@@ -228,47 +219,8 @@ Output parameters:
         {
             if (G.E.Count > 1)
             {
-                List<Edge> temp = new List<Edge>();
-
-                if (firstlaunch)
-                {
-                    for (int i = 0; i < G.E.Count; i++)
-                    {
-                        if (G.E[i].Weight == 0)
-                        {
-                            revbuild.Add(G.E[i]);
-                        }
-                    }
-                }
-
-                for (int i = 0; i < G.E.Count; i++)
-                {
-                    bool exists = false;
-                    for (int j = 0; j < revbuild.Count; j++)
-                    {
-                        if (G.E[i] == revbuild[j])
-                        {
-                            exists = true;
-                        }
-                    }
-                    if (!exists)
-                    {
-                        temp.Add(G.E[i]);
-                    }
-                }
-                
                 longestEdgeindex = 0;
                 lEdgeWeight = G.E[0].Weight;
-                if (firstlaunch)
-                {
-                    shortestEdge = temp[0];
-                    sshortestEdge = new Edge(new Vertex(new Word("s"), Double.MaxValue, Double.MaxValue, Double.MaxValue), new Vertex(new Word("s"), 0, 0, 0));
-                }
-                else 
-                {
-                    shortestEdge = sshortestEdge;
-                    sshortestEdge = new Edge(new Vertex(new Word("s"), Double.MaxValue, Double.MaxValue, Double.MaxValue), new Vertex(new Word("s"), 0, 0, 0));
-                }
                 
                 for (int i = 0; i < G.E.Count; i++)
                 {
@@ -280,37 +232,6 @@ Output parameters:
                         longestEdgeindex = i;
                     }
                 }
-                for (int i = 0; i < temp.Count; i++)
-                {
-                    if (firstlaunch && temp[i].Weight < shortestEdge.Weight)
-                    {
-                        sshortestEdge = shortestEdge;
-                        shortestEdge = temp[i];
-                    }
-                }
-
-                for (int i = 0; i < G.E.Count; i++)
-                {
-                    if (i != longestEdgeindex)
-                    {
-                        if (G.E[i].Weight > slEdgeWeight && G.E[i].Weight != lEdgeWeight)
-                        {
-                            slEdgeWeight = G.E[i].Weight;
-                            slongestEdgeindex = i;
-                        }
-                    }
-                }
-                for (int i = 0; i < temp.Count; i++)
-                {
-                    if (temp[i] != shortestEdge)
-                    {
-                        if (temp[i].Weight <= sshortestEdge.Weight)
-                        {
-                            sshortestEdge = temp[i];
-                        }
-                    }
-                }
-                firstlaunch = false;
             }
         }
 
@@ -587,6 +508,7 @@ Output parameters:
         //Нахождение моды
         public double FindMode(List<Edge> sourse)
         {
+            int v = 15;
             double le = Double.MinValue;
             double se = Double.MaxValue;
             for (int i = 0; i < sourse.Count; i++)
@@ -601,11 +523,33 @@ Output parameters:
                 }
             }
             List<List<Edge>> gaps = new List<List<Edge>>();
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < v; i++)
             {
                 gaps.Add(new List<Edge>());
             }
-            double av = (le - se) / 10;
+            double av = (le - se) / v;
+
+            for (int i = 1; i < v; i++)
+            {
+                for (int j = 0; j < sourse.Count; j++)
+                {
+                    if (sourse[j].Weight > i * av && sourse[j].Weight <= (i + 1) * av)
+                    {
+                        gaps[i].Add(sourse[j]);
+                    }
+                }
+            }
+            int gindex = 0;
+            int a = gaps[gindex].Count;
+            for (int i = 0; i < gaps.Count; i++)
+            {
+                if (gaps[i].Count > a)
+                {
+                    gindex = i;
+                    a = gaps[i].Count;
+                }
+            }
+            return AverageEdgeWeight(gaps[gindex]);
         }
 
         public Graph GetGraph

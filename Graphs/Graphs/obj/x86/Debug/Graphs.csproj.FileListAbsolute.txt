@@ -16,3 +16,5 @@ C:\Users\Karpenko.Maksim\Desktop\Диплом\Clustering-Search-Results\Graphs\G
 C:\Users\Karpenko.Maksim\Desktop\Диплом\Clustering-Search-Results\Graphs\Graphs\obj\x86\Debug\Graphs.Form2.resources
 C:\Users\Karpenko.Maksim\Desktop\Диплом\Clustering-Search-Results\Graphs\Graphs\obj\x86\Debug\Graphs.Properties.Resources.resources
 C:\Users\Karpenko.Maksim\Desktop\Диплом\Clustering-Search-Results\Graphs\Graphs\obj\x86\Debug\Graphs.csproj.GenerateResource.Cache
+C:\Users\maxim_000\Desktop\ДипломV2\Clustering-Search-Results\Graphs\Graphs\obj\x86\Debug\Graphs.exe
+C:\Users\maxim_000\Desktop\ДипломV2\Clustering-Search-Results\Graphs\Graphs\obj\x86\Debug\Graphs.pdb
