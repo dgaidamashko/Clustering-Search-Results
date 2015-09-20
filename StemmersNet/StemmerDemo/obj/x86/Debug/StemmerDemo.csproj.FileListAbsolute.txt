@@ -5,3 +5,10 @@ D:\Users\user\Documents\ДАНЯ\Clustering-Search-Results\StemmersNet\StemmerDe
 D:\Users\user\Documents\ДАНЯ\Clustering-Search-Results\StemmersNet\StemmerDemo\obj\x86\Debug\StemmerDemo.csprojResolveAssemblyReference.cache
 D:\Users\user\Documents\ДАНЯ\Clustering-Search-Results\StemmersNet\StemmerDemo\obj\x86\Debug\StemmerDemo.exe
 D:\Users\user\Documents\ДАНЯ\Clustering-Search-Results\StemmersNet\StemmerDemo\obj\x86\Debug\StemmerDemo.pdb
+C:\Users\maxim_000\Desktop\ДипломV2\Clustering-Search-Results\StemmersNet\StemmerDemo\bin\Debug\StemmerDemo.exe
+C:\Users\maxim_000\Desktop\ДипломV2\Clustering-Search-Results\StemmersNet\StemmerDemo\bin\Debug\StemmerDemo.pdb
+C:\Users\maxim_000\Desktop\ДипломV2\Clustering-Search-Results\StemmersNet\StemmerDemo\bin\Debug\StemmersNet.dll
+C:\Users\maxim_000\Desktop\ДипломV2\Clustering-Search-Results\StemmersNet\StemmerDemo\bin\Debug\StemmersNet.pdb
+C:\Users\maxim_000\Desktop\ДипломV2\Clustering-Search-Results\StemmersNet\StemmerDemo\obj\x86\Debug\StemmerDemo.csprojResolveAssemblyReference.cache
+C:\Users\maxim_000\Desktop\ДипломV2\Clustering-Search-Results\StemmersNet\StemmerDemo\obj\x86\Debug\StemmerDemo.exe
+C:\Users\maxim_000\Desktop\ДипломV2\Clustering-Search-Results\StemmersNet\StemmerDemo\obj\x86\Debug\StemmerDemo.pdb
