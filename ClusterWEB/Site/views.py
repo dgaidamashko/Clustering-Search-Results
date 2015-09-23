@@ -4,16 +4,16 @@ import codecs
 from abc import ABCMeta, abstractclassmethod, abstractproperty
 from overloading import overloaded
 from math import *
-from numpy import *
+from collections import Counter
 from scipy import *
+from nltk.stem.snowball import EnglishStemmer, RussianStemmer
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import RequestContext, loader
 from django.core.urlresolvers import reverse
 from django import forms
-from grab import Grab, GrabNetworkError, GrabTimeoutError
+from grab import Grab
 from django.utils.http import urlquote_plus
-from Stemmer import *
 from Site import models
 
 
@@ -478,8 +478,8 @@ class Tags(metaclass=ABCMeta):
 
 
 class TextOperations:
-    stemmer_eng = Stemmer('english')
-    stemmer_rus = Stemmer('russian')
+    stemmer_eng = EnglishStemmer()
+    stemmer_rus = RussianStemmer()
     TextTitles = []
     Words = []
     Tag = []
@@ -540,7 +540,7 @@ class TextOperations:
             if language == "cyrillic":
                 if stop_words_rus_full.__contains__(text[i]):
                     del (text[i])
-                text[i] = self.stemmer_rus.stemWord(text[i])
+                text[i] = self.stemmer_rus.stem(text[i])
                 if stop_words_rus_stem.__contains__(text[i]):
                     del (text[i])
                     i -= 1
@@ -549,7 +549,7 @@ class TextOperations:
                     del (text[i])
                     i -= 1
                 else:
-                    text[i] = self.stemmer_eng.stemWord(text[i])
+                    text[i] = self.stemmer_eng.stem(text[i])
         return text
 
     # Формирование списка уникальных основ в тексте с указанием их частот

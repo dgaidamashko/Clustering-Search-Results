@@ -100,17 +100,6 @@ namespace ClusteringSearchResults
             formwidth = F.Size.Width;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            TextOperations.TagNullifier();
-            for (int i = 0; i < TextOperations.ts.Count; i++)
-            {
-                TextOperations.Tag.Add(TextOperations.Frequency(TextOperations.vClusterize(TextOperations.ts[i].ToString())));
-            }
-            TextOperations.FormMatrix();
-            F.ShowDialog();
-            this.Close();
-        }
 
     }
 }

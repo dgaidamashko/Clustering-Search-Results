@@ -37,6 +37,9 @@
     <Reference Include="alglibnet2">
       <HintPath>..\..\csharp\alglibnet2.dll</HintPath>
     </Reference>
+    <Reference Include="StemmersNet">
+      <HintPath>..\..\StemmersNet\StemmersNet\bin\Debug\StemmersNet.dll</HintPath>
+    </Reference>
     <Reference Include="StopWords, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\StopWords\StopWords\bin\Debug\StopWords.dll</HintPath>

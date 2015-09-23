@@ -3,3 +3,8 @@ D:\Users\user\Documents\ДАНЯ\Clustering-Search-Results\StemmersNet\StemmersN
 D:\Users\user\Documents\ДАНЯ\Clustering-Search-Results\StemmersNet\StemmersNet\obj\Debug\StemmersNet.csprojResolveAssemblyReference.cache
 D:\Users\user\Documents\ДАНЯ\Clustering-Search-Results\StemmersNet\StemmersNet\obj\Debug\StemmersNet.dll
 D:\Users\user\Documents\ДАНЯ\Clustering-Search-Results\StemmersNet\StemmersNet\obj\Debug\StemmersNet.pdb
+E:\Документы\Даня\Диплом\Clustering-Search-Results\StemmersNet\StemmersNet\bin\Debug\StemmersNet.dll
+E:\Документы\Даня\Диплом\Clustering-Search-Results\StemmersNet\StemmersNet\bin\Debug\StemmersNet.pdb
+E:\Документы\Даня\Диплом\Clustering-Search-Results\StemmersNet\StemmersNet\obj\Debug\StemmersNet.csprojResolveAssemblyReference.cache
+E:\Документы\Даня\Диплом\Clustering-Search-Results\StemmersNet\StemmersNet\obj\Debug\StemmersNet.dll
+E:\Документы\Даня\Диплом\Clustering-Search-Results\StemmersNet\StemmersNet\obj\Debug\StemmersNet.pdb

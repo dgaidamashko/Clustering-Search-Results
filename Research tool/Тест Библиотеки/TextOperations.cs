@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using StopWords;
+using Iveonik.Stemmers;
 
 namespace ClusteringSearchResults
 {
@@ -11,6 +12,8 @@ namespace ClusteringSearchResults
 
         static StWdsEng Eng;
         static StWdsRus Rus;
+        static EnglishStemmer EngStem;
+        static RussianStemmer RusStem;
         public static List<string> ts;
         public static List<string> txt;
         public static List<List<Word>> Tag;
@@ -38,6 +41,8 @@ namespace ClusteringSearchResults
             temp = t;
             Eng = new StWdsEng();
             Rus = new StWdsRus();
+            EngStem = new EnglishStemmer();
+            RusStem = new RussianStemmer();
             ts = new List<string>();
             ts.AddRange(temp);
             txt = new List<string>();
@@ -90,7 +95,7 @@ namespace ClusteringSearchResults
                     case 1://Русский язык
                         {
                             tx[i] = temp;
-                            //tx[i]=Stemming(tx[i], "russian");
+                            tx[i] = RusStem.Stem(tx[i]);
                             if (Rus.Check(tx[i]))
                             {
                                 tx.RemoveAt(i);
@@ -106,7 +111,7 @@ namespace ClusteringSearchResults
                                 tx.RemoveAt(i);
                                 i--;
                             }
-                            //else tx[i] = Stemming(tx[i], "english");
+                            else tx[i] = EngStem.Stem(tx[i]);
                             break;
                         }
                 }
