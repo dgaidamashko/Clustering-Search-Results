@@ -4,28 +4,12 @@
     <list default="true" id="d2fd889a-aac3-4fb9-a8b0-b6d30ed55e88" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Research tool/Тест Библиотеки/obj/x86/Debug/ClusteringSearchResults.csproj.GenerateResource.Cache" afterPath="$PROJECT_DIR$/Research tool/Тест Библиотеки/obj/x86/Debug/ClusteringSearchResults.csproj.GenerateResource.Cache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Research tool/ClusteringSearchResults.suo" afterPath="$PROJECT_DIR$/Research tool/ClusteringSearchResults.suo" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StemmersNet/StemmerDemo/obj/x86/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterPath="$PROJECT_DIR$/StemmersNet/StemmerDemo/obj/x86/Debug/DesignTimeResolveAssemblyReferencesInput.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StemmersNet/StemmersNet/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterPath="$PROJECT_DIR$/StemmersNet/StemmersNet/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StemmersNet/StemmerDemo/obj/x86/Debug/StemmerDemo.csprojResolveAssemblyReference.cache" afterPath="$PROJECT_DIR$/StemmersNet/StemmerDemo/obj/x86/Debug/StemmerDemo.csprojResolveAssemblyReference.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StemmersNet/StemmerDemo/bin/Debug/StemmerDemo.exe" afterPath="$PROJECT_DIR$/StemmersNet/StemmerDemo/bin/Debug/StemmerDemo.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StemmersNet/StemmerDemo/obj/x86/Debug/StemmerDemo.exe" afterPath="$PROJECT_DIR$/StemmersNet/StemmerDemo/obj/x86/Debug/StemmerDemo.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StemmersNet/StemmerDemo/bin/Debug/StemmerDemo.pdb" afterPath="$PROJECT_DIR$/StemmersNet/StemmerDemo/bin/Debug/StemmerDemo.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StemmersNet/StemmerDemo/obj/x86/Debug/StemmerDemo.pdb" afterPath="$PROJECT_DIR$/StemmersNet/StemmerDemo/obj/x86/Debug/StemmerDemo.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StemmersNet/StemmerDemo/bin/Debug/StemmersNet.dll" afterPath="$PROJECT_DIR$/StemmersNet/StemmerDemo/bin/Debug/StemmersNet.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StemmersNet/StemmersNet/bin/Debug/StemmersNet.dll" afterPath="$PROJECT_DIR$/StemmersNet/StemmersNet/bin/Debug/StemmersNet.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StemmersNet/StemmersNet/obj/Debug/StemmersNet.dll" afterPath="$PROJECT_DIR$/StemmersNet/StemmersNet/obj/Debug/StemmersNet.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StemmersNet/StemmerDemo/bin/Debug/StemmersNet.pdb" afterPath="$PROJECT_DIR$/StemmersNet/StemmerDemo/bin/Debug/StemmersNet.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StemmersNet/StemmersNet/bin/Debug/StemmersNet.pdb" afterPath="$PROJECT_DIR$/StemmersNet/StemmersNet/bin/Debug/StemmersNet.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StemmersNet/StemmersNet/obj/Debug/StemmersNet.pdb" afterPath="$PROJECT_DIR$/StemmersNet/StemmersNet/obj/Debug/StemmersNet.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StemmersNet/StemmersNet.suo" afterPath="$PROJECT_DIR$/StemmersNet/StemmersNet.suo" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Research tool/Тест Библиотеки/bin/Debug/Тест Библиотеки.exe" afterPath="$PROJECT_DIR$/Research tool/Тест Библиотеки/bin/Debug/Тест Библиотеки.exe" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Research tool/Тест Библиотеки/obj/x86/Debug/Тест Библиотеки.exe" afterPath="$PROJECT_DIR$/Research tool/Тест Библиотеки/obj/x86/Debug/Тест Библиотеки.exe" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Research tool/Тест Библиотеки/bin/Debug/Тест Библиотеки.pdb" afterPath="$PROJECT_DIR$/Research tool/Тест Библиотеки/bin/Debug/Тест Библиотеки.pdb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Research tool/Тест Библиотеки/obj/x86/Debug/Тест Библиотеки.pdb" afterPath="$PROJECT_DIR$/Research tool/Тест Библиотеки/obj/x86/Debug/Тест Библиотеки.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Research tool/Тест Библиотеки/Clusters.cs" afterPath="$PROJECT_DIR$/Research tool/Тест Библиотеки/Clusters.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Research tool/Тест Библиотеки/Form2.Designer.cs" afterPath="$PROJECT_DIR$/Research tool/Тест Библиотеки/Form2.Designer.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StemmersNet/StemmerDemo/obj/x86/Debug/StemmerDemo.csproj.FileListAbsolute.txt" afterPath="$PROJECT_DIR$/StemmersNet/StemmerDemo/obj/x86/Debug/StemmerDemo.csproj.FileListAbsolute.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StemmersNet/StemmersNet/obj/Debug/StemmersNet.csproj.FileListAbsolute.txt" afterPath="$PROJECT_DIR$/StemmersNet/StemmersNet/obj/Debug/StemmersNet.csproj.FileListAbsolute.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Research tool/Тест Библиотеки/TestData.cs" afterPath="$PROJECT_DIR$/Research tool/Тест Библиотеки/TestData.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Clustering-Search-Results.iws" />
