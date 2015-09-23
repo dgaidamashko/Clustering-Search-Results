@@ -79,21 +79,31 @@ namespace ClusteringSearchResults
         private void UpdateParameter(object sender, ParameterEventArgs e)
         {
             textBox1.Text = Convert.ToString(e.GetPar);
+            textBox3.Clear();
             TestData.SetData();
-            textBox3.Clear();
-            C = new Clusters(TextOperations.GetMatrix, TextOperations.GetTextTitles, TextOperations.GetWords);
-            EnableClusterPainting = true;
-            CBaction();
-            textBox3.Clear();
-            for (int i = 0; i < C.GetClusters.Count; i++)
+            TextOperations.InitParams(TestData.Texts[comboBox2.SelectedIndex]);
+
+            TextOperations.TagNullifier();
+            for (int i = 0; i < TextOperations.ts.Count; i++)
             {
-                for (int j = 0; j < C.GetClusters[i].Data.Count; j++)
-                {
-                    textBox3.Text += C.GetClusters[i].Data[j].Data.GetTag += " ";
-                }
-                textBox3.Text += " | ";
+                TextOperations.Tag.Add(TextOperations.Frequency(TextOperations.vClusterize(TextOperations.ts[i].ToString())));
             }
-            Invalidate();
+            TextOperations.FormMatrix();
+            if (EnableClusterPainting)
+            {
+                C = new Clusters(TextOperations.GetMatrix, TextOperations.GetTextTitles, TextOperations.GetWords);
+                CBaction();
+                textBox3.Clear();
+                for (int i = 0; i < C.GetClusters.Count; i++)
+                {
+                    for (int j = 0; j < C.GetClusters[i].Data.Count; j++)
+                    {
+                        textBox3.Text += C.GetClusters[i].Data[j].Data.GetTag += " ";
+                    }
+                    textBox3.Text += " | ";
+                }
+                Invalidate();
+            }
         }
 
         private void Visualization_Load(object sender, EventArgs e)

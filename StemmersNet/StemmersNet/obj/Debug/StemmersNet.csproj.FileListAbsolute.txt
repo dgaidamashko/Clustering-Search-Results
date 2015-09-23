@@ -3,8 +3,16 @@ D:\Users\user\Documents\ДАНЯ\Clustering-Search-Results\StemmersNet\StemmersN
 D:\Users\user\Documents\ДАНЯ\Clustering-Search-Results\StemmersNet\StemmersNet\obj\Debug\StemmersNet.csprojResolveAssemblyReference.cache
 D:\Users\user\Documents\ДАНЯ\Clustering-Search-Results\StemmersNet\StemmersNet\obj\Debug\StemmersNet.dll
 D:\Users\user\Documents\ДАНЯ\Clustering-Search-Results\StemmersNet\StemmersNet\obj\Debug\StemmersNet.pdb
+<<<<<<< HEAD
 E:\Документы\Даня\Диплом\Clustering-Search-Results\StemmersNet\StemmersNet\bin\Debug\StemmersNet.dll
 E:\Документы\Даня\Диплом\Clustering-Search-Results\StemmersNet\StemmersNet\bin\Debug\StemmersNet.pdb
 E:\Документы\Даня\Диплом\Clustering-Search-Results\StemmersNet\StemmersNet\obj\Debug\StemmersNet.csprojResolveAssemblyReference.cache
 E:\Документы\Даня\Диплом\Clustering-Search-Results\StemmersNet\StemmersNet\obj\Debug\StemmersNet.dll
 E:\Документы\Даня\Диплом\Clustering-Search-Results\StemmersNet\StemmersNet\obj\Debug\StemmersNet.pdb
+=======
+C:\Users\maxim_000\Desktop\ДипломV2\Clustering-Search-Results\StemmersNet\StemmersNet\bin\Debug\StemmersNet.dll
+C:\Users\maxim_000\Desktop\ДипломV2\Clustering-Search-Results\StemmersNet\StemmersNet\bin\Debug\StemmersNet.pdb
+C:\Users\maxim_000\Desktop\ДипломV2\Clustering-Search-Results\StemmersNet\StemmersNet\obj\Debug\StemmersNet.csprojResolveAssemblyReference.cache
+C:\Users\maxim_000\Desktop\ДипломV2\Clustering-Search-Results\StemmersNet\StemmersNet\obj\Debug\StemmersNet.dll
+C:\Users\maxim_000\Desktop\ДипломV2\Clustering-Search-Results\StemmersNet\StemmersNet\obj\Debug\StemmersNet.pdb
+>>>>>>> 83535f14ee75bdfcc0d5d6428cf81f415141d5c7

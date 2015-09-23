@@ -160,7 +160,8 @@ Output parameters:
                         {
                             if (n == 4)//   статическая мода
                             {
-                                double temp = FindMode(G.E);
+                                double cv = 0;
+                                double temp = FindMode(G.E,out cv);
                                 //
                                 Form2.modeval = Convert.ToString(temp);
                                 //
@@ -169,10 +170,13 @@ Output parameters:
                                     G.E.Remove(G.E[longestEdgeindex]);
                                     LongestEdge();
                                 }
+                                //
+                                Form2.ael = Convert.ToString(cv);
+                                //
                             }
-                            else//    статическая мода
+                            else//    статическая мода (не завис. от k)
                             {
-                                
+                                ModeDelete(G.E);
                             }
                         }
                     }
@@ -180,8 +184,8 @@ Output parameters:
                 #endregion    
 
                 Clusterize();
-                
-                for (int i = 0; i < Texts.Data.Count; i++)
+                /*
+                for (int i = 0; i < Texts.Data.Count; i++)//добавление одиночных текстов к к другим кластерам
                 {
                     bool exists = false;
                     for (int q = 0; q < C.Count; q++)
@@ -195,24 +199,31 @@ Output parameters:
                     {
                         AddToClosestCluster(Texts.Data[i]);
                     }
-                }
-                for (int i = 0; i < C.Count; i++)
+                }*/
+                for (int i = 0; i < C.Count; i++)//удаление пустых кластров
                 {
-                    if (C[i].Data.Count <= 1)
+                    if (C[i].Data.Count < 1)
                     {
                         C.Remove(C[i]);
                         i--;
                     }
                 }
-                for (int i = 0; i < C.Count; i++)
+                for (int i = 0; i < C.Count; i++)//добавление единичн. кластеров в другие
                 {
-                    if (ConsistsOfTexts(C[i]))
+                    if (C[i].Data.Count == 1)
                     {
                         AddToClosestCluster(C[i]);
-                        C.Remove(C[i]);
                         i--;
                     }
                 }
+                    for (int i = 0; i < C.Count; i++)
+                    {
+                        if (ConsistsOfTexts(C[i]))
+                        {
+                            AddToClosestCluster(C[i]);
+                            i--;
+                        }
+                    }
         }
 
         public void LongestEdge()
@@ -442,9 +453,9 @@ Output parameters:
 
             Vertex neighbour = G.V[0];
             double shortestedgeweight = double.MaxValue;
-            for (int j = 0; j < cl.Data.Count; j++)
+            for (int j = 0; j < cl.Data.Count; j++)//перебор вершин кластера
             {
-                for (int i = 0; i < temp.E.Count; i++)
+                for (int i = 0; i < temp.E.Count; i++)//перебор связанных с вершиной рёбер
                 {
                     if (temp.E[i].V1 == cl.Data[j])
                     {
@@ -489,9 +500,10 @@ Output parameters:
                     }
                 }
             }
-                for (int i = 0; i < C.Count; i++)
+                for (int i = 0; i < C.Count; i++)//перебор имеющихся кластеров
                 {
-                    for (int j = 0; j < C[i].Data.Count; j++)
+                    bool tobreak = false;
+                    for (int j = 0; j < C[i].Data.Count; j++)//перебор вершин в кластере i
                     {
                         if (C[i].Data[j] == neighbour)
                         {
@@ -499,14 +511,118 @@ Output parameters:
                             {
                                     C[i].Data.Add(cl.Data[q]);
                             }
+                            C.Remove(cl);
+                            tobreak = true;
                             break;
                         }
                     }
+                    if (tobreak) break;
                 }
         }
 
         //Нахождение моды
+        public double FindMode(List<Edge> sourse, out double coefficient)
+        {
+            int v = 12;
+            double le = Double.MinValue;
+            double se = Double.MaxValue;
+            for (int i = 0; i < sourse.Count; i++)
+            {
+                if (sourse[i].Weight < se)
+                {
+                    se = sourse[i].Weight;
+                }
+                if (sourse[i].Weight > le)
+                {
+                    le = sourse[i].Weight;
+                }
+            }
+            List<List<Edge>> gaps = new List<List<Edge>>();
+            for (int i = 0; i < v; i++)
+            {
+                gaps.Add(new List<Edge>());
+            }
+            double av = (le - se) / v;
+
+            for (int i = 1; i < v; i++)
+            {
+                for (int j = 0; j < sourse.Count; j++)
+                {
+                    if (sourse[j].Weight > i * av + se && sourse[j].Weight <= (i + 1) * av + se)
+                    {
+                        gaps[i].Add(sourse[j]);
+                    }
+                }
+            }
+            int gindex = 0;
+            int a = gaps[gindex].Count;
+            for (int i = 0; i < gaps.Count; i++)
+            {
+                if (gaps[i].Count > a)
+                {
+                    gindex = i;
+                    a = gaps[i].Count;
+                }
+            }
+            List<Edge> temp = new List<Edge>();
+            for (int i = gindex + 1; i < gaps.Count; i++)
+            {
+                for (int j = 0; j < gaps[i].Count; j++)
+                {
+                    temp.Add(gaps[i][j]);
+                }
+            }
+            coefficient = FindMode(temp);
+                return AverageEdgeWeight(gaps[gindex]);
+        }
+
         public double FindMode(List<Edge> sourse)
+        {
+            int v = 5;
+            double le = Double.MinValue;
+            double se = Double.MaxValue;
+            for (int i = 0; i < sourse.Count; i++)
+            {
+                if (sourse[i].Weight < se)
+                {
+                    se = sourse[i].Weight;
+                }
+                if (sourse[i].Weight > le)
+                {
+                    le = sourse[i].Weight;
+                }
+            }
+            List<List<Edge>> gaps = new List<List<Edge>>();
+            for (int i = 0; i < v; i++)
+            {
+                gaps.Add(new List<Edge>());
+            }
+            double av = (le - se) / v;
+
+            for (int i = 1; i < v; i++)
+            {
+                for (int j = 0; j < sourse.Count; j++)
+                {
+                    if (sourse[j].Weight > i * av + se && sourse[j].Weight <= (i + 1) * av + se)
+                    {
+                        gaps[i].Add(sourse[j]);
+                    }
+                }
+            }
+            int gindex = 0;
+            int a = gaps[gindex].Count;
+            for (int i = 0; i < gaps.Count; i++)
+            {
+                if (gaps[i].Count > a)
+                {
+                    gindex = i;
+                    a = gaps[i].Count;
+                }
+            }
+            return AverageEdgeWeight(gaps[gindex]);
+        }
+
+        public void ModeDelete(List<Edge> sourse)
         {
             int v = 15;
             double le = Double.MinValue;
@@ -533,7 +649,7 @@ Output parameters:
             {
                 for (int j = 0; j < sourse.Count; j++)
                 {
-                    if (sourse[j].Weight > i * av && sourse[j].Weight <= (i + 1) * av)
+                    if (sourse[j].Weight > i * av + se && sourse[j].Weight <= (i + 1) * av + se)
                     {
                         gaps[i].Add(sourse[j]);
                     }
@@ -549,8 +665,16 @@ Output parameters:
                     a = gaps[i].Count;
                 }
             }
-            return AverageEdgeWeight(gaps[gindex]);
+            for (int i = 0; i < sourse.Count; i++)
+            {
+                if (sourse[i].Weight > gindex * av + se)
+                {
+                    sourse.Remove(sourse[i]);
+                    i--;
+                }
+            }
         }
+
 
         public Graph GetGraph
         {
