@@ -40,9 +40,7 @@ def search_page(request, search_request, group):
     form.search_request = search_request
     if form.is_valid():
         query = form.cleaned_data['search_request']
-        a = str(urlquote_plus(query))
-        return HttpResponseRedirect('/search/results/request=' + a.replace(' ', '_')
-                                    + '&group=1/')
+        return HttpResponseRedirect('/search/results/request=' + str(urlquote_plus(query)) + '&group=1/')
     return render(request, "Site/Result_Page.html", {'form': form}, )
 
 def yandex_search(query, group):
@@ -65,14 +63,6 @@ def yandex_search(query, group):
             result = models.SearchResult(title=titles.selector_list[i].text(), url=urls.selector_list[i]._node,
                                          snippet=snippets.selector_list[i].text())
             result.save()
-
-def regex_chars_unspec(string):
-    chars = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '{', '}', '[', ']', '\"', '\'', '|', ':', ';',
-             '.', ',', '?', '-', '+', '=', '№', '*', '\\', '/']
-    for elem in chars:
-        string = string.replace(elem, '\\' + elem)
-
-    return string
 
 stop_words_eng = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0",
                   "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t",

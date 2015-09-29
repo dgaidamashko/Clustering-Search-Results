@@ -1,9 +1,10 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="UTF-8">
     <title>Cluster Web Searcher</title>
-    <link rel="stylesheet" href="Slyles.css" type="text/css"/>
+    <link rel="stylesheet" media="all" href="{% static "style.css"%}" type="text/css">
 </head>
 <body>
     <h2 class="title">Добро пожаловать на кластерный веб-поисковик!</h2>
@@ -13,10 +14,10 @@
         <br><label class="comment">Введите поисковый запрос / Input a search request</label><br><br>
         <form action="" method="GET">
             {% for field in form %}
-                {{ field }}
+                <p align="center">{{ field }}</p>
             {% endfor %}
-            <input type="submit" value="Найти / Search">
-            <br><br>
+            <br><p align="center"><input type="submit" value=""></p>
+            <br>
         </form>
     </div>
 
