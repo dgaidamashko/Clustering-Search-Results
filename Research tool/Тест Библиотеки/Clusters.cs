@@ -184,22 +184,7 @@ Output parameters:
                 #endregion    
 
                 Clusterize();
-                /*
-                for (int i = 0; i < Texts.Data.Count; i++)//добавление одиночных текстов к к другим кластерам
-                {
-                    bool exists = false;
-                    for (int q = 0; q < C.Count; q++)
-                    {
-                        for (int j = 0; j < C[q].Data.Count; j++)
-                        {
-                            if (C[q].Data[j] == Texts.Data[i] && C[q].Data.Count > 1) exists = true;
-                        }
-                    }
-                    if (!exists)
-                    {
-                        AddToClosestCluster(Texts.Data[i]);
-                    }
-                }*/
+                
                 for (int i = 0; i < C.Count; i++)//удаление пустых кластров
                 {
                     if (C[i].Data.Count < 1)
@@ -219,6 +204,18 @@ Output parameters:
                     for (int i = 0; i < C.Count; i++)
                     {
                         if (ConsistsOfTexts(C[i]))
+                        {
+                            AddToClosestCluster(C[i]);
+                            i--;
+                        }
+                    }
+                    for (int i = 0; i < C.Count; i++)
+                    {
+                        if (i == 6)
+                        {
+
+                        }
+                        if (ConsistsOfWords(C[i]))
                         {
                             AddToClosestCluster(C[i]);
                             i--;
@@ -388,6 +385,32 @@ Output parameters:
                 {
                     return true;
                 }
+            return false;
+        }
+
+        //Определяет, состоит ли кластер лишь из слов-тегов
+        public bool ConsistsOfWords(Cluster cl)
+        {
+            bool ofwds = true;
+            int oneoftexts = 0;
+            for (int i = 0; i < cl.Data.Count; i++)
+            {
+                for (int j = 0; j < Texts.Data.Count; j++)
+                {
+                    if (cl.Data[i].Data.GetTag == Texts.Data[j].Data.GetTag)
+                    {
+                        oneoftexts += 1;
+                    }
+                }
+            }
+            if (oneoftexts > 1 && cl.Data.Count > oneoftexts + 2)
+            {
+                ofwds = false;
+            }
+            if (ofwds)
+            {
+                return true;
+            }
             return false;
         }
 
