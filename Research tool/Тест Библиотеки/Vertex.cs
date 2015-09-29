@@ -35,8 +35,8 @@ namespace ClusteringSearchResults
         public void Draw(Graphics g)
         {
             Brush br;
-            if (isin) br = new SolidBrush(Color.Red);
-            else br = new SolidBrush(Color.Black);
+            if (Data is Word) br = new SolidBrush(Color.Red);
+            else br = new SolidBrush(Color.Blue);
             g.FillEllipse(br, (int)(x * Form2.GetScale) - rad + Form1.GetForm2Width / 2 + ax, (int)(y * Form2.GetScale) - rad + Form1.GetForm2Height / 2 + ay, rad * 2, rad * 2);
         }
 

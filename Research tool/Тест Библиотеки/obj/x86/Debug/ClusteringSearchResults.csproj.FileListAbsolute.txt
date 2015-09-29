@@ -43,3 +43,5 @@ E:\Документы\Даня\Диплом\Clustering-Search-Results\Research t
 E:\Документы\Даня\Диплом\Clustering-Search-Results\Research tool\Тест Библиотеки\bin\Debug\StopWords.pdb
 D:\Programming\Projects\Clustering-Search-Results\Research tool\Тест Библиотеки\obj\x86\Debug\Тест Библиотеки.exe
 D:\Programming\Projects\Clustering-Search-Results\Research tool\Тест Библиотеки\obj\x86\Debug\Тест Библиотеки.pdb
+C:\Users\maxim_000\Desktop\ДипломV2\Clustering-Search-Results\Research tool\Тест Библиотеки\bin\Debug\StemmersNet.dll
+C:\Users\maxim_000\Desktop\ДипломV2\Clustering-Search-Results\Research tool\Тест Библиотеки\bin\Debug\StemmersNet.pdb

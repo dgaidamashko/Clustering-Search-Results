@@ -21,8 +21,7 @@ namespace ClusteringSearchResults
         public void Draw(Graphics g)
         {
             Pen p;
-            if (optimal) p = new Pen(Color.Red, 2);
-            else p = new Pen(Color.Black, 2);
+            p = new Pen(Color.Black, 2);
             g.DrawLine(p, (int)(V1.x * Form2.GetScale) + Form1.GetForm2Width / 2 + Vertex.AX, (int)(V1.y * Form2.GetScale) + Form1.GetForm2Height / 2 + Vertex.AY, (int)(V2.x * Form2.GetScale) + Form1.GetForm2Width / 2 + Vertex.AX, (int)(V2.y * Form2.GetScale) + Form1.GetForm2Height / 2 + Vertex.AY);
         }
 
