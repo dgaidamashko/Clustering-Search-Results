@@ -148,6 +148,10 @@ namespace ClusteringSearchResults
                 {
                     C.GetGraph.V[i].Draw(e.Graphics);
                 }
+                for (int i = 0; i < C.GetClusters.Count; i++)
+                {
+                    C.GetClusters[i].ConvexHull(e.Graphics);
+                }
                 
             }
         }

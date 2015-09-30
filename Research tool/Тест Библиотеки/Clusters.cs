@@ -193,14 +193,7 @@ Output parameters:
                         i--;
                     }
                 }
-                for (int i = 0; i < C.Count; i++)//добавление единичн. кластеров в другие
-                {
-                    if (C[i].Data.Count == 1)
-                    {
-                        AddToClosestCluster(C[i]);
-                        i--;
-                    }
-                }
+                
                     for (int i = 0; i < C.Count; i++)
                     {
                         if (ConsistsOfTexts(C[i]))
