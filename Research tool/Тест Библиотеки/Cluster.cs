@@ -15,6 +15,32 @@ namespace ClusteringSearchResults
             Data = new List<Vertex>();
         }
 
+        public List<Tags> GetWds()
+        {
+            List<Tags> result = new List<Tags>();
+            for (int i = 0; i < Data.Count; i++)
+            {
+                if (Data[i].Data is Word)
+                {
+                    result.Add(Data[i].Data);
+                }
+            }
+            return result;
+        }
+
+        public List<Tags> GetTxts()
+        {
+            List<Tags> result = new List<Tags>();
+            for (int i = 0; i < Data.Count; i++)
+            {
+                if (Data[i].Data is TextTitle)
+                {
+                    result.Add(Data[i].Data);
+                }
+            }
+            return result;
+        }
+
         public void ConvexHull(Graphics g)
         {
             bool include = true;

@@ -122,9 +122,6 @@ Output parameters:
                 }
             
                 LongestEdge();
-            //
-                Form2.ael = Convert.ToString(AverageEdgeWeight(G.E));
-                //
                 // methods
                 #region
                 if (n == 1)//    самое длинное/второе по длине ребро
@@ -170,9 +167,6 @@ Output parameters:
                                     G.E.Remove(G.E[longestEdgeindex]);
                                     LongestEdge();
                                 }
-                                //
-                                Form2.ael = Convert.ToString(cv);
-                                //
                             }
                             else//    статическая мода (не завис. от k)
                             {
@@ -194,7 +188,7 @@ Output parameters:
                     }
                 }
                 
-                    for (int i = 0; i < C.Count; i++)
+                    for (int i = 0; i < C.Count; i++)//присоединение кластеров, сост. только из текстов
                     {
                         if (ConsistsOfTexts(C[i]))
                         {
@@ -202,12 +196,8 @@ Output parameters:
                             i--;
                         }
                     }
-                    for (int i = 0; i < C.Count; i++)
+                    for (int i = 0; i < C.Count; i++)//присоединение кластеров, сост. из слов + 2 или меньше текстов
                     {
-                        if (i == 6)
-                        {
-
-                        }
                         if (ConsistsOfWords(C[i]))
                         {
                             AddToClosestCluster(C[i]);
@@ -216,6 +206,7 @@ Output parameters:
                     }
         }
 
+        //нахождеине самого длинного а второго по длине рёбер
         public void LongestEdge()
         {
             if (G.E.Count > 1)
@@ -236,6 +227,7 @@ Output parameters:
             }
         }
 
+        //нахождение средней длины ребра
         public double AverageEdgeWeight(List<Edge> sourse)
         {
             double sum = 0;
@@ -381,7 +373,7 @@ Output parameters:
             return false;
         }
 
-        //Определяет, состоит ли кластер лишь из слов-тегов
+        //Определяет, состоит ли кластер лишь из слов-тегов + 2 или меньше текстов
         public bool ConsistsOfWords(Cluster cl)
         {
             bool ofwds = true;
@@ -689,6 +681,28 @@ Output parameters:
                     i--;
                 }
             }
+        }
+
+        //Получает список списков слов в кластерах
+        public List<List<Tags>> GetWdsFromClst()
+        {
+            List<List<Tags>> result = new List<List<Tags>>();
+            for (int i = 0; i < C.Count; i++)
+            {
+                result.Add(C[i].GetWds());
+            }
+            return result;
+        }
+
+        //Получает список списков текстов в кластерах
+        public List<List<Tags>> GetTxtsFromClst()
+        {
+            List<List<Tags>> result = new List<List<Tags>>();
+            for (int i = 0; i < C.Count; i++)
+            {
+                result.Add(C[i].GetTxts());
+            }
+            return result;
         }
 
 
