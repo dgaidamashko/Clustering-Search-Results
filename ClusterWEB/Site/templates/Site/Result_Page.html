@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <title>Cluster Web Searcher</title>
     <script>
-         function show_hide(id){
+         function show_hide(id)
+         {
          var item = document.getElementById(id);
          if (item.style.display == 'none') {item.style.display = 'block';}
          else item.style.display = 'none';
@@ -27,14 +28,16 @@
     </div>
     <br><br>
     <div class="results">
-        {% for cluster in clusters %}
-            <div class="cluster" id="C{{ cluster.id }}">
+        {% if clusters|length > 0 %}
+            {% for cluster in clusters %}
+                <div class="cluster" id="C{{ cluster. }}">
+                    {{ cluster.tags|join:", " }}
+                    <a href="javascript:show_hide()">show/hide</a>
+                </div>
+            {% endfor %}
+        {% else %}
 
-            </div>
-        {% endfor %}
+        {% endif %}
     </div>
-
-    
-
 </body>
 </html>
