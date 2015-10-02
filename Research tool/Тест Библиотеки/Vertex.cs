@@ -60,6 +60,11 @@ namespace ClusteringSearchResults
             get { return (int)(y * Form2.GetScale) - rad + Form1.GetForm2Height / 2 + ay; }
         }
 
+        public int GetRad
+        {
+            get { return rad; }
+        }
+
         public static int AX
         {
             get { return ax; }
