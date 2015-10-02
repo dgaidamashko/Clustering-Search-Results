@@ -157,11 +157,7 @@ Output parameters:
                         {
                             if (n == 4)//   статическая мода
                             {
-                                double cv = 0;
-                                double temp = FindMode(G.E,out cv);
-                                //
-                                Form2.modeval = Convert.ToString(temp);
-                                //
+                                double temp = FindMode(G.E);
                                 while (lEdgeWeight > k * temp && G.E.Count != 1)
                                 {
                                     G.E.Remove(G.E[longestEdgeindex]);
@@ -196,7 +192,7 @@ Output parameters:
                             i--;
                         }
                     }
-                    for (int i = 0; i < C.Count; i++)//присоединение кластеров, сост. из слов + 2 или меньше текстов
+                    for (int i = 0; i < C.Count; i++)//присоединение кластеров, сост. из слов + 1 или меньше текстов
                     {
                         if (ConsistsOfWords(C[i]))
                         {
@@ -373,7 +369,7 @@ Output parameters:
             return false;
         }
 
-        //Определяет, состоит ли кластер лишь из слов-тегов + 2 или меньше текстов
+        //Определяет, состоит ли кластер лишь из слов-тегов + 1 или меньше текстов
         public bool ConsistsOfWords(Cluster cl)
         {
             bool ofwds = true;

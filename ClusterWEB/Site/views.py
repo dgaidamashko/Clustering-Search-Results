@@ -176,6 +176,25 @@ stop_words_rus_stem = ["б", "без", "буд", "больш", "был",
 class Cluster:
     Data = []
 
+    def GetWds(self):
+        result = []
+        cst = Word(" ")
+        for i in range(len(self.Data)):
+            if type(self.Data[i].Data) == type(cst):
+                result.append(self, self.Data[i].Data)
+        return result
+
+    def GetTxts(self):
+        result = []
+        cst = TextTitle("1")
+        for i in range(len(self.Data)):
+            if type(self.Data[i].Data) == type(cst):
+                result.append(self, self.Data[i].Data)
+        return result
+
+
+
+
 
 class Clusters:
     G = None
@@ -216,35 +235,32 @@ class Clusters:
                 i -= 1
         self.LongestEdge()
         if n == 1:
-            while self.lEdgeWeight > k * self.slEdgeWeight:
+            while self.lEdgeWeight > k * self.slEdgeWeight and len(self.G.E) != 1:
                 self.G.E.remove(self.G.E[self.longestEdgeindex])
                 self.LongestEdge()
         elif n == 2:
-            while self.lEdgeWeight > k * self.AverageEdgeWeight(1):
+            while self.lEdgeWeight > k * self.AverageEdgeWeight(self.G.E) and len(self.G.E) != 1:
                 self.G.E.remove(self.G.E[self.longestEdgeindex])
                 self.LongestEdge()
         else:
-            while self.lEdgeWeight > k * self.AverageEdgeWeight(2):
+            temp = self.FindMode(self.G.E)
+            while self.lEdgeWeight > k * temp and len(self.G.E) != 1:
                 self.G.E.remove(self.G.E[self.longestEdgeindex])
                 self.LongestEdge()
         self.Clusterize()
-        for i in range(len(self.Texts.Data)):
-            exists = False
-            for q in range(len(self.C)):
-                for j in range(len(self.C[q].Data)):
-                    if self.C[q].Data[j] == self.Texts.Data[i] & len(self.C[q].Data) > 1:
-                        exists = True
-            if not exists:
-                self.AddToClosestCluster(self.Texts.Data[i])
         for i in range(len(self.C)):
-            if len(self.C[i].Data) <= 1:
+            if len(self.C[i].Data) < 1:
                 self.C.remove(self.C[i])
                 i -= 1
         for i in range(len(self.C)):
             if self.ConsistsOfTexts(self.C[i]):
                 self.AddToClosestCluster(self.C[i])
-                self.C.remove(self.C[i])
                 i -= 1
+        for i in range(len(self.C)):
+            if self.ConsistsOfWords(self.C[i]):
+                self.AddToClosestCluster(self.C[i])
+                i -= 1
+
 
     def LongestEdge(self):
         if len(self.G.E) > 1:
@@ -264,15 +280,9 @@ class Clusters:
 
     def AverageEdgeWeight(self, a):
         sum = float(0)
-        if a == 1:
-            for i in range(len(self.G.E)):
-                sum += self.G.E[i].Weight
-            return sum / len(self.G.E)
-        else:
-            for i in range(len(self.G.E)):
-                if i != self.longestEdgeindex:
-                    sum += self.G.E[i].Weight
-            return sum / (len(self.G.E) - 1)
+        for i in range(len(a)):
+            sum += a[i].Weight
+        return sum / len(a)
 
     def Clusterize(self):
         self.C = []
@@ -362,11 +372,16 @@ class Clusters:
                             shortestedgeweight = temp.E[i].Weight
                             neighbour = temp.E[i].V1
         for i in range(len(self.C)):
+            tobreak = False
             for j in range(len(self.C[i].Data)):
                 if self.C[i].Data[j] == neighbour:
                     for q in range(len(cl.Data)):
                         self.C[i].Data.append(cl.Data[q])
+                    self.C.remove(cl)
+                    tobreak = True
                     break
+            if tobreak:
+                break
 
     def ConsistsOfTexts(self, cl):
         allexist = True
@@ -378,9 +393,55 @@ class Clusters:
             if not oneoftexts:
                 allexist = False
                 break
-        if allexist:
-            return 1
-        return 0
+        return allexist
+
+    def ConsistsOfWords(self, cl):
+        ofwds = True
+        oneoftexts = 0
+        for i in range (len(cl.Data)):
+            for j in range (len(self.Texts.Data)):
+                if cl.Data[i].Data.GetTag == self.Texts.Data[j].Data.GetTag:
+                    oneoftexts += 1
+        if oneoftexts > 1 and len(cl.Data) > oneoftexts + 2:
+            ofwds = False
+        return ofwds
+
+    def FindMode(self, sourse):
+        v = 5
+        le = -1
+        se = 340282300000000000000000000000000000000
+        for i in range(len(sourse)):
+            if sourse[i].Weight < se:
+                se = sourse[i].Weight
+            if sourse[i].Weight > le:
+                le = sourse[i].Weight
+        gaps = []
+        for i in range(v):
+            gaps.append([])
+        av = float((le - se) / v)
+        for i in range(1, v):
+            for j in range(len(sourse)):
+                if sourse[j].Weight > i * av + se and sourse[j].Weight <= (i +1) * av + se:
+                    gaps[i].append(sourse[j])
+        gindex = 0
+        a = len(gaps[gindex])
+        for i in range(len(gaps)):
+            if len(gaps[i]) > a:
+                gindex = i
+                a = len(gaps[i])
+        return  self.AverageEdgeWeight(gaps[gindex])
+
+    def GetWdsFromClst(self):
+        result = []
+        for i in range(len(self.C)):
+            result.append(self.C[i].GetWds())
+        return result
+
+    def GetTxtsFromClst(self):
+        result = []
+        for i in range(len(self.C)):
+            result.append(self.C[i].GetTxts())
+        return result
 
 
 class Edge:
