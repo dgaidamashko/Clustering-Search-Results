@@ -16,12 +16,17 @@ namespace ClusteringSearchResults
         
         Form2 F;
         string[] t;
+        public static bool usertxtentered;
+        List<string> input;
 
         static int formwidth, formheight;
 
         public Form1()
         {
+            TestData.SetData();
             InitializeComponent();
+            usertxtentered = false;
+            input = new List<string>();
             F = new Form2();
             formwidth = F.Size.Width;
             formheight = F.Size.Height;
@@ -39,7 +44,9 @@ namespace ClusteringSearchResults
         {
             if (richTextBox1.Text != "")
             {
-                TextOperations.ts.Add(richTextBox1.Text);
+                usertxtentered = true;
+                input.Add(richTextBox1.Text);
+                TextOperations.InitParams(input);
                 listBox1.Items.Add(TextOperations.ts[TextOperations.ts.Count - 1]);
                 richTextBox1.Text = "";
             }
@@ -48,6 +55,16 @@ namespace ClusteringSearchResults
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (usertxtentered && input.Count >1)
+            {
+                F = new Form2();
+                string[] temp = new string[input.Count];
+                for (int i = 0; i < temp.Length; i++)
+                {
+                    temp[i] = input[i];
+                }
+                TestData.Texts.Add(temp);
+            }
             TextOperations.TagNullifier();
             for (int i = 0; i < TextOperations.ts.Count; i++)
             {

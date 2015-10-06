@@ -15,14 +15,13 @@ namespace ClusteringSearchResults
         static EnglishStemmer EngStem;
         static RussianStemmer RusStem;
         public static List<string> ts;
-        public static List<string> txt;
+        //public static List<string> txt;
         public static List<List<Word>> Tag;
         static double[,] Matrix;
         static Tags[] TextTitles;
         static Tags[] Words;
         static List<string> AllWds;
-        #region
-        static string[] temp;
+        //static string[] temp;
 
        /* static string[] temp = {"Британск полиц знает о местонахожден основател WikiLeaks",
 "В суд США начина процесс прот россиянина, рассыла спам",
@@ -34,18 +33,28 @@ namespace ClusteringSearchResults
 "Полиц Великобритан нашл основател WikiLeaks, но, не арестова",
 "В Стокгольм и Осло сегодн состо вручен Нобелевск прем",
                                };*/
-        #endregion
 
         public static void InitParams(string[] t)
         {
-            temp = t;
+            string[] temp = t;
             Eng = new StWdsEng();
             Rus = new StWdsRus();
             EngStem = new EnglishStemmer();
             RusStem = new RussianStemmer();
             ts = new List<string>();
             ts.AddRange(temp);
-            txt = new List<string>();
+            //txt = new List<string>();
+            Tag = new List<List<Word>>();
+        }
+
+        public static void InitParams(List<string> t)
+        {
+            Eng = new StWdsEng();
+            Rus = new StWdsRus();
+            EngStem = new EnglishStemmer();
+            RusStem = new RussianStemmer();
+            ts = new List<string>();
+            ts = t;
             Tag = new List<List<Word>>();
         }
 
@@ -183,7 +192,7 @@ namespace ClusteringSearchResults
 
         static void LLWchange()
         {
-            string[] wordlist;  // wordlist - тот массив всех встречающихся вордов, что тебе надо заполнить; Можешь вместо него поставить что-то другое, но не забудь заменить
+            string[] wordlist;
             List<List<Word>> temp = new List<List<Word>>();
             AllWds = AllWords();
             wordlist = new string[AllWds.Count];

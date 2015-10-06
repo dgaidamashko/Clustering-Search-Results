@@ -158,10 +158,13 @@ Output parameters:
                             if (n == 4)//   статическая мода
                             {
                                 double temp = FindMode(G.E);
-                                while (lEdgeWeight > k * temp && G.E.Count != 1)
+                                for (int i = 0; i < G.E.Count; i++)
                                 {
-                                    G.E.Remove(G.E[longestEdgeindex]);
-                                    LongestEdge();
+                                    if (G.E[i].Weight > k * temp)
+                                    {
+                                        G.E.Remove(G.E[i]);
+                                        i--;
+                                    }
                                 }
                             }
                             else//    статическая мода (не завис. от k)

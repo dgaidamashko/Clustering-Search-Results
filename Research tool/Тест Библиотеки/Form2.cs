@@ -18,8 +18,6 @@ namespace ClusteringSearchResults
         PointF movestart;
         bool EnableClusterPainting;
         Form3 ParScroll;
-        public static string modeval = "";
-        public static string ael = "";
         string kstring;
 
         public Form2()
@@ -34,9 +32,14 @@ namespace ClusteringSearchResults
             comboBox1.SelectedIndex = 0;
             comboBox2.SelectedIndex = 0;
             movestart = new PointF();
-            TestData.SetData();
+            //TestData.SetData();
             ParScroll = new Form3();
             kstring = textBox1.Text;
+            if (Form1.usertxtentered)
+            {
+                comboBox2.Items.Add("Пользовательские данные");
+            }
+            //comboBox2.SelectedIndex = comboBox2.Items.Count - 1;
         }
 
         private void CBaction()
@@ -67,20 +70,19 @@ namespace ClusteringSearchResults
                         else
                         {
                             C.ClusterSelection(k, 5);
-                            textBox2.Text = Convert.ToString(C.r);
+                            
                         }
                     }
                 }
             }
-            textBox2.Text = modeval;
-            textBox4.Text = ael;
+            
         }
 
         private void UpdateParameter(object sender, ParameterEventArgs e)
         {
             textBox1.Text = Convert.ToString(e.GetPar);
             textBox3.Clear();
-            TestData.SetData();
+            //TestData.SetData();
             TextOperations.InitParams(TestData.Texts[comboBox2.SelectedIndex]);
 
             TextOperations.TagNullifier();
@@ -113,7 +115,7 @@ namespace ClusteringSearchResults
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TestData.SetData();
+            //TestData.SetData();
             textBox3.Clear();
             C = new Clusters(TextOperations.GetMatrix, TextOperations.GetTextTitles, TextOperations.GetWords);
             CBaction();
@@ -250,7 +252,7 @@ namespace ClusteringSearchResults
         {
             if (EnableClusterPainting)
             {
-                TestData.SetData();
+                //TestData.SetData();
                 C = new Clusters(TextOperations.GetMatrix, TextOperations.GetTextTitles, TextOperations.GetWords);
                 CBaction();
                 textBox3.Clear();
@@ -300,7 +302,7 @@ namespace ClusteringSearchResults
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             textBox3.Clear();
-            TestData.SetData();
+            //TestData.SetData();
             TextOperations.InitParams(TestData.Texts[comboBox2.SelectedIndex]);
             
             TextOperations.TagNullifier();
@@ -391,6 +393,20 @@ namespace ClusteringSearchResults
             if (!error)
             {
                 kstring = textBox1.Text;
+            }
+        }
+
+        private void Form2_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (EnableClusterPainting)
+            {
+                for (int i = 0; i < C.GetGraph.V.Count; i++)
+                {
+                    if (C.GetGraph.V[i].Clicked(e.X, e.Y) && C.GetGraph.V[i].Data is TextTitle)
+                    {
+                        MessageBox.Show(TestData.Texts[comboBox2.SelectedIndex][Convert.ToInt32(C.GetGraph.V[i].Data.GetTag) - 1]);
+                    }
+                }
             }
         }
     }
