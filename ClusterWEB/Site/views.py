@@ -244,9 +244,10 @@ class Clusters:
                 self.LongestEdge()
         else:
             temp = self.FindMode(self.G.E)
-            while self.lEdgeWeight > k * temp and len(self.G.E) != 1:
-                self.G.E.remove(self.G.E[self.longestEdgeindex])
-                self.LongestEdge()
+            for i in range(len(self.G.E)):
+                if self.G.E[i].Weight > k * temp:
+                    self.G.E.remove(self.G.E[i])
+                    i -= 1
         self.Clusterize()
         for i in range(len(self.C)):
             if len(self.C[i].Data) < 1:

@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2fd889a-aac3-4fb9-a8b0-b6d30ed55e88" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Research tool/ClusteringSearchResults.suo" afterPath="$PROJECT_DIR$/Research tool/ClusteringSearchResults.suo" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Research tool/Тест Библиотеки/bin/Debug/Тест Библиотеки.exe" afterPath="$PROJECT_DIR$/Research tool/Тест Библиотеки/bin/Debug/Тест Библиотеки.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Research tool/Тест Библиотеки/obj/x86/Debug/Тест Библиотеки.exe" afterPath="$PROJECT_DIR$/Research tool/Тест Библиотеки/obj/x86/Debug/Тест Библиотеки.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Research tool/Тест Библиотеки/bin/Debug/Тест Библиотеки.pdb" afterPath="$PROJECT_DIR$/Research tool/Тест Библиотеки/bin/Debug/Тест Библиотеки.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Research tool/Тест Библиотеки/obj/x86/Debug/Тест Библиотеки.pdb" afterPath="$PROJECT_DIR$/Research tool/Тест Библиотеки/obj/x86/Debug/Тест Библиотеки.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Research tool/Тест Библиотеки/Clusters.cs" afterPath="$PROJECT_DIR$/Research tool/Тест Библиотеки/Clusters.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ClusterWEB/Site/views.py" afterPath="$PROJECT_DIR$/ClusterWEB/Site/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Clustering-Search-Results.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,26 +40,25 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ClusterWEB/Site/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38084874">
-              <caret line="278" column="50" selection-start-line="278" selection-start-column="50" selection-end-line="278" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.59085965">
+              <caret line="249" column="26" selection-start-line="249" selection-start-column="26" selection-end-line="249" selection-end-column="26" />
               <folding>
                 <element signature="e#10954#11443#0" expanded="false" />
                 <element signature="e#11693#12517#0" expanded="false" />
-                <element signature="e#12565#13907#0" expanded="false" />
-                <element signature="e#13945#14691#0" expanded="false" />
-                <element signature="e#14737#14842#0" expanded="false" />
-                <element signature="e#14878#15375#0" expanded="false" />
-                <element signature="e#15433#16209#0" expanded="false" />
-                <element signature="e#16273#17145#0" expanded="false" />
-                <element signature="e#17210#18919#0" expanded="false" />
-                <element signature="e#18964#19318#0" expanded="false" />
-                <element signature="e#19363#19709#0" expanded="false" />
-                <element signature="e#19751#20560#0" expanded="false" />
-                <element signature="e#20600#20716#0" expanded="false" />
-                <element signature="e#21076#23172#0" expanded="false" />
-                <element signature="e#23269#28521#0" expanded="false" />
-                <element signature="e#28551#28653#0" expanded="false" />
-                <element signature="e#28885#28958#0" expanded="false" />
+                <element signature="e#13944#14690#0" expanded="false" />
+                <element signature="e#14736#14841#0" expanded="false" />
+                <element signature="e#14877#15374#0" expanded="false" />
+                <element signature="e#15432#16208#0" expanded="false" />
+                <element signature="e#16272#17144#0" expanded="false" />
+                <element signature="e#17209#18918#0" expanded="false" />
+                <element signature="e#18963#19317#0" expanded="false" />
+                <element signature="e#19362#19708#0" expanded="false" />
+                <element signature="e#19750#20559#0" expanded="false" />
+                <element signature="e#20599#20715#0" expanded="false" />
+                <element signature="e#21075#23171#0" expanded="false" />
+                <element signature="e#23268#28520#0" expanded="false" />
+                <element signature="e#28550#28652#0" expanded="false" />
+                <element signature="e#28884#28957#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -121,6 +113,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -239,7 +232,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -523,6 +515,39 @@
     <entry file="file://$PROJECT_DIR$/Тестовые программы/Stemming.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="79" selection-start-line="5" selection-start-column="79" selection-end-line="5" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClusterWEB/Site/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#10954#11443#0" expanded="false" />
+            <element signature="e#11693#12517#0" expanded="false" />
+            <element signature="e#13944#14690#0" expanded="false" />
+            <element signature="e#14736#14841#0" expanded="false" />
+            <element signature="e#14877#15374#0" expanded="false" />
+            <element signature="e#15432#16208#0" expanded="false" />
+            <element signature="e#16272#17144#0" expanded="false" />
+            <element signature="e#17209#18918#0" expanded="false" />
+            <element signature="e#18963#19317#0" expanded="false" />
+            <element signature="e#19362#19708#0" expanded="false" />
+            <element signature="e#19750#20559#0" expanded="false" />
+            <element signature="e#20599#20715#0" expanded="false" />
+            <element signature="e#21075#23171#0" expanded="false" />
+            <element signature="e#23268#28520#0" expanded="false" />
+            <element signature="e#28550#28652#0" expanded="false" />
+            <element signature="e#28884#28957#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Тестовые программы/Stemming.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -543,21 +568,20 @@
           <folding>
             <element signature="e#10954#11443#0" expanded="false" />
             <element signature="e#11693#12517#0" expanded="false" />
-            <element signature="e#12565#13907#0" expanded="false" />
-            <element signature="e#13945#14691#0" expanded="false" />
-            <element signature="e#14737#14842#0" expanded="false" />
-            <element signature="e#14878#15375#0" expanded="false" />
-            <element signature="e#15433#16209#0" expanded="false" />
-            <element signature="e#16273#17145#0" expanded="false" />
-            <element signature="e#17210#18919#0" expanded="false" />
-            <element signature="e#18964#19318#0" expanded="false" />
-            <element signature="e#19363#19709#0" expanded="false" />
-            <element signature="e#19751#20560#0" expanded="false" />
-            <element signature="e#20600#20716#0" expanded="false" />
-            <element signature="e#21076#23172#0" expanded="false" />
-            <element signature="e#23269#28521#0" expanded="false" />
-            <element signature="e#28551#28653#0" expanded="false" />
-            <element signature="e#28885#28958#0" expanded="false" />
+            <element signature="e#13944#14690#0" expanded="false" />
+            <element signature="e#14736#14841#0" expanded="false" />
+            <element signature="e#14877#15374#0" expanded="false" />
+            <element signature="e#15432#16208#0" expanded="false" />
+            <element signature="e#16272#17144#0" expanded="false" />
+            <element signature="e#17209#18918#0" expanded="false" />
+            <element signature="e#18963#19317#0" expanded="false" />
+            <element signature="e#19362#19708#0" expanded="false" />
+            <element signature="e#19750#20559#0" expanded="false" />
+            <element signature="e#20599#20715#0" expanded="false" />
+            <element signature="e#21075#23171#0" expanded="false" />
+            <element signature="e#23268#28520#0" expanded="false" />
+            <element signature="e#28550#28652#0" expanded="false" />
+            <element signature="e#28884#28957#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -588,26 +612,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ClusterWEB/Site/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38084874">
-          <caret line="278" column="50" selection-start-line="278" selection-start-column="50" selection-end-line="278" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.59085965">
+          <caret line="249" column="26" selection-start-line="249" selection-start-column="26" selection-end-line="249" selection-end-column="26" />
           <folding>
             <element signature="e#10954#11443#0" expanded="false" />
             <element signature="e#11693#12517#0" expanded="false" />
-            <element signature="e#12565#13907#0" expanded="false" />
-            <element signature="e#13945#14691#0" expanded="false" />
-            <element signature="e#14737#14842#0" expanded="false" />
-            <element signature="e#14878#15375#0" expanded="false" />
-            <element signature="e#15433#16209#0" expanded="false" />
-            <element signature="e#16273#17145#0" expanded="false" />
-            <element signature="e#17210#18919#0" expanded="false" />
-            <element signature="e#18964#19318#0" expanded="false" />
-            <element signature="e#19363#19709#0" expanded="false" />
-            <element signature="e#19751#20560#0" expanded="false" />
-            <element signature="e#20600#20716#0" expanded="false" />
-            <element signature="e#21076#23172#0" expanded="false" />
-            <element signature="e#23269#28521#0" expanded="false" />
-            <element signature="e#28551#28653#0" expanded="false" />
-            <element signature="e#28885#28958#0" expanded="false" />
+            <element signature="e#13944#14690#0" expanded="false" />
+            <element signature="e#14736#14841#0" expanded="false" />
+            <element signature="e#14877#15374#0" expanded="false" />
+            <element signature="e#15432#16208#0" expanded="false" />
+            <element signature="e#16272#17144#0" expanded="false" />
+            <element signature="e#17209#18918#0" expanded="false" />
+            <element signature="e#18963#19317#0" expanded="false" />
+            <element signature="e#19362#19708#0" expanded="false" />
+            <element signature="e#19750#20559#0" expanded="false" />
+            <element signature="e#20599#20715#0" expanded="false" />
+            <element signature="e#21075#23171#0" expanded="false" />
+            <element signature="e#23268#28520#0" expanded="false" />
+            <element signature="e#28550#28652#0" expanded="false" />
+            <element signature="e#28884#28957#0" expanded="false" />
           </folding>
         </state>
       </provider>
