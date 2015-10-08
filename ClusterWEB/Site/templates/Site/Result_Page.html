@@ -30,9 +30,12 @@
     <div class="results">
         {% if clusters|length > 0 %}
             {% for cluster in clusters %}
-                <div class="cluster" id="C{{ cluster. }}">
+                <div class="cluster">
                     {{ cluster.tags|join:", " }}
-                    <a href="javascript:show_hide()">show/hide</a>
+                    <a href="javascript:show_hide('{{ cluster.id }}')">show/hide</a>
+                    <div id="{{ cluster.id }}">
+                        {% for result in cluster. %}
+                    </div>
                 </div>
             {% endfor %}
         {% else %}

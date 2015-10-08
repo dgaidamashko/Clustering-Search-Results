@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 import codecs
-from abc import ABCMeta, abstractclassmethod, abstractproperty
+from abc import ABCMeta
 from overloading import overloaded
 from math import *
 from collections import Counter
@@ -20,6 +20,7 @@ from Site import models
 class SearchForm(forms.Form):
     search_request = forms.CharField(widget=forms.TextInput(attrs={'size': 140, 'lang': 50, 'width': 40}))
 
+
 def main_page(request):
     form = SearchForm(request.GET, auto_id=False)
     # Выполнение поиска
@@ -29,40 +30,88 @@ def main_page(request):
 
     return render(request, "Site/Main_Page.html", {'form': form})
 
+
 def main_page_runserver(request):
     return HttpResponseRedirect('/search/')
+
 
 def search_page_redirect(request, search_request):
     return HttpResponseRedirect('/search/results/request=' + str(search_request) + '&group=1/')
 
-def search_page(request, search_request, group):
+
+def search_page(request, query, group):
     form = SearchForm(request.GET, auto_id=False)
-    form.search_request = search_request
+    form.search_request = query
+    result_list = yandex_search(query, group)
     if form.is_valid():
         query = form.cleaned_data['search_request']
-        return HttpResponseRedirect('/search/results/request=' + str(urlquote_plus(query)) + '&group=1/')
-    return render(request, "Site/Result_Page.html", {'form': form}, )
+        return HttpResponseRedirect('/search/results/request=' + str(urlquote_plus(query)) + '&group='+str(group)+'/')
+    return render(request, "Site/Result_Page.html", {'form': form, 'results': result_list}, )
+
 
 def yandex_search(query, group):
     g = Grab()
-    g.setup(connect_timeout=30, timeout=30)
-    for i in range(10):
+    g.setup(connect_timeout=20, timeout=20)
+    titles = []
+    urls = []
+    snippets = []
+    result_list = []
+
+    def replacement(string):
+        return string.replace('\u2014', '-').replace('\u0301', '').replace('\u2013', '-')
+
+    page = 2*int(group)-2
+    while page < 2:
         yandex_url = 'http://yandex.ru/yandsearch?text=%s&numdoc=50' % urlquote_plus(query)
-        page = group-1+i
         if page:
             yandex_url += '&p=%d' % page
-
         g.go(yandex_url)
-        urls = g.doc.select('//div[@class="serp-list" and @role="main"]/' +
-                             'div[contains(@class,"serp-block serp-block-")]/div/' +
-                             'h2[@class="serp-item__title"]/a/@href')
-        titles = g.doc.select('//div[@class="serp-list" and @role="main"]' +
-                              '/div[contains(@class,"serp-block serp-block-")]/div/h2[@class="serp-item__title"]')
-        snippets = g.doc.select('//div[@class="serp-item__text"]')
-        for j in range(len(urls.selector_list)):
-            result = models.SearchResult(title=titles.selector_list[i].text(), url=urls.selector_list[i]._node,
-                                         snippet=snippets.selector_list[i].text())
-            result.save()
+        # Получение информации (Заголовков, адресов ссылок и сниппетов) со страницы Яндекса с помощью XPath выражения
+        sel_urls = g.doc.select('//div[@class="serp-list" and @role="main"]/' +
+                                'div[contains(@class,"serp-block serp-block")' +
+                     ' and not(contains(@class,"images")) and not(contains(@class,"video"))]//' +
+                     'h2[@class="serp-item__title"]/a/@href')
+        sel_titles = g.doc.select('//div[@class="serp-list" and @role="main"]/div[contains(@class,' +
+                                  '"serp-block serp-block")' +
+                      ' and not(contains(@class,"images")) and not(contains(@class,"video"))]' +
+                      '//h2[@class="serp-item__title"]')
+        sel_snippets = g.doc.select('//div[@class="serp-list" and @role="main"]/' +
+                                    'div[contains(@class,"serp-block serp-block")' +
+                          ' and not(contains(@class,"images")) and not(contains(@class,"video"))]' +
+                          '//div[contains(@class,"__text") or contains(@class,"__descr")]')
+
+        for elem in sel_urls.selector_list:
+            urls.append(elem._node)
+        for elem in sel_titles.selector_list:
+            titles.append(replacement(elem.text()))
+        for elem in sel_snippets.selector_list:
+            snippets.append(replacement(elem.text()))
+        page += 1
+    for i in range(len(titles)):
+        result_list.append(Search_Result(titles[i], urls[i], snippets[i], i))
+    return result_list
+
+def clustering_search_results(results):
+    tool_text = TextOperations()
+    for i in range(len(results)):
+        tool_text.Tag.append(tool_text.frequency(tool_text.vClusterize(results[i].texts)))
+    tool_text.form_matrix()
+
+     
+    tool_cluster = Clusters(tool_text.Matrix, tool_text.TextTitles, tool_text.Words)
+    tool_cluster.ClusterSelection(0, 10)
+    tag_list = tool_cluster.GetWdsFromClst()
+    text_list = tool_cluster.GetTxtsFromClst()
+
+
+
+class Search_Result:
+    def __init__(self, title, url, snippet, num):
+        self.id = num
+        self.title = title
+        self.url = url
+        self.snippet = snippet
+        self.text = self.title + ' ' + self.snippet
 
 stop_words_eng = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0",
                   "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t",
@@ -193,9 +242,6 @@ class Cluster:
         return result
 
 
-
-
-
 class Clusters:
     G = None
     longestEdgeindex = int()
@@ -244,10 +290,9 @@ class Clusters:
                 self.LongestEdge()
         else:
             temp = self.FindMode(self.G.E)
-            for i in range(len(self.G.E)):
-                if self.G.E[i].Weight > k * temp:
-                    self.G.E.remove(self.G.E[i])
-                    i -= 1
+            while self.lEdgeWeight > k * temp and len(self.G.E) != 1:
+                self.G.E.remove(self.G.E[self.longestEdgeindex])
+                self.LongestEdge()
         self.Clusterize()
         for i in range(len(self.C)):
             if len(self.C[i].Data) < 1:
@@ -261,7 +306,6 @@ class Clusters:
             if self.ConsistsOfWords(self.C[i]):
                 self.AddToClosestCluster(self.C[i])
                 i -= 1
-
 
     def LongestEdge(self):
         if len(self.G.E) > 1:
@@ -430,7 +474,7 @@ class Clusters:
             if len(gaps[i]) > a:
                 gindex = i
                 a = len(gaps[i])
-        return  self.AverageEdgeWeight(gaps[gindex])
+        return self.AverageEdgeWeight(gaps[gindex])
 
     def GetWdsFromClst(self):
         result = []
@@ -664,15 +708,6 @@ class TextOperations:
                 self.Matrix[i, j] = self.Tag[j][i].count
                 self.TextTitles = TextTitle(str(j + 1))
                 self.Words[i] = self.Tag[j][i]
-
-    def GetMatrix(self):
-        return self.Matrix
-
-    def GetWords(self):
-        return self.Words
-
-    def GetTextTitles(self):
-        return self.TextTitles
 
 
 class TextTitle(Tags):
