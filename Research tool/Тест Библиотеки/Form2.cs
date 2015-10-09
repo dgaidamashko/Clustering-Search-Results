@@ -37,7 +37,7 @@ namespace ClusteringSearchResults
             kstring = textBox1.Text;
             if (Form1.usertxtentered)
             {
-                comboBox2.Items.Add("Пользовательские данные");
+                comboBox2.Items.Add("Пользовательские данные ");
             }
             //comboBox2.SelectedIndex = comboBox2.Items.Count - 1;
         }

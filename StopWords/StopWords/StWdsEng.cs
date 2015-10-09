@@ -61,7 +61,7 @@ namespace StopWords
 "taking","tc","td","ten","text","tf","tg","test","th","than","that","that'll","that's",
         "the","their","them","themselves","then","thence","there","there'll","there's",
         "thereafter","thereby","therefore","therein","thereupon","these","they","they'd",
-        "they'll","they're","they've","thirty","t",
+        "they'll","they're","they've","thirty","t", "to",
 "ua","ug","uk","um","under","unless","unlike","unlikely","until","up","upon","us","use","used","using","uy","uz",
 "va","vc","ve","very","vg","vi","via","vn","vu",
 "was","wasn","wasn't","we","we'd","we'll","we're","we've","web","webpage","website",

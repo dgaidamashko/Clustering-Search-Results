@@ -172,11 +172,13 @@
             // 
             this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox3.Enabled = false;
             this.textBox3.Location = new System.Drawing.Point(701, 443);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(430, 107);
             this.textBox3.TabIndex = 9;
+            this.textBox3.Visible = false;
             // 
             // Form2
             // 
