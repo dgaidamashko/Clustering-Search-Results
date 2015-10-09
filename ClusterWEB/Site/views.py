@@ -239,6 +239,12 @@ class Cluster:
         for i in range(len(self.Data)):
             if type(self.Data[i].Data) == type(cst):
                 result.append(self, self.Data[i].Data)
+        for i in range(len(result - 1)):
+            for j in range(len(result) - i - 1):
+                if int(result[j].Data.GetTag()) > int(result[j+1].Data.GetTag()):
+                    a = result[j+1]
+                    result[j+1] = result[j]
+                    result[j] = a
         return result
 
 
