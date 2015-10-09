@@ -18,8 +18,8 @@ namespace ClusteringSearchResults
         string[] t;
         public static bool usertxtentered;
         List<string> input;
-
         static int formwidth, formheight;
+        public static int ftn;
 
         public Form1()
         {
@@ -55,9 +55,9 @@ namespace ClusteringSearchResults
 
         private void button2_Click(object sender, EventArgs e)
         {
+            F = new Form2();
             if (usertxtentered && input.Count >1)
             {
-                F = new Form2();
                 string[] temp = new string[input.Count];
                 for (int i = 0; i < temp.Length; i++)
                 {
@@ -115,6 +115,14 @@ namespace ClusteringSearchResults
         {
             formheight = F.Size.Height;
             formwidth = F.Size.Width;
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            input = new List<string>();
+            listBox1.Items.Clear();
+            usertxtentered = false;
+            TestData.Texts.Remove(TestData.Texts[TestData.Texts.Count - 1]);
         }
 
 

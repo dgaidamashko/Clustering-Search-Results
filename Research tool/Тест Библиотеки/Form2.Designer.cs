@@ -118,11 +118,11 @@
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
-            "Тест 1",
-            "Тест 2",
-            "Тест 3",
-            "Тест 4",
-            "Тест 5",
+            "Миронов",
+            "Тест (habr)",
+            "Кремень",
+            "Обама",
+            "Судьба",
             "Snippets (Миронов)",
             "Snippets (Кремень)"});
             this.comboBox2.Location = new System.Drawing.Point(43, 313);
@@ -155,11 +155,10 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Метод 1",
-            "Метод 2",
-            "Метод 3",
-            "Мода (стат.)",
-            "Мода (не зав. от k)"});
+            "Средняя длина ребра (дин)",
+            "Средняя длина ребра (стат)",
+            "Два самых длинных ребра",
+            "Мода (стат)"});
             this.comboBox1.Location = new System.Drawing.Point(43, 214);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(171, 21);
@@ -172,11 +171,13 @@
             // 
             this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox3.Enabled = false;
             this.textBox3.Location = new System.Drawing.Point(701, 443);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(430, 107);
             this.textBox3.TabIndex = 9;
+            this.textBox3.Visible = false;
             // 
             // Form2
             // 
