@@ -56,7 +56,7 @@ namespace ClusteringSearchResults
 
         public static void ConnectDots(Vertex dot1, Vertex dot2, Graphics g)
         {
-            g.DrawLine(new Pen(new SolidBrush(Color.Gray)), dot1.GetCoordX + dot1.GetRad, dot1.GetCoordY + dot1.GetRad, dot2.GetCoordX + dot2.GetRad, dot2.GetCoordY + dot2.GetRad);
+            g.DrawLine(new Pen(new SolidBrush(Color.Black)), dot1.GetCoordX + dot1.GetRad, dot1.GetCoordY + dot1.GetRad, dot2.GetCoordX + dot2.GetRad, dot2.GetCoordY + dot2.GetRad);
         }
 
 

@@ -38,6 +38,7 @@ namespace ClusteringSearchResults
             if (Data is Word) br = new SolidBrush(Color.Red);
             else br = new SolidBrush(Color.Blue);
             g.FillEllipse(br, (int)(x * Form2.GetScale) - rad + Form1.GetForm2Width / 2 + ax, (int)(y * Form2.GetScale) - rad + Form1.GetForm2Height / 2 + ay, rad * 2, rad * 2);
+            g.DrawEllipse(new Pen(new SolidBrush(Color.Black)), (int)(x * Form2.GetScale) - rad + Form1.GetForm2Width / 2 + ax, (int)(y * Form2.GetScale) - rad + Form1.GetForm2Height / 2 + ay, rad * 2, rad * 2);
         }
 
         public bool Clicked(float x0, float y0)
