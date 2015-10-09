@@ -66,7 +66,10 @@ def yandex_search(query, group):
         yandex_url = 'http://yandex.ru/yandsearch?text=%s&numdoc=50' % urlquote_plus(query)
         if page:
             yandex_url += '&p=%d' % page
-        g.go(yandex_url)
+        try:
+            g.go(yandex_url)
+        except Exception:
+            g.change_proxy()
         # Получение информации (Заголовков, адресов ссылок и сниппетов) со страницы Яндекса с помощью XPath выражения
         sel_urls = g.doc.select('//div[@class="serp-list" and @role="main"]/' +
                                 'div[contains(@class,"serp-block serp-block")' +
@@ -455,7 +458,7 @@ class Clusters:
 
     def ConsistsOfTexts(self, cl):
         allexist = True
-        for i in  range(len(cl.Data)):
+        for i in range(len(cl.Data)):
             oneoftexts = False
             for j in range(len(self.Texts.Data)):
                 if cl.Data[i].Data.Tag == self.Texts.Data[j].Data.Tag:
@@ -468,8 +471,8 @@ class Clusters:
     def ConsistsOfWords(self, cl):
         ofwds = True
         oneoftexts = 0
-        for i in range (len(cl.Data)):
-            for j in range (len(self.Texts.Data)):
+        for i in range(len(cl.Data)):
+            for j in range(len(self.Texts.Data)):
                 if cl.Data[i].Data.GetTag == self.Texts.Data[j].Data.GetTag:
                     oneoftexts += 1
         if oneoftexts > 1 and len(cl.Data) > oneoftexts + 2:
@@ -491,7 +494,7 @@ class Clusters:
         av = float((le - se) / v)
         for i in range(1, v):
             for j in range(len(sourse)):
-                if sourse[j].Weight > i * av + se and sourse[j].Weight <= (i +1) * av + se:
+                if sourse[j].Weight > (i * av + se) and sourse[j].Weight <= ((i +1) * av + se):
                     gaps[i].append(sourse[j])
         gindex = 0
         a = len(gaps[gindex])

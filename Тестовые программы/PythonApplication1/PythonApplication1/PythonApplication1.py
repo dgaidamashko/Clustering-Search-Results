@@ -25,7 +25,12 @@ while page<2:
     yandex_url = 'http://yandex.ru/yandsearch?text=%s&numdoc=100' % urlquote_plus(query)
     if page:
         yandex_url += '&p=%d' % page
-    g.go(yandex_url)
+    try:
+        g.go(yandex_url)
+    except Exception as error:
+        print(error)
+        g.change_proxy()
+
     a = g.doc.select('//div[@class="serp-list" and @role="main"]/div[contains(@class,"serp-block serp-block") and not(contains(@class,"images")) and not(contains(@class,"video"))]//h2[@class="serp-item__title"]/a/@href')
     a1 = g.doc.select('//div[@class="serp-list" and @role="main"]/div[contains(@class,"serp-block serp-block") and not(contains(@class,"images")) and not(contains(@class,"video"))]//h2[@class="serp-item__title"]')
     a2 = g.doc.select('//div[@class="serp-list" and @role="main"]/div[contains(@class,"serp-block serp-block") and not(contains(@class,"images")) and not(contains(@class,"video"))]//div[contains(@class,"__text") or contains(@class,"__descr")]')
