@@ -618,12 +618,27 @@ class TextOperations:
                 c = ord(char)
                 return 1040 <= c <= 1071 or 65 <= c <= 90 or 1072 <= c <= 1103 or 97 <= c <= 122 or 48 <= c <= 57
 
+            def word_sensible(word):
+                for i in range(len(word)):
+                    if char_sensible(word[i]):
+                        return True
+                return False
+
+            def punctuation_delete(word):
+                while not char_sensible(word[0]):
+                    word = word[1:]
+                while not char_sensible(word[-1]):
+                    word = word[:-1]
+                return word
+
             txt.lower()
             txt.replace('ё', 'е')
-            for j in range(len(txt)):
-                if not char_sensible(txt[j]):
-                    txt = txt.replace(txt[j], ' ')
             text = txt.split()
+            for item in text:
+                if word_sensible(item):
+                    item = punctuation_delete(item)
+                else:
+                    text.remove(item)
             return text
 
         # Проверка слова на язык (русский или английский (алфавит - кириллица или латиница?))
@@ -645,21 +660,20 @@ class TextOperations:
             return rez
 
         text = divid(txt)
-        for i in range(len(text)):
-            language = language_check(text[i])
+        for item in text:
+            language = language_check(item)
             if language == "cyrillic":
-                if stop_words_rus_full.__contains__(text[i]):
-                    del (text[i])
-                text[i] = self.stemmer_rus.stem(text[i])
-                if stop_words_rus_stem.__contains__(text[i]):
-                    del (text[i])
-                    i -= 1
-            elif language == "latin":
-                if stop_words_eng.__contains__(text[i]):
-                    del (text[i])
-                    i -= 1
+                if stop_words_rus_full.__contains__(item):
+                    text.remove(item)
                 else:
-                    text[i] = self.stemmer_eng.stem(text[i])
+                    item = self.stemmer_rus.stem(item)
+                    if stop_words_rus_stem.__contains__(item):
+                        text.remove(item)
+            elif language == "latin":
+                if stop_words_eng.__contains__(item):
+                    text.remove(item)
+                else:
+                    item = self.stemmer_eng.stem(item)
         return text
 
     # Формирование списка уникальных основ в тексте с указанием их частот
@@ -717,8 +731,6 @@ class TextOperations:
             self.Tag = temp
 
         llw_change()
-        temp = self.Tag
-        temp1 = len(self.Tag[0])
         self.Matrix = zeros([len(self.Tag[0]), len(self.Tag)])
         for i in range(0, len(self.Tag[0])):
             for j in range(0, len(self.Tag)):
