@@ -3,7 +3,7 @@ h2.title {color: black; font-style: normal; font-size: x-large; font-weight: bol
 label.comment {color: black; font-style: normal; font-size: medium;
 font-weight: bold; font-family: Gungsuh, Arial Black; }
 a:hover {text-decoration: none}
-div.request {color: black; font-family: Arial; border-style: outset; background-color: antiquewhite}
+div.request {color: black; font-family: Arial; border-style: none; background-color: gold}
 div.result {color: black; font-family: Arial; border-style: outset; background-color: white}
 div.cluster {color: midnightblue; font-family: Arial; border-style: solid; background-color: azure}
 div. result {color: black; font-family: Arial; border-style: solid; border-color: grey; border-width: thin;

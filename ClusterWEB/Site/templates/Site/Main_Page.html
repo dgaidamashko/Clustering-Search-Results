@@ -11,13 +11,11 @@
     <h2 class="title">Welcome to the Cluster Web Searcher!</h2>
     <br><br><br>
     <div class="request">
-        <br><label class="comment">Введите поисковый запрос / Input a search request</label><br><br>
         <form action="" method="GET">
             {% for field in form %}
                 <p align="center">{{ field }}</p>
             {% endfor %}
-            <br><p align="center"><input type="submit" value=""></p>
-            <br>
+            <p align="center"><input type="submit" value=""></p>
         </form>
     </div>
 
