@@ -22,7 +22,7 @@ class SearchForm(forms.Form):
 
 
 def main_page(request):
-    form = SearchForm(request.GET, auto_id=False)
+    form = SearchForm(request.GET, auto_id=False, initial={'search_request': 'Введите поисковый запрос'})
     # Выполнение поиска
     if form.is_valid():
         query = form.cleaned_data['search_request']
@@ -35,18 +35,19 @@ def main_page_runserver(request):
     return HttpResponseRedirect('/search/')
 
 
-def search_page_redirect(request, search_request):
-    return HttpResponseRedirect('/search/results/request=' + str(search_request) + '&group=1/')
+def search_page_redirect(request, query):
+    return HttpResponseRedirect('/search/results/request=' + str(query) + '&group=1/')
 
 
 def search_page(request, query, group):
-    form = SearchForm(request.GET, auto_id=False)
+    form = SearchForm(request.GET, auto_id=False, initial={'search_request': 'Введите поисковый запрос'})
     form.search_request = query
     result_list = yandex_search(query, group)
+    clusters = clustering_search_results(result_list)
     if form.is_valid():
         query = form.cleaned_data['search_request']
         return HttpResponseRedirect('/search/results/request=' + str(urlquote_plus(query)) + '&group='+str(group)+'/')
-    return render(request, "Site/Result_Page.html", {'form': form, 'results': result_list}, )
+    return render(request, "Site/Result_Page.html", {'form': form, 'clusters': clusters}, )
 
 
 def yandex_search(query, group):
@@ -92,16 +93,28 @@ def yandex_search(query, group):
     return result_list
 
 def clustering_search_results(results):
-    tool_text = TextOperations()
-    for i in range(len(results)):
-        tool_text.Tag.append(tool_text.frequency(tool_text.vClusterize(results[i].texts)))
-    tool_text.form_matrix()
-
-     
-    tool_cluster = Clusters(tool_text.Matrix, tool_text.TextTitles, tool_text.Words)
-    tool_cluster.ClusterSelection(0, 10)
-    tag_list = tool_cluster.GetWdsFromClst()
-    text_list = tool_cluster.GetTxtsFromClst()
+    if len(results):
+        tool_text = TextOperations()
+        for i in range(len(results)):
+            tool_text.Tag.append(tool_text.frequency(tool_text.vClusterize(results[i].text)))
+        tool_text.form_matrix()
+        tool_cluster = Clusters(tool_text.Matrix, tool_text.TextTitles, tool_text.Words)
+        tool_cluster.ClusterSelection(0, 10)
+        tag_list = tool_cluster.GetWdsFromClst()
+        text_list = tool_cluster.GetTxtsFromClst()
+        webclusters = []
+        for i in range(len(tag_list)):
+            tag_temp_list = []
+            result_temp_list = []
+            for tag in tag_list:
+                tag_temp_list.append(tag)
+            for item in text_list:
+                temp_index = int(item) - 1
+                result_temp_list.append(results[temp_index])
+            webclusters.append(webCluster(i, tag_temp_list, result_temp_list))
+        return webclusters
+    else:
+        return []
 
 
 
@@ -214,6 +227,7 @@ stop_words_rus_stem = ["б", "без", "буд", "больш", "был",
                        "наш", "н", "нибуд", "ним", "называ", "назван", "назва", "нам",
                        "от", "он", "обычн", "основа",
                        "побыва", "п",
+                       "р",
                        "сам", "св", "сво", "себ", "сказа", "скаж", "стат", "стал", "станов",
                        "тем", "так", "теб",
                        "уж",
@@ -241,6 +255,11 @@ class Cluster:
                 result.append(self, self.Data[i].Data)
         return result
 
+class webCluster:
+    def __init__(self, id, tags, results):
+        self.id = str(id + 1)
+        self.tags = tags
+        self.results = results
 
 class Clusters:
     G = None
@@ -586,41 +605,29 @@ class TextOperations:
         # Дробление текста на слова и удаление знаков препнания
         def divid(txt):
 
-            # Проверка на наличие букв в строке
-            def alphabet_chars_existance(word):
-                for i in range(len(word)):
-                    if word[i] == 'Ё' or word[i] == 'ё':
-                        return True
-                    if 1040 <= ord(word[i]) <= 1071 or 65 <= ord(word[i]) <= 90:
-                        return True
-                    if 1072 <= ord(word[i]) <= 1103 or 97 <= ord(word[i]) <= 122:
-                        return True
-                return False
+            def char_sensible(char):
+                c = ord(char)
+                return 1040 <= c <= 1071 or 65 <= c <= 90 or 1072 <= c <= 1103 or 97 <= c <= 122 or 48 <= c <= 57
 
+            txt.lower()
+            txt.replace('ё', 'е')
+            for j in range(len(txt)):
+                if not char_sensible(txt[j]):
+                    txt = txt.replace(txt[j], ' ')
             text = txt.split()
-            beginning = ['(', '<', '\'', '\"', '«', '•', '?', '?']
-            end = [';', '.', ',', '\'', '\"', ':', '!', '?', '>', ')', '%', '»', '•', '?', '?']
-            for elem in text:
-                if alphabet_chars_existance(elem):
-                    while beginning.__contains__(elem[0]):
-                        elem = elem[1:]
-                    while end.__contains__(elem[-1]):
-                        elem = elem[:-1]
-                else:
-                    text.remove(elem)
             return text
 
         # Проверка слова на язык (русский или английский (алфавит - кириллица или латиница?))
         def language_check(word):
             rez = "invalid"
-            for i in range(len(word)):
-                if 1072 <= ord(word[i]) <= 1103:
+            for k in range(len(word)):
+                if 1072 <= ord(word[k]) <= 1103:
                     if rez == "cyrillic" or rez == "invalid":
                         rez = "cyrillic"
                     elif rez == "latin":
                         rez = "invalid"
                         break
-                elif 97 <= ord(word[i]) <= 122:
+                elif 97 <= ord(word[k]) <= 122:
                     if rez == "latin" or rez == "invalid":
                         rez = "latin"
                     elif rez == "cyrillic":
@@ -630,8 +637,6 @@ class TextOperations:
 
         text = divid(txt)
         for i in range(len(text)):
-            text[i] = text[i].lower()
-            text[i].replace('ё', 'е')
             language = language_check(text[i])
             if language == "cyrillic":
                 if stop_words_rus_full.__contains__(text[i]):
@@ -677,8 +682,9 @@ class TextOperations:
                     return False
 
                 ss = []
-                for i in range(len(self.Tag)):
-                    for j in range(len(self.Tag[i])):
+                temp = []
+                for i in range(0, len(self.Tag)):
+                    for j in range(len(0, self.Tag[i])):
                         if not check_list_item(temp, self.Tag[i][j].word):
                             temp.append(Word(self.Tag[i][j].word))
                 for elem in temp:
@@ -688,9 +694,9 @@ class TextOperations:
 
             self.AllWords = all_words()
             temp = []
-            for i in range(len(self.Tag)):
+            for i in range(0, len(self.Tag)):
                 temp.append([])
-                for j in range(len(self.AllWords)):
+                for j in range(0, len(self.AllWords)):
                     word_exists = False
                     for k in range(len(self.Tag[i])):
                         if self.AllWords[j] == self.Tag[i][k].word:
@@ -702,9 +708,11 @@ class TextOperations:
             self.Tag = temp
 
         llw_change()
+        temp = self.Tag
+        temp1 = len(self.Tag[0])
         self.Matrix = zeros([len(self.Tag[0]), len(self.Tag)])
-        for i in range(len(self.Tag[0])):
-            for j in range(len(self.Tag)):
+        for i in range(0, len(self.Tag[0])):
+            for j in range(0, len(self.Tag)):
                 self.Matrix[i, j] = self.Tag[j][i].count
                 self.TextTitles = TextTitle(str(j + 1))
                 self.Words[i] = self.Tag[j][i]

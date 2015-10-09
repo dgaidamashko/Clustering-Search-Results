@@ -32,15 +32,21 @@
             {% for cluster in clusters %}
                 <div class="cluster">
                     {{ cluster.tags|join:", " }}
-                    <a href="javascript:show_hide('{{ cluster.id }}')">show/hide</a>
+                    <a href="javascript:show_hide('{{ cluster.id }}')">show/hide</a><br>
                     <div id="{{ cluster.id }}">
-                        {% for result in cluster. %}
+                        {% for result in cluster.results %}
+                            <div class="result">
+                                <a href="{{ result.url }}" target="_blank">{{ result.title }}</a>
+                                <br>{{ result.snippet }}<br>
+                            </div>
+                            {% endfor %}
                     </div>
                 </div>
             {% endfor %}
         {% else %}
-
+            <span class="noresults">К сожалению, результаты не найдены :(</span>
         {% endif %}
     </div>
+
 </body>
 </html>

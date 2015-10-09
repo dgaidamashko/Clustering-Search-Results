@@ -6,4 +6,7 @@ a:hover {text-decoration: none}
 div.request {color: black; font-family: Arial; border-style: outset; background-color: antiquewhite}
 div.result {color: black; font-family: Arial; border-style: outset; background-color: white}
 div.cluster {color: midnightblue; font-family: Arial; border-style: solid; background-color: azure}
+div. result {color: black; font-family: Arial; border-style: solid; border-color: grey; border-width: thin;
+    background-color: silver}
 input[type="submit"] {width: 40px; height: 40px; border: none; background: white url("images/search.png");}
+span.noresults {color: black; font-family: Arial; font-style: oblique; text-align: center}

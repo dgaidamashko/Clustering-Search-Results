@@ -20,8 +20,8 @@ from Site import views
 
 urlpatterns = patterns('', url(r'^$', views.main_page_runserver),
                        url(r'^search/$', views.main_page),
-                       url(r'\?search_request=(?P<search_request>.*)$', views.search_page_redirect),
-                       url(r'^search/results/request=(?P<search_request>.*)&group=(?P<group>\d+)/$',
+                       url(r'\?search_request=(?P<query>.*)$', views.search_page_redirect),
+                       url(r'^search/results/request=(?P<query>.*)&group=(?P<group>\d+)/$',
                            views.search_page))
 
 # urlpatterns = patterns('', url(r'^$', views.main_page),
