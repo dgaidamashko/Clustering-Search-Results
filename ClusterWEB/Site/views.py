@@ -18,7 +18,8 @@ from Site import models
 
 
 class SearchForm(forms.Form):
-    search_request = forms.CharField(widget=forms.TextInput(attrs={'size': 140, 'lang': 50, 'width': 40}))
+    search_request = forms.CharField(widget=forms.TextInput(attrs={'size': 140, 'lang': 50, 'width': 40,
+                                                                   'placeholder': "Поиск..."}))
 
 
 def main_page(request):
@@ -63,12 +64,13 @@ def yandex_search(query, group):
 
     page = 2*int(group)-2
     while page < 2:
+
         yandex_url = 'http://yandex.ru/yandsearch?text=%s&numdoc=50' % urlquote_plus(query)
         if page:
             yandex_url += '&p=%d' % page
         try:
             g.go(yandex_url)
-        except Exception:
+        except:
             g.change_proxy()
         # Получение информации (Заголовков, адресов ссылок и сниппетов) со страницы Яндекса с помощью XPath выражения
         sel_urls = g.doc.select('//div[@class="serp-list" and @role="main"]/' +
@@ -618,12 +620,28 @@ class TextOperations:
                 c = ord(char)
                 return 1040 <= c <= 1071 or 65 <= c <= 90 or 1072 <= c <= 1103 or 97 <= c <= 122 or 48 <= c <= 57
 
+            def word_sensible(word):
+                for i in range(len(word)):
+                    if char_sensible(word[i]):
+                        return True
+                return False
+
+            def punctuation_delete(word):
+                while not char_sensible(word[0]):
+                    word = word[1:]
+                while not char_sensible(word[-1]):
+                    word = word[:-1]
+                return word
+
             txt.lower()
             txt.replace('ё', 'е')
-            for j in range(len(txt)):
-                if not char_sensible(txt[j]):
-                    txt = txt.replace(txt[j], ' ')
             text = txt.split()
+            for i in range(0, len(text)):
+                if word_sensible(text[i]):
+                    text[i] = punctuation_delete(text[i])
+                else:
+                    text.remove(text[i])
+                    i -= 1
             return text
 
         # Проверка слова на язык (русский или английский (алфавит - кириллица или латиница?))
@@ -645,18 +663,19 @@ class TextOperations:
             return rez
 
         text = divid(txt)
-        for i in range(len(text)):
+        for i in range(0, len(text)):
             language = language_check(text[i])
             if language == "cyrillic":
                 if stop_words_rus_full.__contains__(text[i]):
-                    del (text[i])
-                text[i] = self.stemmer_rus.stem(text[i])
-                if stop_words_rus_stem.__contains__(text[i]):
-                    del (text[i])
-                    i -= 1
+                    text.remove(text[i])
+                else:
+                    item = self.stemmer_rus.stem(text[i])
+                    if stop_words_rus_stem.__contains__(text[i]):
+                        text.remove(text[i])
+                        i -= 1
             elif language == "latin":
                 if stop_words_eng.__contains__(text[i]):
-                    del (text[i])
+                    text.remove(text[i])
                     i -= 1
                 else:
                     text[i] = self.stemmer_eng.stem(text[i])
@@ -683,10 +702,10 @@ class TextOperations:
             # Формирование списка уникальных основ слов, которые повторяются в РАЗНЫХ текстах
             def all_words():
 
-                def check_list_item(list, elem):
-                    for item in list:
-                        if item.word == elem:
-                            item.IsSingle = False
+                def check_list_item(List, Elem):
+                    for i in range(0, len(List)):
+                        if List[i].word == Elem:
+                            List[i].IsSingle = False
                             return True
                     return False
 
@@ -717,8 +736,6 @@ class TextOperations:
             self.Tag = temp
 
         llw_change()
-        temp = self.Tag
-        temp1 = len(self.Tag[0])
         self.Matrix = zeros([len(self.Tag[0]), len(self.Tag)])
         for i in range(0, len(self.Tag[0])):
             for j in range(0, len(self.Tag)):
