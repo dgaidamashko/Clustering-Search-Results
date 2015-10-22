@@ -13,6 +13,7 @@ from django.template import RequestContext, loader
 from django.core.urlresolvers import reverse
 from django import forms
 from grab import Grab
+from grab.proxylist import ProxyList, parse_proxy_line
 from django.utils.http import urlquote_plus
 from Site import models
 
@@ -23,7 +24,7 @@ class SearchForm(forms.Form):
 
 
 def main_page(request):
-    form = SearchForm(request.GET, auto_id=False, initial={'search_request': 'Введите поисковый запрос'})
+    form = SearchForm(request.GET, auto_id=False)
     # Выполнение поиска
     if form.is_valid():
         query = form.cleaned_data['search_request']
@@ -53,7 +54,7 @@ def search_page(request, query, group):
 
 def yandex_search(query, group):
     g = Grab()
-    g.setup(connect_timeout=20, timeout=20)
+    g.setup(connect_timeout=5, timeout=20)
     titles = []
     urls = []
     snippets = []
@@ -68,10 +69,8 @@ def yandex_search(query, group):
         yandex_url = 'http://yandex.ru/yandsearch?text=%s&numdoc=50' % urlquote_plus(query)
         if page:
             yandex_url += '&p=%d' % page
-        try:
-            g.go(yandex_url)
-        except:
-            g.change_proxy()
+        g.go(yandex_url)
+        w = g.response.code
         # Получение информации (Заголовков, адресов ссылок и сниппетов) со страницы Яндекса с помощью XPath выражения
         sel_urls = g.doc.select('//div[@class="serp-list" and @role="main"]/' +
                                 'div[contains(@class,"serp-block serp-block")' +
@@ -636,12 +635,11 @@ class TextOperations:
             txt.lower()
             txt.replace('ё', 'е')
             text = txt.split()
+            for elem in text:
+                if not word_sensible(elem):
+                    text.remove(elem)
             for i in range(0, len(text)):
-                if word_sensible(text[i]):
-                    text[i] = punctuation_delete(text[i])
-                else:
-                    text.remove(text[i])
-                    i -= 1
+                text[i] = punctuation_delete(text[i])
             return text
 
         # Проверка слова на язык (русский или английский (алфавит - кириллица или латиница?))
@@ -663,23 +661,24 @@ class TextOperations:
             return rez
 
         text = divid(txt)
-        for i in range(0, len(text)):
-            language = language_check(text[i])
+        stemmed = []
+        for elem in text:
+            language = language_check(elem)
             if language == "cyrillic":
-                if stop_words_rus_full.__contains__(text[i]):
-                    text.remove(text[i])
+                if stop_words_rus_full.__contains__(elem):
+                    text.remove(elem)
                 else:
-                    item = self.stemmer_rus.stem(text[i])
-                    if stop_words_rus_stem.__contains__(text[i]):
-                        text.remove(text[i])
-                        i -= 1
+                    temp = self.stemmer_rus.stem(elem)
+                    if stop_words_rus_stem.__contains__(temp):
+                        text.remove(elem)
+                    else:
+                        stemmed.append(temp)
             elif language == "latin":
-                if stop_words_eng.__contains__(text[i]):
-                    text.remove(text[i])
-                    i -= 1
+                if stop_words_eng.__contains__(elem):
+                    text.remove(elem)
                 else:
-                    text[i] = self.stemmer_eng.stem(text[i])
-        return text
+                    stemmed.append(self.stemmer_eng.stem(elem))
+        return stemmed
 
     # Формирование списка уникальных основ в тексте с указанием их частот
     @staticmethod

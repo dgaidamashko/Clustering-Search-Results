@@ -13,9 +13,6 @@ hrefs=[]
 snippets=[]
 group=1
 query=input()
-pages_many_links=[]
-pages_many_titles=[]
-pages_many_snippets=[]
 
 def replacement(string):
     return string.replace('\u2014', '-').replace('\u0301', '').replace('\u2013', '-')
