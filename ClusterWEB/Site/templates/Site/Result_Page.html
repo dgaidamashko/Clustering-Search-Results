@@ -17,12 +17,11 @@
 <body>
     <h2 class="title">Cluster Web Searcher</h2>
     <div class="request">
-        <br><label class="comment">Введите поисковый запрос / Input a search request</label><br><br>
         <form action="" method="GET">
             {% for field in form %}
                 <p align="center">{{ field }}</p>
             {% endfor %}
-            <br><p align="center"><input type="submit" value=""></p>
+            <input type="submit" value="">
             <br>
         </form>
     </div>

@@ -5,7 +5,7 @@ from abc import ABCMeta
 from overloading import overloaded
 from math import *
 from collections import Counter
-from scipy import *
+from scipy import linalg, zeros
 from nltk.stem.snowball import EnglishStemmer, RussianStemmer
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse, HttpResponseRedirect
@@ -54,7 +54,7 @@ def search_page(request, query, group):
 
 def yandex_search(query, group):
     g = Grab()
-    g.setup(connect_timeout=5, timeout=20)
+    g.setup(connect_timeout=6, timeout=20)
     titles = []
     urls = []
     snippets = []
@@ -130,8 +130,7 @@ class Search_Result:
         self.snippet = snippet
         self.text = self.title + ' ' + self.snippet
 
-stop_words_eng = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0",
-                  "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t",
+stop_words_eng = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t",
                   "u", "v", "w", "x", "y", "z",
                   "about", "above", "according", "across", "actually", "ad", "adj", "ae", "af", "after", "afterwards",
                   "ag", "again", "against", "ai", "al", "all", "almost", "alone", "along", "already", "also",
@@ -531,14 +530,8 @@ class Graph:
     max = 340282300000000000000000000000000000000
     # float.maxvalue=340282300000000000000000000000000000000
 
-    @overloaded
-    def init(self, l):
+    def __init__(self, l=[]):
         self.V = l
-        self.E = []
-
-    @overloaded
-    def __init__(self):
-        self.V = []
         self.E = []
 
     def find_min_span_tree(self, first):
@@ -609,6 +602,7 @@ class TextOperations:
     Words = []
     Tag = []
     AllWords = []
+    Matrix = None
 
     def vClusterize(self, txt):
 
@@ -617,27 +611,30 @@ class TextOperations:
 
             def char_sensible(char):
                 c = ord(char)
-                return 1040 <= c <= 1071 or 65 <= c <= 90 or 1072 <= c <= 1103 or 97 <= c <= 122 or 48 <= c <= 57
+                if 1072 <= c <= 1103 or 97 <= c <= 122 or 48 <= c <= 57:
+                    return True
+                return False
 
             def word_sensible(word):
-                for i in range(len(word)):
-                    if char_sensible(word[i]):
+                for j in range(0, len(word)):
+                    if char_sensible(word[j]):
                         return True
                 return False
 
             def punctuation_delete(word):
+                r = word
                 while not char_sensible(word[0]):
                     word = word[1:]
                 while not char_sensible(word[-1]):
                     word = word[:-1]
                 return word
 
-            txt.lower()
-            txt.replace('ё', 'е')
-            text = txt.split()
-            for elem in text:
-                if not word_sensible(elem):
-                    text.remove(elem)
+            text = txt.lower().replace('ё', 'е').split()
+            arr = []
+            for item in text:
+                if word_sensible(item):
+                    arr.append(item)
+            text = arr
             for i in range(0, len(text)):
                 text[i] = punctuation_delete(text[i])
             return text
@@ -711,7 +708,7 @@ class TextOperations:
                 ss = []
                 temp = []
                 for i in range(0, len(self.Tag)):
-                    for j in range(len(0, self.Tag[i])):
+                    for j in range(0, len(self.Tag[i])):
                         if not check_list_item(temp, self.Tag[i][j].word):
                             temp.append(Word(self.Tag[i][j].word))
                 for elem in temp:
@@ -736,10 +733,12 @@ class TextOperations:
 
         llw_change()
         self.Matrix = zeros([len(self.Tag[0]), len(self.Tag)])
+        self.TextTitles = [None for i in range(len(self.Tag))]
+        self.Words = [None for i in range(len(self.Tag[0]))]
         for i in range(0, len(self.Tag[0])):
             for j in range(0, len(self.Tag)):
                 self.Matrix[i, j] = self.Tag[j][i].count
-                self.TextTitles = TextTitle(str(j + 1))
+                self.TextTitles[j] = TextTitle(str(j + 1))
                 self.Words[i] = self.Tag[j][i]
 
 
@@ -766,23 +765,11 @@ class Vertex:
 
 
 class Word(Tags):
-    count = 1
-    IsSingle = True
 
-    @overloaded
-    def __init__(self, word):
-        self.word = word
-
-    @overloaded
-    def __init__(self, word, c):
+    def __init__(self, word, c=1, IsSingle=True):
         self.word = word
         self.count = c
-
-    @overloaded
-    def __init__(self, word, c, IsSingle):
-        self.word = word
         self.IsSingle = IsSingle
-        self.count = c
 
     def GetTag(self):
         return self.word

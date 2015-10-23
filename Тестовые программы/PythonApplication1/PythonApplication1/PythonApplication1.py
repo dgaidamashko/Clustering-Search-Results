@@ -8,7 +8,7 @@ logger = logging.getLogger('grab')
 logger.addHandler(logging.StreamHandler())
 logger.setLevel(logging.DEBUG)
 g=Grab()
-g.setup(connect_timeout=20, timeout=20)
+g.setup(connect_timeout=5, timeout=20)
 
 titles=[]
 hrefs=[]
