@@ -21,7 +21,7 @@ def replacement(string):
 #page=group-1
 page=0
 while page<4:
-    yandex_url = 'http://yandex.ru/yandsearch?text=%s&numdoc=100' % urlquote_plus(query)
+    yandex_url = 'http://yandex.ru/yandsearch?text=%s&numdoc=100&showmecaptcha=no' % urlquote_plus(query)
     if page:
         yandex_url += '&p=%d' % page
     g.go(yandex_url)

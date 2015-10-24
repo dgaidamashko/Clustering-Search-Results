@@ -45,7 +45,10 @@ def search_page(request, query, group):
     form = SearchForm(request.GET, auto_id=False, initial={'search_request': 'Введите поисковый запрос'})
     form.search_request = query
     result_list = yandex_search(query, group)
-    clusters = clustering_search_results(result_list)
+    if not result_list == []:
+        clusters = clustering_search_results(result_list)
+    else:
+        clusters = []
     if form.is_valid():
         query = form.cleaned_data['search_request']
         return HttpResponseRedirect('/search/results/request=' + str(urlquote_plus(query)) + '&group='+str(group)+'/')
@@ -92,8 +95,23 @@ def yandex_search(query, group):
         for elem in sel_snippets.selector_list:
             snippets.append(replacement(elem.text()))
         page += 1
-    for i in range(len(titles)):
-        result_list.append(Search_Result(titles[i], urls[i], snippets[i], i))
+    if len(titles):
+        for i in range(len(titles)):
+            result_list.append(Search_Result(titles[i], urls[i], snippets[i], i))
+    else:
+        # return []
+        snippets = ["Британская полиция знает о местонахождении основателя WikiLeaks",
+                    "В суде США начинается процесс против россиянина, рассылавшего спам",
+                    "Церемонию вручения Нобелевской премии мира бойкотируют 19 стран",
+                    "В Великобритании арестован основатель сайта Wikileaks Джулиан Ассандж",
+                    "Украина игнорирует церемонию вручения Нобелевской премии",
+                    "Шведский суд отказался рассматривать апелляцию основателя Wikileaks",
+                    "НАТО и США разработали планы обороны стран Балтии против России",
+                    "Полиция Великобритании нашла основателя WikiLeaks, но, не арестовала",
+                    "В Стокгольме и Осло сегодня состоится вручение Нобелевских премий"]
+        titles = [str(i) for i in range(len(snippets))]
+        for i in range(len(snippets)):
+            result_list.append(Search_Result(titles[i], ' ', snippets[i], i))
     return result_list
 
 def clustering_search_results(results):
@@ -119,6 +137,7 @@ def clustering_search_results(results):
         return webclusters
     else:
         return []
+
 
 
 
@@ -289,7 +308,7 @@ class Clusters:
         W, U, VT = linalg.svd(A)
         # добавление вершин графа:
         for i in range(len(U)):
-            self.G.V.append(Vertex(words[i], U[i, 0], U[i, 1], U[i, 2]))
+            self.G.V.append(Vertex(words[i], U[i][0], U[i][1], U[i][2]))
         for i in range(len(VT[0])):
             self.G.V.append(Vertex(texts[i], VT[0, i], VT[1, i], VT[2, i]))
         # Добавление ребер графа:
