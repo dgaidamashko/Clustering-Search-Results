@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 import codecs
+import time
 from abc import ABCMeta
 from overloading import overloaded
 from math import *
@@ -57,7 +58,7 @@ def search_page(request, query, group):
 
 def yandex_search(query, group):
     g = Grab()
-    g.setup(connect_timeout=6, timeout=20)
+    g.setup(connect_timeout=5, timeout=20)
     titles = []
     urls = []
     snippets = []
@@ -66,35 +67,32 @@ def yandex_search(query, group):
     def replacement(string):
         return string.replace('\u2014', '-').replace('\u0301', '').replace('\u2013', '-')
 
-    page = 2*int(group)-2
-    while page < 2:
-
-        yandex_url = 'http://yandex.ru/yandsearch?text=%s&numdoc=50' % urlquote_plus(query)
-        if page:
-            yandex_url += '&p=%d' % page
-        g.go(yandex_url)
-        w = g.response.code
-        # Получение информации (Заголовков, адресов ссылок и сниппетов) со страницы Яндекса с помощью XPath выражения
-        sel_urls = g.doc.select('//div[@class="serp-list" and @role="main"]/' +
+    page = int(group)-1
+    yandex_url = 'http://yandex.ru/yandsearch?text=%s&numdoc=50' % urlquote_plus(query)
+    if page:
+        yandex_url += '&p=%d' % page
+    g.go(yandex_url)
+    # Получение информации (Заголовков, адресов ссылок и сниппетов) со страницы Яндекса с помощью XPath выражения
+    sel_urls = g.doc.select('//div[@class="serp-list" and @role="main"]/' +
                                 'div[contains(@class,"serp-block serp-block")' +
                      ' and not(contains(@class,"images")) and not(contains(@class,"video"))]//' +
                      'h2[@class="serp-item__title"]/a/@href')
-        sel_titles = g.doc.select('//div[@class="serp-list" and @role="main"]/div[contains(@class,' +
+    sel_titles = g.doc.select('//div[@class="serp-list" and @role="main"]/div[contains(@class,' +
                                   '"serp-block serp-block")' +
                       ' and not(contains(@class,"images")) and not(contains(@class,"video"))]' +
                       '//h2[@class="serp-item__title"]')
-        sel_snippets = g.doc.select('//div[@class="serp-list" and @role="main"]/' +
+    sel_snippets = g.doc.select('//div[@class="serp-list" and @role="main"]/' +
                                     'div[contains(@class,"serp-block serp-block")' +
                           ' and not(contains(@class,"images")) and not(contains(@class,"video"))]' +
                           '//div[contains(@class,"__text") or contains(@class,"__descr")]')
 
-        for elem in sel_urls.selector_list:
-            urls.append(elem._node)
-        for elem in sel_titles.selector_list:
-            titles.append(replacement(elem.text()))
-        for elem in sel_snippets.selector_list:
-            snippets.append(replacement(elem.text()))
-        page += 1
+    for elem in sel_urls.selector_list:
+        urls.append(elem._node)
+    for elem in sel_titles.selector_list:
+        titles.append(replacement(elem.text()))
+    for elem in sel_snippets.selector_list:
+        snippets.append(replacement(elem.text()))
+
     if len(titles):
         for i in range(len(titles)):
             result_list.append(Search_Result(titles[i], urls[i], snippets[i], i))
@@ -305,54 +303,52 @@ class Clusters:
         self.G = Graph()
         self.Texts = Cluster()
         # Сингулярного разложение частотной матрицы A:
-        W, U, VT = linalg.svd(A)
+        U, W, VT = linalg.svd(A)
         # добавление вершин графа:
-        for i in range(len(U)):
-            self.G.V.append(Vertex(words[i], U[i][0], U[i][1], U[i][2]))
-        for i in range(len(VT[0])):
+        for i in range(0, len(U)):
+            self.G.V.append(Vertex(words[i], U[i, 0], U[i, 1], U[i, 2]))
+        for i in range(0, len(VT[0])):
             self.G.V.append(Vertex(texts[i], VT[0, i], VT[1, i], VT[2, i]))
         # Добавление ребер графа:
-        for i in range(len(self.G.V)):
+        for i in range(0, len(self.G.V)):
             for j in range(i + 1, len(self.G.V)):
                 self.G.E.append(Edge(self.G.V[i], self.G.V[j]))
-        for i in range(len(texts)):
-            for j in range(len(self.G.V)):
+        for i in range(0, len(texts)):
+            for j in range(0, len(self.G.V)):
                 if texts[i].GetTag == self.G.V[j].Data.GetTag:
                     self.Texts.Data.append(self.G.V[j])
 
     def ClusterSelection(self, k, n):
         self.G.find_min_span_tree(self.G.V[0])
+        temp = []
         for i in range(len(self.G.E)):
-            if not self.G.optimal:
-                self.G.E.remove(self.G.E[i])
-                i -= 1
+            if self.G.E[i].optimal:
+                temp.append(self.G.E[i])
+        self.G.E = temp
         self.LongestEdge()
         if n == 1:
-            while self.lEdgeWeight > k * self.slEdgeWeight and len(self.G.E) != 1:
+            while self.lEdgeWeight > k * self.slEdgeWeight and not len(self.G.E) == 1:
                 self.G.E.remove(self.G.E[self.longestEdgeindex])
                 self.LongestEdge()
         elif n == 2:
-            while self.lEdgeWeight > k * self.AverageEdgeWeight(self.G.E) and len(self.G.E) != 1:
+            while self.lEdgeWeight > k * self.AverageEdgeWeight(self.G.E) and not len(self.G.E) == 1:
                 self.G.E.remove(self.G.E[self.longestEdgeindex])
                 self.LongestEdge()
         else:
             temp = self.FindMode(self.G.E)
-            while self.lEdgeWeight > k * temp and len(self.G.E) != 1:
+            while self.lEdgeWeight > k * temp and not len(self.G.E) == 1:
                 self.G.E.remove(self.G.E[self.longestEdgeindex])
                 self.LongestEdge()
         self.Clusterize()
-        for i in range(len(self.C)):
-            if len(self.C[i].Data) < 1:
-                self.C.remove(self.C[i])
-                i -= 1
-        for i in range(len(self.C)):
-            if self.ConsistsOfTexts(self.C[i]):
-                self.AddToClosestCluster(self.C[i])
-                i -= 1
-        for i in range(len(self.C)):
-            if self.ConsistsOfWords(self.C[i]):
-                self.AddToClosestCluster(self.C[i])
-                i -= 1
+        for elem in self.C:
+            if len(elem.Data) < 1:
+                self.C.remove(elem)
+        for elem in self.C:
+            if self.ConsistsOfTexts(elem):
+                self.AddToClosestCluster(elem)
+        for elem in self.C:
+            if self.ConsistsOfWords(elem):
+                self.AddToClosestCluster(elem)
 
     def LongestEdge(self):
         if len(self.G.E) > 1:
@@ -366,7 +362,7 @@ class Clusters:
                     self.longestEdgeindex = i
             for i in range(len(self.G.E)):
                 if i != self.longestEdgeindex:
-                    if self.G.E[i].Weight > self.slEdgeWeight & self.G.E[i].Weight != self.lEdgeWeight:
+                    if self.G.E[i].Weight > self.slEdgeWeight and not self.G.E[i].Weight == self.lEdgeWeight:
                         self.slEdgeWeight = self.G.E[i].Weight
                         self.slongestEdgeindex = i
 
@@ -581,8 +577,9 @@ class Graph:
                 temp = self.V[i]
                 break
         for i in range(0, len(self.V)):
-            temp = self.V[i] if self.V[i].t <= temp.t and self.V[i].p == self.max else None
-
+            if self.V[i].t <= temp.t and self.V[i].p == self.max:
+                if not self.V[i].wasMin:
+                    temp = self.V[i]
         temp.wasMin = True
         return temp
 
@@ -630,7 +627,7 @@ class TextOperations:
 
             def char_sensible(char):
                 c = ord(char)
-                if 1072 <= c <= 1103 or 97 <= c <= 122 or 48 <= c <= 57:
+                if 1072 <= c <= 1103 or 97 <= c <= 122:
                     return True
                 return False
 
@@ -773,7 +770,8 @@ class Vertex:
     # Временный и постоянный приоритетные коеффициенты
     t = p = 340282300000000000000000000000000000000
     Data = Tags()
-    isin = wasMin = False
+    isin = False
+    wasMin = False
     cocheck = 0
 
     def __init__(self, Data, x, y, z):
