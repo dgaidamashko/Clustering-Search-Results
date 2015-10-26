@@ -57,11 +57,11 @@ def search_page(request, query, group):
 
 
 def yandex_search(query, group):
-    g = Grab()
-    g.setup(connect_timeout=5, timeout=20)
-    titles = []
-    urls = []
-    snippets = []
+    #g = Grab()
+    #g.setup(connect_timeout=5, timeout=20)
+    #titles = []
+    #urls = []
+    #snippets = []
     result_list = []
 
     def replacement(string):
@@ -71,34 +71,42 @@ def yandex_search(query, group):
     yandex_url = 'http://yandex.ru/yandsearch?text=%s&numdoc=50' % urlquote_plus(query)
     if page:
         yandex_url += '&p=%d' % page
-    g.go(yandex_url)
+    #g.go(yandex_url)
     # Получение информации (Заголовков, адресов ссылок и сниппетов) со страницы Яндекса с помощью XPath выражения
-    sel_urls = g.doc.select('//div[@class="serp-list" and @role="main"]/' +
-                                'div[contains(@class,"serp-block serp-block")' +
-                     ' and not(contains(@class,"images")) and not(contains(@class,"video"))]//' +
-                     'h2[@class="serp-item__title"]/a/@href')
-    sel_titles = g.doc.select('//div[@class="serp-list" and @role="main"]/div[contains(@class,' +
-                                  '"serp-block serp-block")' +
-                      ' and not(contains(@class,"images")) and not(contains(@class,"video"))]' +
-                      '//h2[@class="serp-item__title"]')
-    sel_snippets = g.doc.select('//div[@class="serp-list" and @role="main"]/' +
-                                    'div[contains(@class,"serp-block serp-block")' +
-                          ' and not(contains(@class,"images")) and not(contains(@class,"video"))]' +
-                          '//div[contains(@class,"__text") or contains(@class,"__descr")]')
+    #sel_urls = g.doc.select('//div[@class="serp-list" and @role="main"]/' +
+     #                           'div[contains(@class,"serp-block serp-block")' +
+      #               ' and not(contains(@class,"images")) and not(contains(@class,"video"))]//' +
+       #              'h2[@class="serp-item__title"]/a/@href')
+    #sel_titles = g.doc.select('//div[@class="serp-list" and @role="main"]/div[contains(@class,' +
+     #                             '"serp-block serp-block")' +
+      #                ' and not(contains(@class,"images")) and not(contains(@class,"video"))]' +
+       #               '//h2[@class="serp-item__title"]')
+    #sel_snippets = g.doc.select('//div[@class="serp-list" and @role="main"]/' +
+     #                               'div[contains(@class,"serp-block serp-block")' +
+      #                    ' and not(contains(@class,"images")) and not(contains(@class,"video"))]' +
+       #                   '//div[contains(@class,"__text") or contains(@class,"__descr")]')
 
-    for elem in sel_urls.selector_list:
-        urls.append(elem._node)
-    for elem in sel_titles.selector_list:
-        titles.append(replacement(elem.text()))
-    for elem in sel_snippets.selector_list:
-        snippets.append(replacement(elem.text()))
-
-    if len(titles):
-        for i in range(len(titles)):
-            result_list.append(Search_Result(titles[i], urls[i], snippets[i], i))
-    else:
+    #for elem in sel_urls.selector_list:
+     #   urls.append(elem._node)
+    #for elem in sel_titles.selector_list:
+     #   titles.append(replacement(elem.text()))
+    #for elem in sel_snippets.selector_list:
+     #   snippets.append(replacement(elem.text()))
+    #titles = []
+    #if len(titles):
+     #   x = 0
+        #for i in range(len(titles)):
+         #   result_list.append(Search_Result(titles[i], urls[i], snippets[i], i))
+    #else:
         # return []
-        snippets = ["Британская полиция знает о местонахождении основателя WikiLeaks",
+     #   result_list = test_data()
+    result_list = test_data()
+    return result_list
+
+
+def test_data():
+    result_list = []
+    snippets = ["Британская полиция знает о местонахождении основателя WikiLeaks",
                     "В суде США начинается процесс против россиянина, рассылавшего спам",
                     "Церемонию вручения Нобелевской премии мира бойкотируют 19 стран",
                     "В Великобритании арестован основатель сайта Wikileaks Джулиан Ассандж",
@@ -107,34 +115,35 @@ def yandex_search(query, group):
                     "НАТО и США разработали планы обороны стран Балтии против России",
                     "Полиция Великобритании нашла основателя WikiLeaks, но, не арестовала",
                     "В Стокгольме и Осло сегодня состоится вручение Нобелевских премий"]
-        titles = [str(i) for i in range(len(snippets))]
-        for i in range(len(snippets)):
-            result_list.append(Search_Result(titles[i], ' ', snippets[i], i))
+    titles = [str(i) for i in range(len(snippets))]
+    for i in range(len(snippets)):
+        result_list.append(Search_Result(titles[i], ' ', snippets[i], i))
     return result_list
 
+
 def clustering_search_results(results):
-    if len(results):
-        tool_text = TextOperations()
-        for i in range(len(results)):
-            tool_text.Tag.append(tool_text.frequency(tool_text.vClusterize(results[i].text)))
-        tool_text.form_matrix()
-        tool_cluster = Clusters(tool_text.Matrix, tool_text.TextTitles, tool_text.Words)
-        tool_cluster.ClusterSelection(0, 10)
-        tag_list = tool_cluster.GetWdsFromClst()
-        text_list = tool_cluster.GetTxtsFromClst()
-        webclusters = []
-        for i in range(len(tag_list)):
-            tag_temp_list = []
-            result_temp_list = []
-            for tag in tag_list:
-                tag_temp_list.append(tag)
-            for item in text_list:
-                temp_index = int(item) - 1
-                result_temp_list.append(results[temp_index])
-            webclusters.append(webCluster(i, tag_temp_list, result_temp_list))
-        return webclusters
-    else:
-        return []
+    tool_text = TextOperations()
+    for result in results:
+        tool_text.Tag.append(tool_text.frequency(tool_text.vClusterize(result.text)))
+    m = tool_text.Tag
+    tool_text.form_matrix()
+    m1 = tool_text.TextTitles
+    m2 = tool_text.Words
+    tool_cluster = Clusters(tool_text.Matrix, tool_text.TextTitles, tool_text.Words)
+    tool_cluster.ClusterSelection(0, 10)
+    tag_list = tool_cluster.GetWdsFromClst()
+    text_list = tool_cluster.GetTxtsFromClst()
+    webclusters = []
+    for i in range(len(tag_list)):
+        tag_temp_list = []
+        result_temp_list = []
+        for tag in tag_list:
+            tag_temp_list.append(tag)
+        for item in text_list:
+            temp_index = int(item) - 1
+            result_temp_list.append(results[temp_index])
+        webclusters.append(webCluster(i, tag_temp_list, result_temp_list))
+    return webclusters
 
 
 
@@ -281,11 +290,13 @@ class Cluster:
                     result[j] = a
         return result
 
+
 class webCluster:
     def __init__(self, id, tags, results):
         self.id = str(id + 1)
         self.tags = tags
         self.results = results
+
 
 class Clusters:
     G = None
@@ -302,6 +313,7 @@ class Clusters:
         self.C = []
         self.G = Graph()
         self.Texts = Cluster()
+        a.d=0
         # Сингулярного разложение частотной матрицы A:
         U, W, VT = linalg.svd(A)
         # добавление вершин графа:
@@ -553,16 +565,20 @@ class Graph:
         first.t = 0
         temp = first
         Q = []
+        num = 0
+        c = len(self.V)
+        c1 = len(self.E)
         while self.max_marker_exists():
-            temp = self.min_temporary_marker()
+            temp = self.min_temporary_marker(num)
             temp.p = temp.t
             neighbours = []
             self.finding_neighbours(neighbours, temp)
             self.change_temporary_marker(neighbours, temp)
             Q.append(temp)
-            for i in range(1, len(Q)):
-                e = self.find_edge(Q[i], Q[i].prev)
-                e.optimal = True
+            num += 1
+        for i in range(1, len(Q)):
+            e = self.find_edge(Q[i], Q[i].prev)
+            e.optimal = True
 
     def max_marker_exists(self):
         for i in range(0, len(self.V)):
@@ -570,7 +586,7 @@ class Graph:
                 return True
         return False
 
-    def min_temporary_marker(self):
+    def min_temporary_marker(self, num):
         temp = None
         for i in range(0, len(self.V)):
             if not self.V[i].wasMin:
@@ -730,6 +746,7 @@ class TextOperations:
                 for elem in temp:
                     if not elem.IsSingle:
                         ss.append(elem.word)
+                fg
                 return ss
 
             self.AllWords = all_words()
@@ -738,7 +755,7 @@ class TextOperations:
                 temp.append([])
                 for j in range(0, len(self.AllWords)):
                     word_exists = False
-                    for k in range(len(self.Tag[i])):
+                    for k in range(0, len(self.Tag[i])):
                         if self.AllWords[j] == self.Tag[i][k].word:
                             word_exists = True
                             temp[i].append(Word(self.Tag[i][k].word, self.Tag[i][k].count))
@@ -746,11 +763,15 @@ class TextOperations:
                     if not word_exists:
                         temp[i].append(Word(self.AllWords[j], 0))
             self.Tag = temp
+            v = len(temp)
+            u
 
         llw_change()
         self.Matrix = zeros([len(self.Tag[0]), len(self.Tag)])
-        self.TextTitles = [None for i in range(len(self.Tag))]
-        self.Words = [None for i in range(len(self.Tag[0]))]
+        self.TextTitles = [None for i in range(0, len(self.Tag))]
+        self.Words = [None for i in range(0, len(self.Tag[0]))]
+        tempo = self.Words
+        bn7
         for i in range(0, len(self.Tag[0])):
             for j in range(0, len(self.Tag)):
                 self.Matrix[i, j] = self.Tag[j][i].count
@@ -768,11 +789,13 @@ class TextTitle(Tags):
 
 class Vertex:
     # Временный и постоянный приоритетные коеффициенты
-    t = p = 340282300000000000000000000000000000000
+    t = 340282300000000000000000000000000000000
+    p = 340282300000000000000000000000000000000
     Data = Tags()
     isin = False
     wasMin = False
     cocheck = 0
+    prev = None
 
     def __init__(self, Data, x, y, z):
         self.x = x

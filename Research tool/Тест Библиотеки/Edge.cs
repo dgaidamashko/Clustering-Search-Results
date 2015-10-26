@@ -15,7 +15,7 @@ namespace ClusteringSearchResults
         {
             this.V1 = V1;
             this.V2 = V2;
-            Weight = Math.Sqrt(Math.Pow((V1.x - V2.x), 2) + Math.Pow((V1.y - V2.y), 2) /*+ Math.Pow((V1.z - V2.z), 2)*/);
+            Weight = Math.Sqrt(Math.Pow((V1.x - V2.x), 2) + Math.Pow((V1.y - V2.y), 2)/* + Math.Pow((V1.z - V2.z), 2)*/);
         }
 
         public void Draw(Graphics g)

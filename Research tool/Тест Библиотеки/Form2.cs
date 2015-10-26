@@ -19,6 +19,8 @@ namespace ClusteringSearchResults
         bool EnableClusterPainting;
         Form3 ParScroll;
         string kstring;
+        string lstring;
+        public static int limit;
 
         public Form2()
         {
@@ -32,9 +34,10 @@ namespace ClusteringSearchResults
             comboBox1.SelectedIndex = 0;
             comboBox2.SelectedIndex = 0;
             movestart = new PointF();
-            //TestData.SetData();
             ParScroll = new Form3();
             kstring = textBox1.Text;
+            lstring = textBox2.Text;
+            limit = Convert.ToInt32(lstring);
             if (Form1.usertxtentered)
             {
                 comboBox2.Items.Add("Пользовательские данные ");
@@ -45,6 +48,7 @@ namespace ClusteringSearchResults
         private void CBaction()
         {
             double k = Convert.ToDouble(textBox1.Text);
+            limit = Convert.ToInt32(textBox2.Text);
             if (comboBox1.SelectedIndex == 0)
             {
                 C.ClusterSelection(k, 2);
@@ -407,6 +411,36 @@ namespace ClusteringSearchResults
                         MessageBox.Show(TestData.Texts[comboBox2.SelectedIndex][Convert.ToInt32(C.GetGraph.V[i].Data.GetTag) - 1]);
                     }
                 }
+            }
+        }
+
+        private void textBox2_TextChanged_2(object sender, EventArgs e)
+        {
+            bool error = false;
+            int k;
+            try
+            {
+                if (textBox2.Text != "")
+                {
+                    button1.Enabled = true;
+                    button2.Enabled = true;
+                    k = Convert.ToInt32(textBox1.Text);
+                }
+                else
+                {
+                    button1.Enabled = false;
+                    button2.Enabled = false;
+                }
+            }
+            catch (System.Exception)
+            {
+                error = true;
+                MessageBox.Show("Невертый формат текста");
+                textBox2.Text = lstring;
+            }
+            if (!error)
+            {
+                lstring = textBox2.Text;
             }
         }
     }

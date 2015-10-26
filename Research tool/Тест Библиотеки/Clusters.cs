@@ -387,15 +387,11 @@ Output parameters:
                     }
                 }
             }
-            if (oneoftexts > 1 && cl.Data.Count > oneoftexts + 2)
+            if (oneoftexts > Form2.limit && cl.Data.Count > oneoftexts + 2)
             {
                 ofwds = false;
             }
-            if (ofwds)
-            {
-                return true;
-            }
-            return false;
+            return ofwds;
         }
 
         //Добавляет вершину к ближайшему кластеру
