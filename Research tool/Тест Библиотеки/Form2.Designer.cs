@@ -201,6 +201,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(430, 107);
             this.textBox3.TabIndex = 9;
+            this.textBox3.Visible = false;
             // 
             // Form2
             // 
@@ -214,6 +215,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1159, 601);
             this.Name = "Form2";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Visualization";
             this.Activated += new System.EventHandler(this.Form2_Activated);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form2_FormClosed);

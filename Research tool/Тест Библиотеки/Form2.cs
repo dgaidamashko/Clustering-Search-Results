@@ -42,7 +42,6 @@ namespace ClusteringSearchResults
             {
                 comboBox2.Items.Add("Пользовательские данные ");
             }
-            //comboBox2.SelectedIndex = comboBox2.Items.Count - 1;
         }
 
         private void CBaction()
@@ -86,7 +85,6 @@ namespace ClusteringSearchResults
         {
             textBox1.Text = Convert.ToString(e.GetPar);
             textBox3.Clear();
-            //TestData.SetData();
             TextOperations.InitParams(TestData.Texts[comboBox2.SelectedIndex]);
 
             TextOperations.TagNullifier();
@@ -119,7 +117,6 @@ namespace ClusteringSearchResults
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //TestData.SetData();
             textBox3.Clear();
             C = new Clusters(TextOperations.GetMatrix, TextOperations.GetTextTitles, TextOperations.GetWords);
             CBaction();
@@ -165,7 +162,6 @@ namespace ClusteringSearchResults
         private void Form2_SizeChanged(object sender, EventArgs e)
         {
             EventArgs par = new EventArgs();
-            //FormSizeChanged(this, par);
         }
 
         private void Form2_MouseHover(object sender, EventArgs e)
@@ -173,7 +169,7 @@ namespace ClusteringSearchResults
             
         }
 
-        private void Form2_MouseMove(object sender, MouseEventArgs e)//временная версия
+        private void Form2_MouseMove(object sender, MouseEventArgs e)
         {
             if (moving)
             {
@@ -200,7 +196,6 @@ namespace ClusteringSearchResults
                             vselected = true;
                             label2.Text += " ";
                             label2.Text += C.GetGraph.V[i].Data.GetTag;
-                            //
                             label2.Left = C.GetGraph.V[i].GetCoordX + 20;
                             label2.Top = C.GetGraph.V[i].GetCoordY + 20;
 
@@ -256,7 +251,6 @@ namespace ClusteringSearchResults
         {
             if (EnableClusterPainting)
             {
-                //TestData.SetData();
                 C = new Clusters(TextOperations.GetMatrix, TextOperations.GetTextTitles, TextOperations.GetWords);
                 CBaction();
                 textBox3.Clear();
@@ -306,7 +300,6 @@ namespace ClusteringSearchResults
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             textBox3.Clear();
-            //TestData.SetData();
             TextOperations.InitParams(TestData.Texts[comboBox2.SelectedIndex]);
             
             TextOperations.TagNullifier();
@@ -367,7 +360,32 @@ namespace ClusteringSearchResults
 
         private void textBox2_TextChanged_1(object sender, EventArgs e)
         {
-
+            bool error = false;
+            int k;
+            try
+            {
+                if (textBox2.Text != "")
+                {
+                    button1.Enabled = true;
+                    button2.Enabled = true;
+                    k = Convert.ToInt32(textBox2.Text);
+                }
+                else
+                {
+                    button1.Enabled = false;
+                    button2.Enabled = false;
+                }
+            }
+            catch (System.Exception)
+            {
+                error = true;
+                MessageBox.Show("Невертый формат текста");
+                textBox2.Text = lstring;
+            }
+            if (!error)
+            {
+                lstring = textBox2.Text;
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -416,32 +434,6 @@ namespace ClusteringSearchResults
 
         private void textBox2_TextChanged_2(object sender, EventArgs e)
         {
-            bool error = false;
-            int k;
-            try
-            {
-                if (textBox2.Text != "")
-                {
-                    button1.Enabled = true;
-                    button2.Enabled = true;
-                    k = Convert.ToInt32(textBox1.Text);
-                }
-                else
-                {
-                    button1.Enabled = false;
-                    button2.Enabled = false;
-                }
-            }
-            catch (System.Exception)
-            {
-                error = true;
-                MessageBox.Show("Невертый формат текста");
-                textBox2.Text = lstring;
-            }
-            if (!error)
-            {
-                lstring = textBox2.Text;
-            }
         }
     }
 }

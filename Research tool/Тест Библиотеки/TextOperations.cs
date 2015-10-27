@@ -15,24 +15,11 @@ namespace ClusteringSearchResults
         static EnglishStemmer EngStem;
         static RussianStemmer RusStem;
         public static List<string> ts;
-        //public static List<string> txt;
         public static List<List<Word>> Tag;
         static double[,] Matrix;
         static Tags[] TextTitles;
         static Tags[] Words;
         static List<string> AllWds;
-        //static string[] temp;
-
-       /* static string[] temp = {"Британск полиц знает о местонахожден основател WikiLeaks",
-"В суд США начина процесс прот россиянина, рассыла спам",
-"Церемон вручен Нобелевск прем мир бойкотир 19 стран",
-"В Великобритан арестова основател сайт Wikileaks Джулиа Ассандж",
-"Украин игнорир церемон вручен Нобелевск прем",
-"Шведск суд отказа рассматрива апелляц основател Wikileaks",
-"НАТО и США разработа план оборон стран Балт прот Росс",
-"Полиц Великобритан нашл основател WikiLeaks, но, не арестова",
-"В Стокгольм и Осло сегодн состо вручен Нобелевск прем",
-                               };*/
 
         public static void InitParams(string[] t)
         {
@@ -43,7 +30,6 @@ namespace ClusteringSearchResults
             RusStem = new RussianStemmer();
             ts = new List<string>();
             ts.AddRange(temp);
-            //txt = new List<string>();
             Tag = new List<List<Word>>();
         }
 
@@ -86,7 +72,6 @@ namespace ClusteringSearchResults
                 if (word[i] == 'Ё' || word[i] == 'ё') return true;
                 if (((int)(word[i]) >= 1040 && (int)(word[i]) <= 1071) || ((int)(word[i]) >= 65 && (int)(word[i]) <= 90)) return true;
                 if ((((int)(word[i]) >= 1072 && (int)(word[i]) <= 1103)) || ((int)(word[i]) >= 97 && (int)(word[i]) <= 122)) return true;
-                //if ((int)(word[i]) >= 48 && (int)(word[i]) <= 57) return true;
             }
             return false;
         }

@@ -79,22 +79,7 @@ namespace ClusteringSearchResults
 
         }
 
-        //Стемминг слова
-        #region
-        /*string Stemming(string data, string language)
-        {
-            var engine = Python.CreateEngine();
-            ScriptScope scope = engine.CreateScope();
-            ScriptSource ss = engine.CreateScriptSourceFromFile("script.py");
-            CompiledCode code = ss.Compile();
-            scope = code.DefaultScope;
-            scope.SetVariable("word", data);
-            scope.SetVariable("lang", language);
-            code.Execute();
-            data = scope.GetVariable<string>("stemmed");
-            return data;
-        }*/
-        #endregion
+        
 
         public static int GetForm2Width
         {
