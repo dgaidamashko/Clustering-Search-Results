@@ -432,6 +432,11 @@ namespace ClusteringSearchResults
             }
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void textBox2_TextChanged_2(object sender, EventArgs e)
         {
         }

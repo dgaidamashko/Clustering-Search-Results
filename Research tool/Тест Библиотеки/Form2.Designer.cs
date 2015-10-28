@@ -79,9 +79,10 @@
             // 
             // label2
             // 
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(13, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(652, 13);
+            this.label2.Size = new System.Drawing.Size(511, 26);
             this.label2.TabIndex = 3;
             this.label2.Text = "label2";
             this.label2.Visible = false;
@@ -102,10 +103,11 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Location = new System.Drawing.Point(890, 12);
+            this.panel1.Location = new System.Drawing.Point(650, 21);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(241, 411);
             this.panel1.TabIndex = 8;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label5
             // 
@@ -208,12 +210,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1143, 562);
+            this.ClientSize = new System.Drawing.Size(903, 476);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(1159, 601);
+            this.MinimumSize = new System.Drawing.Size(915, 486);
             this.Name = "Form2";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Visualization";

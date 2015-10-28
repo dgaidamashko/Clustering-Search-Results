@@ -45,3 +45,16 @@ D:\Programming\Projects\Clustering-Search-Results\Research tool\Тест Биб�
 D:\Programming\Projects\Clustering-Search-Results\Research tool\Тест Библиотеки\obj\x86\Debug\Тест Библиотеки.pdb
 C:\Users\maxim_000\Desktop\ДипломV2\Clustering-Search-Results\Research tool\Тест Библиотеки\bin\Debug\StemmersNet.dll
 C:\Users\maxim_000\Desktop\ДипломV2\Clustering-Search-Results\Research tool\Тест Библиотеки\bin\Debug\StemmersNet.pdb
+D:\Programming\Projects\Clustering-Search-Results\Research tool\Тест Библиотеки\obj\x86\Debug\ClusteringSearchResults.csprojResolveAssemblyReference.cache
+D:\Programming\Projects\Clustering-Search-Results\Research tool\Тест Библиотеки\obj\x86\Debug\ClusteringSearchResults.Form1.resources
+D:\Programming\Projects\Clustering-Search-Results\Research tool\Тест Библиотеки\obj\x86\Debug\ClusteringSearchResults.Form2.resources
+D:\Programming\Projects\Clustering-Search-Results\Research tool\Тест Библиотеки\obj\x86\Debug\ClusteringSearchResults.Form3.resources
+D:\Programming\Projects\Clustering-Search-Results\Research tool\Тест Библиотеки\obj\x86\Debug\ClusteringSearchResults.Properties.Resources.resources
+D:\Programming\Projects\Clustering-Search-Results\Research tool\Тест Библиотеки\obj\x86\Debug\ClusteringSearchResults.csproj.GenerateResource.Cache
+D:\Programming\Projects\Clustering-Search-Results\Research tool\Тест Библиотеки\bin\Debug\Тест Библиотеки.exe
+D:\Programming\Projects\Clustering-Search-Results\Research tool\Тест Библиотеки\bin\Debug\Тест Библиотеки.pdb
+D:\Programming\Projects\Clustering-Search-Results\Research tool\Тест Библиотеки\bin\Debug\alglibnet2.dll
+D:\Programming\Projects\Clustering-Search-Results\Research tool\Тест Библиотеки\bin\Debug\StemmersNet.dll
+D:\Programming\Projects\Clustering-Search-Results\Research tool\Тест Библиотеки\bin\Debug\StopWords.dll
+D:\Programming\Projects\Clustering-Search-Results\Research tool\Тест Библиотеки\bin\Debug\StemmersNet.pdb
+D:\Programming\Projects\Clustering-Search-Results\Research tool\Тест Библиотеки\bin\Debug\StopWords.pdb
