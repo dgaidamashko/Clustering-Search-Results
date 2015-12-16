@@ -20,14 +20,14 @@ namespace Clustering_research_tool
         //????
         string kstring;
         //
-        double k;
+        static double k;
 
         public Form2()
         {
             InitializeComponent();
             this.MouseWheel += new MouseEventHandler(Form2_MouseWheel);
             EnableClusterPainting = false;
-            k = 1;
+            k = Convert.ToDouble(textBox1.Text);
             moving = false;
             movestart = new PointF();
             kstring = Convert.ToString(k);
@@ -42,6 +42,7 @@ namespace Clustering_research_tool
 
         private void button1_Click(object sender, EventArgs e)
         {
+            EnableClusterPainting = true;
             CBaction(true);
         }
 
@@ -202,7 +203,7 @@ namespace Clustering_research_tool
         {
             switch(comboBox1.SelectedIndex)
             {
-                case 0: C.dbscan(0.1, 2); break;
+                case 0: C.dbscan(k, 2); break;
             }
         }
 
@@ -211,6 +212,11 @@ namespace Clustering_research_tool
             if(EnableClusterPainting)
             { CBaction(true); }
             
+        }
+
+        public static double GetK
+        {
+            get { return k; }
         }
     }
 }
