@@ -8,17 +8,12 @@ namespace ClusterIt_.Controllers
 {
     public class SearchController : Controller
     {
-        // GET: Search
-        public ActionResult Index()
-        {
-            return View();
-        }
 
         [HttpGet]
-        public ActionResult Search(string query)
+        public ActionResult Response(string query, int group)
         {
             /*Getting results from Ya.XML, clusterisation, etc*/
-            return View();
+            return View("ResultPage");
         }
     }
 }

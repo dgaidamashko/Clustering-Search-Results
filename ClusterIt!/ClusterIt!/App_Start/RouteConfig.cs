@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using System.Web.Http;
 
 namespace ClusterIt_
 {
@@ -13,14 +14,22 @@ namespace ClusterIt_
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+           routes.MapRoute(
+                name: "Search",
+                url: "search/{query}/{group}",
+                defaults: new { controller = "Search", action = "Response", query = RouteParameter.Optional, group = RouteParameter.Optional }
+            );
+
             routes.MapRoute(
                 name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                url: "{controller}/{action}",
+                defaults: new { controller = "Home", action = "RedirIndex" }
             );
+
             routes.MapRoute(
-                
-                
+                name: "SearchRedir",
+                url: "Home/Index/{query}",
+                defaults: new { controller = "Home", action = "RedirQuery", query = RouteParameter.Optional }
             );
         }
     }
