@@ -12,8 +12,18 @@ namespace ClusterIt_.Controllers
         public ActionResult Index()
         {
             ViewBag.Controller = "HomeController";
-            ViewBag.Action = "";
+            ViewBag.Action = "Index";
             return View();
+        }
+
+        public RedirectResult RedirIndex()
+        {
+            return RedirectPermanent("/Home/Index");
+        }
+
+        public RedirectResult RedirQuery(string query)
+        {
+            return RedirectPermanent("/Search/Response/query={0}&group=1");
         }
     }
 }
