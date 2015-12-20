@@ -13,7 +13,7 @@ namespace ClusterIt_.Controllers
         public ActionResult Response(string query, int group)
         {
             /*Getting results from Ya.XML, clusterisation, etc*/
-            return View("ResultPage");
+            return View("Response");
         }
     }
 }

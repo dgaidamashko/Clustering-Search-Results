@@ -4,5 +4,33 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Response</h2>
+<h2 class="title">Cluster Web Searcher</h2>
+<div class="request">
+    <form action="" method="get">
+        <input type="text" name="query" />
+        <input type="submit" value="Search">
+    </form>
+</div><br><br>
+<div class="results">
+    {% if clusters|length > 0 %}
+    {% for cluster in clusters %}
+    <div class="cluster">
+        {{ cluster.tags|join:", " }}
+        <a href="javascript:show_hide('{{ cluster.id }}')">show/hide</a><br>
+        <div id="{{ cluster.id }}">
+            {% for result in cluster.results %}
+            <div class="result">
+                <a href="{{ result.url }}" target="_blank">{{ result.title }}</a>
+                <br>{{ result.snippet }}<br>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+    {% else %}
+    <span class="noresults">К сожалению, результаты не найдены :(</span>
+    {% endif %}
+</div>
+
+
 
