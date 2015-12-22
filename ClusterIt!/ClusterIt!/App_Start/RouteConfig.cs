@@ -17,20 +17,21 @@ namespace ClusterIt_
            routes.MapRoute(
                 name: "Search",
                 url: "search/{query}/{group}",
-                defaults: new { controller = "Search", action = "Response", query = RouteParameter.Optional, group = RouteParameter.Optional }
+                defaults: new { controller = "Search", action = "Response", query = UrlParameter.Optional, group = UrlParameter.Optional }
             );
 
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}",
                 defaults: new { controller = "Home", action = "RedirIndex" }
+                
             );
 
-            routes.MapRoute(
+            /*routes.MapRoute(
                 name: "SearchRedir",
-                url: "Home/Index/{query}",
-                defaults: new { controller = "Home", action = "RedirQuery", query = RouteParameter.Optional }
-            );
+                url: "Home/Index{query}",
+                defaults: new { controller = "Home", action = "RedirQuery", query = UrlParameter.Optional }
+            );*/
         }
     }
 }
