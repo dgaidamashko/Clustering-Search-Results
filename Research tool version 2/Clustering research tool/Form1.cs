@@ -7,10 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 namespace Clustering_research_tool
 {
-    public partial class Form1 : Form
+     public partial class Form1 : Form
     {
         Form2 F;
         List<string> input;
@@ -19,7 +21,6 @@ namespace Clustering_research_tool
         public static bool firstTxtEnter;
         public static bool txtEntered;
         public static bool listChanged;
-
         public Form1()
         {
             InitializeComponent();
@@ -31,11 +32,11 @@ namespace Clustering_research_tool
             firstTxtEnter = true;
             txtEntered = false;
             listChanged = false;
+            saveToolStripMenuItem.Enabled = false;
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -47,7 +48,11 @@ namespace Clustering_research_tool
                 listBox1.Items.Add(TextOperations.ts[TextOperations.ts.Count - 1]);
                 richTextBox1.Text = "";
                 txtEntered = true;
-                if (input.Count >= 3 || TestData.Count > 0) button3.Enabled = true;
+                if (input.Count >= 3 || TestData.Count > 0)
+                {
+                    button3.Enabled = true;
+                    saveToolStripMenuItem.Enabled = true;
+                }
             }
         }
 
@@ -56,6 +61,7 @@ namespace Clustering_research_tool
             input = new List<string>();
             listBox1.Items.Clear();
             txtEntered = false;
+            saveToolStripMenuItem.Enabled = false;
             listChanged = true;
             if (firstTxtEnter && TestData.Count < 1) button3.Enabled = false;
         }
@@ -100,6 +106,49 @@ namespace Clustering_research_tool
             get { return formwidth; }
             set { formwidth = value; }
         }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.ShowDialog();
+        }
+
+        private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+            bool edot = false;
+            FileStream fs;
+            for (int i = 0; i < saveFileDialog1.FileName.Length; i++)
+            {
+                if (saveFileDialog1.FileName[i] == '.')
+                {
+                    edot = true;
+                }
+            }
+            if (edot)
+            {
+                fs = new FileStream(saveFileDialog1.FileName, FileMode.Create, FileAccess.Write);
+            }
+            else
+            {
+                fs = new FileStream(saveFileDialog1.FileName + ".clst", FileMode.Create, FileAccess.Write);
+            }
+            bf.Serialize(fs, TestData);
+            fs.Close();
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream fs = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read);
+            TestData = (List<string[]>)bf.Deserialize(fs);
+            txtEntered = true;
+        }
+
         public static int GetForm2Height
         {
             get { return formheight; }

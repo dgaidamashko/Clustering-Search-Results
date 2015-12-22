@@ -25,6 +25,8 @@ namespace Clustering_research_tool
         public Form2()
         {
             InitializeComponent();
+            label3.BackColor = Color.Transparent;
+            label3.Visible = false;
             this.MouseWheel += new MouseEventHandler(Form2_MouseWheel);
             EnableClusterPainting = false;
             k = Convert.ToDouble(textBox1.Text);
@@ -144,21 +146,24 @@ namespace Clustering_research_tool
                 {
 
                     bool vselected = false;
-                    label2.Text = "";
+                    label3.Text = "";
                     for (int i = 0; i < C.GetV.Count; i++)
                     {
                         if (C.GetV[i].Clicked(e.X, e.Y))
                         {
                             label3.Visible = true;
-                            vselected = true;
+                            if (!vselected)
+                            {
+                                label3.Left = C.GetV[i].GetCoordX + 20;
+                                label3.Top = C.GetV[i].GetCoordY + 20;
+                            }
                             label3.Text += " ";
                             label3.Text += C.GetV[i].Data.GetTag;
-                            label3.Left = C.GetV[i].GetCoordX + 20;
-                            label3.Top = C.GetV[i].GetCoordY + 20;
-
+                            vselected = true;
                         }
                     }
                     if (!vselected) label3.Visible = false;
+                    else { Invalidate(); }
                 }
             }
         }
@@ -203,7 +208,7 @@ namespace Clustering_research_tool
         {
             switch(comboBox1.SelectedIndex)
             {
-                case 0: C.dbscan(k, 2); break;
+                case 0: C.dbscan(k, 1); break;
             }
         }
 

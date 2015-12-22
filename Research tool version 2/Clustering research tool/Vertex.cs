@@ -50,7 +50,7 @@ namespace Clustering_research_tool
 
         public static double EuclideDistance(Vertex a, Vertex b)
         {
-            return Math.Sqrt(Math.Pow(a.x, 2) + Math.Pow(a.y, 2) + Math.Pow(a.z, 2));
+            return Math.Sqrt(Math.Pow(a.x - b.x, 2) + Math.Pow(a.y - b.y, 2) + Math.Pow(a.z - b.z, 2));
         }
 
         public int GetCoordX
