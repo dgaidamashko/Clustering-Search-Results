@@ -21,6 +21,7 @@ namespace Clustering_research_tool
         public static bool firstTxtEnter;
         public static bool txtEntered;
         public static bool listChanged;
+        bool fileopened;
         public Form1()
         {
             InitializeComponent();
@@ -33,6 +34,7 @@ namespace Clustering_research_tool
             txtEntered = false;
             listChanged = false;
             saveToolStripMenuItem.Enabled = false;
+            fileopened = false;
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -60,10 +62,14 @@ namespace Clustering_research_tool
         {
             input = new List<string>();
             listBox1.Items.Clear();
-            txtEntered = false;
-            saveToolStripMenuItem.Enabled = false;
+            if (!fileopened)
+            {
+                txtEntered = false;
+                saveToolStripMenuItem.Enabled = false;
+                if (firstTxtEnter && TestData.Count < 1) button3.Enabled = false;
+            }
             listChanged = true;
-            if (firstTxtEnter && TestData.Count < 1) button3.Enabled = false;
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -85,6 +91,10 @@ namespace Clustering_research_tool
                 {
                     TestData[TestData.Count - 1] = temp;
                 }
+            }
+            else if (fileopened)
+            {
+
             }
             //Задаются необходимые для обработки текстов параметры и формируется частотная матрица
             TextOperations.TagNullifier();
@@ -132,7 +142,23 @@ namespace Clustering_research_tool
             {
                 fs = new FileStream(saveFileDialog1.FileName + ".clst", FileMode.Create, FileAccess.Write);
             }
-            bf.Serialize(fs, TestData);
+            if (txtEntered)
+            {
+                string[] temp = new string[input.Count];
+                for (int i = 0; i < temp.Length; i++)
+                {
+                    temp[i] = input[i];
+                }
+                if (listChanged || firstTxtEnter)
+                {
+                    TestData.Add(temp);
+                }
+                else
+                {
+                    TestData[TestData.Count - 1] = temp;
+                }
+            }
+            bf.Serialize(fs, TestData[TestData.Count - 1]);
             fs.Close();
         }
 
@@ -145,8 +171,12 @@ namespace Clustering_research_tool
         {
             BinaryFormatter bf = new BinaryFormatter();
             FileStream fs = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read);
-            TestData = (List<string[]>)bf.Deserialize(fs);
+            TestData.Add((string[])bf.Deserialize(fs));
             txtEntered = true;
+            button3.Enabled = true;
+            saveToolStripMenuItem.Enabled = true;
+            TextOperations.InitParams(TestData[TestData.Count - 1]);
+            listChanged = true;
         }
 
         public static int GetForm2Height
