@@ -14,24 +14,25 @@ namespace ClusterIt_
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-           routes.MapRoute(
-                name: "Search",
-                url: "search/{query}/{group}",
-                defaults: new { controller = "Search", action = "Response", query = UrlParameter.Optional, group = UrlParameter.Optional }
-            );
-
             routes.MapRoute(
                 name: "Default",
-                url: "{controller}/{action}",
+                url: "{controller}/{action}/{*catchall}",
                 defaults: new { controller = "Home", action = "RedirIndex" }
                 
             );
 
-            /*routes.MapRoute(
+            routes.MapRoute(
+                name: "Search",
+                url: "{controller}/{action}/{query}/{group}/{*catchall}",
+                defaults: new { controller = "Search", action = "SearchResponse", query = RouteParameter.Optional, group = UrlParameter.Optional },
+                constraints: new { controller = "Search" }
+            );
+
+            routes.MapRoute(
                 name: "SearchRedir",
-                url: "Home/Index{query}",
-                defaults: new { controller = "Home", action = "RedirQuery", query = UrlParameter.Optional }
-            );*/
+                url: "Home/Index/{query}",
+                defaults: new { controller = "Home", action = "RedirQuery", query = RouteParameter.Optional }
+            );
         }
     }
 }

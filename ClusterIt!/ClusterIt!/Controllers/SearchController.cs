@@ -10,10 +10,11 @@ namespace ClusterIt_.Controllers
     {
 
         [HttpGet]
-        public ActionResult Response(string query, int group)
+        public ActionResult SearchResponse(string query, int group)
         {
             /*Getting results from Ya.XML, clusterisation, etc*/
-            return View("Response");
+            ViewData["clusters"] = null;
+            return View();
         }
     }
 }

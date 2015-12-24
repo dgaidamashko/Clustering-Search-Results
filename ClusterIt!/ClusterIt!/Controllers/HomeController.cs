@@ -9,21 +9,21 @@ namespace ClusterIt_.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        public ActionResult Index(string query)
+        public ActionResult Index()
         {
-            ViewBag.Controller = "HomeController";
-            ViewBag.Action = "Index";
-            return View("Index");
+                ViewBag.Controller = "HomeController";
+                ViewBag.Action = "Index";
+                return View();
         }
+
+        /*public RedirectResult Index(string query)
+        {
+            return Redirect("/Search/SearchResponse?query=" + query + "&group=1");
+        }*/
 
         public RedirectResult RedirIndex()
         {
-            return RedirectPermanent("/Home/Index");
+            return Redirect("/Home/Index/");
         }
-
-        /*public RedirectResult RedirQuery(string query)
-        {
-            return RedirectPermanent("/Search/Response?query="+query+"&group=1");
-        }*/
     }
 }

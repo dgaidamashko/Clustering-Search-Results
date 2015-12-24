@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "Response";
+    ViewBag.Title = "SearchResponse";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -12,24 +12,28 @@
     </form>
 </div><br><br>
 <div class="results">
-    {% if clusters|length > 0 %}
-    {% for cluster in clusters %}
-    <div class="cluster">
-        {{ cluster.tags|join:", " }}
-        <a href="javascript:show_hide('{{ cluster.id }}')">show/hide</a><br>
-        <div id="{{ cluster.id }}">
-            {% for result in cluster.results %}
-            <div class="result">
-                <a href="{{ result.url }}" target="_blank">{{ result.title }}</a>
-                <br>{{ result.snippet }}<br>
-            </div>
-            {% endfor %}
+    @if (clusters.length > 0)
+    {
+        foreach (var cluster in clusters)
+        {
+            <div class="cluster">
+            {{ cluster.tags|join:", " }}
+            <a href="javascript:show_hide('@cluster.id')">show/hide</a><br>
+            <div id="@cluster.id">
+            @foreach (var result in cluster.results)
+            {
+                <div class="result">
+                <a href="@result.url" target="_blank">@result.title</a>
+                <br>@result.snippet<br>
+            </div>}
         </div>
     </div>
-    {% endfor %}
-    {% else %}
-    <span class="noresults">К сожалению, результаты не найдены :(</span>
-    {% endif %}
+        }
+    }
+    else
+    {
+            <span class="noresults">"К сожалению, результаты не найдены :("</span>
+    }
 </div>
 
 
