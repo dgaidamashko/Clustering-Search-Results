@@ -16,11 +16,6 @@ namespace ClusterIt_.Controllers
                 return View();
         }
 
-        /*public RedirectResult Index(string query)
-        {
-            return Redirect("/Search/SearchResponse?query=" + query + "&group=1");
-        }*/
-
         public RedirectResult RedirIndex()
         {
             return Redirect("/Home/Index/");

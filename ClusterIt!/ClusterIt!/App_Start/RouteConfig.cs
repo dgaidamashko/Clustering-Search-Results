@@ -23,15 +23,9 @@ namespace ClusterIt_
 
             routes.MapRoute(
                 name: "Search",
-                url: "{controller}/{action}/{query}/{group}/{*catchall}",
-                defaults: new { controller = "Search", action = "SearchResponse", query = RouteParameter.Optional, group = UrlParameter.Optional },
+                url: "{controller}/{action}/{query}/{group}",
+                defaults: new { controller = "Search", action = "SearchResponse", query = RouteParameter.Optional, group = RouteParameter.Optional },
                 constraints: new { controller = "Search" }
-            );
-
-            routes.MapRoute(
-                name: "SearchRedir",
-                url: "Home/Index/{query}",
-                defaults: new { controller = "Home", action = "RedirQuery", query = RouteParameter.Optional }
             );
         }
     }
