@@ -74,9 +74,8 @@ namespace Clustering_research_tool
 
         private void button3_Click(object sender, EventArgs e)
         {
-            F = new Form2();
             //Список конвертируется в массив
-            if (txtEntered)
+            if (txtEntered||fileopened)
             {
                 string[] temp = new string[input.Count];
                 for (int i = 0; i < temp.Length; i++)
@@ -85,17 +84,18 @@ namespace Clustering_research_tool
                 }
                 if (listChanged || firstTxtEnter)
                 {
-                    TestData.Add(temp);
+                    if (!fileopened)
+                    {
+                        TestData.Add(temp);
+                        listChanged = true;
+                    }
                 }
-                else
+                if (firstTxtEnter && !fileopened)
                 {
-                    TestData[TestData.Count - 1] = temp;
+                    firstTxtEnter = false;
                 }
             }
-            else if (fileopened)
-            {
-
-            }
+            F = new Form2();
             //Задаются необходимые для обработки текстов параметры и формируется частотная матрица
             TextOperations.TagNullifier();
             for (int i = 0; i < TextOperations.ts.Count; i++)
@@ -104,11 +104,12 @@ namespace Clustering_research_tool
             }
             TextOperations.FormMatrix();
             F.ShowDialog();
-            firstTxtEnter = false;
-            if (txtEntered)
+            
+            if (txtEntered||fileopened)
             {
                 listChanged = false;
             }
+            fileopened = false;
         }
 
         public static int GetForm2Width
@@ -142,21 +143,18 @@ namespace Clustering_research_tool
             {
                 fs = new FileStream(saveFileDialog1.FileName + ".clst", FileMode.Create, FileAccess.Write);
             }
-            if (txtEntered)
+            string[] temp = new string[input.Count];
+            for (int i = 0; i < temp.Length; i++)
             {
-                string[] temp = new string[input.Count];
-                for (int i = 0; i < temp.Length; i++)
-                {
-                    temp[i] = input[i];
-                }
-                if (listChanged || firstTxtEnter)
-                {
-                    TestData.Add(temp);
-                }
-                else
-                {
-                    TestData[TestData.Count - 1] = temp;
-                }
+                temp[i] = input[i];
+            }
+            if (listChanged || firstTxtEnter)
+            {
+                TestData.Add(temp);
+            }
+            else
+            {
+                TestData[TestData.Count - 1] = temp;
             }
             bf.Serialize(fs, TestData[TestData.Count - 1]);
             fs.Close();
@@ -169,10 +167,12 @@ namespace Clustering_research_tool
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
+            input = new List<string>();
+            listBox1.Items.Clear();
             BinaryFormatter bf = new BinaryFormatter();
             FileStream fs = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read);
             TestData.Add((string[])bf.Deserialize(fs));
-            txtEntered = true;
+            fileopened = true;
             button3.Enabled = true;
             saveToolStripMenuItem.Enabled = true;
             TextOperations.InitParams(TestData[TestData.Count - 1]);

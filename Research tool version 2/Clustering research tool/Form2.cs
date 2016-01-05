@@ -34,9 +34,9 @@ namespace Clustering_research_tool
             movestart = new PointF();
             kstring = Convert.ToString(k);
             label3.BackColor = Color.Transparent;
-            if (Form1.listChanged || Form1.firstTxtEnter)
+            for (int i = 0; i < Form1.TestData.Count; i++)
             {
-                comboBox2.Items.Add(Convert.ToString(comboBox2.Items.Count + 1));
+                comboBox2.Items.Add(Convert.ToString(i + 1));
             }
             comboBox1.SelectedIndex = comboBox1.Items.Count - 1;
             comboBox2.SelectedIndex = comboBox2.Items.Count - 1;
