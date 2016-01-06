@@ -41,6 +41,23 @@ namespace Clustering_research_tool
             return result;
         }
 
+        public Vertex ClusterCenter
+        {
+            get
+            {
+                double sumx = 0;
+                double sumy = 0;
+                double sumz = 0;
+                for (int i = 0; i < Data.Count; i++)
+                {
+                    sumx += Data[i].x;
+                    sumy += Data[i].y;
+                    sumz += Data[i].z;
+                }
+                return new Vertex(Data[0].Data, sumx / Data.Count, sumy / Data.Count, sumz / Data.Count);
+            }
+        }
+
         public void ConvexHull(Graphics g)
         {
             bool include = true;

@@ -98,7 +98,33 @@ Output parameters:
             }
         }
 
-        public void dbscan(double eps, int minPts)
+        public void PostClustering()
+        {
+            List<Vertex> docs = DocVertexes;
+            Vertex[] ClusterCoords = new Vertex[C.Count];
+            //Получение кооддинат кластеров
+            for (int i = 0; i < C.Count; i++)
+            {
+                ClusterCoords[i] = C[i].ClusterCenter;
+            }
+            //Добавление вершин-документов
+            for (int i = 0; i < docs.Count; i++)
+            {
+                double minDist = double.MaxValue;
+                int clstIndex = 0;
+                for (int j = 0; j < ClusterCoords.Length; j++)
+                {
+                    if (Vertex.EuclideDistance(docs[i], ClusterCoords[j]) < minDist)
+                    {
+                        minDist = Vertex.EuclideDistance(docs[i], ClusterCoords[j]);
+                        clstIndex = j;
+                    }
+                }
+                C[clstIndex].Data.Add(docs[i]);
+            }
+        }
+
+        public void dbscan(double eps, int minPts, List<Vertex> V)
         {
             C = new List<Cluster>();
             if (V == null) return;
@@ -188,6 +214,33 @@ Output parameters:
             }
         }
 
+        //Получает список списков слов в кластерах
+        public List<List<Tags>> GetWdsFromClst()
+        {
+            List<List<Tags>> result = new List<List<Tags>>();
+            for (int i = 0; i < C.Count; i++)
+            {
+                result.Add(C[i].GetWds());
+            }
+            return result;
+        }
+
+        //Получает список списков текстов в кластерах
+        public List<List<Tags>> GetTxtsFromClst()
+        {
+            List<List<Tags>> result = new List<List<Tags>>();
+            for (int i = 0; i < C.Count; i++)
+            {
+                result.Add(C[i].GetTxts());
+            }
+            return result;
+        }
+
+        public static double DestinationToCluster(double x, double y, double z, Cluster cl)
+        {
+            return Math.Sqrt(Math.Pow(x - cl.ClusterCenter.x, 2) + Math.Pow(y - cl.ClusterCenter.y, 2) + Math.Pow(z - cl.ClusterCenter.z, 2));
+        }
+
         public List<Vertex> GetV
         {
             get { return V; } 
@@ -196,6 +249,38 @@ Output parameters:
         public List<Cluster> GetClusterList
         {
             get { return C; }
+        }
+
+        public List<Vertex> WordVertexes
+        {
+            get
+            {
+                List<Vertex> temp = new List<Vertex>();
+                for (int i = 0; i < V.Count; i++)
+                {
+                    if (V[i].Data is Word)
+                    {
+                        temp.Add(V[i]);
+                    }
+                }
+                return temp;
+            }
+        }
+
+        public List<Vertex> DocVertexes
+        {
+            get
+            {
+                List<Vertex> temp = new List<Vertex>();
+                for (int i = 0; i < V.Count; i++)
+                {
+                    if (V[i].Data is TextTitle)
+                    {
+                        temp.Add(V[i]);
+                    }
+                }
+                return temp;
+            }
         }
     }
 }

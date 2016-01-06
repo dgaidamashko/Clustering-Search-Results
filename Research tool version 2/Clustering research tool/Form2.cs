@@ -17,9 +17,7 @@ namespace Clustering_research_tool
         bool moving;
         PointF movestart;
         bool EnableClusterPainting;
-        //????
         string kstring;
-        //
         static double k;
 
         public Form2()
@@ -208,7 +206,7 @@ namespace Clustering_research_tool
         {
             switch(comboBox1.SelectedIndex)
             {
-                case 0: C.dbscan(k, 1); break;
+                case 0: C.dbscan(k, 1, C.WordVertexes); C.PostClustering(); break;
             }
         }
 
@@ -222,6 +220,20 @@ namespace Clustering_research_tool
         public static double GetK
         {
             get { return k; }
+        }
+
+        private void Form2_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (EnableClusterPainting)
+            {
+                for (int i = 0; i < C.GetV.Count; i++)
+                {
+                    if (C.GetV[i].Clicked(e.X, e.Y) && C.GetV[i].Data is TextTitle)
+                    {
+                        MessageBox.Show(Form1.TestData[comboBox2.SelectedIndex][Convert.ToInt32(C.GetV[i].Data.GetTag) - 1]);
+                    }
+                }
+            }
         }
     }
 }
