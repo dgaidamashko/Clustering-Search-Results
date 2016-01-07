@@ -36,7 +36,7 @@ namespace Clustering_research_tool
             else br = new SolidBrush(Color.Blue);
             g.FillEllipse(br, (int)(x * Form2.GetScale) - rad + Form1.GetForm2Width / 2 + ax, (int)(y * Form2.GetScale) - rad + Form1.GetForm2Height / 2 + ay, rad * 2, rad * 2);
             g.DrawEllipse(new Pen(new SolidBrush(Color.Black)), (int)(x * Form2.GetScale) - rad + Form1.GetForm2Width / 2 + ax, (int)(y * Form2.GetScale) - rad + Form1.GetForm2Height / 2 + ay, rad * 2, rad * 2);
-            g.DrawEllipse(new Pen(new SolidBrush(Color.Black)), (int)(x * Form2.GetScale) - (int)(Form2.GetK * Form2.GetScale) + Form1.GetForm2Width / 2 + ax, (int)(y * Form2.GetScale) - (int)(Form2.GetK * Form2.GetScale) + Form1.GetForm2Height / 2 + ay, (int)(Form2.GetK * Form2.GetScale) * 2, (int)(Form2.GetK * Form2.GetScale) * 2);
+            //g.DrawEllipse(new Pen(new SolidBrush(Color.Black)), (int)(x * Form2.GetScale) - (int)(Form2.GetK * Form2.GetScale) + Form1.GetForm2Width / 2 + ax, (int)(y * Form2.GetScale) - (int)(Form2.GetK * Form2.GetScale) + Form1.GetForm2Height / 2 + ay, (int)(Form2.GetK * Form2.GetScale) * 2, (int)(Form2.GetK * Form2.GetScale) * 2);
         }
 
         public bool Clicked(float x0, float y0)

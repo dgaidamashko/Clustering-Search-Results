@@ -148,6 +148,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximumSize = new System.Drawing.Size(742, 483);
             this.Name = "Form1";
             this.Text = "Enter the texts";
             this.menuStrip1.ResumeLayout(false);
