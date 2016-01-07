@@ -220,7 +220,10 @@ Output parameters:
             List<List<Tags>> result = new List<List<Tags>>();
             for (int i = 0; i < C.Count; i++)
             {
-                result.Add(C[i].GetWds());
+                if (Cluster.ContainsDocs(C[i]))
+                {
+                    result.Add(C[i].GetWds());
+                }
             }
             return result;
         }
@@ -231,7 +234,10 @@ Output parameters:
             List<List<Tags>> result = new List<List<Tags>>();
             for (int i = 0; i < C.Count; i++)
             {
-                result.Add(C[i].GetTxts());
+                if (Cluster.ContainsDocs(C[i]))
+                {
+                    result.Add(C[i].GetTxts());
+                }
             }
             return result;
         }

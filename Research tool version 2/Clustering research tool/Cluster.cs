@@ -58,6 +58,20 @@ namespace Clustering_research_tool
             }
         }
 
+        public static bool ContainsDocs(Cluster cl)
+        {
+            bool pass = false;
+            for (int i = 0; i < cl.Data.Count; i++)
+            {
+                if (cl.Data[i].Data is TextTitle)
+                {
+                    pass = true;
+                    break;
+                }
+            }
+            return pass;
+        }
+
         public void ConvexHull(Graphics g)
         {
             bool include = true;
