@@ -19,10 +19,12 @@ namespace Clustering_research_tool
         bool EnableClusterPainting;
         string kstring;
         static double k;
+        bool labelVis;
 
         public Form2()
         {
             InitializeComponent();
+            labelVis = true;
             label3.BackColor = Color.Transparent;
             label3.Visible = false;
             this.MouseWheel += new MouseEventHandler(Form2_MouseWheel);
@@ -140,9 +142,8 @@ namespace Clustering_research_tool
             }
             else
             {
-                if (EnableClusterPainting)
+                if (EnableClusterPainting && labelVis)
                 {
-
                     bool vselected = false;
                     label3.Text = "";
                     for (int i = 0; i < C.GetV.Count; i++)
@@ -160,8 +161,12 @@ namespace Clustering_research_tool
                             vselected = true;
                         }
                     }
-                    if (!vselected) label3.Visible = false;
-                    else { Invalidate(); }
+                    if (!vselected || !labelVis)
+                    {
+                        label3.Visible = false;
+                        label3.Invalidate();
+                    }
+                    else { label3.Invalidate(); }
                 }
             }
         }
@@ -170,6 +175,8 @@ namespace Clustering_research_tool
         {
             if (EnableClusterPainting)
             {
+                labelVis = false;
+                label3.Invalidate();
                 moving = true;
                 movestart.X = e.X;
                 movestart.Y = e.Y;
@@ -179,6 +186,7 @@ namespace Clustering_research_tool
         private void Form2_MouseUp(object sender, MouseEventArgs e)
         {
             moving = false;
+            labelVis = true;
         }
 
         private void CBaction(bool needReform)

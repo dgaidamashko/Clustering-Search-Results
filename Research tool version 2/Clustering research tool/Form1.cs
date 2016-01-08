@@ -75,7 +75,7 @@ namespace Clustering_research_tool
         private void button3_Click(object sender, EventArgs e)
         {
             //Список конвертируется в массив
-            if (txtEntered||fileopened)
+            if (txtEntered || fileopened)
             {
                 string[] temp = new string[input.Count];
                 for (int i = 0; i < temp.Length; i++)
@@ -105,7 +105,7 @@ namespace Clustering_research_tool
             TextOperations.FormMatrix();
             F.ShowDialog();
             
-            if (txtEntered||fileopened)
+            if (txtEntered || fileopened)
             {
                 listChanged = false;
             }
