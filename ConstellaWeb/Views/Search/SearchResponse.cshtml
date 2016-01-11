@@ -1,0 +1,54 @@
+﻿@using Yandex.XML.Search;
+@using Clustering_research_tool;
+@{
+    ViewBag.Title = "SearchResponse";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var Cluster_words = ViewData["clusterwords"] as List<List<Tags>>;
+    var Cluster_results = ViewData["clusterresults"] as List<List<YaSearchResult>>;
+    var found_docs_human = ViewData["found"] as string;
+}
+<br />
+<div class="request">
+    @using (Html.BeginForm("SearchResponse", "Search", new { group = 1 }, FormMethod.Get))
+    {
+        <input type="text" size=140 lang=100 placeholder="Поиск..." name="query" value="@ViewData["query"]" />
+        <input type="submit" value="Search">
+    }
+</div>
+
+<br /><p align="center">
+    <a href="yandex.ru"><img scr="~/Content/Images/yandex-for-white-background.png" /></a> @found_docs_human
+</p><br />
+@if (Cluster_results == null && Cluster_words == null)
+{
+    <span class="noresults">К сожалению, по запросу ничего не найдено :(</span>
+}
+else
+{<div class="response">
+        @for (int i = 0; i < Cluster_words.Count; i++)
+        {
+            <div class="cluster">
+                <ul class="tags">
+                    @for (int j = 0; j < Cluster_words[i].Count; j++)
+                    {
+                        <li>@Cluster_words[i][j].GetTag;</li>
+                    }
+                </ul>
+                <a href="javascript:show_hide(@i)">show/hide</a><br>
+                <div class="resultlist" id="@i">
+                    @foreach (YaSearchResult result in Cluster_results[i])
+                    {
+                        <div class="result">
+                            @result.Position <a href="@result.DisplayUrl" class="title">@result.Title</a><br />
+                            <span class="desc">@result.Description</span><br />
+                            <span class="url">@result.Domain</span>
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+    </div>}
+
+
+
+

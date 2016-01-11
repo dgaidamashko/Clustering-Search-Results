@@ -878,9 +878,11 @@ namespace Yandex.XML.Search
         private APICredentials _APICredentials { get; set; } // Обьект идентификации пользователь и токен
         private YandexRegion _region { get; set; }
         private string _query { get; set; } //Запрос
+        private int _page { get; set; } //Страница
+        public string _found { get; set; }
         private Stream _responseStream { get; set; } //Ответ
         private RequestMethodEnum _requestMethod { get; set; } //Метод запроса
-        public YandexSearchQuery(string query, APICredentials APICred, YandexRegion region, RequestMethodEnum? requestMethod)
+        public YandexSearchQuery(string query, int page, APICredentials APICred, YandexRegion region, RequestMethodEnum? requestMethod)
         {
 
             if (!String.IsNullOrEmpty(query.Trim()))
@@ -898,6 +900,7 @@ namespace Yandex.XML.Search
                 }
 
             }
+            _page = page;
             _APICredentials = APICred;
             if (requestMethod != null)
             {
@@ -975,8 +978,9 @@ namespace Yandex.XML.Search
                       <request>  
                        <query>" + _query.ToString() + @"</query>
 <sortby order=""descending"" priority=""no"">rlv</sortby>
-   <maxpassages/>
-                       <groupings>
+   <maxpassages>2</maxpassages>
+        <page>" + _page.ToString() + @"</page>
+                       < groupings>
                          <groupby attr=""d""
                                 mode=""deep""
                                 groups-on-page=""100""
@@ -1019,7 +1023,7 @@ namespace Yandex.XML.Search
 
 
             }
-            string completeUrl = String.Format("http://xmlsearch.yandex.ru/xmlsearch?{0}query={1}&groupby=attr%3Dd.mode%3Ddeep.groups-on-page%3D100.docs-in-group%3D1&user={2}&key={3}", regionquery, _query, _APICredentials.User, _APICredentials.Key);
+            string completeUrl = String.Format("http://xmlsearch.yandex.ru/xmlsearch?{0}query={1}&groupby=attr%3Dd.mode%3Ddeep.groups-on-page%3D100.docs-in-group%3D1&page={2}&user={3}&key={4}", regionquery, _query, _page, _APICredentials.User, _APICredentials.Key);
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(completeUrl);
             //Получение ответа.
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
@@ -1044,7 +1048,8 @@ namespace Yandex.XML.Search
                           Elements("grouping").
                           Elements("group")
                              select gr;
-
+            //
+            _found = Getfound(response);
             //каждый элемент group преобразовывается в объект SearchResult
             for (int i = 0; i < groupQuery.Count(); i++)
             {
@@ -1061,6 +1066,11 @@ namespace Yandex.XML.Search
             }
 
             return ret;
+        }
+        public static string Getfound(XDocument response)
+        {
+            try { return response.Element("found-docs-human").Name.ToString(); }
+            catch { return String.Empty; }
         }
         public static string GetValue(XElement group, string name)
         {
