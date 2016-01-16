@@ -1,11 +1,13 @@
-﻿@using Yandex.XML.Search;
+﻿
+@using Yandex.XML.Search;
 @using Clustering_research_tool;
 @{
-    ViewBag.Title = "SearchResponse";
+    ViewBag.Title = "Результаты";
     Layout = "~/Views/Shared/_Layout.cshtml";
     var Cluster_words = ViewData["clusterwords"] as List<List<Tags>>;
     var Cluster_results = ViewData["clusterresults"] as List<List<YaSearchResult>>;
     var found_docs_human = ViewData["found"] as string;
+    var error_code = ViewData["error"] as string;
 }
 <br />
 <div class="request">
@@ -16,8 +18,8 @@
     }
 </div>
 
-<br />
-    <a href="yandex.ru"><img src="~/Content/Images/yandex-for-white-background.png"</a> @found_docs_human
+<br />@error_code<br />
+<a href="http://www.yandex.ru"><img src="~/Content/Images/yandex-for-white-background.png" /></a> @found_docs_human<br />
 @if (Cluster_results == null && Cluster_words == null)
 {
     <span class="noresults">К сожалению, по запросу ничего не найдено :(</span>
@@ -40,13 +42,15 @@ else
                         <div class="result">
                             @result.Position <a href="@result.DisplayUrl" class="title">@result.Title</a><br />
                             <span class="desc">@result.Description</span><br />
-                            <span class="url">@result.Domain</span>
+                            <span class="url">@result.Domain</span><br />
                         </div>
                     }
                 </div>
             </div>
         }
     </div>}
+
+
 
 
 

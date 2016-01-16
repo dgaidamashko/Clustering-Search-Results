@@ -880,6 +880,7 @@ namespace Yandex.XML.Search
         private string _query { get; set; } //Запрос
         private int _page { get; set; } //Страница
         public string _found { get; set; }
+        public string _error { get; set; }
         private Stream _responseStream { get; set; } //Ответ
         private RequestMethodEnum _requestMethod { get; set; } //Метод запроса
         public YandexSearchQuery(string query, int page, APICredentials APICred, YandexRegion region, RequestMethodEnum? requestMethod)
@@ -915,6 +916,7 @@ namespace Yandex.XML.Search
             {
                 this._responseStream = ResponseStreamPOST();
 
+
             }
             else if (_requestMethod == RequestMethodEnum.GET)
             {
@@ -933,13 +935,9 @@ namespace Yandex.XML.Search
         }
         public string GetResponseToString()
         {
-
-
             using (StreamReader ResponseStreamReader = new StreamReader(this._responseStream))
             {
-
                 return ResponseStreamReader.ReadToEnd();
-
             }
         }
         private Stream ResponseStreamPOST()
@@ -1041,6 +1039,7 @@ namespace Yandex.XML.Search
 
             XmlReader xmlReader = XmlReader.Create(this._responseStream);
             XDocument response = XDocument.Load(xmlReader);
+            _error = GetError(response);
             //из полученного XML'я выдираем все элементы с именем "group" - это результаты поиска
             var groupQuery = from gr in response.Elements().
                           Elements("response").
@@ -1070,6 +1069,12 @@ namespace Yandex.XML.Search
         public static string Getfound(XDocument response)
         {
             try { return response.Element("found-docs-human").Name.ToString(); }
+            catch { return String.Empty; }
+        }
+
+        public static string GetError(XDocument response)
+        {
+            try { return response.Element("error").Attribute("code").Value; }
             catch { return String.Empty; }
         }
         public static string GetValue(XElement group, string name)

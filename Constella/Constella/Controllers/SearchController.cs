@@ -16,6 +16,7 @@ namespace Constella.Controllers
         List<YaSearchResult> results;
         List<List<YaSearchResult>> ResultCluster;
         static string found_docs_human;
+        static string error_code;
         [HttpGet]
         public ActionResult SearchResponse(string query, int group = 1)
         {
@@ -23,6 +24,7 @@ namespace Constella.Controllers
             results = YaSearch(query, group);
             ViewData["query"] = query;
             ViewData["found"] = found_docs_human;
+            ViewData["error"] = error_code;
             if (results.Count != 0)
             {
                 Clusterisation(GetTexts());
@@ -86,6 +88,7 @@ namespace Constella.Controllers
             YandexRegion _region = YandexRegion.GetList().FirstOrDefault(n => n.StringName.Contains("Москва"));
             YandexSearchQuery _query = new YandexSearchQuery(query, group - 1, _DefaultCredential, _region, RequestMethodEnum.POST);
             List<YaSearchResult> resultList = _query.GetResponseToList();
+            error_code = _query._error;
             found_docs_human = _query._found;
             return resultList;
         }

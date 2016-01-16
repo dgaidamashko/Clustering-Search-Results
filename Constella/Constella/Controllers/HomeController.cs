@@ -16,8 +16,7 @@ namespace Constella.Controllers
 
         public RedirectResult RedirIndex()
         {
-            return Redirect("/Home/Index/");
+            return Redirect("Home/Index/");
         }
-
     }
 }
