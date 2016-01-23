@@ -28,6 +28,18 @@ namespace Constella
                 constraints: new { controller = "Search" }
             );
 
+            routes.MapRoute(
+                name: "Robots.txt",
+                url: "robots.txt",
+                defaults: new { controller = "Home", action = "Robots"}
+                );
+
+            routes.MapRoute(
+                name: "Sitemap.xml",
+                url: "sitemap.xml",
+                defaults: new { controller = "Home", action = "Sitemap"}
+                );
+
         }
     }
 }

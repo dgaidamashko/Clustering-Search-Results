@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constella", "Constella\Cons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClusteringAlgorithmLibrary", "..\ClusteringAlgorithmLibrary\ClusteringAlgorithmLibrary\ClusteringAlgorithmLibrary.csproj", "{991A83BE-66C3-4C3C-BC81-9BDB8209D72C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YandexXML", "..\YandexXML\YandexXML\YandexXML.csproj", "{942DB23C-3167-4AF6-B05A-B4AF9B97892A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{991A83BE-66C3-4C3C-BC81-9BDB8209D72C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{991A83BE-66C3-4C3C-BC81-9BDB8209D72C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{991A83BE-66C3-4C3C-BC81-9BDB8209D72C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{942DB23C-3167-4AF6-B05A-B4AF9B97892A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{942DB23C-3167-4AF6-B05A-B4AF9B97892A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{942DB23C-3167-4AF6-B05A-B4AF9B97892A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{942DB23C-3167-4AF6-B05A-B4AF9B97892A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

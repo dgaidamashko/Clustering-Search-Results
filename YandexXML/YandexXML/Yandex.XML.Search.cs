@@ -954,7 +954,7 @@ namespace Yandex.XML.Search
             }
             /* Адрес для совершения запроса, полученный при регистрации IP,
             в него уже забит логин и ключ API.*/
-            string url = @"http://xmlsearch.yandex.ru/xmlsearch?" + regionquery + "user=" + _APICredentials.User + "&key=" + _APICredentials.Key;
+            string url = @"http://yandex.ru/search/xml?" + regionquery + "user=" + _APICredentials.User + "&key=" + _APICredentials.Key;
 
 
 
@@ -1021,7 +1021,7 @@ namespace Yandex.XML.Search
 
 
             }
-            string completeUrl = String.Format("http://xmlsearch.yandex.ru/xmlsearch?{0}query={1}&groupby=attr%3Dd.mode%3Ddeep.groups-on-page%3D100.docs-in-group%3D1&page={2}&user={3}&key={4}", regionquery, _query, _page, _APICredentials.User, _APICredentials.Key);
+            string completeUrl = String.Format("http://yandex.ru/search/xml?{0}query={1}&groupby=attr%3Dd.mode%3Ddeep.groups-on-page%3D100.docs-in-group%3D1&page={2}&user={3}&key={4}", regionquery, _query, _page, _APICredentials.User, _APICredentials.Key);
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(completeUrl);
             //Получение ответа.
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();

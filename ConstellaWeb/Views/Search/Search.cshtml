@@ -1,0 +1,8 @@
+﻿
+<div class="request">
+    @using (Html.BeginForm("SearchResponse", "Search", new { group = 1 }, FormMethod.Get))
+    {
+        <input type="text" size=140 lang=100 placeholder="Поиск..." name="query" value="@ViewBag.query" />
+        <input type="submit" value="Search">
+    }
+</div>

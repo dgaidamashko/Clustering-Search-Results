@@ -16,7 +16,19 @@ namespace Constella.Controllers
 
         public RedirectResult RedirIndex()
         {
-            return Redirect("Home/Index/");
+            return Redirect("/Home/Index");
         }
+
+        public ActionResult Info()
+        {
+            return View();
+        }
+
+        public ActionResult Robots()
+        {
+            Response.ContentType = "text/plain";
+            return View();
+        }
+        
     }
 }

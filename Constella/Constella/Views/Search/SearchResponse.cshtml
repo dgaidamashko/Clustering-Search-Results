@@ -8,19 +8,18 @@
     var Cluster_results = ViewData["clusterresults"] as List<List<YaSearchResult>>;
     var found_docs_human = ViewData["found"] as string;
     var error_code = ViewData["error"] as string;
+    var correct = ViewData["correct"] as string;
 }
 <br />
-<div class="request">
-    @using (Html.BeginForm("SearchResponse", "Search", new { group = 1 }, FormMethod.Get))
-    {
-        <input type="text" size=140 lang=100 placeholder="Поиск..." name="query" value="@ViewData["query"]" />
-        <input type="submit" value="Search">
-    }
-</div>
-
+@{Html.RenderPartial("Search");}
+@if (!Convert.ToBoolean(correct))
+{ <br /><span>Задан пустой поисковый запрос</span>
+}
+else
+{
 <br />@error_code<br />
 <a href="http://www.yandex.ru"><img src="~/Content/Images/yandex-for-white-background.png" /></a> @found_docs_human<br />
-@if (Cluster_results == null && Cluster_words == null)
+if (Cluster_results == null && Cluster_words == null)
 {
     <span class="noresults">К сожалению, по запросу ничего не найдено :(</span>
 }
@@ -49,6 +48,7 @@ else
             </div>
         }
     </div>}
+}
 
 
 

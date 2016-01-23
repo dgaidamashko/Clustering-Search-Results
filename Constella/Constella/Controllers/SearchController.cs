@@ -17,27 +17,37 @@ namespace Constella.Controllers
         List<List<YaSearchResult>> ResultCluster;
         static string found_docs_human;
         static string error_code;
+        bool correct_query;
         [HttpGet]
-        public ActionResult SearchResponse(string query, int group = 1)
+        public ActionResult SearchResponse(string query="", int group = 1)
         {
-            /*Getting results from Ya.XML, clusterisation, etc*/
-            results = YaSearch(query, group);
-            ViewData["query"] = query;
-            ViewData["found"] = found_docs_human;
-            ViewData["error"] = error_code;
-            if (results.Count != 0)
+            correct_query = true;
+            if (query == "")
             {
-                Clusterisation(GetTexts());
-                ResultCluster = Classification();
-                ViewData["clusterresults"] = ResultCluster;
-                ViewData["clusterwords"] = words;
+                correct_query = false;
+                ViewBag.query = "";
             }
             else
             {
-                ViewData["clusterresults"] = null;
-                ViewData["clusterwords"] = null;
+                /*Getting results from Ya.XML, clusterisation, etc*/
+                results = YaSearch(query, group);
+                ViewData["found"] = found_docs_human;
+                ViewData["error"] = error_code;
+                if (results.Count != 0)
+                {
+                    Clusterisation(GetTexts());
+                    ResultCluster = Classification();
+                    ViewData["clusterresults"] = ResultCluster;
+                    ViewData["clusterwords"] = words;
+                }
+                else
+                {
+                    ViewData["clusterresults"] = null;
+                    ViewData["clusterwords"] = null;
+                }
             }
-
+            ViewBag.query = query;
+            ViewData["correct"] = Convert.ToString(correct_query);
             return View();
         }
 
