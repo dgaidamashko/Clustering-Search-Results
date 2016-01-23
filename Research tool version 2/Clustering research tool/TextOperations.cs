@@ -16,11 +16,12 @@ namespace Clustering_research_tool
         static EnglishStemmer EngStem;
         static RussianStemmer RusStem;
         public static List<string> ts;
-        public static List<List<Word>> Tag;
+        public static List<List<Word>>[] Tag;
         static double[,] Matrix;
         static Tags[] TextTitles;
         static Tags[] Words;
         static List<string> AllWds;
+        public static List<List<string>>[] fullWdsCollection;
 
         public static void InitParams(string[] t)
         {
@@ -31,7 +32,12 @@ namespace Clustering_research_tool
             RusStem = new RussianStemmer();
             ts = new List<string>();
             ts.AddRange(temp);
-            Tag = new List<List<Word>>();
+            fullWdsCollection = new List<List<string>>[2];
+            fullWdsCollection[0] = new List<List<string>>();
+            fullWdsCollection[1] = new List<List<string>>();
+            Tag = new List<List<Word>>[2];
+            Tag[0] = new List<List<Word>>();
+            Tag[1] = new List<List<Word>>();
         }
 
         public static void InitParams(List<string> t)
@@ -42,12 +48,22 @@ namespace Clustering_research_tool
             RusStem = new RussianStemmer();
             ts = new List<string>();
             ts = t;
-            Tag = new List<List<Word>>();
+            fullWdsCollection = new List<List<string>>[2];
+            fullWdsCollection[0] = new List<List<string>>();
+            fullWdsCollection[1] = new List<List<string>>();
+            Tag = new List<List<Word>>[2];
+            Tag[0] = new List<List<Word>>();
+            Tag[1] = new List<List<Word>>();
         }
 
         public static void TagNullifier()
         {
-            Tag = new List<List<Word>>();
+            Tag = new List<List<Word>>[2];
+            Tag[0] = new List<List<Word>>();
+            Tag[1] = new List<List<Word>>();
+            fullWdsCollection = new List<List<string>>[2];
+            fullWdsCollection[0] = new List<List<string>>();
+            fullWdsCollection[1] = new List<List<string>>();
         }
 
         //Дробление текста на слова
@@ -77,12 +93,13 @@ namespace Clustering_research_tool
             return false;
         }
 
-        //Стемминг слов в тексте
+        //Стемминг слов в тексте(!)
         public static List<string> vClusterize(string text)
         {
             List<string> tx = Divid(text);
             for (int i = 0; i < tx.Count; i++)
             {
+                string fullwd = tx[i];
                 string temp;
                 int lang = LanguageCheck(tx[i], out temp);
                 switch (lang)
@@ -96,6 +113,11 @@ namespace Clustering_research_tool
                                 tx.RemoveAt(i);
                                 i--;
                             }
+                            else
+                            {
+                                fullWdsCollection[0][fullWdsCollection[0].Count - 1].Add(fullwd);
+                                fullWdsCollection[1][fullWdsCollection[0].Count - 1].Add(tx[i]);
+                            }
                             break;
                         }
                     case 2://Английский язык
@@ -106,7 +128,12 @@ namespace Clustering_research_tool
                                 tx.RemoveAt(i);
                                 i--;
                             }
-                            else tx[i] = EngStem.Stem(tx[i]);
+                            else
+                            {
+                                tx[i] = EngStem.Stem(tx[i]);
+                                fullWdsCollection[0][fullWdsCollection[0].Count - 1].Add(fullwd);
+                                fullWdsCollection[1][fullWdsCollection[0].Count - 1].Add(tx[i]);
+                            }
                             break;
                         }
                 }
@@ -177,7 +204,7 @@ namespace Clustering_research_tool
         }
 
         static void LLWchange()
-        {
+        { 
             string[] wordlist;
             List<List<Word>> temp = new List<List<Word>>();
             AllWds = AllWords();
@@ -187,19 +214,19 @@ namespace Clustering_research_tool
                 wordlist[i] = AllWds[i];
             }
 
-            for (int i = 0; i < Tag.Count; i++)
+            for (int i = 0; i < Tag[0].Count; i++)
             {
                 temp.Add(new List<Word>());
 
                 for (int j = 0; j < wordlist.Length; j++)
                 {
                     bool wordexists = false;
-                    for (int k = 0; k < Tag[i].Count; k++)
+                    for (int k = 0; k < Tag[0][i].Count; k++)
                     {
-                        if (wordlist[j] == Tag[i][k].word)
+                        if (wordlist[j] == Tag[0][i][k].word)
                         {
                             wordexists = true;
-                            temp[i].Add(new Word(Tag[i][k].word, Tag[i][k].count));
+                            temp[i].Add(new Word(Tag[0][i][k].word, Tag[0][i][k].count));
                             break;
                         }
                     }
@@ -209,7 +236,7 @@ namespace Clustering_research_tool
                     }
                 }
             }
-            Tag = temp;
+            Tag[0] = temp;
         }
 
         //Формирование списка уникальных основ слов, которые повторяются в РАЗНЫХ текстах
@@ -217,13 +244,13 @@ namespace Clustering_research_tool
         {
             List<string> ss = new List<string>();
             List<Word> temp = new List<Word>();
-            for (int i = 0; i < Tag.Count; i++)
+            for (int i = 0; i < Tag[0].Count; i++)
             {
-                for (int j = 0; j < Tag[i].Count; j++)
+                for (int j = 0; j < Tag[0][i].Count; j++)
                 {
-                    if (!CheckItemInList(ref temp, Tag[i][j].word))
+                    if (!CheckItemInList(ref temp, Tag[0][i][j].word))
                     {
-                        temp.Add(new Word(Tag[i][j].word));
+                        temp.Add(new Word(Tag[0][i][j].word));
                     }
                 }
             }
@@ -251,17 +278,56 @@ namespace Clustering_research_tool
         //Формирование частотной матрицы
         public static void FormMatrix()
         {
+            for (int i = 0; i < ts.Count; i++)
+            {
+                fullWdsCollection[0].Add(new List<string>());
+                fullWdsCollection[1].Add(new List<string>());
+                Tag[0].Add(Frequency(vClusterize(ts[i].ToString())));
+                
+            }
             LLWchange();
-            Matrix = new double[Tag[0].Count, Tag.Count];
-            TextTitles = new Tags[Matrix.GetLength(1)];
-            Words = new Tags[Matrix.GetLength(0)];
             for (int i = 0; i < Tag[0].Count; i++)
             {
-                for (int j = 0; j < Tag.Count; j++)
+                Tag[1].Add(new List<Word>());
+                for (int j = 0; j < Tag[0][i].Count; j++)
                 {
-                    Matrix[i, j] = Tag[j][i].count;
+                    Tag[1][i].Add(new Word(Tag[0][i][j].word, Tag[0][i][j].count));
+                }
+            }
+            for (int ind = 0; ind < Tag[0][Tag[0].Count - 1].Count; ind++)
+            {
+                for (int j = 0; j < fullWdsCollection[1].Count; j++)
+                {
+                    bool tobreak = false;
+                    for (int q = 0; q < fullWdsCollection[1][j].Count; q++)
+                    {
+                        if (Tag[0][Tag[0].Count - 1][ind].word == fullWdsCollection[1][j][q])
+                        {
+                            Tag[1][Tag[1].Count - 1][ind].word = fullWdsCollection[0][j][q];
+                            tobreak = true;
+                        }
+                        if (tobreak)
+                        {
+                            break;
+                        }
+                    }
+                    if (tobreak)
+                    {
+                        break;
+                    }
+                }
+            }
+            // Создание матрицы
+            Matrix = new double[Tag[0][0].Count, Tag[0].Count];
+            TextTitles = new Tags[Matrix.GetLength(1)];
+            Words = new Tags[Matrix.GetLength(0)];
+            for (int i = 0; i < Tag[0][0].Count; i++)
+            {
+                for (int j = 0; j < Tag[0].Count; j++)
+                {
+                    Matrix[i, j] = Tag[0][j][i].count;
                     TextTitles[j] = new TextTitle(Convert.ToString(j + 1));
-                    Words[i] = Tag[j][i];
+                    Words[i] = Tag[1][j][i];
                 }
             }
         }
