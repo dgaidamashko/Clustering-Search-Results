@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Главная";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="title">Добро пожаловать на кластерный веб-поисковик!</h2>
+<br><br><br>
+<div class="request">
+    @using (Html.BeginForm("SearchResponse", "Search", new { group = 1 }, FormMethod.Get))
+    {
+        <input type="text" size=140 lang=100 placeholder="Поиск..." name="query" />
+        <input type="submit" value="Search">
+    }
+</div>
+
