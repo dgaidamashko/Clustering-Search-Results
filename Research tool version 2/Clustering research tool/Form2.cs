@@ -195,10 +195,6 @@ namespace Clustering_research_tool
             {
                 TextOperations.InitParams(Form1.TestData[comboBox2.SelectedIndex]);
                 TextOperations.TagNullifier();
-                for (int i = 0; i < TextOperations.ts.Count; i++)
-                {
-                    TextOperations.Tag.Add(TextOperations.Frequency(TextOperations.vClusterize(TextOperations.ts[i].ToString())));
-                }
                 TextOperations.FormMatrix();
             }
             if (EnableClusterPainting)

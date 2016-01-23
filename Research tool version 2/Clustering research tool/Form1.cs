@@ -98,10 +98,6 @@ namespace Clustering_research_tool
             F = new Form2();
             //Задаются необходимые для обработки текстов параметры и формируется частотная матрица
             TextOperations.TagNullifier();
-            for (int i = 0; i < TextOperations.ts.Count; i++)
-            {
-                TextOperations.Tag.Add(TextOperations.Frequency(TextOperations.vClusterize(TextOperations.ts[i].ToString())));
-            }
             TextOperations.FormMatrix();
             F.ShowDialog();
             
