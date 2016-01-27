@@ -100,6 +100,13 @@ Output parameters:
 
         public void PostClustering()
         {
+            for (int i = 0; i < C.Count; i++)
+            {
+                if (C[i].Data.Count < 2)
+                {
+                    AddToClosestCluster(C[i]);
+                }
+            }
             List<Vertex> docs = DocVertexes;
             Vertex[] ClusterCoords = new Vertex[C.Count];
             //Получение кооддинат кластеров
@@ -287,6 +294,29 @@ Output parameters:
                 }
                 return temp;
             }
+        }
+
+        //Добавляет кластер к ближайшему кластеру
+        public void AddToClosestCluster(Cluster cl)
+        {
+            int index = 0;
+            double mindist = Double.MaxValue;
+            for (int i = 0; i < C.Count; i++)
+            {
+                if (C[i] != cl)
+                {
+                    if (Vertex.EuclideDistance(cl.ClusterCenter, C[i].ClusterCenter) < mindist)
+                    {
+                        mindist = Vertex.EuclideDistance(cl.ClusterCenter, C[i].ClusterCenter);
+                        index = i;
+                    }
+                }
+            }
+            for (int i = 0; i < cl.Data.Count; i++)
+            {
+                C[index].Data.Add(cl.Data[i]);
+            }
+            C.Remove(cl);
         }
     }
 }
