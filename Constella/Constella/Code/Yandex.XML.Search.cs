@@ -973,21 +973,19 @@ namespace Yandex.XML.Search
             //}
             // Текст запроса в формате XML
             string command =
-              @"<?xml version=""1.0"" encoding=""UTF-8""?>  
-                      <request>  
-                       <query>" + _query.ToString() + @"</query>
-<sortby order=""descending"" priority=""no"">rlv</sortby>
-   <maxpassages>2</maxpassages>
-        <page>" + _page.ToString() + @"</page>
-                       < groupings>
-                         <groupby attr=""d""
-                                mode=""deep""
-                                groups-on-page=""100""
-                                docs-in-group=""1"" />  
-                       </groupings>
-  <nocache/>
+                @"<?xml version=""1.0"" encoding=""UTF-8""?>
+     <request>
+       <query>"
+         + _query.ToString() +
+       @"</query>  
+       <page>"
+         + _page.ToString() +
+       @"</page>
+          <maxpassages>2</maxpassages>   
+          <groupings>    
+            <groupby attr=""d"" mode=""deep"" groups-on-page = ""50"" docs-in-group=""1"" curcateg=""-1""/>             
+          </groupings>              
                       </request>";
-
 
             byte[] bytes = Encoding.UTF8.GetBytes(command);
             // Объект, с помощью которого будем отсылать запрос и получать ответ.
@@ -1069,13 +1067,23 @@ namespace Yandex.XML.Search
         }
         public static string Getfound(XDocument response)
         {
-            try { return response.XPathSelectElement("//found-docs-human").Name.ToString(); }
+            try
+            {
+                var temp = from elem in response.Elements().Elements("response").Elements("results").Elements("grouping").Elements("found-docs-human") select elem;
+                List<XElement> num = temp.ToList();
+                return num[0].Value.ToString();
+            }
             catch { return String.Empty; }
         }
 
         public static string GetError(XDocument response)
         {
-            try { return response.XPathSelectElement("error").Attribute("code").Value; }
+            try
+            {
+                var temp = from elem in response.Elements().Elements("response").Elements("error") select elem;
+                List<XElement> error = temp.ToList();
+                return error[0].Attribute("code").Value;
+            }
             catch { return String.Empty; }
         }
         public static string GetValue(XElement group, string name)

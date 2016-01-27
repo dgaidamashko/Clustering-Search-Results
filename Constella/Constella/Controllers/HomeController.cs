@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Fabrik.Common.Web;
 
 namespace Constella.Controllers
 {
@@ -29,6 +30,14 @@ namespace Constella.Controllers
             Response.ContentType = "text/plain";
             return View();
         }
-        
+
+        public ActionResult Sitemap()
+        {
+            var sitemapItems = new List<SitemapItem>
+            {
+                new SitemapItem(Url.QualifiedAction("Index", "Home"), changeFrequency: SitemapChangeFrequency.Always, priority: 1.0)
+            };
+            return new SitemapResult(sitemapItems);
+        }
     }
 }

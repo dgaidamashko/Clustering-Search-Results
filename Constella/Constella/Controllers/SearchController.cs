@@ -19,13 +19,13 @@ namespace Constella.Controllers
         static string error_code;
         bool correct_query;
         [HttpGet]
-        public ActionResult SearchResponse(string query="", int group = 1)
+        //todo
+        public ActionResult SearchResponse(string query, int group=1)
         {
             correct_query = true;
             if (query == "")
             {
                 correct_query = false;
-                ViewBag.query = "";
             }
             else
             {
@@ -55,10 +55,6 @@ namespace Constella.Controllers
         {
             TextOperations.InitParams(input);
             TextOperations.TagNullifier();
-            for (int i = 0; i < TextOperations.ts.Count; i++)
-            {
-                TextOperations.Tag.Add(TextOperations.Frequency(TextOperations.vClusterize(TextOperations.ts[i].ToString())));
-            }
             TextOperations.FormMatrix();
             Ctool = new Clusters(TextOperations.GetMatrix, TextOperations.GetTextTitles, TextOperations.GetWords);
             MethodDecision(0);
@@ -82,7 +78,7 @@ namespace Constella.Controllers
                 ResultCluster.Add(new List<YaSearchResult>());
                 for (int j = 0; j < TextTitles[i].Count; j++)
                 {
-                    ResultCluster[i].Add(results[Convert.ToInt32(TextTitles[i][j]) - 1]);
+                    ResultCluster[i].Add(results[Convert.ToInt32(TextTitles[i][j].GetTag) - 1]);
                 }
             }
             return ResultCluster;
@@ -91,7 +87,7 @@ namespace Constella.Controllers
         private static List<YaSearchResult> YaSearch(string query, int group)
         {
             string user = "dan-gai";
-            string key = "03.56416762:5589252e96061e5a63e0be3823f0101b";
+            string key = "03.56416762:5589252e96061e5a63e0be3823f0101b.vir.10f8546b09ea0adc51ac1f602746f568";
             Yandex.XML.Search.APICredentials _DefaultCredential = new APICredentials();
             _DefaultCredential.User = user;
             _DefaultCredential.Key = key;

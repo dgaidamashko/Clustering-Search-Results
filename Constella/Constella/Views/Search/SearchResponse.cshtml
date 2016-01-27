@@ -28,20 +28,22 @@ else
         @for (int i = 0; i < Cluster_words.Count; i++)
         {
             <div class="cluster">
-                <ul class="tags">
-                    @for (int j = 0; j < Cluster_words[i].Count; j++)
+                <div class="tags">
+                    <b>@Cluster_words[i][0].GetTag;</b>
+                    @for (int j = 1; j < Cluster_words[i].Count; j++)
                     {
-                        <li>@Cluster_words[i][j].GetTag;</li>
+                        @Html.Raw(", ")
+                        <b>@Cluster_words[i][j].GetTag;</b>
                     }
-                </ul>
-                <a href="javascript:show_hide(@i)">show/hide</a><br>
+                </div>
+                [<a href="javascript:show_hide(@i)">show/hide</a>]<br />
                 <div class="resultlist" id="@i">
                     @foreach (YaSearchResult result in Cluster_results[i])
                     {
-                        <div class="result">
-                            @result.Position <a href="@result.DisplayUrl" class="title">@result.Title</a><br />
+                        <br /><div class="result">
+                            @result.Position <h5><a href="@result.DisplayUrl" class="title">@result.Title</a></h5><br />
                             <span class="desc">@result.Description</span><br />
-                            <span class="url">@result.Domain</span><br />
+                            <a href="@result.Domain">@result.Domain</a><br />
                         </div>
                     }
                 </div>
