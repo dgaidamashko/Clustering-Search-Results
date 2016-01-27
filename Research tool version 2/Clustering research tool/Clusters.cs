@@ -105,6 +105,7 @@ Output parameters:
                 if (C[i].Data.Count < 2)
                 {
                     AddToClosestCluster(C[i]);
+                    i--;
                 }
             }
             List<Vertex> docs = DocVertexes;
